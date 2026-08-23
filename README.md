@@ -1,27 +1,36 @@
-# Robichip Official Website
+# RobiChip official website
 
-This repository contains the source code for the Robichip official website.  The entire site is contained in the file `index.html`, which includes all of the markup and styling.  The site is written in HTML with inline CSS.
+Static, route-complete migration of the RobiChip Google Site to GitHub Pages-compatible HTML, CSS, and JavaScript.
 
-## Contents
+## What is included
 
-- **index.html** – the single‑page website for Robichip.  It contains the full layout, styles, and content.
-- **README.md** – this file with instructions.
+- Homepage and all primary Google Sites navigation pages.
+- RobiSoC, RobiDev, RobiThrust, RobiTorque, RobiAgent, and RobiLab platform pages.
+- Technology Insights index plus four article routes.
+- News & Events index plus six event/detail routes.
+- Partnership, Join Us, and Privacy Policy routes.
+- Shared responsive navigation, footer, metadata, canonical URLs, structured data, sitemap, and robots file.
+- Existing RobiChip logo and three platform images retained from this repository.
+- Google Analytics ID `G-JMMFPY6RMQ` retained.
+- Elfsight AI chatbot app `81f17c2c-1f14-4548-a7c3-64076eb9e933` loaded globally on every page.
 
-## Usage
+## Architecture
 
-To publish this website via GitHub Pages:
+This migration intentionally has no build step or package dependencies. Each public route contains a small HTML entry point; shared presentation and page data live in:
 
-1. Create a new repository on GitHub (e.g. `robichip.github.io`).
-2. Copy the contents of this directory into your new repository.  Ensure that `index.html` is at the root of the repository.
-3. Commit and push the files to GitHub.
-4. Enable **GitHub Pages** in the repository settings, choosing the branch (e.g. `main`) and the `/ (root)` folder.
-5. After a few minutes, your site should be available at `https://<username>.github.io/`.
+- `assets/styles.css`
+- `assets/site.js`
 
-### Image Assets
+Serve the repository root with any static server. For example:
 
-The `index.html` references several images hosted on Google Drive.  For long‑term reliability, consider downloading those images, storing them in an `assets/` folder, and updating the `src` attributes in the HTML accordingly.
+```bash
+python3 -m http.server 4173
+```
 
-## Notes
+Then open `http://localhost:4173/`.
 
-- This repository intentionally keeps the structure simple; no additional build tools or dependencies are required.
-- Feel free to edit the HTML content to reflect updates, translations, or new product information.
+## GitHub Pages
+
+The repository is prepared for GitHub Pages with `CNAME` and `.nojekyll`. Do not switch production DNS from Google Sites until the media placeholders, privacy copy, links, analytics, and responsive pages have been reviewed.
+
+See [MIGRATION.md](MIGRATION.md) for the route inventory and remaining media work.
