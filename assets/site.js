@@ -4,9 +4,13 @@
   const ORIGIN = 'https://www.robichip.com';
   const CONTACT = 'mailto:contact@robichip.com';
   const BD = 'mailto:bd@robichip.com';
+  const BASE_PATH = location.hostname.endsWith('.github.io') ? '/robichip-website' : '';
 
   const normalizePath = (value) => {
     let path = value || '/';
+    if (BASE_PATH && path.startsWith(BASE_PATH)) {
+      path = path.slice(BASE_PATH.length) || '/';
+    }
     try { path = decodeURIComponent(path); } catch (_) {}
     path = path.replace(/\/index\.html$/i, '').replace(/\/+$/, '') || '/';
     return path;
@@ -638,6 +642,16 @@
   document.head.appendChild(ld);
 
   site.innerHTML = `${nav()}<main id="main" class="page">${page.render()}</main>${footer()}`;
+
+  if (BASE_PATH) {
+    site.querySelectorAll('[href^="/"], [src^="/"]').forEach((element) => {
+      const attribute = element.hasAttribute('href') ? 'href' : 'src';
+      const value = element.getAttribute(attribute);
+      if (value && !value.startsWith(`${BASE_PATH}/`)) {
+        element.setAttribute(attribute, `${BASE_PATH}${value}`);
+      }
+    });
+  }
 
   const toggle = document.querySelector('.nav-toggle');
   const primaryNav = document.getElementById('primary-nav');

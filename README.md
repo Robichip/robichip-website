@@ -31,6 +31,8 @@ Then open `http://localhost:4173/`.
 
 ## GitHub Pages
 
-The repository is prepared for GitHub Pages with `CNAME` and `.nojekyll`. Do not switch production DNS from Google Sites until the media placeholders, privacy copy, links, analytics, and responsive pages have been reviewed.
+The repository deploys a review build to `https://robichip.github.io/robichip-website/` through `.github/workflows/pages.yml`. The runtime supports both the GitHub project path and a future root-level custom domain.
+
+Do not switch production DNS from Google Sites until the media placeholders, privacy copy, links, analytics, and responsive pages have been reviewed.
 
 See [MIGRATION.md](MIGRATION.md) for the route inventory and remaining media work.
