@@ -81,6 +81,20 @@
       </div>
     </section>`;
 
+  const utilityBar = () => `
+    <aside class="utility-bar" aria-label="RobiChip event and contact links">
+      <div class="wrap utility-links">
+        <a href="https://robichip-homepage.robichip-ai-8830.chatgpt.site/2026-TAIROS#schedule">TAIROS Virtual Booth · AUG 19 · 13:30 <span aria-hidden="true">↗</span></a>
+        <a href="https://robichip-homepage.robichip-ai-8830.chatgpt.site/semicon-taiwan-2026">SILICON STARTUPS PITCH</a>
+        <a href="https://VIP.robichip.com">VIP Room</a>
+        <a href="https://robichip-homepage.robichip-ai-8830.chatgpt.site/contact?intent=meeting">BOOK A MEETING</a>
+        <a href="https://www.linkedin.com/company/robichip/?viewAsMember=true">LINKEDIN</a>
+        <a href="https://www.facebook.com/robichipTW">FACEBOOK</a>
+        <a href="https://www.youtube.com/channel/UCqp-CDSVPCX8TfYT_aVScpg">YOUTUBE</a>
+        <a href="https://www.104.com.tw/company/1a2x6bnk3q#info06">104 CAREERS</a>
+      </div>
+    </aside>`;
+
   const cta = (title = 'Build the Next Generation of Intelligent Machines with RobiChip', text = '與羅比芯共同打造次世代智慧機器動力平台。從技術對焦、驗證計畫到 design-in 與 pilot partnership。') => `
     <section class="section tight">
       <div class="wrap">
@@ -96,6 +110,7 @@
     </section>`;
 
   const homePage = () => `
+    ${utilityBar()}
     ${hero({
       eyebrow: 'Power + AI + Robotics',
       title: 'Power SoC Platform for Intelligent Machines',
@@ -108,10 +123,9 @@
         {href: '/partnership', label: '洽談策略合作'}
       ]
     })}
-    ${section('2026 Technology Showcase Series', 'From Live Validation to Semiconductor-Defined Motion', '從現場驗證到半導體定義運動平台：在 2026 展會現場看見 Power SoC 如何連結推進、散熱與智慧控制。', cards([
+    ${section('2026 Technology Showcase Series', 'From Live Validation to Semiconductor-Defined Motion', '從實機驗證走向半導體定義的智慧動力。Aug. 19–22 展示技術如何運作；Sep. 2–4 說明如何透過半導體平台規模化。', cards([
       {tag: 'Aug 19–22 · Taipei', title: 'Automation Taipei / TAIROS 2026', text: 'Live demo at Swancor booth Q210, TaiNEX 2 and Maxon booth K012, TaiNEX 1.', href: '/news-events/2026-TAIROS', link: 'Event details'},
-      {tag: 'Sep 2–4 · Taipei', title: 'SEMICON Taiwan 2026', text: 'Accepted speaker and showcase at booth T9404, 7F TaiNEX 2. Presentation: Sep 4, 14:00.', href: '/news-events/semicon-taiwan-2026', link: 'Event details'},
-      {tag: 'Validation', title: 'Live Engineering Discussion', text: 'Bring your motor, thermal-path, control, or design-in requirements to the RobiChip team.', href: '/partnership', link: 'Start a discussion'}
+      {tag: 'Sep 2–4 · Taipei', title: 'SEMICON Taiwan 2026', text: 'Accepted speaker and showcase at booth T9404, 7F TaiNEX 2. Presentation: Sep 4, 14:00.', href: '/news-events/semicon-taiwan-2026', link: 'Event details'}
     ]), 'tint')}
     ${section('RobiThrust Focus', 'From Power SoC to Propulsion Validation', '從 Power SoC 到無人機推進驗證平台：把電力轉換、馬達驅動、熱路徑與量測資料放進同一條工程流程。', `
       <div class="split">
@@ -125,6 +139,11 @@
           <div style="margin-top:18px">${flow(['Power SoC', 'Motor Drive', 'Thermal Path', 'Validation', 'Design-in'])}</div>
         </div>
       </div>`)}
+    ${section("Latest News & Events", "最新消息與活動", "Three current milestones. Full stories and the complete archive are available in News & Events.<br>首頁僅保留三則近期重點；完整內容與歷史紀錄請前往活動消息總頁。", cards([
+      {tag:"2026.07.31 · Accepted Speaker", title:"RobiChip Selected to Speak at SEMICON Taiwan 2026", text:"Presenting semiconductor-defined motion for high-power-density robotics and UAV motor drives.<br><br>分享半導體定義動力平台，連結高功率密度馬達驅動、機器人與無人機應用。", href:"/news-events/semicon-taiwan-2026", link:"View Event Details"},
+      {tag:"2026.08.19–22 · Live Showcase", title:"Automation Taipei / TAIROS 2026", text:"Live RobiTorque and RobiThrust demonstrations with ecosystem partners.<br><br>攜手生態系夥伴展示 RobiTorque 與 RobiThrust 實機驗證。", href:"/news-events/2026-TAIROS", link:"Explore the Showcase"},
+      {tag:"2026.04.25 · Recognition", title:"2026 Best AI Awards", text:"Recognition for RobiChip Power SoC platform for intelligent motion systems.<br><br>羅比芯智慧動力 Power SoC 平台獲 IC 設計類別肯定。", href:"/news-events/news-events-best-AI-Awards", link:"Read Award Story"}
+    ]), "tint")}
     ${section('Platform Overview', 'One Platform, Multiple Entry Points', '從 Power SoC、驗證平台到 AI-assisted design-in，依照客戶所處階段選擇最直接的合作入口。', cards([
       {tag:'Power SoC', title:'RobiSoC', text:'Power SoC + hybrid-substrate product family from 250 W to 1000 W class.', href:'/robisoc'},
       {tag:'Evaluation', title:'RobiDev', text:'Developer and evaluation platforms for electrical, firmware, and thermal validation.', href:'/robidev'},
@@ -133,7 +152,6 @@
       {tag:'AI Workflow', title:'RobiAgent', text:'AI-assisted technical query, pre-check, layout review, and design-in decisions.', href:'/robiagent'},
       {tag:'Lab', title:'RobiLab', text:'Measurement, thermal, reliability, and system-validation base.', href:'/robilab'}
     ]), 'tint')}
-    ${section('Growth Pipeline', 'From Prototype Validation to Production Scale', 'A stage-gated path that keeps technical evidence, manufacturing decisions, and partner alignment connected.', flow(['Prototype Validation', 'Design-in Package', 'DFM & Reliability', 'Pilot Sample', 'Production Scale']))}
     ${section('Technical Insights', 'Engineering Notes for High-Power-Density Motion', '高功率密度智慧動力平台的技術洞察與驗證筆記。', cards([
       {tag:'Published Note', title:'RobiThrust ECX-32 Test Observation', text:'From motor-driver matching to endurance optimization: G2 showed +6.3% average gf/W advantage at 3100–5600 rpm.', href:'/technology-insights/robithrust-ecx32-test-observation', link:'Read note'},
       {tag:'Fundamentals', title:'Why Power Density Matters in Intelligent Machines', text:'How compact power conversion affects payload, thermal design, reliability, and motion performance.', href:'/technology-insights/why-power-density-matters', link:'Read insight'},
@@ -145,7 +163,12 @@
         <div class="callout"><span class="tag">Scale Out</span><h3>UAV · Robotics · Industrial Motion</h3><p>Reuse the platform across propulsion, actuator, and high-density motion applications.</p></div>
       </div>
       <div style="margin-top:22px">${flow(['Prototype Validation', 'DFM & Reliability', 'Pilot Sample', 'Design-in', 'Platform Scale'])}</div>`)}
-    ${cta()}`;
+    ${section("Partnership CTA", "Build the Next Generation of Intelligent Machines with RobiChip", "與羅比芯共同打造次世代智慧機器動力平台。<br>RobiChip welcomes robotics, UAV, industrial motion, advanced packaging, thermal materials, and strategic investment partners.<br><br>我們歡迎機器人、無人機、工業運動控制、先進封裝、散熱材料與策略投資夥伴，共同推進高功率密度 Power SoC 與智慧動力系統。", cards([
+      {tag:"Robotics / UAV", title:"System Partners", text:"For robotics, UAV, AMR / AGV, and actuator system companies seeking compact, high-efficiency motion platforms.<br><br>適合需要高效率、小型化、高功率密度動力平台的機器人、無人機與致動器系統廠。"},
+      {tag:"Packaging / Materials", title:"Technology Partners", text:"For advanced packaging, substrate, thermal interface, and materials partners interested in Power SoC co-development.<br><br>適合先進封裝、載板、散熱介面材料與高功率模組夥伴共同開發。"},
+      {tag:"Design-in", title:"Engineering Collaboration", text:"Explore RobiDev, RobiThrust, validation workflows, thermal evaluation, and early design-in discussion.<br><br>透過 RobiDev、RobiThrust、熱評估與實測流程，展開早期規格收斂與設計導入。"},
+      {tag:"Strategic Capital", title:"Investment Partners", text:"For strategic investors who can support DFM, reliability validation, pilot production, and market access.<br><br>歡迎能支持 DFM、可靠度驗證、pilot production 與國際市場導入的策略投資夥伴。"}
+    ], "four") + `<h3 class="subsection-title">Collaboration Path｜合作流程</h3>${flow(["Initial Discussion<br><small>需求與應用場景盤點</small>", "Technical Alignment<br><small>規格、熱路徑與驗證條件</small>", "Validation Plan<br><small>RobiDev / RobiThrust 測試規劃</small>", "Design-in Package<br><small>導入方案與工程資料</small>", "Pilot / Partnership<br><small>試作、合作或策略投資</small>"])}<div class="actions">${link("/partnership", "洽談合作 Partnership", "btn primary")}${link("/robithrust", "了解 RobiThrust", "btn")}${link("/technology-insights", "閱讀技術洞察", "btn")}</div><p class="public-note">Detailed technical specifications, raw validation data, design files, and partner-only materials are shared through official discussion, NDA, or designated partner access.<br>詳細規格、原始驗證資料、設計檔案與 partner-only 技術資料，將透過正式洽談、NDA 或指定夥伴授權提供。</p>`, "tint")}`;
 
   const robisocPage = () => `
     ${hero({
@@ -154,7 +177,7 @@
       zh:'面向智慧機器的可擴展高功率密度 Power SoC 產品線',
       lead:'RobiSoC is RobiChip’s scalable Power SoC product family for robotics, UAV propulsion, and high-power-density motion systems, offered as RC25 / RC50 / RC75 / RC100 modules from 250 W to 1000 W class.',
       sublead:'RobiSoC 是羅比芯面向機器人、無人機推進與高功率密度動力系統的可擴展 Power SoC 產品線，提供 RC25 / RC50 / RC75 / RC100，涵蓋 250 W 到 1000 W class。',
-      actions:[{href:BD,label:'Discuss Design-in'},{href:'/robidev',label:'Explore RobiDev'}],
+      actions:[{href:"/partnership",label:"Discuss Design-in"},{href:"/robidev",label:"Explore RobiDev"}],
       metrics:[['250–1000 W','RC25–RC100'],['18.5 × 22.5 mm','Module footprint'],['M1/M2 · G1/G2','Configuration logic']]
     })}
     ${section('Product Line', 'RC25 / RC50 / RC75 / RC100', 'A scalable product family organized by power class and application direction.', cards([
@@ -163,6 +186,34 @@
       {tag:'3× Direction', title:'RC75', power:'750 W Class', text:'Robotics joints, industrial automation, and high-dynamic motion.'},
       {tag:'Indicator Product', title:'RC100', power:'1000 W Class', text:'Flagship high-power-density platform and design-in indicator product.'}
     ], 'four'), 'tint')}
+    ${section("Technical Documentation", "RC100 Detailed Datasheet", "RC100 三相 BLDC／PMSM 馬達驅動器詳細規格書<br>Download the detailed technical datasheet for the RC100 motor-drive Power SoC, including architecture, interfaces, operating conditions, protection functions, package information, ordering options, and RobiDev design-in support.<br><br>下載 RC100 馬達驅動 Power SoC 詳細規格書，查看功能架構、控制介面、操作條件、保護功能、封裝資訊、訂購組態與 RobiDev Design-in 支援。", `
+      <div class="datasheet-layout">
+        <div>
+          <div class="badge-row"><span class="tag">Version 0.9</span><span class="tag">Three-Phase BLDC / PMSM</span><span class="tag">Integrated GaN Power Stage</span><span class="tag">RobiSoC Platform</span></div>
+          <h3>RC100 Three-Phase BLDC/PMSM Motor Driver</h3><p class="secondary-heading">RobiSoC Motor-Drive Power SoC</p>
+          <p>RC100 combines an STM32G4-series motor-control MCU, a three-phase GaN power stage, current sensing, protection functions, and multiple control interfaces in a compact 18.5 mm × 22.5 mm form factor.</p>
+          <p>RC100 在 18.5 mm × 22.5 mm 的精巧尺寸中，整合 STM32G4 系列馬達控制 MCU、三相 GaN 功率級、電流感測、保護功能與多種控制介面。</p>
+          <div class="spec-grid">
+            <div class="spec-item"><span>Main Supply</span><strong>12–54 V</strong><small>24 V / 48 V typical</small></div>
+            <div class="spec-item"><span>Form Factor</span><strong>18.5 × 22.5 mm</strong><small>Compact RobiSoC module</small></div>
+            <div class="spec-item"><span>PWM Frequency</span><strong>10–100 kHz</strong><small>Recommended operating range</small></div>
+            <div class="spec-item"><span>Controller</span><strong>STM32G4 Series</strong><small>Motor-control MCU in package</small></div>
+            <div class="spec-item"><span>Power Stage</span><strong>Three-Phase GaN</strong><small>Configurable G1 / G2 options</small></div>
+            <div class="spec-item"><span>Interfaces</span><strong>PWM / SPI / UART</strong><small>Encoder and POT support</small></div>
+          </div>
+        </div>
+        <aside class="document-panel">
+          <span class="document-icon">PDF</span><span class="document-pages">11 PAGES</span>
+          <h3>RC100 BLDC/PMSM Motor Driver Datasheet</h3>
+          <dl><div><dt>Document</dt><dd>RC100-DS-0717</dd></div><div><dt>Version</dt><dd>0.9 (draft)</dd></div><div><dt>Released</dt><dd>2026-07-29</dd></div><div><dt>Part No.</dt><dd>Robi-DRV-RC100B</dd></div><div><dt>Language</dt><dd>English</dd></div></dl>
+          <div class="actions"><a class="btn primary" href="https://drive.google.com/file/d/14MMWa4HdldpVRfPoB2D2_pjUSVBwh5M8/view?usp=sharing">Download RC100 Datasheet</a><a class="btn" href="https://drive.google.com/file/d/14MMWa4HdldpVRfPoB2D2_pjUSVBwh5M8/view?usp=sharing">View Datasheet Online</a></div>
+        </aside>
+      </div>
+      <div class="detail-grid">
+        <div><span>Architecture</span><strong>Functional Block Diagram</strong><small>MCU、GaN 功率級、感測與控制架構</small></div><div><span>Electrical</span><strong>Ratings & Operating Conditions</strong><small>電壓、溫度與 PWM 操作範圍</small></div><div><span>Interfaces</span><strong>Control & Feedback</strong><small>PWM、SPI、UART、Encoder 與 POT</small></div><div><span>Protection</span><strong>OCP / OVP / UVLO / OTP</strong><small>過流、過壓、欠壓與過溫保護</small></div><div><span>Mechanical</span><strong>Package & Footprint</strong><small>封裝尺寸、焊墊與 IC footprint</small></div><div><span>Thermal</span><strong>Thermal & Reliability Data</strong><small>熱阻、接面溫度與 ESD 資訊</small></div><div><span>Configuration</span><strong>M1 / M2 · G1 / G2 Options</strong><small>控制器與 GaN 功率級組態</small></div><div><span>Design-in</span><strong>RobiDev Development Support</strong><small>High-Density 與 Discrete 評估平台</small></div>
+      </div>
+      <div class="notice"><strong>Document notice｜文件說明：</strong> Specifications, configuration options, package codes, electrical limits, availability, and production part numbers remain subject to formal quotation, engineering review, and final product release.<br>規格、組態選項、封裝代碼、電氣限制、供貨狀態及正式量產料號，仍應以工程審查、正式報價及最終產品發布文件為準。</div>
+    `, "tint")}
     ${section('SKU Logic', 'RCxx + M / G Defines the RobiSoC Product Configuration', '以 RCxx + M / G 定義 RobiSoC 產品組態：RobiSoC-RCxx-MxGx。', `
       <div class="table-wrap"><table>
         <thead><tr><th>Code</th><th>Meaning</th><th>Public positioning</th></tr></thead>
@@ -182,7 +233,12 @@
       {title:'Co-developed Evaluation Platform', text:'Build a measurable reference platform around the target application.'},
       {title:'Power Platform Without MCU Lock-in', text:'Keep the power-platform direction adaptable to customer control choices.'}
     ], 'four'), 'tint')}
-    ${cta('Move from Power-Class Selection to Design-in', 'Select the target power class, controller direction, GaN configuration, and validation track with the RobiChip engineering team.')}`;
+    ${section("Validation Loop", "From RobiDev to RobiLab to Application Proof", "從 RobiDev、RobiLab 到應用驗證<br>RobiChip builds a validation loop from module samples and driver boards to dynamic-load measurement, thermal validation, UAV propulsion testing, and robotics actuator scenarios.<br><br>羅比芯建立從模組樣品、驅動板、動態負載量測、熱驗證、無人機推進測試到機器人致動器場景的驗證閉環。", cards([
+      {tag:"RobiDev", title:"Design-in Front Door", text:"Supports electrical interface checks, driver-board validation, firmware bring-up, and early customer-facing evaluation.<br><br>客戶導入前門"},
+      {tag:"RobiLab", title:"Measurement Validation", text:"Supports dynamic load, thermal management, T-N curve, system measurement, and validation workflow design.<br><br>量測與驗證"},
+      {tag:"RobiThrust", title:"UAV Propulsion Proof", text:"Connects RobiSoC development to motor-driver matching, thrust efficiency, thermal path, and propulsion validation.<br><br>無人機推進驗證"},
+      {tag:"RobiAgent", title:"AI-assisted Engineering", text:"Supports thermal and power evaluation, technical explanation, and FAE / design-in acceleration workflows.<br><br>AI 輔助工程導入"}
+    ], "four") + `<h3 class="subsection-title">RobiSoC Development Path｜RobiSoC 發展路徑</h3>${flow(["Prototype Validation<br><small>architecture, module, measurement</small>", "DFM Review<br><small>layout rules, thermal interface</small>", "Reliability Build<br><small>thermal, power, mechanical stress</small>", "Pilot Samples<br><small>sample lot, yield learning</small>", "Design-in Readiness<br><small>customer validation, roadmap alignment</small>"])}<p class="public-note">Public website content is intended for platform communication and early design-in education. Detailed specifications, raw validation data, design files, DFM materials, MCU partner details, and partner-only documents are provided through official technical discussion or NDA-controlled access.<br>本頁內容用於平台溝通與早期 design-in 教育。詳細規格、原始驗證資料、設計檔案、DFM 資料、MCU 夥伴細節與 partner-only 文件，將透過正式技術洽談或 NDA 管制方式提供。</p><div class="actions">${link("/partnership", "Start Technical Discussion", "btn primary")}${link(BD, "bd@robichip.com", "btn")}${link(CONTACT, "contact@robichip.com", "btn")}</div>`, "tint")}`;
 
   const robidevPage = () => `
     ${hero({
@@ -501,7 +557,7 @@
       eyebrow:'Join Us', title:'Build Semiconductor-Defined Intelligent Machines', zh:'加入羅比芯，從 Power SoC 到機器人與無人機平台',
       lead:'Join a cross-domain team working across power semiconductors, motor control, advanced packaging, thermal design, robotics, UAVs, validation, and AI-assisted engineering.',
       sublead:'我們正在建立從元件、封裝、板級設計到機電系統驗證的完整工程路徑。',
-      actions:[{href:'https://www.104.com.tw/company/1a2x6bmrw9',label:'View openings on 104'},{href:'mailto:contact@robichip.com?subject=Career%20at%20RobiChip',label:'Contact the team'}]
+      actions:[{href:'https://www.104.com.tw/company/1a2x6bnk3q#info06',label:'View openings on 104'},{href:'mailto:contact@robichip.com?subject=Career%20at%20RobiChip',label:'Contact the team'}]
     })}
     ${section('Work at RobiChip', 'Cross-domain Problems, Measurable Results', 'We value engineers and collaborators who can connect a deep specialty to the complete intelligent-machine system.', cards([
       {title:'Power Electronics & GaN', text:'Power-stage architecture, device evaluation, switching, protection, and high-density design.'},
@@ -601,12 +657,13 @@
       <div class="footer-brand">
         <h3>RobiChip Technology Co., Ltd.</h3>
         <p>羅比芯科技股份有限公司</p>
+        <p>Power SoC platform for intelligent machines. RobiChip integrates Power SoC, RobiDev, RobiThrust, RobiAgent, and validation workflows for robotics, UAVs, and high-power-density motion systems.<br>羅比芯聚焦 Power + AI + Robotics，建構從 Power SoC、開發驗證、無人機推進平台到 AI-assisted design-in 的智慧動力半導體平台。</p>
         <p>National Taiwan University of Science and Technology, International Building 11F, Room 1105<br>No. 43, Sec. 4, Keelung Rd., Da’an Dist., Taipei City, Taiwan</p>
         <p>台北市大安區基隆路四段 43 號<br>國立臺灣科技大學 國際大樓 11F 1105 室</p>
       </div>
       <div><h3>Platforms</h3><div class="footer-list"><a href="/robisoc">RobiSoC</a><a href="/robidev">RobiDev</a><a href="/robithrust">RobiThrust</a><a href="/robitorque">RobiTorque</a><a href="/robiagent">RobiAgent</a></div></div>
       <div><h3>Resources</h3><div class="footer-list"><a href="/technology-insights">Technology Insights</a><a href="/news-events">News & Events</a><a href="/robilab">RobiLab Validation</a><a href="https://www.youtube.com/channel/UCqp-CDSVPCX8TfYT_aVScpg">YouTube</a></div></div>
-      <div><h3>Contact</h3><div class="footer-list"><a href="/partnership">Partnership</a><a href="mailto:contact@robichip.com">contact@robichip.com</a><a href="mailto:bd@robichip.com">bd@robichip.com</a><a href="tel:+886277015728">+886-2-7701-5728</a><a href="/join-us">Join Us</a><a href="/privacy-policy">Privacy Policy</a></div></div>
+      <div><h3>Contact</h3><div class="footer-list"><a href="/partnership">Partnership</a><a href="/partnership">Technical Discussion</a><a href="mailto:contact@robichip.com">contact@robichip.com</a><a href="mailto:bd@robichip.com">bd@robichip.com</a><a href="tel:+886277015728">+886-2-7701-5728</a><a href="/join-us">Join Us</a><a href="/privacy-policy">Privacy Policy</a></div></div>
     </div>
     <div class="wrap footer-bottom">
       <p>© 2026 RobiChip Technology Co., Ltd. All rights reserved.</p>
