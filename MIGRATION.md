@@ -31,7 +31,7 @@ Destination: `Robichip/robichip-website`.
 | `/join-us` | `/join-us` | Migrated |
 | hidden privacy page | `/privacy-policy` | Structure migrated; legal review required |
 
-The hidden working routes `/work`, `/v1`, `/v2`, `/v3`, and `/temp` are retained as no-index archive placeholders and are not linked from public navigation.
+The hidden working routes `/work`, `/v1`, `/v2`, `/v3`, `/temp`, and the empty `/robigrip` page are retained as no-index archive placeholders and are not linked from public navigation. The source page named `Private Policy` is additionally preserved at `/private-policy` as a no-index alias of the existing migration-ready privacy-policy location.
 
 ## Reused repository assets
 
