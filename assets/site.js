@@ -542,7 +542,8 @@
     '/news-events': {title:'News & Events', render:newsPage},
     '/partnership': {title:'Partnership', render:partnershipPage},
     '/join-us': {title:'Join Us', render:joinPage},
-    '/privacy-policy': {title:'Privacy Policy', render:privacyPage}
+    '/privacy-policy': {title:'Privacy Policy', render:privacyPage},
+    '/private-policy': {title:'Private Policy', render:privacyPage, noindex:true}
   };
 
   Object.entries(articles).forEach(([route, article]) => {
@@ -551,7 +552,7 @@
   Object.entries(events).forEach(([route, event]) => {
     routeTable[route] = {title:event.title, render:() => eventPage(event)};
   });
-  ['/work','/v1','/v2','/v3','/temp'].forEach((route) => {
+  ['/work','/v1','/v2','/v3','/temp','/robigrip'].forEach((route) => {
     routeTable[route] = {title:'Legacy Draft Page', render:legacyPage, noindex:true};
   });
 
