@@ -1,10 +1,16 @@
-name: Deploy RobiChip preview to GitHub Pages
+name: Deploy RobiChip website to GitHub Pages
 
 on:
-  push:
-    branches:
-      - master
   workflow_dispatch:
+    inputs:
+      website_version:
+        description: Choose which website branch to deploy
+        required: true
+        default: elfsight-version
+        type: choice
+        options:
+          - elfsight-version
+          - flowring-version
 
 permissions:
   contents: read
@@ -22,8 +28,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout selected website version
         uses: actions/checkout@v6
+        with:
+          ref: ${{ inputs.website_version }}
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
