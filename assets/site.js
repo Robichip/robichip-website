@@ -58,7 +58,7 @@
 
   // Each frozen Google-Sites page is copied as its original custom-HTML
   // blocks in a static asset, keeping the shared renderer compact.
-  const sourceRoute = (source) => `<div class="google-source-route" data-source-route="${source}"></div>`;
+  const sourceRoute = (source, layout = '') => `<div class="google-source-route" data-source-route="${source}" data-source-layout="${layout}"></div>`;
   const hero = ({ eyebrow, title, zh, lead, sublead, image, caption, actions = [], metrics = [] }) => `
     <section class="hero">
       <div class="wrap hero-grid">
@@ -687,7 +687,7 @@
   const routeTable = {
     '/': {title:'Power SoC Platform for Intelligent Machines', render:homePage},
     '/首頁': {title:'Power SoC Platform for Intelligent Machines', render:homePage},
-    '/robisoc': {title:'RobiSoC', render:() => sourceRoute('/assets/source/robisoc.html?v=frozen-reference-v6'), reference:true},
+    '/robisoc': {title:'RobiSoC', render:() => sourceRoute('/assets/source/robisoc.html?v=frozen-reference-v7', 'robisoc'), reference:true},
     '/robidev': {title:'RobiDev', render:robidevPage},
     '/robithrust': {title:'RobiThrust', render:robithrustPage},
     '/robitorque': {title:'RobiTorque', render:robitorquePage},
@@ -828,6 +828,18 @@
           block.before(wrapper);
           wrapper.append(block);
         });
+        if (sourceMount.dataset.sourceLayout === 'robisoc') {
+          const hero = sourceMount.querySelector('.google-source-block');
+          const layout = document.createElement('div');
+          layout.className = 'google-source-block robisoc-source-hero';
+          hero.before(layout);
+          layout.append(hero);
+          layout.insertAdjacentHTML('beforeend', `
+            <aside class="robisoc-hero-media" aria-label="RobiSoC and RobiDev reference images">
+              <figure><img src="https://lh3.googleusercontent.com/sitesv/AG8ngQUmRlX6P77BSr8YJNH0YLU-gDgOWERi0_s6ysoIon-9Q1H5HG1LPaw-I-rI_OvLFFuCQ-2sCzFcVUoEMIJW8Ri8m2acWU0-GctaLJLR0US0VtEC3oLjvzSKq4mcQBvfaA_MVKvfULndlgA_hy6A5ShqsXdiokhX0p4EgtcSnol1bjw2DZyDkOmf_f2JPT6lBVvlpGiLRmBOwH6Pu-WzED1jYFDx8yQIgAKyOSBM=w1280" alt="RobiSoC Power SoC module"><figcaption>RobiSoC = 18.5mm X 22.5mm</figcaption></figure>
+              <figure><img src="https://lh3.googleusercontent.com/sitesv/AG8ngQVrKDKXMhcweji-XwiU6zZbBNXbc7lJmbH-Cv-IMdh64uKsmrzzfFWHOMac6NTVgd-GcUiMWgeBDxoCraNSdQvOKBWzkuSJ8bo629IwnAMrOnwH-XDOKTBxYNWg_rSeEn6Rbr9-v8tIHMiDswlTMlQGk47amOGMIh0Dl1Q46wNve_9R7QO9qWfmydDm2nhWiWNsyF2jhQpcQO85U91H0j6oRc17bSiEEAasZUsmH1k=w1280" alt="RobiDev reference platform"><figcaption>RobiDev diameter = 35mm</figcaption></figure>
+            </aside>`);
+        }
         if (BASE_PATH) {
           sourceMount.querySelectorAll('[href]').forEach((element) => {
             const href = element.getAttribute('href');
