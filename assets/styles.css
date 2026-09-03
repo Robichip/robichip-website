@@ -78,6 +78,8 @@ body.google-reference .robisoc-hero-media figure { margin: 0; }
 body.google-reference .robisoc-hero-media img { width: 100%; height: auto; object-fit: contain; }
 body.google-reference .robisoc-hero-media figcaption { margin-top: 10px; color: #3c4043; font-size: 14px; font-weight: 500; }
 body.google-reference .robidev-legacy-row { width: min(1166px, calc(100% - 48px)); margin: 0 auto; display: grid; grid-template-columns: 465px minmax(0, 1fr); gap: 34px; align-items: start; color: #202124; font-family: Roboto, Arial, sans-serif; }
+body.google-reference .robidev-source-social { width: min(1116px, calc(100% - 48px)); margin: 0 auto; height: 34px; }
+body.google-reference .robidev-source-social img { display: block; width: 120px; height: 34px; margin-left: 105px; }
 body.google-reference .robidev-legacy-row figure { margin: 0; width: 465px; }
 body.google-reference .robidev-legacy-row figure img { display: block; max-width: 100%; height: auto; }
 body.google-reference .robidev-legacy-row figcaption { width: 365px; margin-top: 10px; text-align: center; color: #202124; font-size: 16px; }
@@ -114,6 +116,8 @@ body.google-reference .home-source-media img { display: block; width: 365px; max
   body.google-reference .robisoc-source-hero { grid-template-columns: 1fr; gap: 24px; }
   body.google-reference .robisoc-hero-media { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0 18px 18px; }
   body.google-reference .robidev-legacy-row { width: min(100% - 32px, 640px); grid-template-columns: 1fr; gap: 24px; }
+  body.google-reference .robidev-source-social { width: min(100% - 32px, 640px); }
+  body.google-reference .robidev-source-social img { margin-left: 0; }
   body.google-reference .robidev-legacy-row figure { width: 100%; }
   body.google-reference .robidev-legacy-row figure img { width: auto; max-width: 100%; }
   body.google-reference .robidev-legacy-copy { padding-top: 0; }

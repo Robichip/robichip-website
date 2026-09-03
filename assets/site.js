@@ -853,6 +853,10 @@
         }
         if (sourceMount.dataset.sourceLayout === 'robidev') {
           const blocks = sourceMount.querySelectorAll(':scope > .google-source-block');
+          const social = document.createElement('section');
+          social.className = 'robidev-source-social';
+          social.innerHTML = '<img src="' + BASE_PATH + '/assets/images/robidev-social-links-reference.jpg" alt="RobiChip YouTube, Facebook, and LinkedIn">';
+          blocks[0]?.before(social);
           const highDensity = document.createElement('section');
           highDensity.className = 'robidev-legacy-row robidev-high-density';
           highDensity.innerHTML = '<figure><img src="' + BASE_PATH + '/assets/images/robidev-high-density-reference.jpg" alt="RobiDev High-Density"></figure><div class="robidev-legacy-copy"><h1>RobiDev High-Density</h1><h2>RobiSoC Evaluation &amp; High-Density Motor-Drive Design-in Platform</h2><p>RobiDev-High-density supports RC100 / RobiSoC evaluation, thermal-path review, and high-density motor-drive design-in.</p><p>RobiDev-High-density 支援 RC100 / RobiSoC 評估、熱路徑檢視與高密度馬達驅動導入。</p></div>';
