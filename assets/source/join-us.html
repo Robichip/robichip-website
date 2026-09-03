@@ -1,0 +1,1697 @@
++<section class="rj-hero">
+  <style>
+    .rj-hero {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.28), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 54px 40px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .rj-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rj-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rj-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rj-hero h1 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -0.065em;
+      font-weight: 950;
+    }
+
+    .rj-hero h2 {
+      margin: 18px 0 0;
+      color: #d9ecff;
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rj-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rj-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 26px;
+    }
+
+    .rj-tag {
+      padding: 8px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(101, 241, 255, 0.36);
+      background: rgba(101, 241, 255, 0.14);
+      color: #eafcff;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1;
+    }
+
+    .rj-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .rj-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #f8fbff;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .rj-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #031120;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37,99,235,0.28);
+    }
+
+    @media (max-width: 900px) {
+      .rj-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rj-hero { padding: 36px 24px; }
+    }
+  </style>
+
+  <div class="rj-grid">
+    <div>
+      <div class="rj-eyebrow">Join RobiChip</div>
+      <h1>Build the Power Platform for Intelligent Machines</h1>
+      <h2>加入羅比芯，一起打造智慧機器的動力平台</h2>
+    </div>
+
+    <div class="rj-copy">
+      <p>
+        RobiChip is building a high-power-density smart motion platform for robotics,
+        drones, actuators, and next-generation intelligent machines.
+      </p>
+      <p>
+        羅比芯正在打造面向機器人、無人機、致動器與下一代智慧機器的高功率密度智慧動力平台。
+      </p>
+
+      <div class="rj-tags">
+        <span class="rj-tag">Power SoC</span>
+        <span class="rj-tag">Robotics</span>
+        <span class="rj-tag">UAV</span>
+        <span class="rj-tag">Thermal Architecture</span>
+        <span class="rj-tag">RobiLab</span>
+        <span class="rj-tag">RobiAgent</span>
+      </div>
+
+      <div class="rj-buttons">
+        <a class="rj-btn primary" href="mailto:contact@robichip.com">Contact RobiChip</a>
+        <a class="rj-btn" href="mailto:bd@robichip.com">Project / Partnership Inquiry</a>
+      </div>
+    </div>
+  </div>
+</section>
++<section class="rj-why">
+  <style>
+    .rj-why {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    .rj-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rj-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rj-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rj-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rj-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rj-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rj-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .rj-card {
+      background: #ffffff;
+      border: 1px solid rgba(37,99,235,0.12);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 240px;
+      box-shadow: 0 16px 34px rgba(15,23,42,0.07);
+    }
+
+    .rj-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #075985;
+      background: rgba(34,211,238,0.13);
+      border: 1px solid rgba(14,165,233,0.28);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rj-card h4 {
+      margin: 0 0 10px;
+      color: #06111f;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rj-card h5 {
+      margin: 0 0 14px;
+      color: #1e3a8a;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rj-card p {
+      margin: 0;
+      color: #5b6b80;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 1020px) {
+      .rj-grid,
+      .rj-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rj-why { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rj-grid">
+    <div class="rj-title">
+      <div class="rj-eyebrow">Why Join RobiChip</div>
+      <h2>Work on the Hardest Part of Intelligent Machines</h2>
+      <h3>投入智慧機器最難、也最關鍵的動力瓶頸</h3>
+    </div>
+
+    <div class="rj-copy">
+      <p>
+        The next bottleneck in robotics and UAV systems is no longer only control algorithm.
+        It is power integration, thermal path, packaging, validation, and manufacturability.
+      </p>
+      <p>
+        機器人與無人機的下一個瓶頸，不只是控制演算法，而是功率整合、熱路徑、
+        封裝、驗證與可製造性。
+      </p>
+    </div>
+  </div>
+
+  <div class="rj-card-grid">
+    <article class="rj-card">
+      <span class="rj-pill">Deep Tech</span>
+      <h4>Power SoC + Thermal Architecture</h4>
+      <h5>功率晶片與熱架構</h5>
+      <p>
+        Work on high-power-density integration across chip, board, package, and system-level heat path.
+      </p>
+    </article>
+
+    <article class="rj-card">
+      <span class="rj-pill">Real Machines</span>
+      <h4>Robotics and UAV Applications</h4>
+      <h5>機器人與無人機應用</h5>
+      <p>
+        Build technology that connects directly to drones, actuators, robot joints, servo modules, and smart motion systems.
+      </p>
+    </article>
+
+    <article class="rj-card">
+      <span class="rj-pill">Validation</span>
+      <h4>Measure, Calibrate, Improve</h4>
+      <h5>量測、校準、改善</h5>
+      <p>
+        Turn engineering assumptions into measured data through RobiDev, RobiLab, RobiThrust, and future RobiTorque workflows.
+      </p>
+    </article>
+
+    <article class="rj-card">
+      <span class="rj-pill">Startup</span>
+      <h4>Build from 0 to 1</h4>
+      <h5>從 0 到 1 建構平台</h5>
+      <p>
+        Join a small team where architecture, product, validation, customer feedback, and partnerships are tightly connected.
+      </p>
+    </article>
+  </div>
+</section>
++<section class="rj-roles">
+  <style>
+    .rj-roles {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34,211,238,0.25), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .rj-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rj-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rj-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rj-title h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rj-title h3 {
+      margin: 14px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rj-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rj-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .rj-card {
+      background: rgba(255,255,255,0.075);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 26px;
+      padding: 28px;
+      min-height: 330px;
+      box-shadow: 0 18px 38px rgba(0,0,0,0.16);
+    }
+
+    .rj-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #f2fdff;
+      background: rgba(34,211,238,0.26);
+      border: 1px solid rgba(101,241,255,0.56);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rj-card h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 24px;
+      line-height: 1.18;
+      letter-spacing: -0.04em;
+      font-weight: 950;
+    }
+
+    .rj-card h5 {
+      margin: 0 0 14px;
+      color: #d9ecff;
+      font-size: 17px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rj-card p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .rj-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .rj-list div {
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.09);
+      color: #e6f0fb;
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    @media (max-width: 1020px) {
+      .rj-grid,
+      .rj-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rj-roles { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rj-grid">
+    <div class="rj-title">
+      <div class="rj-eyebrow">Who We Are Looking For</div>
+      <h2>Builders Across Chip, Power, Thermal, AI, and Systems</h2>
+      <h3>尋找能跨晶片、電力、熱、AI 與系統的人才</h3>
+    </div>
+
+    <div class="rj-copy">
+      <p>
+        We welcome full-time candidates, senior advisors, project collaborators,
+        research partners, and students who want to work on real power-system challenges.
+      </p>
+      <p>
+        我們歡迎全職候選人、資深顧問、專案合作夥伴、研究合作單位，以及想投入真實動力系統問題的學生。
+      </p>
+    </div>
+  </div>
+
+  <div class="rj-card-grid">
+    <article class="rj-card">
+      <span class="rj-pill">Engineering Core</span>
+      <h4>IC / Power Electronics / Motor Drive</h4>
+      <h5>晶片、電力電子與馬達驅動</h5>
+      <p>
+        For engineers interested in Power SoC, GaN power stage, BLDC / PMSM control,
+        sensing, protection, PCB / module design, and motor-drive validation.
+      </p>
+      <div class="rj-list">
+        <div>Power IC / power electronics</div>
+        <div>BLDC / PMSM motor control</div>
+        <div>Gate driver / sensing / protection</div>
+        <div>PCB / module design and bring-up</div>
+      </div>
+    </article>
+
+    <article class="rj-card">
+      <span class="rj-pill">Thermal & Validation</span>
+      <h4>Thermal / Packaging / RobiLab</h4>
+      <h5>熱管理、封裝與量測驗證</h5>
+      <p>
+        For engineers who can connect package thermal path, aluminum substrate,
+        dynamic load, system measurement, calibration, and reliability thinking.
+      </p>
+      <div class="rj-list">
+        <div>Thermal architecture</div>
+        <div>Packaging / DFM / reliability</div>
+        <div>Dynamic load and T-N curve</div>
+        <div>Measurement and report workflow</div>
+      </div>
+    </article>
+
+    <article class="rj-card">
+      <span class="rj-pill">System & AI</span>
+      <h4>Robotics / UAV / RobiAgent</h4>
+      <h5>機器人、無人機與 AI 輔助工程</h5>
+      <p>
+        For builders interested in RobiThrust, RobiTorque, RobiAgent, simulation-to-measurement workflow,
+        vertical applications, customer design-in, and smart motion platforms.
+      </p>
+      <div class="rj-list">
+        <div>Robotics actuator / UAV propulsion</div>
+        <div>AI-assisted engineering workflow</div>
+        <div>Simulation / CAE / DOE support</div>
+        <div>Customer pilot and field feedback</div>
+      </div>
+    </article>
+  </div>
+</section>
++<section class="rj-tracks">
+  <style>
+    .rj-tracks {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    .rj-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rj-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rj-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rj-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rj-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rj-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rj-track-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .rj-track {
+      background: #ffffff;
+      border: 1px solid rgba(37,99,235,0.12);
+      border-radius: 22px;
+      padding: 20px;
+      min-height: 210px;
+      box-shadow: 0 14px 30px rgba(15,23,42,0.06);
+    }
+
+    .rj-track strong {
+      display: block;
+      color: #06111f;
+      font-size: 17px;
+      line-height: 1.3;
+      margin-bottom: 8px;
+      font-weight: 950;
+    }
+
+    .rj-track span {
+      display: block;
+      color: #1e3a8a;
+      font-size: 14px;
+      line-height: 1.45;
+      margin-bottom: 10px;
+      font-weight: 850;
+    }
+
+    .rj-track p {
+      margin: 0;
+      color: #5b6b80;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .rj-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
+      border: 1px solid rgba(37,99,235,0.12);
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .rj-note strong {
+      color: #06111f;
+      font-weight: 950;
+    }
+
+    @media (max-width: 1120px) {
+      .rj-track-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 900px) {
+      .rj-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .rj-track-grid { grid-template-columns: 1fr; }
+      .rj-tracks { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rj-grid">
+    <div class="rj-title">
+      <div class="rj-eyebrow">Open Collaboration Tracks</div>
+      <h2>Multiple Ways to Work with RobiChip</h2>
+      <h3>多種方式與羅比芯一起合作</h3>
+    </div>
+
+    <div class="rj-copy">
+      <p>
+        We are building a focused team and ecosystem. Some roles may be full-time,
+        while others may begin as advisor, project, internship, or research collaboration.
+      </p>
+      <p>
+        我們正在建立精實團隊與生態系。有些角色會是全職，有些則可能從顧問、專案、實習或研究合作開始。
+      </p>
+    </div>
+  </div>
+
+  <div class="rj-track-grid">
+    <div class="rj-track">
+      <strong>Full-time Core Team</strong>
+      <span>全職核心團隊</span>
+      <p>For engineers and builders ready to work closely on RobiSoC, RobiDev, RobiLab, RobiAgent, RobiThrust, and RobiTorque roadmap.</p>
+    </div>
+
+    <div class="rj-track">
+      <strong>Technical Advisor</strong>
+      <span>技術顧問</span>
+      <p>For senior experts in power electronics, packaging, robotics, UAV, thermal simulation, DFM, reliability, or manufacturing.</p>
+    </div>
+
+    <div class="rj-track">
+      <strong>Project Collaboration</strong>
+      <span>專案型合作</span>
+      <p>For specific validation, layout, RobiAgent, RobiLab, RobiThrust, RobiTorque, or customer pilot projects.</p>
+    </div>
+
+    <div class="rj-track">
+      <strong>Internship / Student Project</strong>
+      <span>實習與學生專題</span>
+      <p>For students interested in motor control, thermal measurement, robotics validation, AI tools, or engineering documentation.</p>
+    </div>
+
+    <div class="rj-track">
+      <strong>Research / Lab Collaboration</strong>
+      <span>研究與實驗室合作</span>
+      <p>For university labs and research groups working on power electronics, thermal management, UAV propulsion, or robotic actuators.</p>
+    </div>
+  </div>
+
+  <div class="rj-note">
+    <strong>Current status｜目前狀態：</strong>
+    RobiChip is open to talent discussions, project-based collaboration, internship proposals,
+    and advisor conversations. Specific openings, compensation, scope, NDA, and schedule will be discussed case by case.
+    <br><br>
+    <strong>目前狀態：</strong>
+    羅比芯開放人才洽談、專案合作、實習提案與顧問討論。具體職缺、報酬、合作範圍、NDA 與時程，將依個案討論。
+  </div>
+</section>
++<section class="rj-build">
+  <style>
+    .rj-build {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34,211,238,0.25), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .rj-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rj-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rj-build h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rj-build h3 {
+      margin: 14px 0 24px;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rj-steps {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .rj-step {
+      background: rgba(255,255,255,0.075);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 22px;
+      padding: 18px 14px;
+      box-shadow: 0 16px 34px rgba(0,0,0,0.14);
+      text-align: center;
+    }
+
+    .rj-step strong {
+      display: block;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 1.3;
+      margin-bottom: 6px;
+      font-weight: 950;
+    }
+
+    .rj-step span {
+      display: block;
+      color: #b9c7da;
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .rj-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1120px) {
+      .rj-steps { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .rj-steps { grid-template-columns: 1fr; }
+      .rj-build { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rj-eyebrow">What You Will Build</div>
+  <h2>From Architecture to Real Machine Validation</h2>
+  <h3>從架構設計走到真實機器驗證</h3>
+
+  <div class="rj-steps">
+    <div class="rj-step">
+      <strong>RobiSoC</strong>
+      <span>Power SoC + hybrid substrate platform</span>
+    </div>
+
+    <div class="rj-step">
+      <strong>RobiDev</strong>
+      <span>driver board and design-in support</span>
+    </div>
+
+    <div class="rj-step">
+      <strong>RobiLab</strong>
+      <span>measurement, thermal and system validation</span>
+    </div>
+
+    <div class="rj-step">
+      <strong>RobiAgent</strong>
+      <span>AI-assisted engineering workflow</span>
+    </div>
+
+    <div class="rj-step">
+      <strong>RobiThrust</strong>
+      <span>UAV propulsion validation platform</span>
+    </div>
+
+    <div class="rj-step">
+      <strong>RobiTorque</strong>
+      <span>robotics actuator validation roadmap</span>
+    </div>
+  </div>
+
+  <div class="rj-note">
+    RobiChip is building a platform where chip design, thermal path, motor drive, measurement data,
+    AI-assisted engineering, and customer design-in are connected in one execution loop.
+    <br><br>
+    羅比芯正在建立一個平台，將晶片設計、熱路徑、馬達驅動、量測資料、AI 輔助工程與客戶導入串成同一個執行閉環。
+  </div>
+</section>
++<section class="rj-culture">
+  <style>
+    .rj-culture {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    .rj-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rj-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rj-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rj-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rj-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rj-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rj-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .rj-card {
+      background: #ffffff;
+      border: 1px solid rgba(37,99,235,0.12);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 230px;
+      box-shadow: 0 16px 34px rgba(15,23,42,0.07);
+    }
+
+    .rj-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #075985;
+      background: rgba(34,211,238,0.13);
+      border: 1px solid rgba(14,165,233,0.28);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rj-card h4 {
+      margin: 0 0 10px;
+      color: #06111f;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rj-card h5 {
+      margin: 0 0 14px;
+      color: #1e3a8a;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rj-card p {
+      margin: 0;
+      color: #5b6b80;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 1020px) {
+      .rj-grid,
+      .rj-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rj-culture { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rj-grid">
+    <div class="rj-title">
+      <div class="rj-eyebrow">How We Work</div>
+      <h2>Small Team, Real Data, Fast Learning</h2>
+      <h3>小團隊、真實數據、快速學習</h3>
+    </div>
+
+    <div class="rj-copy">
+      <p>
+        RobiChip is a deep-tech startup. We value people who can move between theory,
+        implementation, measurement, customer feedback, and business reality.
+      </p>
+      <p>
+        羅比芯是 deep-tech 新創。我們重視能在理論、實作、量測、客戶回饋與商業現實之間快速切換的人。
+      </p>
+    </div>
+  </div>
+
+  <div class="rj-card-grid">
+    <article class="rj-card">
+      <span class="rj-pill">Evidence-first</span>
+      <h4>Measure Before Overclaiming</h4>
+      <h5>先量測，再主張</h5>
+      <p>
+        We prefer real test data, clear assumptions, and engineering reports over vague claims.
+      </p>
+    </article>
+
+    <article class="rj-card">
+      <span class="rj-pill">System Thinking</span>
+      <h4>Chip to System</h4>
+      <h5>從晶片到系統</h5>
+      <p>
+        We connect silicon, package, board, thermal path, motor, fixture, and customer use case.
+      </p>
+    </article>
+
+    <article class="rj-card">
+      <span class="rj-pill">Ownership</span>
+      <h4>Build and Close the Loop</h4>
+      <h5>主動推進並完成閉環</h5>
+      <p>
+        We value builders who can define a problem, run experiments, document results, and drive next actions.
+      </p>
+    </article>
+
+    <article class="rj-card">
+      <span class="rj-pill">Integrity</span>
+      <h4>Clear Boundary, Clear Promise</h4>
+      <h5>清楚邊界，清楚承諾</h5>
+      <p>
+        We are careful about claims, IP boundaries, customer confidentiality, and partner commitments.
+      </p>
+    </article>
+  </div>
+</section>
++<section class="rj-student">
+  <style>
+    .rj-student {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34,211,238,0.25), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .rj-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rj-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rj-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rj-title h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rj-title h3 {
+      margin: 14px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rj-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rj-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .rj-card {
+      background: rgba(255,255,255,0.075);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 26px;
+      padding: 28px;
+      min-height: 250px;
+      box-shadow: 0 18px 38px rgba(0,0,0,0.16);
+    }
+
+    .rj-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #f2fdff;
+      background: rgba(34,211,238,0.26);
+      border: 1px solid rgba(101,241,255,0.56);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rj-card h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rj-card h5 {
+      margin: 0 0 14px;
+      color: #d9ecff;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rj-card p {
+      margin: 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 1020px) {
+      .rj-grid,
+      .rj-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rj-student { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rj-grid">
+    <div class="rj-title">
+      <div class="rj-eyebrow">Students & Young Engineers</div>
+      <h2>Learn by Building Real Power Systems</h2>
+      <h3>用真實動力系統學習工程</h3>
+    </div>
+
+    <div class="rj-copy">
+      <p>
+        RobiChip welcomes students and young engineers who want to learn from real measurement,
+        motor control, thermal validation, AI-assisted engineering, and customer-facing product development.
+      </p>
+      <p>
+        羅比芯歡迎想從真實量測、馬達控制、熱驗證、AI 輔助工程與客戶導向產品開發中學習的學生與年輕工程師。
+      </p>
+    </div>
+  </div>
+
+  <div class="rj-card-grid">
+    <article class="rj-card">
+      <span class="rj-pill">Power Electronics</span>
+      <h4>Motor Drive & Measurement</h4>
+      <h5>馬達驅動與量測</h5>
+      <p>
+        Learn voltage, current, RPM, thrust, torque, temperature, and system-level measurement through RobiDev and RobiLab.
+      </p>
+    </article>
+
+    <article class="rj-card">
+      <span class="rj-pill">AI Engineering</span>
+      <h4>RobiAgent Workflow</h4>
+      <h5>AI 輔助工程流程</h5>
+      <p>
+        Help organize engineering knowledge, technical documents, thermal pre-checks, layout review notes, and design-in workflows.
+      </p>
+    </article>
+
+    <article class="rj-card">
+      <span class="rj-pill">Robotics / UAV</span>
+      <h4>Application Validation</h4>
+      <h5>應用驗證</h5>
+      <p>
+        Participate in RobiThrust, RobiTorque, robotics actuator, UAV propulsion, and smart motion validation projects.
+      </p>
+    </article>
+  </div>
+</section>
++<section class="rj-cta">
+  <style>
+    .rj-cta {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    .rj-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .rj-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rj-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rj-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 1.06;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rj-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rj-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rj-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .rj-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(37,99,235,0.18);
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: #ffffff;
+      box-shadow: 0 12px 26px rgba(15,23,42,0.06);
+    }
+
+    .rj-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #ffffff;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37,99,235,0.22);
+    }
+
+    .rj-note {
+      margin-top: 22px;
+      color: #64748b;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .rj-note strong {
+      color: #06111f;
+      font-weight: 950;
+    }
+
+    @media (max-width: 900px) {
+      .rj-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rj-cta { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rj-grid">
+    <div class="rj-title">
+      <div class="rj-eyebrow">Join Us</div>
+      <h2>Apply, Collaborate, or Start a Talent Conversation</h2>
+      <h3>投遞職缺、提出合作，或開啟人才洽談</h3>
+    </div>
+
+    <div class="rj-copy">
+      <p>
+        Official job openings are listed on 104 Job Bank. For advisor, project collaboration,
+        internship, research collaboration, or roles not listed on 104, please contact RobiChip directly.
+      </p>
+      <p>
+        正式職缺請以 104 人力銀行公告為準。若您有技術顧問、專案合作、實習、研究合作，
+        或目前 104 尚未列出的合作想法，歡迎直接與羅比芯聯繫。
+      </p>
+
+      <div class="rj-buttons">
+        <a class="rj-btn primary" href="https://www.104.com.tw/company/1a2x6bnk3q#info06" target="_blank">
+          Apply via 104
+        </a>
+        <a class="rj-btn" href="mailto:contact@robichip.com">
+          Send Profile by Email
+        </a>
+        <a class="rj-btn" href="mailto:bd@robichip.com">
+          Project / Advisor Inquiry
+        </a>
+        <a class="rj-btn" href="https://www.robichip.com/robisoc" target="_blank">
+          RobiSoC
+        </a>
+        <a class="rj-btn" href="https://www.robichip.com/robilab" target="_blank">
+          RobiLab
+        </a>
+      </div>
+
+      <div class="rj-note">
+        <strong>Suggested email subject：</strong>
+        Join RobiChip｜Full-time / Advisor / Project / Internship / Research Collaboration.
+        Please include your resume or profile, portfolio or project links if available,
+        and a short note on your area of interest.
+        <br><br>
+        <strong>建議信件主旨：</strong>
+        Join RobiChip｜全職 / 顧問 / 專案 / 實習 / 研究合作。
+        請附上履歷或個人簡介、作品集或專案連結，並簡短說明感興趣的方向。
+      </div>
+    </div>
+  </div>
+</section>
++<footer class="robi-footer">
+  <style>
+    .robi-footer {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: #050b14;
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 42px 38px 26px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .robi-footer::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -120px;
+      top: -130px;
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 70%);
+      pointer-events: none;
+    }
+
+    .footer-wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.8fr 0.8fr 0.9fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .footer-brand h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+      font-weight: 950;
+    }
+
+    .footer-brand h3 {
+      margin: 8px 0 0;
+      color: #d9ecff;
+      font-size: 18px;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+      font-weight: 850;
+    }
+
+    .footer-brand p {
+      margin: 16px 0 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    .footer-col h4 {
+      margin: 0 0 13px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-link {
+      display: block;
+      color: #d9ecff;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.55;
+      margin: 0 0 9px;
+      font-weight: 700;
+    }
+
+    .footer-link:hover {
+      color: #65f1ff;
+    }
+
+    .footer-info {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer-address h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 17px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      font-weight: 900;
+    }
+
+    .footer-address p {
+      margin: 0 0 8px;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .footer-address a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .footer-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .footer-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(101, 241, 255, 0.09);
+      border: 1px solid rgba(101, 241, 255, 0.20);
+      color: #dffcff;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .footer-bottom {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+      justify-content: space-between;
+      color: #8fa1b8;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-bottom a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-info {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-badges {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .robi-footer {
+        padding: 34px 24px 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        display: block;
+      }
+
+      .footer-bottom div {
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>RobiChip Technology Co., Ltd.</h2>
+        <h3>羅比芯科技股份有限公司</h3>
+        <p>
+          Power SoC platform for intelligent machines. Robichip integrates Power SoC,
+          RobiDev, RobiThrust, RobiAgent, and validation workflows for robotics,
+          UAVs, and high-power-density motion systems.
+        </p>
+        <p>
+          羅比芯聚焦 Power + AI + Robotics，建構從 Power SoC、開發驗證、
+          無人機推進平台到 AI-assisted design-in 的智慧動力半導體平台。
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a class="footer-link" href="https://www.robichip.com/robisoc" target="_blank">RobiSoC</a>
+        <a class="footer-link" href="https://www.robichip.com/robidev" target="_blank">RobiDev</a>
+        <a class="footer-link" href="https://www.robichip.com/robithrust" target="_blank">RobiThrust</a>
+        <a class="footer-link" href="https://www.robichip.com/robitorque" target="_blank">RobiTorque</a>
+        <a class="footer-link" href="https://www.robichip.com/robiagent" target="_blank">RobiAgent</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a class="footer-link" href="https://www.robichip.com/technology-insights" target="_blank">Technology Insights</a>
+        <a class="footer-link" href="https://www.robichip.com/news-events" target="_blank">News & Events</a>
+        <a class="footer-link" href="https://www.robichip.com/robilab" target="_blank">RobiLab Validation</a>
+        <a class="footer-link" href="https://www.youtube.com/channel/UCqp-CDSVPCX8TfYT_aVScpg" target="_blank">Youtube channel</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Partnership</a>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Technical Discussion</a>
+        <a class="footer-link" href="https://www.robichip.com/join-us" target="_blank">Join Us</a>
+        <a class="footer-link" href="tel:+886277015728">+886-2-7701-5728</a>
+        <a class="footer-link" href="mailto:contact@robichip.com">contact@robichip.com</a>
+        <a class="footer-link" href="mailto:bd@robichip.com">bd@robichip.com</a>
+      </div>
+    </div>
+
+    <div class="footer-info">
+      <div class="footer-address">
+        <h4>Company Information｜公司資訊</h4>
+        <p><strong>RobiChip Technology Co., Ltd.｜羅比芯科技股份有限公司</strong></p>
+
+        <p>
+          National Taiwan University of Science and Technology, International Building 11F, Room 1105<br>
+          No. 43, Sec. 4, Keelung Rd., Da’an Dist., Taipei City, Taiwan
+        </p>
+
+        <p>
+          台北市大安區基隆路四段 43 號<br>
+          國立臺灣科技大學 國際大樓 11F 1105 室
+        </p>
+
+        <p>
+          Tel｜電話：
+          <a href="tel:+886277015728">+886-2-7701-5728</a><br>
+          General Contact｜一般聯絡：
+          <a href="mailto:contact@robichip.com">contact@robichip.com</a><br>
+          Business Development｜商務合作：
+          <a href="mailto:bd@robichip.com">bd@robichip.com</a>
+        </p>
+      </div>
+
+      <div class="footer-badges">
+        <span class="footer-badge">Power SoC</span>
+        <span class="footer-badge">Robotics</span>
+        <span class="footer-badge">UAV</span>
+        <span class="footer-badge">Advanced Packaging</span>
+        <span class="footer-badge">Thermal Path</span>
+        <span class="footer-badge">Design-in</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        © 2026 RobiChip Technology Co., Ltd. All rights reserved.
+      </div>
+      <div>
+        Public website content is for general information only. Detailed specifications are subject to official release, NDA, or partner discussion.
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- JOIN_US_SOURCE_BLOCKS_END -->

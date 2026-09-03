@@ -56,6 +56,9 @@
       <div><strong>${title}</strong><span>${note}</span></div>
     </div>`;
 
+  // Each frozen Google-Sites page is copied as its original custom-HTML
+  // blocks in a static asset, keeping the shared renderer compact.
+  const sourceRoute = (source) => `<div class="google-source-route" data-source-route="${source}"></div>`;
   const hero = ({ eyebrow, title, zh, lead, sublead, image, caption, actions = [], metrics = [] }) => `
     <section class="hero">
       <div class="wrap hero-grid">
@@ -654,7 +657,7 @@
     ${section("Collaboration Path", "From First Discussion to Joint Validation", "從初步討論到共同驗證<br>Partnership should move through clear, verifiable outputs rather than staying at slide exchange. Each stage should define scope, owner, validation method, and next decision point.<br><br>合作不應停留在交換簡報，而應逐步形成可驗證產出。每個階段都應定義 scope、owner、validation method 與下一個決策點。", `${flow(["Mutual Understanding<br><small>company / roadmap exchange</small>","Technical Alignment<br><small>interface, power stage, thermal path</small>","Pilot Definition<br><small>kit, actuator, UAV, packaging scope</small>","Joint Validation<br><small>RobiLab measurement, thermal test</small>","Go-to-market Option<br><small>demo, co-branding, design-in</small>"])}<div class="grid three" style="margin-top:20px"><div class="callout"><h3>Public Materials</h3><p>Website pages, public technology notes, high-level product descriptions, public event materials, and non-confidential partnership introduction.</p></div><div class="callout"><h3>NDA Materials</h3><p>Detailed datasheets, raw validation data, design files, DFM discussions, pilot planning, partner-specific technical reviews, and sample exchange details.</p></div><div class="callout"><h3>Joint Improvements</h3><p>DFM rules, control-board variants, package improvements, process windows, reference designs, field-of-use, ownership, license, and publication terms should be defined under JDA / SCA / pilot MOU.</p></div></div>`, "tint")}
     ${section("Start a Discussion", "Let’s Define the First Pilot Together", "讓我們一起定義第一個合作 pilot<br>Whether you are a system company, MCU partner, packaging / material partner, university lab, or developer ecosystem partner, the best next step is to define one clear technical pilot with scope, owner, validation method, and timeline.<br><br>無論你是系統廠、MCU 夥伴、封裝材料夥伴、學研實驗室或開發者生態夥伴，最好的下一步是定義一個清楚的 technical pilot：scope、owner、驗證方法與時程。", `<div class="actions">${link(BD,"bd@robichip.com","btn primary")}${link(CONTACT,"contact@robichip.com","btn")}${link("/robisoc","RobiSoC","btn")}${link("/technology-insights","Technology Insights","btn")}</div><p class="public-note">Detailed technical materials, sample exchange, DFM review, and partner-specific discussions may require NDA.</p>`, "tint")}`;
 
-  const joinPage = () => `
+  const legacyJoinPage = () => `
     ${hero({eyebrow:"Join RobiChip",title:"Build the Power Platform for Intelligent Machines",zh:"加入羅比芯，一起打造智慧機器的動力平台",lead:"RobiChip is building a high-power-density smart motion platform for robotics, drones, actuators, and next-generation intelligent machines.",sublead:"羅比芯正在打造面向機器人、無人機、致動器與下一代智慧機器的高功率密度智慧動力平台。",metrics:[["Power SoC","Robotics"],["UAV","Thermal Architecture"],["RobiLab","RobiAgent"]],actions:[{href:CONTACT,label:"Contact RobiChip"},{href:BD,label:"Project / Partnership Inquiry"}]})}
     ${section("Why Join RobiChip","Work on the Hardest Part of Intelligent Machines","投入智慧機器最難、也最關鍵的動力瓶頸<br>The next bottleneck in robotics and UAV systems is not only control algorithm. It is power integration, thermal path, packaging, validation, and manufacturability.<br><br>機器人與無人機的下一個瓶頸，不只是控制演算法，而是功率整合、熱路徑、封裝、驗證與可製造性。",cards([{tag:"Deep Tech",title:"Power SoC + Thermal Architecture",text:"功率晶片與熱架構：high-power-density integration across chip, board, package, and system heat path."},{tag:"Real Machines",title:"Robotics and UAV Applications",text:"機器人與無人機應用：technology connecting drones, actuators, robot joints, servo modules, and smart motion systems."},{tag:"Validation",title:"Measure, Calibrate, Improve",text:"量測、校準、改善：turn engineering assumptions into measured data through RobiDev, RobiLab, RobiThrust, and RobiTorque workflows."},{tag:"Startup",title:"Build from 0 to 1",text:"從 0 到 1 建構平台：a small team where architecture, product, validation, customer feedback, and partnerships are tightly connected."}],"four"),"tint")}
     ${section("Who We Are Looking For","Builders Across Chip, Power, Thermal, AI, and Systems","尋找能跨晶片、電力、熱、AI 與系統的人才<br>We welcome full-time candidates, senior advisors, project collaborators, research partners, and students who want to work on real power-system challenges.<br><br>我們歡迎全職候選人、資深顧問、專案合作夥伴、研究合作單位，以及想投入真實動力系統問題的學生。",cards([{tag:"Engineering Core",title:"IC / Power Electronics / Motor Drive",text:"晶片、電力電子與馬達驅動<br><br>Power IC / power electronics · BLDC / PMSM control · Gate driver / sensing / protection · PCB / module design and bring-up"},{tag:"Thermal & Validation",title:"Thermal / Packaging / RobiLab",text:"熱管理、封裝與量測驗證<br><br>Thermal architecture · Packaging / DFM / reliability · Dynamic load and T-N curve · Measurement and report workflow"},{tag:"System & AI",title:"Robotics / UAV / RobiAgent",text:"機器人、無人機與 AI 輔助工程<br><br>Robotics actuator / UAV propulsion · AI-assisted engineering workflow · Simulation / CAE / DOE · Customer pilot and field feedback"}]),"tint")}
@@ -663,6 +666,8 @@
     ${section("How We Work","Small Team, Real Data, Fast Learning","小團隊、真實數據、快速學習<br>RobiChip is a deep-tech startup. We value people who can move between theory, implementation, measurement, customer feedback, and business reality.<br><br>羅比芯是 deep-tech 新創。我們重視能在理論、實作、量測、客戶回饋與商業現實之間快速切換的人。",cards([{tag:"Evidence-first",title:"Measure Before Overclaiming",text:"先量測，再主張：real test data, clear assumptions, and engineering reports over vague claims."},{tag:"System Thinking",title:"Chip to System",text:"從晶片到系統：connect silicon, package, board, thermal path, motor, fixture, and customer use case."},{tag:"Ownership",title:"Build and Close the Loop",text:"主動推進並完成閉環：define a problem, run experiments, document results, and drive next actions."},{tag:"Integrity",title:"Clear Boundary, Clear Promise",text:"清楚邊界，清楚承諾：careful about claims, IP boundaries, customer confidentiality, and partner commitments."}],"four"))}
     ${section("Students & Young Engineers","Learn by Building Real Power Systems","用真實動力系統學習工程<br>RobiChip welcomes students and young engineers who want to learn from real measurement, motor control, thermal validation, AI-assisted engineering, and customer-facing product development.<br><br>羅比芯歡迎想從真實量測、馬達控制、熱驗證、AI 輔助工程與客戶導向產品開發中學習的學生與年輕工程師。",cards([{tag:"Power Electronics",title:"Motor Drive & Measurement",text:"馬達驅動與量測：voltage, current, RPM, thrust, torque, temperature, and system-level measurement through RobiDev and RobiLab."},{tag:"AI Engineering",title:"RobiAgent Workflow",text:"AI 輔助工程流程：engineering knowledge, technical documents, thermal pre-checks, layout review notes, and design-in workflows."},{tag:"Robotics / UAV",title:"Application Validation",text:"應用驗證：RobiThrust, RobiTorque, robotics actuator, UAV propulsion, and smart motion validation projects."}],"three"),"tint")}
     ${section("Join Us","Apply, Collaborate, or Start a Talent Conversation","投遞職缺、提出合作，或開啟人才洽談<br>Official job openings are listed on 104 Job Bank. For advisor, project collaboration, internship, research collaboration, or roles not listed on 104, please contact RobiChip directly.<br><br>正式職缺請以 104 人力銀行公告為準。若您有技術顧問、專案合作、實習、研究合作，或目前 104 尚未列出的合作想法，歡迎直接與羅比芯聯繫。",`<div class="actions">${link("https://www.104.com.tw/company/1a2x6bnk3q#info06","Apply via 104","btn primary")}${link(CONTACT,"Send Profile by Email","btn")}${link(BD,"Project / Advisor Inquiry","btn")}${link("/robisoc","RobiSoC","btn")}${link("/robilab","RobiLab","btn")}</div><p class="public-note"><strong>Suggested email subject：</strong> Join RobiChip｜Full-time / Advisor / Project / Internship / Research Collaboration. Please include your resume or profile, portfolio or project links if available, and a short note on your area of interest.<br><strong>建議信件主旨：</strong> Join RobiChip｜全職 / 顧問 / 專案 / 實習 / 研究合作。請附上履歷或個人簡介、作品集或專案連結，並簡短說明感興趣的方向。</p>`,"tint")}`;
+
+  const joinPage = () => sourceRoute('/assets/source/join-us.html');
 
   const privacyPage = () => `
     ${hero({eyebrow:'Privacy',title:'Privacy Policy',zh:'隱私權政策',lead:'This page is retained from the Google Sites information architecture as a migration-ready policy location.',sublead:'正式上線前請由羅比芯確認最終隱私權條款、資料處理範圍與第三方服務揭露。',actions:[{href:CONTACT,label:'Privacy inquiry'}]})}
@@ -691,7 +696,7 @@
     '/robilab': {title:'RobiLab', render:robilabPage},
     '/news-events': {title:'News & Events', render:newsPage},
     '/partnership': {title:'Partnership', render:partnershipPage},
-    '/join-us': {title:'Join Us', render:joinPage},
+    '/join-us': {title:'Join Us', render:joinPage, reference:true},
     '/privacy-policy': {title:'Privacy Policy', render:privacyPage},
     '/private-policy': {title:'Private Policy', render:privacyPage, noindex:true}
   };
@@ -793,7 +798,8 @@
   ld.textContent = JSON.stringify(structuredData);
   document.head.appendChild(ld);
 
-  site.innerHTML = `${nav()}<main id="main" class="page">${page.render()}</main>${footer()}`;
+  document.body.classList.toggle('google-reference', Boolean(page.reference));
+  site.innerHTML = `${nav()}<main id="main" class="page${page.reference ? ' reference-page' : ''}">${page.render()}</main>${page.reference ? '' : footer()}`;
 
   if (BASE_PATH) {
     site.querySelectorAll('[href^="/"], [src^="/"]').forEach((element) => {
@@ -803,6 +809,27 @@
         element.setAttribute(attribute, `${BASE_PATH}${value}`);
       }
     });
+  }
+
+  const sourceMount = site.querySelector('[data-source-route]');
+  if (sourceMount) {
+    const source = sourceMount.getAttribute('data-source-route');
+    const url = BASE_PATH && source?.startsWith('/') ? `${BASE_PATH}${source}` : source;
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) throw new Error(`Unable to load ${source}`);
+        return response.text();
+      })
+      .then((html) => {
+        sourceMount.innerHTML = html;
+        [...sourceMount.children].forEach((block) => {
+          const wrapper = document.createElement('div');
+          wrapper.className = 'google-source-block';
+          block.before(wrapper);
+          wrapper.append(block);
+        });
+      })
+      .catch(() => { sourceMount.innerHTML = '<p class="source-load-error">Source content is temporarily unavailable.</p>'; });
   }
 
   const toggle = document.querySelector('.nav-toggle');
