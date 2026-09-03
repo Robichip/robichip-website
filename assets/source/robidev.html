@@ -1,0 +1,3052 @@
+<section class="rd-hero">
+  <style>
+    .rd-hero{
+      font-family: Inter,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34,211,238,.25), transparent 34%),
+                  linear-gradient(135deg,#050b14 0%,#06111f 48%,#0a1f3a 100%);
+      color:#f8fbff;
+      border-radius:28px;
+      padding:54px 40px;
+      box-sizing:border-box;
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .rd-grid{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:34px;
+      align-items:end;
+    }
+    .rd-eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:#65f1ff;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+    .rd-eyebrow::before{
+      content:"";
+      width:30px;height:2px;
+      background:linear-gradient(90deg,#65f1ff,transparent);
+      display:inline-block;
+    }
+    .rd-hero h1{
+      margin:0;
+      color:#fff;
+      font-size:clamp(42px,6vw,74px);
+      line-height:1.03;
+      letter-spacing:-.06em;
+      font-weight:950;
+    }
+    .rd-hero h2{
+      margin:18px 0 0;
+      color:#d9ecff;
+      font-size:clamp(24px,3vw,36px);
+      line-height:1.25;
+      letter-spacing:-.04em;
+      font-weight:850;
+    }
+    .rd-copy p{
+      margin:0 0 12px;
+      color:#b9c7da;
+      font-size:16px;
+      line-height:1.75;
+    }
+    .rd-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:24px;
+    }
+    .rd-tag{
+      padding:8px 11px;
+      border-radius:999px;
+      border:1px solid rgba(101,241,255,.36);
+      background:rgba(101,241,255,.14);
+      color:#eafcff;
+      font-size:12px;
+      font-weight:850;
+      line-height:1;
+    }
+    .rd-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+    }
+    .rd-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:13px 18px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      color:#f8fbff;
+      text-decoration:none;
+      font-weight:900;
+      font-size:14px;
+      background:rgba(255,255,255,.08);
+    }
+    .rd-btn.primary{
+      background:linear-gradient(135deg,#2563eb,#22d3ee);
+      color:#031120;
+      border:0;
+      box-shadow:0 14px 28px rgba(37,99,235,.28);
+    }
+    @media (max-width:900px){
+      .rd-grid{grid-template-columns:1fr;}
+    }
+    @media (max-width:560px){
+      .rd-hero{padding:36px 24px;}
+    }
+  </style>
+
+  <div class="rd-grid">
+    <div>
+      <div class="rd-eyebrow">RobiDev</div>
+      <h1>Design-in & Validation Platform</h1>
+      <h2>RobiSoC 的設計導入與驗證平台</h2>
+    </div>
+
+    <div class="rd-copy">
+      <p>
+        RobiDev transforms RobiSoC from a Power SoC device into a measurable,
+        configurable, and customer-ready design-in platform.
+      </p>
+      <p>
+        RobiDev 不只是開發板，而是把 RobiSoC 從單一 Power SoC 元件，
+        轉化為可量測、可配置、可驗證、可導入客戶專案的平台。
+      </p>
+
+      <div class="rd-tags">
+        <span class="rd-tag">RobiSoC</span>
+        <span class="rd-tag">Gen.1</span>
+        <span class="rd-tag">Gen.2</span>
+        <span class="rd-tag">Motor Control</span>
+        <span class="rd-tag">Thermal Validation</span>
+        <span class="rd-tag">Design-in</span>
+      </div>
+
+      <div class="rd-buttons">
+        <a class="rd-btn primary" href="mailto:bd@robichip.com">Request Evaluation</a>
+        <a class="rd-btn" href="https://www.robichip.com/robisoc" target="_blank">Explore RobiSoC</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rd-overview">
+  <style>
+    .rd-overview{
+      font-family: Inter,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
+      background:linear-gradient(135deg,#ffffff 0%,#f7fbff 48%,#eef6ff 100%);
+      color:#071426;
+      border-radius:28px;
+      padding:50px 38px;
+      box-sizing:border-box;
+      border:1px solid rgba(37,99,235,.12);
+    }
+    .rd-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:34px;
+      align-items:end;
+    }
+    .rd-eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:#2563eb;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+    .rd-eyebrow::before{
+      content:"";
+      width:30px;height:2px;
+      background:linear-gradient(90deg,#2563eb,#22d3ee);
+      display:inline-block;
+    }
+    .rd-title h2{
+      margin:0;
+      color:#06111f;
+      font-size:clamp(32px,4.8vw,56px);
+      line-height:1.08;
+      letter-spacing:-.055em;
+      font-weight:950;
+    }
+    .rd-title h3{
+      margin:14px 0 0;
+      color:#1e3a8a;
+      font-size:clamp(22px,3vw,32px);
+      line-height:1.28;
+      letter-spacing:-.04em;
+      font-weight:850;
+    }
+    .rd-copy p{
+      margin:0 0 12px;
+      color:#526174;
+      font-size:16px;
+      line-height:1.75;
+    }
+    .rd-points{
+      margin-top:28px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+    .rd-point{
+      background:#fff;
+      border:1px solid rgba(37,99,235,.12);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 16px 34px rgba(15,23,42,.07);
+    }
+    .rd-point h4{
+      margin:0 0 10px;
+      color:#06111f;
+      font-size:20px;
+      line-height:1.25;
+      font-weight:950;
+      letter-spacing:-.03em;
+    }
+    .rd-point p{
+      margin:0;
+      color:#5b6b80;
+      font-size:14px;
+      line-height:1.65;
+    }
+    @media (max-width:980px){
+      .rd-grid,.rd-points{grid-template-columns:1fr;}
+    }
+    @media (max-width:560px){
+      .rd-overview{padding:34px 22px;}
+    }
+  </style>
+
+  <div class="rd-grid">
+    <div class="rd-title">
+      <div class="rd-eyebrow">Platform Overview</div>
+      <h2>What is RobiDev?</h2>
+      <h3>RobiDev 是什麼？</h3>
+    </div>
+
+    <div class="rd-copy">
+      <p>
+        RobiDev is the board-level platform that bridges RobiSoC device technology
+        with system-level validation, motor integration, thermal review, and customer design-in.
+      </p>
+      <p>
+        RobiDev 是承接 RobiSoC 與系統驗證之間的 board-level 平台，
+        用來完成馬達整合、熱檢視、控制介面驗證與客戶導入前評估。
+      </p>
+    </div>
+  </div>
+
+  <div class="rd-points">
+    <article class="rd-point">
+      <h4>Evaluation</h4>
+      <p>
+        Supports early feasibility review, motor-control evaluation,
+        electrical interface testing, and firmware bring-up.
+      </p>
+    </article>
+
+    <article class="rd-point">
+      <h4>Validation</h4>
+      <p>
+        Supports thermal-path review, dynamic-load testing,
+        measurement correlation, and board-to-system validation.
+      </p>
+    </article>
+
+    <article class="rd-point">
+      <h4>Design-in</h4>
+      <p>
+        Shortens the path from concept to customer design-in,
+        especially for robotics, UAV, actuator, and motion-system developers.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section id="robidev-evaluation-options" class="rd-buy-options">
+  <style>
+    .rd-buy-options,
+    .rd-buy-options * {
+      box-sizing: border-box;
+    }
+
+    .rd-buy-options {
+      font-family:
+        Inter,
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        Arial,
+        sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 91% 8%,
+          rgba(34, 211, 238, 0.10),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #f9fcff 0%,
+          #f3f8ff 55%,
+          #edf5ff 100%
+        );
+
+      color: #071426;
+
+      border: 1px solid rgba(37, 99, 235, 0.18);
+      border-radius: 28px;
+
+      padding: 50px 38px;
+    }
+
+    .rd-buy-head {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rd-buy-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-bottom: 16px;
+
+      color: #2563eb;
+
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .rd-buy-eyebrow::before {
+      content: "";
+
+      display: inline-block;
+
+      width: 30px;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #2563eb,
+          #22d3ee
+        );
+    }
+
+    .rd-buy-title h2 {
+      margin: 0;
+
+      color: #071426;
+
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rd-buy-title h3 {
+      margin: 14px 0 0;
+
+      color: #1e3a8a;
+
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rd-buy-intro p {
+      margin: 0 0 12px;
+
+      color: #526174;
+
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rd-buy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+
+      margin-top: 30px;
+    }
+
+    .rd-buy-card {
+      display: flex;
+      flex-direction: column;
+
+      min-height: 500px;
+      padding: 28px;
+
+      background: #ffffff;
+
+      border: 1px solid rgba(37, 99, 235, 0.14);
+      border-radius: 24px;
+
+      box-shadow:
+        0 16px 34px rgba(15, 23, 42, 0.07);
+    }
+
+    .rd-buy-card.featured {
+      border-color: rgba(14, 165, 233, 0.36);
+
+      background:
+        linear-gradient(
+          155deg,
+          #eef8ff 0%,
+          #ffffff 72%
+        );
+
+      box-shadow:
+        0 18px 38px rgba(37, 99, 235, 0.11);
+    }
+
+    .rd-buy-label {
+      display: inline-flex;
+      width: fit-content;
+
+      padding: 8px 11px;
+
+      border: 1px solid rgba(14, 165, 233, 0.28);
+      border-radius: 999px;
+
+      color: #075985;
+      background: rgba(34, 211, 238, 0.13);
+
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .rd-buy-status {
+      width: fit-content;
+
+      margin: 3px 0 17px;
+      padding: 7px 10px;
+
+      border-radius: 999px;
+
+      color: #365978;
+      background: #edf4fa;
+
+      font-size: 11px;
+      font-weight: 850;
+    }
+
+    .rd-buy-status.design-in {
+      color: #075985;
+      background: #e1f4ff;
+    }
+
+    .rd-buy-card h4 {
+      margin: 18px 0 8px;
+
+      color: #071426;
+
+      font-size: clamp(25px, 3.1vw, 36px);
+      line-height: 1.12;
+      letter-spacing: -0.05em;
+      font-weight: 950;
+    }
+
+    .rd-buy-card h5 {
+      margin: 0 0 16px;
+
+      color: #1e3a8a;
+
+      font-size: 18px;
+      line-height: 1.4;
+      font-weight: 850;
+    }
+
+    .rd-buy-card p {
+      margin: 0 0 12px;
+
+      color: #526174;
+
+      font-size: 15px;
+      line-height: 1.72;
+    }
+
+    .rd-buy-list {
+      display: grid;
+      gap: 8px;
+
+      margin: 16px 0 24px;
+    }
+
+    .rd-buy-list div {
+      padding: 10px 12px;
+
+      color: #435268;
+      background: rgba(37, 99, 235, 0.055);
+
+      border: 1px solid rgba(37, 99, 235, 0.10);
+      border-radius: 14px;
+
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 750;
+    }
+
+    .rd-buy-action {
+      margin-top: auto;
+    }
+
+    .rd-buy-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 46px;
+      padding: 13px 18px;
+
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #2563eb,
+          #0ea5e9
+        );
+
+      border-radius: 999px;
+
+      text-align: center;
+      text-decoration: none;
+
+      font-size: 14px;
+      font-weight: 900;
+
+      box-shadow:
+        0 14px 28px rgba(37, 99, 235, 0.22);
+
+      transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+    }
+
+    .rd-buy-btn:hover {
+      transform: translateY(-1px);
+
+      box-shadow:
+        0 18px 32px rgba(37, 99, 235, 0.28);
+    }
+
+    .rd-buy-btn:focus-visible {
+      outline: 3px solid rgba(37, 99, 235, 0.24);
+      outline-offset: 3px;
+    }
+
+    .rd-thrust-strip {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 26px;
+      align-items: center;
+
+      margin-top: 18px;
+      padding: 22px 24px;
+
+      background: rgba(37, 99, 235, 0.06);
+
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 20px;
+    }
+
+    .rd-thrust-strip strong {
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #071426;
+
+      font-size: 17px;
+      line-height: 1.4;
+      font-weight: 900;
+    }
+
+    .rd-thrust-strip p {
+      margin: 0;
+
+      color: #526174;
+
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .rd-thrust-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .rd-thrust-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 44px;
+      padding: 12px 16px;
+
+      border: 1px solid rgba(15, 39, 68, 0.16);
+      border-radius: 999px;
+
+      color: #ffffff;
+      background: #102944;
+
+      text-decoration: none;
+
+      font-size: 14px;
+      font-weight: 900;
+      white-space: nowrap;
+
+      transition:
+        transform 0.18s ease,
+        background 0.18s ease;
+    }
+
+    .rd-thrust-link:hover {
+      transform: translateY(-1px);
+      background: #173b61;
+    }
+
+    .rd-buy-terminology {
+      margin-top: 18px;
+      padding: 16px 18px;
+
+      color: #536579;
+      background: rgba(232, 244, 255, 0.78);
+
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 16px;
+
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .rd-buy-terminology strong {
+      color: #173b68;
+    }
+
+    .rd-buy-notice {
+      margin-top: 14px;
+      padding: 16px 18px;
+
+      color: #64748b;
+      background: rgba(255, 255, 255, 0.75);
+
+      border: 1px solid rgba(37, 99, 235, 0.10);
+      border-radius: 16px;
+
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 900px) {
+      .rd-buy-head,
+      .rd-buy-grid,
+      .rd-thrust-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .rd-thrust-links {
+        justify-content: flex-start;
+      }
+
+      .rd-buy-card {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .rd-buy-options {
+        padding: 36px 24px;
+        border-radius: 22px;
+      }
+
+      .rd-buy-card {
+        padding: 24px;
+      }
+
+      .rd-buy-card p,
+      .rd-thrust-strip p {
+        font-size: 15px;
+      }
+
+      .rd-buy-btn,
+      .rd-thrust-link {
+        width: 100%;
+      }
+
+      .rd-thrust-links {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <div class="rd-buy-head">
+
+    <div class="rd-buy-title">
+
+      <div class="rd-buy-eyebrow">
+        Purchase & Evaluation Options
+      </div>
+
+      <h2>
+        Choose Your RobiDev Evaluation & Design-in Path
+      </h2>
+
+      <h3>
+        選擇分離式參考平台或高功率密度 Design-in 組態
+      </h3>
+
+    </div>
+
+    <div class="rd-buy-intro">
+
+      <p>
+        Start with RobiDev Discrete for early motor-control development
+        and reference validation, or select RobiDev High-Density for
+        RobiSoC evaluation, compact power-stage integration, thermal review,
+        and customer-specific design-in.
+      </p>
+
+      <p>
+        可使用 RobiDev Discrete 進行早期馬達控制開發與參考驗證；
+        若需要 RobiSoC 評估、高功率密度功率級、小型化設計、
+        熱路徑檢視或客戶專案導入，則可選擇 RobiDev High-Density。
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="rd-buy-grid">
+
+    <!-- RobiDev Discrete -->
+    <article class="rd-buy-card">
+
+      <span class="rd-buy-label">
+        Reference & Validation Platform
+      </span>
+
+      <h4>
+        RobiDev Discrete
+      </h4>
+
+      <h5>
+        6-Layer Discrete Reference & Validation Platform<br>
+        六層分離式參考與驗證平台
+      </h5>
+
+      <div class="rd-buy-status">
+        Standard Reference Configuration
+      </div>
+
+      <p>
+        Designed for early BLDC / PMSM evaluation, firmware bring-up,
+        engineering education, controller development, and application
+        feasibility testing.
+      </p>
+
+      <p>
+        適用於 BLDC／PMSM 早期評估、韌體 bring-up、工程教育、
+        控制器開發與應用可行性測試。
+      </p>
+
+      <div class="rd-buy-list">
+        <div>RobiDev Discrete six-layer validation board</div>
+        <div>Standard BLDC / PMSM motor-control reference configuration</div>
+        <div>Basic technical documentation and setup guidance</div>
+        <div>Initial motor and application review</div>
+        <div>Availability subject to quotation and lead time</div>
+      </div>
+
+      <div class="rd-buy-action">
+        <a
+          class="rd-buy-btn"
+          href="mailto:bd@robichip.com?subject=RobiDev%20Discrete%20Reference%20and%20Validation%20Platform%20Quotation&body=Company%3A%0AContact%20Person%3A%0AApplication%3A%0AMotor%20Type%3A%0ARated%20Voltage%3A%0ARated%20Current%3A%0AControl%20Requirement%3A%0AQuantity%3A%0ATarget%20Schedule%3A%0AAdditional%20Requirements%3A"
+        >
+          Request Discrete Platform Quote
+        </a>
+      </div>
+
+    </article>
+
+    <!-- RobiDev High-Density -->
+    <article class="rd-buy-card featured">
+
+      <span class="rd-buy-label">
+        High-Density Evaluation & Design-in
+      </span>
+
+      <h4>
+        RobiDev High-Density
+      </h4>
+
+      <h5>
+        RobiSoC Evaluation & High-Density Motor-Drive Design-in Platform<br>
+        RobiSoC 高功率密度評估與 Design-in 平台
+      </h5>
+
+      <div class="rd-buy-status design-in">
+        Engineering Review Required
+      </div>
+
+      <p>
+        For projects requiring RobiSoC evaluation, a specific MCU or
+        controller, firmware integration, compact power-stage design,
+        motor matching, communication interfaces, board-layout review,
+        or thermal-path engineering.
+      </p>
+
+      <p>
+        適用於需要 RobiSoC 評估、特定 MCU／控制器、韌體整合、
+        小型化功率級、馬達匹配、通訊介面、板級設計或熱路徑工程的專案。
+      </p>
+
+      <div class="rd-buy-list">
+        <div>RobiSoC / RC100 evaluation and architecture discussion</div>
+        <div>Standard or customer-specific controller configuration</div>
+        <div>PWM / SPI / UART / encoder interface review</div>
+        <div>Motor parameters, firmware, and protection integration</div>
+        <div>PCB, aluminum substrate, and thermal-path support</div>
+      </div>
+
+      <div class="rd-buy-action">
+        <a
+          class="rd-buy-btn"
+          href="mailto:bd@robichip.com?subject=RobiDev%20High-Density%20Evaluation%20and%20Design-in%20Review&body=Company%3A%0AContact%20Person%3A%0AApplication%3A%0ATarget%20Motor%3A%0ADC%20Bus%3A%0ATarget%20Power%3A%0AMCU%20or%20Controller%3A%0ACommunication%20Interface%3A%0AFirmware%20Requirement%3A%0AThermal%20Requirement%3A%0ATarget%20Schedule%3A%0AAdditional%20Requirements%3A"
+        >
+          Request High-Density Review
+        </a>
+      </div>
+
+    </article>
+
+  </div>
+
+  <div class="rd-thrust-strip">
+
+    <div>
+
+      <strong>
+        Need UAV Propulsion Validation?｜需要無人機推進驗證？
+      </strong>
+
+      <p>
+        Combine RobiDev with RobiThrust for motor-driver-propeller matching,
+        thrust measurement, input-power observation, efficiency analysis,
+        and thermal validation.
+        可將 RobiDev 與 RobiThrust 整合，用於馬達、驅動器與螺旋槳匹配、
+        推力量測、輸入功率、效率分析及熱驗證。
+      </p>
+
+    </div>
+
+    <div class="rd-thrust-links">
+
+      <a
+        class="rd-thrust-link"
+        href="mailto:bd@robichip.com?subject=RobiThrust%20%2B%20RobiDev%20Integration%20Bundle%20Review&body=Company%3A%0AContact%20Person%3A%0AUAV%20Application%3A%0ATarget%20Thrust%3A%0AMotor%3A%0APropeller%3A%0ADC%20Bus%3A%0ARobiDev%20Configuration%3A%0AMeasurement%20Scope%3A%0ATarget%20Schedule%3A%0AAdditional%20Requirements%3A"
+      >
+        Configure Integration Bundle
+      </a>
+
+      <a
+        class="rd-thrust-link"
+        href="https://www.robichip.com/robithrust"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore RobiThrust
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="rd-buy-terminology">
+
+    <strong>Terminology note｜名詞說明：</strong>
+
+    RobiDev platforms use function-based product names:
+    RobiDev Discrete and RobiDev High-Density.
+    These names describe evaluation and design-in configurations
+    and do not correspond to Propulsion Gen.1, Gen.2, or Gen.3.
+
+    <br><br>
+
+    RobiDev 對外採用功能型產品名稱：
+    RobiDev Discrete 與 RobiDev High-Density。
+    這些名稱代表不同的評估與 Design-in 配置，
+    並非 Propulsion Gen.1、Gen.2 或 Gen.3 的推進架構世代。
+
+  </div>
+
+  <div class="rd-buy-notice">
+
+    RobiDev products are currently supplied on a quotation and
+    engineering-review basis. Final configuration, pricing, lead time,
+    documentation, firmware scope, validation support, shipping,
+    and warranty will be confirmed in the formal quotation.
+
+    <br><br>
+
+    RobiDev 目前採詢價與工程審查方式提供。最終組態、價格、交期、
+    文件、韌體範圍、驗證支援、運送與保固內容，將以正式報價為準。
+
+  </div>
+
+</section>
+
+<section class="rd-family">
+  <style>
+    .rd-family,
+    .rd-family * {
+      box-sizing: border-box;
+    }
+
+    .rd-family {
+      font-family:
+        Inter,
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        Arial,
+        sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(34, 211, 238, 0.25),
+          transparent 34%
+        ),
+        linear-gradient(
+          135deg,
+          #050b14 0%,
+          #06111f 48%,
+          #0a1f3a 100%
+        );
+
+      color: #f8fbff;
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 28px;
+
+      padding: 50px 38px;
+    }
+
+    .rd-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rd-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-bottom: 16px;
+
+      color: #65f1ff;
+
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .rd-eyebrow::before {
+      content: "";
+
+      display: inline-block;
+
+      width: 30px;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #65f1ff,
+          transparent
+        );
+    }
+
+    .rd-title h2 {
+      margin: 0;
+
+      color: #ffffff;
+
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rd-title h3 {
+      margin: 14px 0 0;
+
+      color: #d9ecff;
+
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rd-copy p {
+      margin: 0 0 12px;
+
+      color: #b9c7da;
+
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rd-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+
+      margin-top: 30px;
+    }
+
+    .rd-card {
+      display: flex;
+      flex-direction: column;
+
+      min-height: 480px;
+      padding: 28px;
+
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 24px;
+
+      background: rgba(255, 255, 255, 0.075);
+
+      box-shadow:
+        0 18px 38px rgba(0, 0, 0, 0.16);
+    }
+
+    .rd-card.featured {
+      border-color: rgba(101, 241, 255, 0.40);
+
+      background:
+        radial-gradient(
+          circle at 92% 8%,
+          rgba(34, 211, 238, 0.14),
+          transparent 34%
+        ),
+        rgba(255, 255, 255, 0.075);
+    }
+
+    .rd-pill {
+      display: inline-flex;
+      width: fit-content;
+
+      margin-bottom: 14px;
+      padding: 7px 11px;
+
+      border: 1px solid rgba(101, 241, 255, 0.56);
+      border-radius: 999px;
+
+      color: #f2fdff;
+      background: rgba(34, 211, 238, 0.20);
+
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .rd-card h4 {
+      margin: 0 0 8px;
+
+      color: #ffffff;
+
+      font-size: clamp(27px, 3vw, 36px);
+      line-height: 1.14;
+      letter-spacing: -0.045em;
+      font-weight: 950;
+    }
+
+    .rd-card h5 {
+      margin: 0 0 16px;
+
+      color: #d9ecff;
+
+      font-size: 18px;
+      line-height: 1.4;
+      font-weight: 850;
+    }
+
+    .rd-status {
+      width: fit-content;
+
+      margin-bottom: 18px;
+      padding: 7px 10px;
+
+      border-radius: 999px;
+
+      color: #9fdcff;
+      background: rgba(37, 99, 235, 0.17);
+
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.07em;
+    }
+
+    .rd-card p {
+      margin: 0 0 12px;
+
+      color: #b9c7da;
+
+      font-size: 14px;
+      line-height: 1.72;
+    }
+
+    .rd-list {
+      display: grid;
+      gap: 8px;
+
+      margin-top: 14px;
+    }
+
+    .rd-list div {
+      padding: 10px 12px;
+
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 14px;
+
+      color: #e6f0fb;
+      background: rgba(255, 255, 255, 0.06);
+
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    .rd-role {
+      width: fit-content;
+
+      margin-top: auto;
+      padding: 19px 0 0;
+    }
+
+    .rd-role span {
+      display: inline-flex;
+
+      padding: 8px 11px;
+
+      border: 1px solid rgba(101, 241, 255, 0.24);
+      border-radius: 999px;
+
+      color: #76ddff;
+      background: rgba(34, 211, 238, 0.08);
+
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    .rd-relationship {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+
+      margin-top: 20px;
+    }
+
+    .rd-relationship-item {
+      padding: 18px 19px;
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 17px;
+
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .rd-relationship-item span {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: #65d8ff;
+
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+    }
+
+    .rd-relationship-item strong {
+      display: block;
+
+      color: #ffffff;
+
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .rd-relationship-item small {
+      display: block;
+
+      margin-top: 6px;
+
+      color: #a8bbcc;
+
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .rd-terminology {
+      margin-top: 16px;
+      padding: 15px 18px;
+
+      border-radius: 16px;
+
+      color: #8fa8bd;
+      background: rgba(255, 255, 255, 0.045);
+
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .rd-terminology strong {
+      color: #c8dce9;
+    }
+
+    @media (max-width: 980px) {
+      .rd-grid,
+      .rd-card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rd-card {
+        min-height: auto;
+      }
+
+      .rd-relationship {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .rd-family {
+        padding: 34px 22px;
+        border-radius: 22px;
+      }
+
+      .rd-card {
+        padding: 24px;
+      }
+    }
+  </style>
+
+  <div class="rd-grid">
+
+    <div class="rd-title">
+
+      <div class="rd-eyebrow">
+        Product Family
+      </div>
+
+      <h2>
+        RobiDev Discrete & High-Density
+      </h2>
+
+      <h3>
+        從分離式參考驗證到高功率密度 Design-in
+      </h3>
+
+    </div>
+
+    <div class="rd-copy">
+
+      <p>
+        RobiDev is offered through two function-based platform
+        configurations. RobiDev Discrete supports early motor-control
+        development and reference validation, while RobiDev High-Density
+        supports RobiSoC evaluation, compact integration, thermal review,
+        and customer design-in.
+      </p>
+
+      <p>
+        RobiDev 採用兩種功能型平台配置。RobiDev Discrete
+        支援早期馬達控制開發與參考驗證；RobiDev High-Density
+        則支援 RobiSoC 評估、高功率密度整合、熱路徑檢視與客戶
+        Design-in。
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="rd-card-grid">
+
+    <!-- RobiDev Discrete -->
+    <article class="rd-card">
+
+      <span class="rd-pill">
+        Reference & Validation
+      </span>
+
+      <h4>
+        RobiDev Discrete
+      </h4>
+
+      <h5>
+        6-Layer Discrete Reference & Validation Platform<br>
+        六層分離式參考與驗證平台
+      </h5>
+
+      <div class="rd-status">
+        STANDARD REFERENCE CONFIGURATION
+      </div>
+
+      <p>
+        A total-discrete implementation for early BLDC / PMSM evaluation,
+        firmware bring-up, controller development, motor integration,
+        engineering education, and architecture comparison.
+      </p>
+
+      <p>
+        採用 total-discrete 架構，適用於 BLDC／PMSM 早期評估、
+        韌體 bring-up、控制器開發、馬達整合、工程教育與架構比較。
+      </p>
+
+      <div class="rd-list">
+        <div>Architecture: total-discrete motor-drive implementation</div>
+        <div>PCB: six-layer reference and validation board</div>
+        <div>Supports firmware bring-up and controller development</div>
+        <div>Suitable for education, ecosystem, and feasibility work</div>
+        <div>Provides a comparison baseline for high-density integration</div>
+      </div>
+
+      <div class="rd-role">
+        <span>
+          Early Evaluation & Reference Baseline
+        </span>
+      </div>
+
+    </article>
+
+    <!-- RobiDev High-Density -->
+    <article class="rd-card featured">
+
+      <span class="rd-pill">
+        Evaluation & Design-in
+      </span>
+
+      <h4>
+        RobiDev High-Density
+      </h4>
+
+      <h5>
+        RobiSoC Evaluation & High-Density Motor-Drive Design-in Platform<br>
+        RobiSoC 高功率密度評估與 Design-in 平台
+      </h5>
+
+      <div class="rd-status">
+        ENGINEERING REVIEW CONFIGURATION
+      </div>
+
+      <p>
+        A higher-density evaluation path for RobiSoC and RC100,
+        supporting compact motor-drive integration, M1 / G1
+        configuration evaluation, thermal-path review, protection
+        integration, and customer-specific design-in.
+      </p>
+
+      <p>
+        面向 RobiSoC 與 RC100 的高功率密度評估路徑，
+        支援小型化馬達驅動整合、M1／G1 組態評估、
+        熱路徑檢視、保護機制整合與客戶專案導入。
+      </p>
+
+      <div class="rd-list">
+        <div>Architecture: RobiSoC high-density motor-drive platform</div>
+        <div>Supports RC100 and M1 / G1 configuration evaluation</div>
+        <div>Compact power-stage and board-level integration</div>
+        <div>Thermal-path, interface, and protection review</div>
+        <div>Best suited for robotics, UAV, actuator, and motion design-in</div>
+      </div>
+
+      <div class="rd-role">
+        <span>
+          High-Density Evaluation & Customer Design-in
+        </span>
+      </div>
+
+    </article>
+
+  </div>
+
+  <div class="rd-relationship">
+
+    <div class="rd-relationship-item">
+      <span>RobiDev Discrete</span>
+      <strong>
+        Reference implementation and early engineering validation
+      </strong>
+      <small>
+        分離式參考實作與早期工程驗證
+      </small>
+    </div>
+
+    <div class="rd-relationship-item">
+      <span>RobiDev High-Density</span>
+      <strong>
+        RobiSoC evaluation and customer design-in
+      </strong>
+      <small>
+        RobiSoC 高功率密度評估與客戶導入
+      </small>
+    </div>
+
+    <div class="rd-relationship-item">
+      <span>RobiThrust</span>
+      <strong>
+        Application-level propulsion and system validation
+      </strong>
+      <small>
+        推進系統與應用層驗證
+      </small>
+    </div>
+
+  </div>
+
+  <div class="rd-terminology">
+
+    <strong>Terminology note｜名詞說明：</strong>
+
+    RobiDev uses function-based product names rather than generation
+    numbers. RobiDev Discrete and RobiDev High-Density describe
+    different evaluation and design-in configurations; they do not
+    correspond to Propulsion Gen.1, Gen.2, or Gen.3.
+
+    <br><br>
+
+    RobiDev 採用功能型產品名稱，不再以世代數字區分。
+    RobiDev Discrete 與 RobiDev High-Density 代表不同的評估與
+    Design-in 配置，並非 Propulsion Gen.1、Gen.2 或 Gen.3
+    的無人機推進架構世代。
+
+  </div>
+
+</section>
+
+<section class="rd-compare">
+  <style>
+    .rd-compare,
+    .rd-compare * {
+      box-sizing: border-box;
+    }
+
+    .rd-compare {
+      font-family:
+        Inter,
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        Arial,
+        sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 90% 8%,
+          rgba(34, 211, 238, 0.09),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #f7fbff 48%,
+          #eef6ff 100%
+        );
+
+      color: #071426;
+
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 28px;
+
+      padding: 50px 38px;
+    }
+
+    .rd-compare-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-bottom: 16px;
+
+      color: #2563eb;
+
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .rd-compare-eyebrow::before {
+      content: "";
+
+      display: inline-block;
+
+      width: 30px;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #2563eb,
+          #22d3ee
+        );
+    }
+
+    .rd-compare h2 {
+      margin: 0;
+
+      color: #06111f;
+
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rd-compare h3 {
+      margin: 14px 0 12px;
+
+      color: #1e3a8a;
+
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rd-compare-intro {
+      max-width: 860px;
+
+      margin: 0 0 28px;
+
+      color: #526174;
+
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .rd-compare-table {
+      overflow: hidden;
+
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 24px;
+
+      background: #ffffff;
+
+      box-shadow:
+        0 16px 34px rgba(15, 23, 42, 0.07);
+    }
+
+    .rd-compare-row {
+      display: grid;
+      grid-template-columns:
+        minmax(150px, 0.55fr)
+        minmax(0, 0.725fr)
+        minmax(0, 0.725fr);
+
+      border-bottom: 1px solid rgba(37, 99, 235, 0.10);
+    }
+
+    .rd-compare-row:last-child {
+      border-bottom: 0;
+    }
+
+    .rd-compare-head {
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #06111f 0%,
+          #0c2948 100%
+        );
+
+      font-weight: 900;
+    }
+
+    .rd-compare-cell {
+      min-width: 0;
+      padding: 17px 17px;
+
+      color: #1f2937;
+
+      font-size: 14px;
+      line-height: 1.58;
+      font-weight: 700;
+    }
+
+    .rd-compare-cell + .rd-compare-cell {
+      border-left: 1px solid rgba(37, 99, 235, 0.08);
+    }
+
+    .rd-compare-head .rd-compare-cell {
+      color: #ffffff;
+
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .rd-compare-head .rd-compare-cell:nth-child(3) {
+      background: rgba(34, 211, 238, 0.08);
+    }
+
+    .rd-compare-label {
+      color: #075985;
+      background: rgba(37, 99, 235, 0.06);
+
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: 0.075em;
+      text-transform: uppercase;
+    }
+
+    .rd-compare-value.high-density {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(34, 211, 238, 0.035),
+          rgba(37, 99, 235, 0.025)
+        );
+    }
+
+    .rd-compare-platform-name {
+      display: block;
+
+      margin-bottom: 4px;
+
+      color: #ffffff;
+
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 900;
+    }
+
+    .rd-compare-platform-subtitle {
+      display: block;
+
+      color: #aec6db;
+
+      font-size: 11px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    .rd-compare-summary {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+
+      margin-top: 20px;
+    }
+
+    .rd-compare-summary-card {
+      padding: 19px 21px;
+
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 18px;
+
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .rd-compare-summary-card.featured {
+      border-color: rgba(14, 165, 233, 0.28);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(225, 244, 255, 0.82),
+          rgba(255, 255, 255, 0.90)
+        );
+    }
+
+    .rd-compare-summary-card span {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: #1674d1;
+
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .rd-compare-summary-card strong {
+      display: block;
+
+      color: #102944;
+
+      font-size: 16px;
+      line-height: 1.45;
+      font-weight: 900;
+    }
+
+    .rd-compare-summary-card p {
+      margin: 7px 0 0;
+
+      color: #57687b;
+
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .rd-compare-note {
+      margin-top: 16px;
+      padding: 15px 18px;
+
+      border: 1px solid rgba(37, 99, 235, 0.10);
+      border-radius: 16px;
+
+      color: #64748b;
+      background: rgba(255, 255, 255, 0.68);
+
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .rd-compare-note strong {
+      color: #24486f;
+    }
+
+    @media (min-width: 981px) {
+      .rd-compare-value::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .rd-compare-table {
+        overflow: visible;
+
+        border: 0;
+        border-radius: 0;
+
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .rd-compare-head {
+        display: none;
+      }
+
+      .rd-compare-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+
+        margin-bottom: 14px;
+
+        overflow: hidden;
+
+        border: 1px solid rgba(37, 99, 235, 0.12);
+        border-radius: 18px;
+
+        background: #ffffff;
+
+        box-shadow:
+          0 10px 24px rgba(15, 23, 42, 0.05);
+      }
+
+      .rd-compare-row:last-child {
+        margin-bottom: 0;
+      }
+
+      .rd-compare-cell {
+        border-left: 0 !important;
+      }
+
+      .rd-compare-label {
+        padding: 13px 16px;
+
+        color: #075985;
+        background: #eaf4ff;
+      }
+
+      .rd-compare-value {
+        padding: 16px 17px;
+      }
+
+      .rd-compare-value + .rd-compare-value {
+        border-top: 1px solid rgba(37, 99, 235, 0.09);
+      }
+
+      .rd-compare-value::before {
+        content: attr(data-platform);
+
+        display: block;
+
+        margin-bottom: 7px;
+
+        color: #1674d1;
+
+        font-size: 11px;
+        line-height: 1.3;
+        font-weight: 950;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .rd-compare-value.high-density {
+        background: rgba(34, 211, 238, 0.045);
+      }
+
+      .rd-compare-summary {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .rd-compare {
+        padding: 34px 22px;
+        border-radius: 22px;
+      }
+
+      .rd-compare-cell {
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <div class="rd-compare-eyebrow">
+    Platform Comparison
+  </div>
+
+  <h2>
+    RobiDev Discrete vs High-Density
+  </h2>
+
+  <h3>
+    不同評估任務，不同導入路徑
+  </h3>
+
+  <p class="rd-compare-intro">
+    RobiDev Discrete provides a transparent reference implementation
+    for early motor-control development and engineering validation.
+    RobiDev High-Density extends the platform toward RobiSoC evaluation,
+    compact integration, thermal review, and customer design-in.
+    <br><br>
+    RobiDev Discrete 提供便於觀察與比較的分離式參考實作；
+    RobiDev High-Density 則將平台延伸至 RobiSoC 評估、
+    高功率密度整合、熱路徑檢視與客戶 Design-in。
+  </p>
+
+  <div class="rd-compare-table">
+
+    <!-- Desktop header -->
+    <div class="rd-compare-row rd-compare-head">
+
+      <div class="rd-compare-cell">
+        Comparison Item
+      </div>
+
+      <div class="rd-compare-cell">
+        <span class="rd-compare-platform-name">
+          RobiDev Discrete
+        </span>
+
+        <span class="rd-compare-platform-subtitle">
+          Reference & Validation Platform
+        </span>
+      </div>
+
+      <div class="rd-compare-cell">
+        <span class="rd-compare-platform-name">
+          RobiDev High-Density
+        </span>
+
+        <span class="rd-compare-platform-subtitle">
+          RobiSoC Evaluation & Design-in Platform
+        </span>
+      </div>
+
+    </div>
+
+    <!-- Positioning -->
+    <div class="rd-compare-row">
+
+      <div class="rd-compare-cell rd-compare-label">
+        Positioning
+      </div>
+
+      <div
+        class="rd-compare-cell rd-compare-value"
+        data-platform="RobiDev Discrete"
+      >
+        Six-layer discrete reference and engineering-validation platform.
+      </div>
+
+      <div
+        class="rd-compare-cell rd-compare-value high-density"
+        data-platform="RobiDev High-Density"
+      >
+        High-density RobiSoC / RC100 evaluation and customer
+        design-in platform.
+      </div>
+
+    </div>
+
+    <!-- Architecture -->
+    <div class="rd-compare-row">
+
+      <div class="rd-compare-cell rd-compare-label">
+        Architecture
+      </div>
+
+      <div
+        class="rd-compare-cell rd-compare-value"
+        data-platform="RobiDev Discrete"
+      >
+        Total-discrete motor-drive implementation providing a visible
+        and accessible reference baseline for architecture comparison.
+      </div>
+
+      <div
+        class="rd-compare-cell rd-compare-value high-density"
+        data-platform="RobiDev High-Density"
+      >
+        Compact RobiSoC-based motor-drive architecture supporting
+        higher integration density, interface review, protection,
+        and thermal-path engineering.
+      </div>
+
+    </div>
+
+    <!-- Best use -->
+    <div class="rd-compare-row">
+
+      <div class="rd-compare-cell rd-compare-label">
+        Best Use
+      </div>
+
+      <div
+        class="rd-compare-cell rd-compare-value"
+        data-platform="RobiDev Discrete"
+      >
+        Early BLDC / PMSM validation, firmware bring-up,
+        controller development, engineering education,
+        motor integration, and feasibility testing.
+      </div>
+
+      <div
+        class="rd-compare-cell rd-compare-value high-density"
+        data-platform="RobiDev High-Density"
+      >
+        RC100 evaluation, compact power-stage integration,
+        thermal review, M1 / G1 configuration assessment,
+        and customer-specific design-in.
+      </div>
+
+    </div>
+
+    <!-- Typical user -->
+    <div class="rd-compare-row">
+
+      <div class="rd-compare-cell rd-compare-label">
+        Typical User
+      </div>
+
+      <div
+        class="rd-compare-cell rd-compare-value"
+        data-platform="RobiDev Discrete"
+      >
+        Universities, laboratories, MCU partners, firmware teams,
+        engineering educators, and early-stage system developers.
+      </div>
+
+      <div
+        class="rd-compare-cell rd-compare-value high-density"
+        data-platform="RobiDev High-Density"
+      >
+        Robotics, UAV, actuator, industrial-motion, and system-integration
+        teams preparing for RobiSoC evaluation or design-in.
+      </div>
+
+    </div>
+
+    <!-- Engineering focus -->
+    <div class="rd-compare-row">
+
+      <div class="rd-compare-cell rd-compare-label">
+        Engineering Focus
+      </div>
+
+      <div
+        class="rd-compare-cell rd-compare-value"
+        data-platform="RobiDev Discrete"
+      >
+        Functional bring-up, signal observation, control development,
+        parameter verification, and architecture learning.
+      </div>
+
+      <div
+        class="rd-compare-cell rd-compare-value high-density"
+        data-platform="RobiDev High-Density"
+      >
+        Power density, board-space reduction, thermal path,
+        protection integration, interfaces, and application-specific
+        system constraints.
+      </div>
+
+    </div>
+
+    <!-- Commercial role -->
+    <div class="rd-compare-row">
+
+      <div class="rd-compare-cell rd-compare-label">
+        Commercial Role
+      </div>
+
+      <div
+        class="rd-compare-cell rd-compare-value"
+        data-platform="RobiDev Discrete"
+      >
+        Entry reference platform for evaluation, education,
+        engineering onboarding, and ecosystem development.
+      </div>
+
+      <div
+        class="rd-compare-cell rd-compare-value high-density"
+        data-platform="RobiDev High-Density"
+      >
+        Engineering-reviewed evaluation platform supporting
+        higher-value customer design-in and RobiSoC adoption.
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="rd-compare-summary">
+
+    <div class="rd-compare-summary-card">
+
+      <span>Choose RobiDev Discrete When</span>
+
+      <strong>
+        You need an accessible reference implementation for development,
+        learning, comparison, or early validation.
+      </strong>
+
+      <p>
+        適合需要可觀察、可調整且便於工程比較的分離式參考平台。
+      </p>
+
+    </div>
+
+    <div class="rd-compare-summary-card featured">
+
+      <span>Choose RobiDev High-Density When</span>
+
+      <strong>
+        You are evaluating RobiSoC or preparing a compact,
+        thermally reviewed, customer-specific motor-drive design.
+      </strong>
+
+      <p>
+        適合準備導入 RobiSoC、小型化功率級與客戶專案 Design-in 的團隊。
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="rd-compare-note">
+
+    <strong>Terminology note｜名詞說明：</strong>
+
+    RobiDev Discrete and RobiDev High-Density are function-based platform
+    names. They describe different evaluation and design-in configurations
+    and do not correspond to Propulsion Gen.1, Gen.2, or Gen.3.
+
+    <br><br>
+
+    RobiDev Discrete 與 RobiDev High-Density 是功能型平台名稱，
+    用於區分不同的評估與 Design-in 任務，並非 Propulsion Gen.1、
+    Gen.2 或 Gen.3 的無人機推進架構世代。
+
+  </div>
+
+</section>
+
+<section class="rd-why">
+  <style>
+    .rd-why{
+      font-family: Inter,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34,211,238,.25), transparent 34%),
+                  linear-gradient(135deg,#050b14 0%,#06111f 48%,#0a1f3a 100%);
+      color:#f8fbff;
+      border-radius:28px;
+      padding:50px 38px;
+      box-sizing:border-box;
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .rd-eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:#65f1ff;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+    .rd-eyebrow::before{
+      content:"";
+      width:30px;height:2px;
+      background:linear-gradient(90deg,#65f1ff,transparent);
+      display:inline-block;
+    }
+    .rd-why h2{
+      margin:0;
+      color:#fff;
+      font-size:clamp(32px,4.8vw,56px);
+      line-height:1.08;
+      letter-spacing:-.055em;
+      font-weight:950;
+    }
+    .rd-why h3{
+      margin:14px 0 24px;
+      color:#d9ecff;
+      font-size:clamp(22px,3vw,32px);
+      line-height:1.28;
+      letter-spacing:-.04em;
+      font-weight:850;
+    }
+    .rd-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-top:28px;
+    }
+    .rd-card{
+      background:rgba(255,255,255,.075);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 18px 38px rgba(0,0,0,.16);
+    }
+    .rd-card h4{
+      margin:0 0 10px;
+      color:#fff;
+      font-size:20px;
+      line-height:1.25;
+      font-weight:950;
+      letter-spacing:-.03em;
+    }
+    .rd-card p{
+      margin:0;
+      color:#b9c7da;
+      font-size:14px;
+      line-height:1.65;
+    }
+    @media (max-width:1020px){
+      .rd-grid{grid-template-columns:1fr;}
+    }
+    @media (max-width:560px){
+      .rd-why{padding:34px 22px;}
+    }
+  </style>
+
+  <div class="rd-eyebrow">Why RobiDev</div>
+  <h2>From Development Board to Design-in Package</h2>
+  <h3>從開發板走向可導入客戶的驗證平台</h3>
+
+  <div class="rd-grid">
+    <article class="rd-card">
+      <h4>Motor Integration</h4>
+      <p>
+        Supports BLDC / PMSM drive evaluation and early application matching
+        for robotics, UAV, actuator, and motion-control systems.
+      </p>
+    </article>
+
+    <article class="rd-card">
+      <h4>Thermal Review</h4>
+      <p>
+        Helps correlate power stage, thermal path, and system behavior,
+        reducing the gap between simulation and real hardware validation.
+      </p>
+    </article>
+
+    <article class="rd-card">
+      <h4>Control Flexibility</h4>
+      <p>
+        Supports controller evaluation, interface review, firmware bring-up,
+        and M1 / G1 related validation paths.
+      </p>
+    </article>
+
+    <article class="rd-card">
+      <h4>Design-in Readiness</h4>
+      <p>
+        Provides a concrete entry point for customers and partners to move
+        from concept discussion to measurable platform evaluation.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="rd-flow">
+  <style>
+    .rd-flow{
+      font-family: Inter,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
+      background:linear-gradient(135deg,#ffffff 0%,#f7fbff 48%,#eef6ff 100%);
+      color:#071426;
+      border-radius:28px;
+      padding:50px 38px;
+      box-sizing:border-box;
+      border:1px solid rgba(37,99,235,.12);
+    }
+    .rd-eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:#2563eb;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+    .rd-eyebrow::before{
+      content:"";
+      width:30px;height:2px;
+      background:linear-gradient(90deg,#2563eb,#22d3ee);
+      display:inline-block;
+    }
+    .rd-flow h2{
+      margin:0;
+      color:#06111f;
+      font-size:clamp(32px,4.8vw,56px);
+      line-height:1.08;
+      letter-spacing:-.055em;
+      font-weight:950;
+    }
+    .rd-flow h3{
+      margin:14px 0 24px;
+      color:#1e3a8a;
+      font-size:clamp(22px,3vw,32px);
+      line-height:1.28;
+      letter-spacing:-.04em;
+      font-weight:850;
+    }
+    .rd-steps{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:14px;
+      margin-top:28px;
+    }
+    .rd-step{
+      background:#fff;
+      border:1px solid rgba(37,99,235,.12);
+      border-radius:22px;
+      padding:20px 16px;
+      box-shadow:0 16px 34px rgba(15,23,42,.07);
+      text-align:center;
+    }
+    .rd-step strong{
+      display:block;
+      color:#06111f;
+      font-size:15px;
+      line-height:1.35;
+      margin-bottom:6px;
+      font-weight:950;
+    }
+    .rd-step span{
+      display:block;
+      color:#64748b;
+      font-size:13px;
+      line-height:1.55;
+      font-weight:700;
+    }
+    @media (max-width:1020px){
+      .rd-steps{grid-template-columns:1fr;}
+    }
+    @media (max-width:560px){
+      .rd-flow{padding:34px 22px;}
+    }
+  </style>
+
+  <div class="rd-eyebrow">Workflow</div>
+  <h2>Validation Workflow</h2>
+  <h3>建議驗證流程</h3>
+
+  <div class="rd-steps">
+    <div class="rd-step">
+      <strong>1. Bring-up</strong>
+      <span>power-on, interface check, firmware start-up</span>
+    </div>
+    <div class="rd-step">
+      <strong>2. Motor Match</strong>
+      <span>BLDC / PMSM integration and control tuning</span>
+    </div>
+    <div class="rd-step">
+      <strong>3. Thermal Review</strong>
+      <span>temperature rise, hotspot, thermal-path observation</span>
+    </div>
+    <div class="rd-step">
+      <strong>4. Dynamic Load</strong>
+      <span>dynamic test, measurement correlation, system behavior</span>
+    </div>
+    <div class="rd-step">
+      <strong>5. Design-in Report</strong>
+      <span>evaluation summary and next-step recommendation</span>
+    </div>
+  </div>
+</section>
+
+<section class="rd-users">
+  <style>
+    .rd-users{
+      font-family: Inter,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34,211,238,.25), transparent 34%),
+                  linear-gradient(135deg,#050b14 0%,#06111f 48%,#0a1f3a 100%);
+      color:#f8fbff;
+      border-radius:28px;
+      padding:50px 38px;
+      box-sizing:border-box;
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .rd-eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:#65f1ff;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+    .rd-eyebrow::before{
+      content:"";
+      width:30px;height:2px;
+      background:linear-gradient(90deg,#65f1ff,transparent);
+      display:inline-block;
+    }
+    .rd-users h2{
+      margin:0;
+      color:#fff;
+      font-size:clamp(32px,4.8vw,56px);
+      line-height:1.08;
+      letter-spacing:-.055em;
+      font-weight:950;
+    }
+    .rd-users h3{
+      margin:14px 0 24px;
+      color:#d9ecff;
+      font-size:clamp(22px,3vw,32px);
+      line-height:1.28;
+      letter-spacing:-.04em;
+      font-weight:850;
+    }
+    .rd-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-top:28px;
+    }
+    .rd-card{
+      background:rgba(255,255,255,.075);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:0 18px 38px rgba(0,0,0,.16);
+    }
+    .rd-card h4{
+      margin:0 0 10px;
+      color:#fff;
+      font-size:20px;
+      line-height:1.25;
+      font-weight:950;
+      letter-spacing:-.03em;
+    }
+    .rd-card p{
+      margin:0;
+      color:#b9c7da;
+      font-size:14px;
+      line-height:1.65;
+    }
+    @media (max-width:1020px){
+      .rd-grid{grid-template-columns:1fr;}
+    }
+    @media (max-width:560px){
+      .rd-users{padding:34px 22px;}
+    }
+  </style>
+
+  <div class="rd-eyebrow">Target Users</div>
+  <h2>Who Should Use RobiDev?</h2>
+  <h3>誰適合使用 RobiDev？</h3>
+
+  <div class="rd-grid">
+    <article class="rd-card">
+      <h4>System Customers</h4>
+      <p>
+        Robotics, UAV, AMR / AGV, actuator, and motion-system teams
+        evaluating motor-drive solutions before formal design-in.
+      </p>
+    </article>
+
+    <article class="rd-card">
+      <h4>MCU / Control Partners</h4>
+      <p>
+        MCU ecosystem partners and control-board teams exploring validation,
+        reference design, and application-specific collaboration.
+      </p>
+    </article>
+
+    <article class="rd-card">
+      <h4>Universities & Labs</h4>
+      <p>
+        Ideal for power-electronics labs, education kits, motor-control research,
+        and board-to-system measurement studies.
+      </p>
+    </article>
+
+    <article class="rd-card">
+      <h4>Developers & Integrators</h4>
+      <p>
+        Useful for developers who need a practical evaluation platform
+        before committing to a customer-specific system design.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="rd-lab">
+  <style>
+    .rd-lab{
+      font-family: Inter,"Noto Sans TC","Microsoft JhengHei",Arial,sans-serif;
+      background:linear-gradient(135deg,#ffffff 0%,#f7fbff 48%,#eef6ff 100%);
+      color:#071426;
+      border-radius:28px;
+      padding:50px 38px;
+      box-sizing:border-box;
+      border:1px solid rgba(37,99,235,.12);
+    }
+    .rd-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:34px;
+      align-items:end;
+    }
+    .rd-eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:#2563eb;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+    .rd-eyebrow::before{
+      content:"";
+      width:30px;height:2px;
+      background:linear-gradient(90deg,#2563eb,#22d3ee);
+      display:inline-block;
+    }
+    .rd-title h2{
+      margin:0;
+      color:#06111f;
+      font-size:clamp(32px,4.8vw,56px);
+      line-height:1.08;
+      letter-spacing:-.055em;
+      font-weight:950;
+    }
+    .rd-title h3{
+      margin:14px 0 0;
+      color:#1e3a8a;
+      font-size:clamp(22px,3vw,32px);
+      line-height:1.28;
+      letter-spacing:-.04em;
+      font-weight:850;
+    }
+    .rd-copy p{
+      margin:0 0 12px;
+      color:#526174;
+      font-size:16px;
+      line-height:1.75;
+    }
+    .rd-note{
+      margin-top:28px;
+      padding:20px 22px;
+      border-radius:22px;
+      background:rgba(37,99,235,.06);
+      border:1px solid rgba(37,99,235,.12);
+      color:#475569;
+      font-size:14px;
+      line-height:1.7;
+    }
+    @media (max-width:980px){
+      .rd-grid{grid-template-columns:1fr;}
+    }
+    @media (max-width:560px){
+      .rd-lab{padding:34px 22px;}
+    }
+  </style>
+
+  <div class="rd-grid">
+    <div class="rd-title">
+      <div class="rd-eyebrow">RobiDev + RobiLab</div>
+      <h2>From Platform to Measurable Validation</h2>
+      <h3>從平台走向可量測驗證</h3>
+    </div>
+
+    <div class="rd-copy">
+      <p>
+        RobiDev becomes more valuable when combined with RobiLab measurement capability.
+        Customers and partners can move from board evaluation to temperature-rise review,
+        dynamic-load observation, and design-in recommendation.
+      </p>
+      <p>
+        RobiDev 與 RobiLab 搭配時，價值更完整。客戶與夥伴可從 board evaluation，
+        延伸到溫升檢視、動態負載觀察與 design-in 建議。
+      </p>
+    </div>
+  </div>
+
+  <div class="rd-note">
+    Recommended packaging: evaluation board + measurement support + application review.
+    This is especially useful for early-stage system customers, MCU partners, education programs,
+    and robotics / UAV validation projects.
+    <br><br>
+    建議對外包裝方式：evaluation board + measurement support + application review，
+    特別適合早期系統客戶、MCU 夥伴、教育計畫與機器人 / 無人機驗證專案。
+  </div>
+</section>
+
+<section class="rd-final-cta">
+  <style>
+    .rd-final-cta,
+    .rd-final-cta * {
+      box-sizing: border-box;
+    }
+
+    .rd-final-cta {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background:
+        radial-gradient(
+          circle at 86% 14%,
+          rgba(34, 211, 238, 0.25),
+          transparent 34%
+        ),
+        linear-gradient(
+          135deg,
+          #050b14 0%,
+          #06111f 48%,
+          #0a1f3a 100%
+        );
+      color: #f8fbff;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 28px;
+      padding: 50px 38px;
+    }
+
+    .rd-final-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .rd-final-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .rd-final-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rd-final-title h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 1.06;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rd-final-title h3 {
+      margin: 14px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rd-final-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rd-final-fields {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .rd-final-field {
+      padding: 8px 11px;
+      color: #eafcff;
+      background: rgba(101, 241, 255, 0.14);
+      border: 1px solid rgba(101, 241, 255, 0.36);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1;
+    }
+
+    .rd-final-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .rd-final-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 13px 18px;
+      color: #f8fbff;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .rd-final-btn.primary {
+      color: #031120;
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.28);
+    }
+
+    .rd-final-note {
+      margin-top: 20px;
+      padding: 14px 16px;
+      color: #9fb0c4;
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 900px) {
+      .rd-final-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .rd-final-cta {
+        padding: 36px 24px;
+      }
+
+      .rd-final-copy p {
+        font-size: 16px;
+      }
+    }
+  </style>
+
+  <div class="rd-final-grid">
+    <div class="rd-final-title">
+      <div class="rd-final-eyebrow">
+        Start Your Evaluation
+      </div>
+
+      <h2>Start Your RobiDev Evaluation</h2>
+
+      <h3>開始您的 RobiDev 採購與技術評估</h3>
+    </div>
+
+    <div class="rd-final-copy">
+      <p>
+        Tell us about your application, motor, operating voltage,
+        target power, control interface, expected quantity, and schedule.
+        RobiChip will review whether a standard kit or custom configuration
+        is more appropriate.
+      </p>
+
+      <p>
+        請提供應用情境、馬達型號、操作電壓、目標功率、
+        控制介面、預計數量與期望交期。羅比芯將協助判斷
+        適合標準套件或客製組態。
+      </p>
+
+      <div class="rd-final-fields">
+        <span class="rd-final-field">Application</span>
+        <span class="rd-final-field">Motor Model</span>
+        <span class="rd-final-field">DC Bus Voltage</span>
+        <span class="rd-final-field">Target Power</span>
+        <span class="rd-final-field">Control Interface</span>
+        <span class="rd-final-field">Quantity</span>
+        <span class="rd-final-field">Required Schedule</span>
+      </div>
+
+      <div class="rd-final-buttons">
+        <a
+          class="rd-final-btn primary"
+          href="mailto:bd@robichip.com?subject=RobiDev%20Purchase%20and%20Evaluation%20Request">
+          Request a Quote
+        </a>
+
+        <a
+          class="rd-final-btn"
+          href="mailto:bd@robichip.com?subject=RobiDev%20Custom%20Configuration%20Discussion">
+          Discuss Custom Configuration
+        </a>
+
+        <a
+          class="rd-final-btn"
+          href="mailto:contact@robichip.com?subject=RobiDev%20Technical%20Inquiry">
+          Ask a Technical Question
+        </a>
+      </div>
+
+      <div class="rd-final-note">
+        Current commercial process: requirement submission →
+        engineering review → configuration confirmation →
+        formal quotation → PO / payment → build, validation, and delivery.
+        <br><br>
+        目前流程：提交需求 → 工程初審 → 確認組態 →
+        正式報價 → PO／付款 → 製作、驗證與交付。
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="robi-footer">
+  <style>
+    .robi-footer {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: #050b14;
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 42px 38px 26px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .robi-footer::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -120px;
+      top: -130px;
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 70%);
+      pointer-events: none;
+    }
+
+    .footer-wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.8fr 0.8fr 0.9fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .footer-brand h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+      font-weight: 950;
+    }
+
+    .footer-brand h3 {
+      margin: 8px 0 0;
+      color: #d9ecff;
+      font-size: 18px;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+      font-weight: 850;
+    }
+
+    .footer-brand p {
+      margin: 16px 0 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    .footer-col h4 {
+      margin: 0 0 13px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-link {
+      display: block;
+      color: #d9ecff;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.55;
+      margin: 0 0 9px;
+      font-weight: 700;
+    }
+
+    .footer-link:hover {
+      color: #65f1ff;
+    }
+
+    .footer-info {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer-address h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 17px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      font-weight: 900;
+    }
+
+    .footer-address p {
+      margin: 0 0 8px;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .footer-address a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .footer-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .footer-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(101, 241, 255, 0.09);
+      border: 1px solid rgba(101, 241, 255, 0.20);
+      color: #dffcff;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .footer-bottom {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+      justify-content: space-between;
+      color: #8fa1b8;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-bottom a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-info {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-badges {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .robi-footer {
+        padding: 34px 24px 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        display: block;
+      }
+
+      .footer-bottom div {
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>RobiChip Technology Co., Ltd.</h2>
+        <h3>羅比芯科技股份有限公司</h3>
+        <p>
+          Power SoC platform for intelligent machines. Robichip integrates Power SoC,
+          RobiDev, RobiThrust, RobiAgent, and validation workflows for robotics,
+          UAVs, and high-power-density motion systems.
+        </p>
+        <p>
+          羅比芯聚焦 Power + AI + Robotics，建構從 Power SoC、開發驗證、
+          無人機推進平台到 AI-assisted design-in 的智慧動力半導體平台。
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a class="footer-link" href="https://www.robichip.com/robisoc" target="_blank">RobiSoC</a>
+        <a class="footer-link" href="https://www.robichip.com/robidev" target="_blank">RobiDev</a>
+        <a class="footer-link" href="https://www.robichip.com/robithrust" target="_blank">RobiThrust</a>
+        <a class="footer-link" href="https://www.robichip.com/robitorque" target="_blank">RobiTorque</a>
+        <a class="footer-link" href="https://www.robichip.com/robiagent" target="_blank">RobiAgent</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a class="footer-link" href="https://www.robichip.com/technology-insights" target="_blank">Technology Insights</a>
+        <a class="footer-link" href="https://www.robichip.com/news-events" target="_blank">News & Events</a>
+        <a class="footer-link" href="https://www.robichip.com/robilab" target="_blank">RobiLab Validation</a>
+        <a class="footer-link" href="https://www.youtube.com/channel/UCqp-CDSVPCX8TfYT_aVScpg" target="_blank">Youtube channel</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Partnership</a>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Technical Discussion</a>
+        <a class="footer-link" href="https://www.robichip.com/join-us" target="_blank">Join Us</a>
+        <a class="footer-link" href="tel:+886277015728">+886-2-7701-5728</a>
+        <a class="footer-link" href="mailto:contact@robichip.com">contact@robichip.com</a>
+        <a class="footer-link" href="mailto:bd@robichip.com">bd@robichip.com</a>
+      </div>
+    </div>
+
+    <div class="footer-info">
+      <div class="footer-address">
+        <h4>Company Information｜公司資訊</h4>
+        <p><strong>RobiChip Technology Co., Ltd.｜羅比芯科技股份有限公司</strong></p>
+
+        <p>
+          National Taiwan University of Science and Technology, International Building 11F, Room 1105<br>
+          No. 43, Sec. 4, Keelung Rd., Da’an Dist., Taipei City, Taiwan
+        </p>
+
+        <p>
+          台北市大安區基隆路四段 43 號<br>
+          國立臺灣科技大學 國際大樓 11F 1105 室
+        </p>
+
+        <p>
+          Tel｜電話：
+          <a href="tel:+886277015728">+886-2-7701-5728</a><br>
+          General Contact｜一般聯絡：
+          <a href="mailto:contact@robichip.com">contact@robichip.com</a><br>
+          Business Development｜商務合作：
+          <a href="mailto:bd@robichip.com">bd@robichip.com</a>
+        </p>
+      </div>
+
+      <div class="footer-badges">
+        <span class="footer-badge">Power SoC</span>
+        <span class="footer-badge">Robotics</span>
+        <span class="footer-badge">UAV</span>
+        <span class="footer-badge">Advanced Packaging</span>
+        <span class="footer-badge">Thermal Path</span>
+        <span class="footer-badge">Design-in</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        © 2026 RobiChip Technology Co., Ltd. All rights reserved.
+      </div>
+      <div>
+        Public website content is for general information only. Detailed specifications are subject to official release, NDA, or partner discussion.
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ROBIDEV SOURCE BLOCKS -->

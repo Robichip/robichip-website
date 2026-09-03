@@ -688,7 +688,7 @@
     '/': {title:'Power SoC Platform for Intelligent Machines', render:homePage},
     '/首頁': {title:'Power SoC Platform for Intelligent Machines', render:homePage},
     '/robisoc': {title:'RobiSoC', render:() => sourceRoute('/assets/source/robisoc.html?v=frozen-reference-v7', 'robisoc'), reference:true},
-    '/robidev': {title:'RobiDev', render:robidevPage},
+    '/robidev': {title:'RobiDev', render:() => sourceRoute('/assets/source/robidev.html?v=frozen-reference-v1'), reference:true},
     '/robithrust': {title:'RobiThrust', render:robithrustPage},
     '/robitorque': {title:'RobiTorque', render:robitorquePage},
     '/technology-insights': {title:'Technology Insights', render:insightsPage},
@@ -839,6 +839,17 @@
               <figure><img src="${BASE_PATH}/assets/images/robisoc-power-soc-reference.jpg" alt="RobiSoC Power SoC module"><figcaption>RobiSoC = 18.5mm X 22.5mm</figcaption></figure>
               <figure><img src="${BASE_PATH}/assets/images/robidev-reference.jpg" alt="RobiDev reference platform"><figcaption>RobiDev diameter = 35mm</figcaption></figure>
             </aside>`);
+        }
+        if (sourceMount.dataset.sourceLayout === 'robidev') {
+          const blocks = sourceMount.querySelectorAll(':scope > .google-source-block');
+          const highDensity = document.createElement('section');
+          highDensity.className = 'robidev-legacy-row robidev-high-density';
+          highDensity.innerHTML = '<figure><img src="\${BASE_PATH}/assets/images/robidev-high-density-reference.jpg" alt="RobiDev High-Density"></figure><div class="robidev-legacy-copy"><h1>RobiDev High-Density</h1><h2>RobiSoC Evaluation &amp; High-Density Motor-Drive Design-in Platform</h2><p>RobiDev-High-density supports RC100 / RobiSoC evaluation, thermal-path review, and high-density motor-drive design-in.</p><p>RobiDev-High-density 支援 RC100 / RobiSoC 評估、熱路徑檢視與高密度馬達驅動導入。</p></div>';
+          const discrete = document.createElement('section');
+          discrete.className = 'robidev-legacy-row robidev-discrete';
+          discrete.innerHTML = '<figure><img src="\${BASE_PATH}/assets/images/robidev-discrete-reference.jpg" alt="RobiDev Discrete"><figcaption>Diameter=30mm, up to 500W</figcaption></figure><div class="robidev-legacy-copy"><h1>RobiDev Discrete</h1><h2>6-Layer Discrete Reference &amp; Validation Platform</h2><p>RobiDev-Discrete is a 6-layer total discrete validation model, corresponding to the RobiSoC M1/G1 SKU architecture in discrete implementation.</p><p>RobiDev-Discrete 為六層板 total discrete 驗證平台，可視為 RobiSoC 之 M1/G1 SKU 架構的分離式實作版本。</p></div>';
+          blocks[1]?.before(highDensity);
+          blocks[2]?.before(discrete);
         }
         if (BASE_PATH) {
           sourceMount.querySelectorAll('[href]').forEach((element) => {
