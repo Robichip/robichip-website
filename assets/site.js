@@ -178,24 +178,25 @@
       lead:'RobiSoC is RobiChip’s scalable Power SoC product family for robotics, UAV propulsion, and high-power-density motion systems, offered as RC25 / RC50 / RC75 / RC100 modules from 250 W to 1000 W class.',
       sublead:'RobiSoC 是羅比芯面向機器人、無人機推進與高功率密度動力系統的可擴展 Power SoC 產品線，提供 RC25 / RC50 / RC75 / RC100，涵蓋 250 W 到 1000 W class。',
       actions:[{href:"/partnership",label:"Discuss Design-in"},{href:"/robidev",label:"Explore RobiDev"}],
-      metrics:[['250–1000 W','RC25–RC100'],['18.5 × 22.5 mm','Module footprint'],['M1/M2 · G1/G2','Configuration logic']]
+      metrics:[['250–1000 W','RC25–RC100'],['22 × 18 mm','Preliminary RC100 footprint'],['M1/M2 · G1/G2','Configuration logic']]
     })}
     ${section('Product Line', 'RC25 / RC50 / RC75 / RC100', 'A scalable product family organized by power class and application direction.', cards([
-      {tag:'Market Baseline', title:'RC25', power:'250 W Class', text:'Lightweight actuators, education kits, mobility nodes, and edge motion.'},
-      {tag:'2× Direction', title:'RC50', power:'500 W Class', text:'Mid-power robotics, AMR/AGV, gimbal, and automation systems.'},
-      {tag:'3× Direction', title:'RC75', power:'750 W Class', text:'Robotics joints, industrial automation, and high-dynamic motion.'},
-      {tag:'Indicator Product', title:'RC100', power:'1000 W Class', text:'Flagship high-power-density platform and design-in indicator product.'}
+      {tag:'Market Baseline', title:'RC25', power:'250 W Class', text:'Lightweight motor control for compact actuators, education kits, mobility nodes, and edge-motion platforms.'},
+      {tag:'2× Direction', title:'RC50', power:'500 W Class', text:'Compact actuator and servo module for mid-power robotics, AMR/AGV, gimbals, and automation.'},
+      {tag:'3× Direction', title:'RC75', power:'750 W Class', text:'High-power compact actuation for robotics joints, industrial automation, and high-dynamic motion.'},
+      {tag:'Indicator Product', title:'RC100', power:'1000 W Class', text:'1000 W-class flagship for power-dense designs with clear thermal and validation boundaries.'}
     ], 'four'), 'tint')}
     ${section("Technical Documentation", "RC100 Detailed Datasheet", "RC100 三相 BLDC／PMSM 馬達驅動器詳細規格書<br>Download the detailed technical datasheet for the RC100 motor-drive Power SoC, including architecture, interfaces, operating conditions, protection functions, package information, ordering options, and RobiDev design-in support.<br><br>下載 RC100 馬達驅動 Power SoC 詳細規格書，查看功能架構、控制介面、操作條件、保護功能、封裝資訊、訂購組態與 RobiDev Design-in 支援。", `
       <div class="datasheet-layout">
         <div>
           <div class="badge-row"><span class="tag">Version 0.9</span><span class="tag">Three-Phase BLDC / PMSM</span><span class="tag">Integrated GaN Power Stage</span><span class="tag">RobiSoC Platform</span></div>
           <h3>RC100 Three-Phase BLDC/PMSM Motor Driver</h3><p class="secondary-heading">RobiSoC Motor-Drive Power SoC</p>
-          <p>RC100 combines an STM32G4-series motor-control MCU, a three-phase GaN power stage, current sensing, protection functions, and multiple control interfaces in a compact 18.5 mm × 22.5 mm form factor.</p>
-          <p>RC100 在 18.5 mm × 22.5 mm 的精巧尺寸中，整合 STM32G4 系列馬達控制 MCU、三相 GaN 功率級、電流感測、保護功能與多種控制介面。</p>
+          <p>RC100 combines an STM32G4-series motor-control MCU, a three-phase GaN power stage, current sensing, protection functions, and multiple control interfaces in a preliminary 22 mm × 18 mm footprint.</p>
+          <p>RC100 在初步 22 mm × 18 mm 的精巧尺寸中，整合 STM32G4 系列馬達控制 MCU、三相 GaN 功率級、電流感測、保護功能與多種控制介面。</p>
           <div class="spec-grid">
-            <div class="spec-item"><span>Main Supply</span><strong>12–54 V</strong><small>24 V / 48 V typical</small></div>
-            <div class="spec-item"><span>Form Factor</span><strong>18.5 × 22.5 mm</strong><small>Compact RobiSoC module</small></div>
+            <div class="spec-item"><span>Main Supply</span><strong>12–60 V</strong><small>24–60 V robotic bus</small></div>
+            <div class="spec-item"><span>Output Current</span><strong>20 A continuous</strong><small>140 A peak @ 25°C / 300 µs</small></div>
+            <div class="spec-item"><span>Form Factor</span><strong>22 × 18 mm</strong><small>Preliminary RobiSoC footprint</small></div>
             <div class="spec-item"><span>PWM Frequency</span><strong>10–100 kHz</strong><small>Recommended operating range</small></div>
             <div class="spec-item"><span>Controller</span><strong>STM32G4 Series</strong><small>Motor-control MCU in package</small></div>
             <div class="spec-item"><span>Power Stage</span><strong>Three-Phase GaN</strong><small>Configurable G1 / G2 options</small></div>
@@ -212,7 +213,7 @@
       <div class="detail-grid">
         <div><span>Architecture</span><strong>Functional Block Diagram</strong><small>MCU、GaN 功率級、感測與控制架構</small></div><div><span>Electrical</span><strong>Ratings & Operating Conditions</strong><small>電壓、溫度與 PWM 操作範圍</small></div><div><span>Interfaces</span><strong>Control & Feedback</strong><small>PWM、SPI、UART、Encoder 與 POT</small></div><div><span>Protection</span><strong>OCP / OVP / UVLO / OTP</strong><small>過流、過壓、欠壓與過溫保護</small></div><div><span>Mechanical</span><strong>Package & Footprint</strong><small>封裝尺寸、焊墊與 IC footprint</small></div><div><span>Thermal</span><strong>Thermal & Reliability Data</strong><small>熱阻、接面溫度與 ESD 資訊</small></div><div><span>Configuration</span><strong>M1 / M2 · G1 / G2 Options</strong><small>控制器與 GaN 功率級組態</small></div><div><span>Design-in</span><strong>RobiDev Development Support</strong><small>High-Density 與 Discrete 評估平台</small></div>
       </div>
-      <div class="notice"><strong>Document notice｜文件說明：</strong> Specifications, configuration options, package codes, electrical limits, availability, and production part numbers remain subject to formal quotation, engineering review, and final product release.<br>規格、組態選項、封裝代碼、電氣限制、供貨狀態及正式量產料號，仍應以工程審查、正式報價及最終產品發布文件為準。</div>
+      <div class="notice"><strong>Preliminary document notice｜初步文件說明：</strong> Specifications, configuration options, package codes, electrical limits, availability, and production part numbers remain subject to validation, formal quotation, engineering review, and final product release.<br>規格、組態選項、封裝代碼、電氣限制、供貨狀態及正式量產料號，仍應以驗證、工程審查、正式報價及最終產品發布文件為準。</div>
     `, "tint")}
     ${section('SKU Logic', 'RCxx + M / G Defines the RobiSoC Product Configuration', '以 RCxx + M / G 定義 RobiSoC 產品組態：RobiSoC-RCxx-MxGx。', `
       <div class="table-wrap"><table>
@@ -228,10 +229,10 @@
       </table></div>
       <div class="notice">Pin maps, package drawings, order codes, and final electrical/thermal ratings are subject to the official datasheet and partner discussion. M2 positioning is application- and partner-specific.</div>`)}
     ${section('Partner Configuration', 'From Reference Platform to Customer-Specific Power Silicon', '合作內容可依控制、介面、韌體、驗證與製造需求進行組態。', cards([
-      {title:'Toolchain & Firmware Alignment', text:'Align motor-control workflow, MCU toolchain, and validation firmware.'},
-      {title:'Application-specific I/O', text:'Review sensors, protection, communication, and system interfaces.'},
-      {title:'Co-developed Evaluation Platform', text:'Build a measurable reference platform around the target application.'},
-      {title:'Power Platform Without MCU Lock-in', text:'Keep the power-platform direction adaptable to customer control choices.'}
+      {title:'Toolchain & Firmware Alignment', text:'Align the partner MCU, SDK, firmware structure, debug tools, production programming, and validation documentation.'},
+      {title:'Application-specific I/O', text:'Define CAN bus, RS485, UART, SPI, PWM, encoder, sensor signals, cable direction, and control-interface logic.'},
+      {title:'Co-developed Evaluation Platform', text:'Co-develop evaluation boards, developer kits, reference designs, and validation workflows around the target application.'},
+      {title:'Power Platform Without MCU Lock-in', text:'Jointly select power stages, thermal paths, protection logic, and system limits while retaining adaptable control choices.'}
     ], 'four'), 'tint')}
     ${section("Validation Loop", "From RobiDev to RobiLab to Application Proof", "從 RobiDev、RobiLab 到應用驗證<br>RobiChip builds a validation loop from module samples and driver boards to dynamic-load measurement, thermal validation, UAV propulsion testing, and robotics actuator scenarios.<br><br>羅比芯建立從模組樣品、驅動板、動態負載量測、熱驗證、無人機推進測試到機器人致動器場景的驗證閉環。", cards([
       {tag:"RobiDev", title:"Design-in Front Door", text:"Supports electrical interface checks, driver-board validation, firmware bring-up, and early customer-facing evaluation.<br><br>客戶導入前門"},
@@ -257,9 +258,10 @@
       {title:"Design-in",text:"Shortens the path from concept to customer design-in, especially for robotics, UAV, actuator, and motion-system developers."}
     ]), "tint")}
     ${section("Product Family", "RobiDev Discrete & High-Density", "從分離式參考驗證到高功率密度 Design-in<br>RobiDev is offered through two function-based platform configurations. RobiDev Discrete supports early motor-control development and reference validation, while RobiDev High-Density supports RobiSoC evaluation, compact integration, thermal review, and customer design-in.<br><br>RobiDev 採用兩種功能型平台配置。RobiDev Discrete 支援早期馬達控制開發與參考驗證；RobiDev High-Density 則支援 RobiSoC 評估、高功率密度整合、熱路徑檢視與客戶 Design-in。", cards([
-      {tag:"Reference & Validation",title:"RobiDev Discrete",text:"6-Layer Discrete Reference & Validation Platform｜六層分離式參考與驗證平台<br><br>A total-discrete implementation for early BLDC / PMSM evaluation, firmware bring-up, controller development, motor integration, engineering education, and architecture comparison.<br><br>採用 total-discrete 架構，適用於 BLDC／PMSM 早期評估、韌體 bring-up、控制器開發、馬達整合、工程教育與架構比較。"},
-      {tag:"Evaluation & Design-in",title:"RobiDev High-Density",text:"RobiSoC Evaluation & High-Density Motor-Drive Design-in Platform｜RobiSoC 高功率密度評估與 Design-in 平台<br><br>A higher-density evaluation path for RobiSoC and RC100, supporting compact motor-drive integration, M1 / G1 configuration evaluation, thermal-path review, protection integration, and customer-specific design-in.<br><br>面向 RobiSoC 與 RC100 的高功率密度評估路徑，支援小型化馬達驅動整合、M1／G1 組態評估、熱路徑檢視、保護機制整合與客戶專案導入。"}
-    ], "two") + `${flow(["RobiDev Discrete<br><small>Reference implementation and early engineering validation<br>分離式參考實作與早期工程驗證</small>", "RobiDev High-Density<br><small>RobiSoC evaluation and customer design-in<br>RobiSoC 高功率密度評估與客戶導入</small>", "RobiThrust<br><small>Application-level propulsion and system validation<br>推進系統與應用層驗證</small>"])}` + `<div class="notice"><strong>Terminology note｜名詞說明：</strong> RobiDev uses function-based product names rather than generation numbers. RobiDev Discrete and RobiDev High-Density describe different evaluation and design-in configurations; they do not correspond to Propulsion Gen.1, Gen.2, or Gen.3.<br>RobiDev 採用功能型產品名稱，不再以世代數字區分。RobiDev Discrete 與 RobiDev High-Density 代表不同的評估與 Design-in 配置，並非 Propulsion Gen.1、Gen.2 或 Gen.3 的無人機推進架構世代。</div>`, "tint")}
+      {tag:"Reference & Validation",title:"RobiDev Discrete",text:"6-Layer Discrete Reference & Validation Platform｜六層分離式參考與驗證平台<br><br>A total-discrete implementation for early BLDC / PMSM evaluation, firmware bring-up, controller development, motor integration, engineering education, and architecture comparison.<br><br>採用 total-discrete 架構，適用於 BLDC／PMSM 早期評估、韌體 bring-up、控制器開發、馬達整合、工程教育與架構比較。",href:"mailto:bd@robichip.com?subject=RobiDev%20Discrete%20Platform%20Quote",link:"Request Discrete Platform Quote"},
+      {tag:"Evaluation & Design-in",title:"RobiDev High-Density",text:"RobiSoC Evaluation & High-Density Motor-Drive Design-in Platform｜RobiSoC 高功率密度評估與 Design-in 平台<br><br>A higher-density evaluation path for RobiSoC and RC100, supporting compact motor-drive integration, M1 / G1 configuration evaluation, thermal-path review, protection integration, and customer-specific design-in.<br><br>面向 RobiSoC 與 RC100 的高功率密度評估路徑，支援小型化馬達驅動整合、M1／G1 組態評估、熱路徑檢視、保護機制整合與客戶專案導入。",href:"mailto:bd@robichip.com?subject=RobiDev%20High-Density%20Review",link:"Request High-Density Review"},
+      {tag:"System Configuration",title:"RobiDev + RobiThrust Integration Bundle",text:"Integrate motor-driver and propeller matching, thrust, input power, efficiency, and thermal observation into one validation package for UAV propulsion design-in.<br><br>整合馬達驅動與槳匹配、推力、輸入功率、效率與熱觀察，形成無人機推進 Design-in 的驗證套件。",href:"mailto:bd@robichip.com?subject=RobiDev%20RobiThrust%20Integration%20Bundle",link:"Configure Integration Bundle"}
+    ], "three") + `${flow(["RobiDev Discrete<br><small>Reference implementation and early engineering validation<br>分離式參考實作與早期工程驗證</small>", "RobiDev High-Density<br><small>RobiSoC evaluation and customer design-in<br>RobiSoC 高功率密度評估與客戶導入</small>", "RobiThrust<br><small>Application-level propulsion and system validation<br>推進系統與應用層驗證</small>"])}` + `<div class="notice"><strong>Terminology note｜名詞說明：</strong> RobiDev uses function-based product names rather than generation numbers. RobiDev Discrete and RobiDev High-Density describe different evaluation and design-in configurations; they do not correspond to Propulsion Gen.1, Gen.2, or Gen.3.<br>RobiDev 採用功能型產品名稱，不再以世代數字區分。RobiDev Discrete 與 RobiDev High-Density 代表不同的評估與 Design-in 配置，並非 Propulsion Gen.1、Gen.2 或 Gen.3 的無人機推進架構世代。</div>`, "tint")}
     ${section("Platform Comparison", "RobiDev Discrete vs High-Density", "不同評估任務，不同導入路徑<br>RobiDev Discrete provides a transparent reference implementation for early motor-control development and engineering validation. RobiDev High-Density extends the platform toward RobiSoC evaluation, compact integration, thermal review, and customer design-in.<br><br>RobiDev Discrete 提供便於觀察與比較的分離式參考實作；RobiDev High-Density 則將平台延伸至 RobiSoC 評估、高功率密度整合、熱路徑檢視與客戶 Design-in。", `
       <div class="table-wrap"><table><thead><tr><th>Comparison Item</th><th>RobiDev Discrete<br>Reference & Validation Platform</th><th>RobiDev High-Density<br>RobiSoC Evaluation & Design-in Platform</th></tr></thead><tbody>
       <tr><td>Positioning</td><td>Six-layer discrete reference and engineering-validation platform.</td><td>High-density RobiSoC / RC100 evaluation and customer design-in platform.</td></tr>
@@ -300,9 +302,9 @@
     })}
     ${section("RobiThrust-Heavy", "Heavy UAV Propulsion Test Platform with Dynamometer", "RobiThrust-Heavy 在 RobiThrust 推進驗證平台上加入動力計 / 扭力負載模組，可支援較重負載的無人機推進測試、扭力－電流－溫度對應，以及未來 XL Series 的驗證路線。<br><br>RobiThrust-Heavy extends the RobiThrust validation platform with a dynamometer / torque-load module, enabling heavier-load UAV propulsion testing, torque-current-temperature mapping, and future XL Series validation.", `<div class="callout"><span class="tag">Heavy / XL validation path</span><h3>From thrust-only benches to torque-load system evidence</h3><p>RobiThrust-Heavy adds a practical route for heavier-load UAV propulsion, torque-current-temperature mapping, and application-level validation planning.</p></div>`, "tint")}
     ${section("Architecture Evolution", "Evolution of UAV Propulsion Architecture", "無人機推進架構的世代演進<br>RobiChip framework illustrates the transition from discrete ESC, motor, and propeller configurations to integrated modules, and toward semiconductor-defined propulsion.<br><br>羅比芯提出無人機推進架構的三代演進框架：從 ESC、馬達與螺旋槳分離的傳統架構，逐步走向整合模組與半導體定義推進系統。", cards([
-      {tag:"Gen.1",title:"Discrete ESC, Motor & Propeller",text:"Traditional discrete components establish the accessible reference and comparison baseline."},
-      {tag:"Gen.2",title:"Integrated Module",text:"Integration improves compactness while leaving cross-domain power, thermal, and application optimization fragmented."},
-      {tag:"Gen.3",title:"Semiconductor-Defined Propulsion",text:"A Power SoC-centered architecture connecting power control, sensing, protection, thermal design, motor, and propeller within a more integrated propulsion platform.<br><br>以 Power SoC 為功率智慧核心，整合驅動控制、感測、保護、熱管理、馬達與螺旋槳，形成更緊湊且可驗證的推進平台。"}
+      {tag:"Gen.1",title:"Discrete ESC, Motor & Propeller",text:"ESC, motor, and propeller are selected, connected, and validated separately. This accessible baseline keeps the electrical and thermal path long, and requires more wiring and integration effort."},
+      {tag:"Gen.2",title:"Integrated Module",text:"Drive electronics and motor move into a more compact modular architecture, reducing size and wiring while retaining only partial electrical and mechanical integration."},
+      {tag:"Gen.3",title:"Semiconductor-Defined Propulsion",text:"A Power SoC-centered architecture connects power, sensing, control, protection, thermal design, motor, and propeller in one measurable, repeatable validation platform.<br><br>以 Power SoC 為功率智慧核心，串接功率、感測、控制、保護、熱管理、馬達與螺旋槳，形成可量測且可重複驗證的推進平台。"}
     ]), "tint")}
     ${section("Bench Evidence", "RobiThrust-X Test Bench Video", "RobiThrust 推進測試影片<br>EVT bench validation with RobiDev Discrete for thrust, RPM, input power, and thermal observation. 使用 RobiDev Discrete 進行推力、RPM、輸入功率與熱觀察的 EVT 台架驗證。", `<div class="video-frame"><iframe src="https://www.youtube.com/embed/x4YBwamLpcc" title="RobiThrust-X Test Bench Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`, "tint")}
     ${section("Validation Platforms", "RobiThrust Product Family", "RobiThrust-miniE(ECX-32) · RobiThrust-P(ECX-42) · RobiThrust-X(RUM3848)", cards([
@@ -311,6 +313,11 @@
       {tag:"X Series",title:"RobiThrust-X (RUM3848)",text:"EVT bench validation for thrust, RPM, input power, and thermal observation."},
       {tag:"Heavy / XL",title:"RobiThrust-Heavy",text:"Dynamometer and torque-load direction for heavier UAV propulsion and future XL validation."}
     ], "four"))}
+    ${section("Validation Packages", "Choose Your RobiThrust Validation Platform", "Select the validation entry point that matches your motor, propeller, power range, and engineering decision.", cards([
+      {tag:"Base Validation Kit",title:"Early Propulsion Evaluation",text:"For universities, UAV startups, engineering teams, and early propulsion evaluation. Establish a measurable baseline for motor, propeller, drive, and operating condition.",href:"mailto:bd@robichip.com?subject=RobiThrust%20Base%20Validation%20Kit",link:"Request Base Validation Kit"},
+      {tag:"Integration Bundle",title:"RobiDev / RobiSoC Design-in",text:"For motor-driver architecture, drive matching, and customer design-in. Combine RobiThrust with RobiDev or RobiSoC to review power, interface, thermal path, and application constraints.",href:"mailto:bd@robichip.com?subject=RobiThrust%20Integration%20Bundle",link:"Configure Integration Bundle"},
+      {tag:"Heavy Development Platform",title:"X / XL Validation",text:"For larger propellers, higher power, and torque-heavy UAV feasibility. Extend thrust-only testing with heavy-load and dynamometer planning.",href:"mailto:bd@robichip.com?subject=RobiThrust%20Heavy%20Development%20Platform",link:"Plan Heavy Development Platform"}
+    ], "three"), "tint")}
     ${section("Product Resources", "Product Introduction Deck & Validation Reports", "Product Introduction Deck｜RobiThrust 產品介紹簡報<br>無人機三合一高推力密度系統 RobiThrust -E/P/X/XL", cards([
       {title:"mini-E Series Technical Insight",text:"Maxon ECX-32 technology insight / validation note.",href:"/technology-insights/robithrust-ecx32-test-observation",link:"Read note"},
       {title:"P Series Validation Report",text:"RTrst_Exp002_Thrust Test_Maxon ECX42-Flat. Detailed report access is handled through technical discussion."},
@@ -361,7 +368,7 @@
       actions:[{href:BD,label:"Request Engineering Review"},{href:"https://robigpt-webapp-26642801715.asia-east1.run.app/",label:"Try RobiGPT (early access)"},{href:"/robidev",label:"Start with RobiDev"}]
     })}
     ${section("Early Access Notice", "Available by Pilot Discussion & Engineering Review", "RobiAgent services are currently provided on a <strong>pilot / engineering-review basis</strong>. Please contact RobiChip to discuss project scope, data requirements, NDA needs, review depth, and expected deliverables.<br><br>RobiAgent 目前採 <strong>pilot / engineering-review</strong> 方式提供服務。請與羅比芯聯繫，以確認專案範圍、資料需求、NDA 需求、審查深度與交付內容。", `<div class="actions">${link(BD,"Request Pilot Discussion","btn primary")}${link(CONTACT,"General Inquiry","btn")}</div>`, "tint")}
-    ${section("What RobiAgent Does", "From Query to Engineering Decision", "從技術查詢走向工程決策<br>RobiAgent is not just a chatbot. It is RobiChip AI-assisted engineering workflow that connects technical query, thermal pre-check, layout support, validation data, and design-in recommendations.<br><br>RobiAgent 不只是聊天機器人，而是羅比芯的 AI 輔助工程流程，串接技術查詢、熱預評估、layout 支援、驗證資料與 design-in 建議。", `<h3 class="subsection-title">RobiAgent Engineering Path｜RobiAgent 工程導入路徑</h3>${flow(["1. Technical Query<br><small>RobiGPT guided Q&A</small>","2. Thermal Pre-check<br><small>RobiFlux power / heat path review</small>","3. Layout Support<br><small>RobiLayout board-level review</small>","4. Design-in Decision<br><small>report, recommendation, next action</small>"])}`, "tint")}
+    ${section("What RobiAgent Does", "From Query to Engineering Decision", "從技術查詢走向工程決策<br>RobiAgent is not just a chatbot. It is RobiChip’s AI-assisted engineering workflow that connects technical query, thermal pre-check, layout support, validation data, and design-in recommendations.<br><br>RobiAgent 不只是聊天機器人，而是羅比芯的 AI 輔助工程流程，串接技術查詢、熱預評估、layout 支援、驗證資料與 design-in 建議。", `<h3 class="subsection-title">RobiAgent Engineering Path｜RobiAgent 工程導入路徑</h3>${flow(["1. Technical Query<br><small>RobiGPT guided Q&A</small>","2. Thermal Pre-check<br><small>RobiFlux power / heat path review</small>","3. Layout Support<br><small>RobiLayout board-level review</small>","4. Design-in Decision<br><small>report, recommendation, next action</small>"])}`, "tint")}
     ${section("Service Modules", "RobiGPT / RobiFlux / RobiLayout", "三個 AI 輔助工程服務模組<br>RobiAgent starts with three engineering service modules: knowledge query, thermal and power pre-check, and aluminum substrate re-layout support.<br><br>RobiAgent 先以三個工程服務模組啟動：知識查詢、熱與功率預評估，以及單層鋁基板 re-layout 支援。", cards([
       {tag:"RobiGPT",title:"Engineering Knowledge Query",text:"工程知識查詢與文件導覽<br><br>RobiGPT provides guided engineering Q&A for RobiSoC, RobiDev, RobiThrust, RobiTorque, thermal path, validation workflow, and design-in preparation.<br><br>Technical Q&A · Document-assisted engineering support · Design-in preparation · Product navigation and explanation"},
       {tag:"RobiFlux",title:"Thermal & Power Pre-check",text:"熱與功率預評估<br><br>RobiFlux supports early thermal and power feasibility review, helping customers understand heat path, package-to-board behavior, board-level constraints, and system-level cooling direction.<br><br>Thermal path pre-check · Power density review · Board-level constraint discussion · System cooling direction"},
@@ -385,22 +392,41 @@
   const robilabPage = () => `
     ${hero({
       eyebrow:'Measurement, Thermal & System Validation',
-      title:'RobiLab',
-      zh:'連接評估平台、系統驗證與 design-in 的工程量測基地',
-      lead:'RobiLab connects RobiDev evaluation, RobiThrust propulsion validation, RobiTorque actuator pilots, and RobiSoC design-in through measurable engineering data.',
-      sublead:'RobiLab 透過可量測的工程數據，連接 RobiDev 評估、RobiThrust 推進驗證、RobiTorque 致動器 pilot 與 RobiSoC design-in。',
+      title:'Measurement & System Validation Service',
+      zh:'量測與系統驗證服務',
+      lead:'RobiLab turns RobiDev, RobiThrust, RobiTorque, and RobiSoC validation into measurable data, engineering reports, and design-in decisions.',
+      sublead:'RobiLab 將 RobiDev、RobiThrust、RobiTorque 與 RobiSoC 驗證轉化為可量測資料、工程報告與 design-in 決策。',
       image:'/assets/images/robilab-validation.png',
       caption:'RobiLab measurement and validation environment',
-      actions:[{href:CONTACT,label:'Plan a validation session'},{href:'/partnership',label:'Collaboration options'}]
+      actions:[{href:'mailto:bd@robichip.com?subject=RobiLab%20Validation%20Support',label:'Request Validation Support'},{href:'/robidev',label:'Start with RobiDev'}]
     })}
-    ${section('Validation Base', 'One Measurement Context Across the Platform', '以一致的資料語境連接元件、板級、機電系統與客戶應用。', cards([
-      {title:'Electrical Characterization', text:'Input/output power, current, switching behavior, protection, and efficiency.'},
-      {title:'Thermal Observation', text:'Package, PCB, structure, airflow, and transient/steady-state temperature.'},
-      {title:'Motion & Load', text:'RPM, thrust, torque, dynamic load, duty cycle, and application response.'},
-      {title:'Design-in Evidence', text:'Comparable plots, observations, limitations, and recommended next steps.'}
+    ${section('Measurement Layer', 'The Measurement Layer of the RobiChip Platform', 'RobiLab is the physical measurement and validation service layer that connects early engineering assumptions, real data, and design-in recommendations.<br><br>RobiLab 是連接早期工程假設、真實量測資料與 design-in 建議的實體量測與驗證服務層。', cards([
+      {title:'Electrical Measurement', text:'Voltage, current, input power, switching behavior, protection behavior, and efficiency under defined operating conditions.'},
+      {title:'Motion & Load Measurement', text:'RPM, thrust, torque, dynamic load, duty cycle, and system behavior under representative conditions.'},
+      {title:'Thermal & Dynamic Observation', text:'Temperature rise, dynamic-load response, torque-speed (T-N) curves, and board-to-system correlation.'},
+      {title:'Engineering Evidence', text:'Reports that summarize test conditions, data, observations, limitations, and recommended next steps.'}
     ], 'four'), 'tint')}
-    ${section('Connected Platforms', 'From RobiDev to Customer Pilot', '', flow(['RobiDev Evaluation', 'RobiThrust / RobiTorque', 'RobiLab Measurement', 'RobiSoC Design-in', 'Customer Pilot']))}
-    ${cta('Define a Measurable Validation Question', 'The best RobiLab engagement starts with a clear decision, a representative operating condition, and agreed evidence.')}`;
+    ${section('Service Packages', 'Measurement Packages, Not Generic Lab Rental', 'RobiLab packages measurement around an engineering decision, rather than offering an unstructured test-bench rental service.<br><br>RobiLab 以工程決策為核心規劃量測套件，而非提供沒有結構的通用實驗室租用。', cards([
+      {tag:'Motor-drive Basic', title:'Bring-up & Board Behavior', text:'Voltage, current, RPM, temperature rise, board behavior, and bring-up observations for early motor-drive validation.'},
+      {tag:'Propulsion', title:'Thrust & Efficiency', text:'Thrust, RPM, input power, gf/W, motor-driver matching, and thermal behavior for RobiThrust-style propulsion work.'},
+      {tag:'Actuator', title:'Dynamic Load & T-N Curve', text:'Dynamic load, torque-speed behavior, temperature rise, and control-interface review for actuator and servo projects.'},
+      {tag:'Thermal', title:'Physical Thermal Pre-check', text:'Hotspot observation, cooling direction, package-to-board contact, and board-to-system thermal behavior before deeper simulation or design release.'}
+    ], 'four'))}
+    ${section('Platform Support', 'Full RobiChip Platform Support', 'The same measurement language can follow a project from platform bring-up to customer pilot.', cards([
+      {tag:'RobiDev', title:'Gen.1 Evaluation & Motor-drive Bring-up', text:'Electrical interface checks, motor-drive bring-up, current and temperature observation, and board-level validation.'},
+      {tag:'RobiThrust', title:'Propulsion Measurement', text:'Static thrust, RPM, input power, efficiency, motor-driver matching, and propulsion thermal observation.'},
+      {tag:'RobiTorque', title:'Actuator Pilot Validation', text:'Dynamic-load, torque-speed, thermal, and control-interface evidence for actuator pilot planning.'},
+      {tag:'RobiAgent', title:'Pre-check to Measurement', text:'Use RobiAgent for technical intake and assumptions, then use RobiLab to measure the real operating condition.'}
+    ], 'four'), 'tint')}
+    ${section('Simulation to Measurement', 'Close the Loop Between Assumptions and Physical Evidence', 'RobiLab data supports boundary conditions, thermal assumptions, load profiles, and design optimization decisions. It does not replace CAE; it helps make CAE and design reviews more representative.<br><br>RobiLab 資料可支援邊界條件、熱假設、負載輪廓與設計最佳化決策；它不取代 CAE，而是讓 CAE 與設計審查更貼近真實條件。', `
+      <div class="grid two">
+        <div class="callout"><span class="tag">Measurement Data</span><h3>Organize the real operating point</h3><p>Structure voltage, current, RPM, thrust, torque, temperature, airflow, and load data around the defined test condition.</p></div>
+        <div class="callout"><span class="tag">Engineering Review</span><h3>Refine the next design decision</h3><p>Review thermal contact resistance, convection assumptions, losses, cooling direction, and the DOE needed for design optimization.</p></div>
+      </div>
+      <div style="margin-top:22px">${flow(['Assumption & Target', 'RobiDev / System Bring-up', 'RobiLab Measurement', 'Data & Report', 'Design-in Decision'])}</div>
+      <p class="public-note">A useful RobiLab engagement begins with a clear decision, a representative operating condition, and agreed evidence. Detailed test setups, raw data, and customer-specific findings are provided through project discussion and, where needed, NDA-controlled access.</p>
+      <div class="actions">${link('mailto:bd@robichip.com?subject=RobiLab%20Measurement%20Plan','Request Validation Support','btn primary')}${link('/robidev','Start with RobiDev','btn')}${link('/partnership','Discuss Collaboration','btn')}</div>
+    `, 'tint')}`;
 
   const insightsPage = () => `
     ${hero({
@@ -767,4 +793,3 @@
     toggle?.setAttribute('aria-expanded', 'false');
   }));
 })();
-
