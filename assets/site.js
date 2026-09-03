@@ -319,23 +319,36 @@
 
   const robitorquePage = () => `
     ${hero({
-      eyebrow:'Robotics Actuator Validation Platform',
-      title:'RobiTorque',
-      zh:'機器人致動器驗證平台',
-      lead:'RobiTorque extends RobiChip’s Power SoC, motor-drive, and thermal-path validation logic from UAV propulsion to robotics actuators, joint motors, and servo modules.',
-      sublead:'RobiTorque 將羅比芯在 Power SoC、馬達驅動與熱路徑驗證上的能力，從無人機推進延伸至機器人致動器、關節馬達與伺服模組。',
-      actions:[{href:CONTACT,label:'Discuss an actuator pilot'},{href:'/robisoc',label:'Explore RobiSoC'}],
-      metrics:[['Torque density','System target'],['FOC + Encoder','Control layer'],['T–N Curve','Validation output']]
+      eyebrow:"RobiTorque",
+      title:"Robotics Actuator Validation Platform",
+      zh:"機器人致動器驗證平台",
+      lead:"RobiTorque is RobiChip’s planned robotics actuator validation platform for joint motors, servo modules, and high-torque-density smart motion systems.",
+      sublead:"RobiTorque 是羅比芯規劃中的機器人致動器驗證平台，面向關節馬達、伺服模組與高扭力密度智慧動力系統。",
+      metrics:[["Joint Motor","Servo Module"],["Torque Density","Thermal Path"],["RobiDev","RobiLab"]],
+      actions:[{href:BD,label:"Discuss Actuator Pilot"},{href:"/robidev",label:"Start with RobiDev"}]
     })}
-    ${section('System Bottleneck', 'Torque Density Becomes the Next System Bottleneck', '扭力密度是機器人致動器的下一個瓶頸。功率電子、散熱、控制與機構必須在同一個體積限制中共同優化。', cards([
-      {title:'Higher Torque in Smaller Modules', text:'更小體積中的更高扭力，提升關節與末端執行器的可用性能。'},
-      {title:'Package-to-Structure Heat Flow', text:'從封裝到 PCB、外殼與機構的完整熱路徑。'},
-      {title:'FOC / Encoder / CANBus / RS-485', text:'控制介面、感測與韌體整合，對齊實際機器人平台。'},
-      {title:'Dynamic Load and T–N Curve', text:'以動態負載、扭力—轉速曲線與溫升建立 design-in 證據。'}
-    ], 'four'), 'tint')}
-    ${section('Validation Tracks', 'Robotics Actuator Validation Tracks', '機器人致動器驗證方向。', flow(['Motor & Gearbox', 'Power Stage', 'Control & Sensing', 'Thermal Structure', 'Dynamic Load']))}
-    ${section('Pilot Scope', 'From Bench Characterization to Robot Integration', '', `<div class="grid two">${mediaPlaceholder('Actuator fixture image placeholder', 'Replace with the source Google Site image or current RobiTorque hardware photograph.')}<div class="callout"><h3>Typical pilot outputs</h3><p>Operating envelope, torque-current-temperature map, communication interface, control tuning observations, thermal risks, and recommended next design-in step.</p></div></div>`, 'tint')}
-    ${cta('Validate the Actuator as a Complete System', 'Bring your joint-motor, servo, mobile-robot, humanoid, or industrial-motion requirement to RobiChip.')}`;
+    ${section("Why RobiTorque", "Torque Density Becomes the Next System Bottleneck", "扭力密度是機器人致動器的下一個瓶頸<br>Robotics actuators are constrained by torque density, module volume, thermal path, control integration, and reliability under dynamic load.<br><br>機器人致動器的瓶頸不只在馬達或控制演算法，而在扭力密度、模組體積、熱路徑、控制整合與動態負載下的可靠度。", cards([
+      {tag:"Torque Density",title:"Higher Torque in Smaller Modules",text:"更小體積中的更高扭力<br><br>Robotics joints and servo modules need compact high-power-density drive solutions to reduce actuator size and integration friction."},
+      {tag:"Thermal Path",title:"Package-to-Structure Heat Flow",text:"從封裝到結構的熱路徑<br><br>Heat must move from power stage and package into the mechanical structure without compromising reliability or control behavior."},
+      {tag:"Control Layer",title:"FOC / Encoder / CANBus / RS-485",text:"控制介面與韌體整合<br><br>Actuator systems require configurable control interfaces, position feedback, current sensing, and application-specific control firmware."},
+      {tag:"Validation",title:"Dynamic Load and T-N Curve",text:"動態負載與扭力轉速曲線<br><br>RobiTorque should move actuator discussion from datasheet assumptions to measurable dynamic-load and thermal validation."}
+    ], "four"), "tint")}
+    ${section("RobiTorque Demo Kits", "Elbow and Knee Actuator Demonstration Platforms", "肘關節與膝關節性能展示平台<br>RobiTorque demo-kit panels illustrate actuator structure, test modes, monitored parameters, dimensions, and interchangeable components for elbow and knee validation concepts.<br><br>RobiTorque 展示面板呈現肘關節與膝關節驗證概念的致動器結構、測試模式、即時監控參數、尺寸與可更換配件。", `<div class="demo-kit-gallery"><figure class="demo-kit-card"><img src="assets/images/robitorque-elbow-demo-kit.png" alt="RobiTorque-Elbow Demo Kit performance and validation panel" loading="lazy"><figcaption><strong>RobiTorque-Elbow Demo Kit</strong><span>肘關節性能展示平台</span></figcaption></figure><figure class="demo-kit-card"><img src="assets/images/robitorque-knee-demo-kit.png" alt="RobiTorque-Knee Demo Kit performance and validation panel" loading="lazy"><figcaption><strong>RobiTorque-Knee Demo Kit</strong><span>膝關節性能展示平台</span></figcaption></figure></div>`, "tint")}
+    ${section("Validation Tracks", "Robotics Actuator Validation Tracks", "機器人致動器驗證方向<br>RobiTorque can be organized into validation tracks for joint actuators, servo modules, compact motion systems, and future dexterous-hand actuation.<br><br>RobiTorque 可依驗證方向整理為關節致動器、伺服模組、緊湊型運動系統，以及未來靈巧手致動方向。", cards([
+      {tag:"RobiTorque-J",title:"Joint Actuator Validation",text:"關節致動器驗證<br><br>For robot joints, humanoid joints, robot dogs, and compact actuator modules requiring torque density, thermal-path review, and control integration."},
+      {tag:"RobiTorque-S",title:"Servo Module Validation",text:"伺服模組驗證<br><br>For industrial servo, AMR / AGV motion, gimbal, and automation nodes requiring compact drive electronics and measurable system behavior."},
+      {tag:"RobiTorque-G",title:"Gimbal / Compact Motion",text:"雲台與小型運動控制<br><br>For gimbal, pan-tilt, camera-stabilization, and compact robotic motion systems where smooth control and thermal stability are critical."},
+      {tag:"RobiGrip Roadmap",title:"Dexterous Hand Actuation",text:"靈巧手與緊湊致動路線<br><br>Future compact actuation roadmap for dexterous-hand or small-form-factor robotic motion, linked to RobiGrip and lower-power RobiSoC directions."}
+    ], "four") + `<p class="public-note">Public positioning: RobiTorque is currently a planned actuator validation platform and pilot collaboration track. Detailed configurations will depend on motor type, gear ratio, torque range, control interface, encoder feedback, mechanical structure, and thermal requirements.<br><br>對外定位：RobiTorque 目前為規劃中的致動器驗證平台與 pilot 合作方向。詳細組態將依馬達類型、減速比、扭力範圍、控制介面、encoder feedback、機構結構與熱需求而定。</p>`)}
+    ${section("RobiDev + RobiLab", "From Motor Drive Evaluation to Actuator Validation", "從馬達驅動評估到致動器驗證<br>RobiDev provides the early motor-drive evaluation platform, while RobiLab supports dynamic-load, T-N curve, temperature-rise, and board-to-system validation.<br><br>RobiDev 提供早期馬達驅動評估平台，RobiLab 則支援動態負載、T-N curve、溫升與 board-to-system validation。", `<h3 class="subsection-title">RobiTorque Validation Flow｜RobiTorque 驗證流程</h3>${flow(["1. Requirement<br><small>torque, speed, voltage, interface</small>","2. Motor Drive<br><small>RobiDev bring-up and control review</small>","3. Dynamic Load<br><small>T-N curve, load profile, torque behavior</small>","4. Thermal Review<br><small>driver, motor, structure heat path</small>","5. Design-in Path<br><small>RobiSoC RC25 / RC50 / RC75 / RC100 mapping</small>"])}<p class="public-note">Recommended first pilot: use RobiDev Gen.1 and RobiLab measurement to validate motor-drive behavior, torque-speed behavior, thermal response, and control interface before committing to RobiSoC customization.<br><br>建議第一個 pilot：先使用 RobiDev Gen.1 與 RobiLab 量測能力，驗證馬達驅動行為、扭力轉速行為、熱反應與控制介面，再進一步評估 RobiSoC 客製化導入。</p>`, "tint")}
+    ${section("Design-in Path", "From Actuator Pilot to RobiSoC Design-in", "從致動器 pilot 走向 RobiSoC design-in<br>RobiTorque is designed to help customers validate actuator requirements first, then map the system into the appropriate RobiSoC power class and control-layer strategy.<br><br>RobiTorque 的目標是先協助客戶驗證致動器需求，再將系統映射到合適的 RobiSoC 功率等級與控制層策略。", cards([
+      {tag:"RC25",title:"Compact Actuation",text:"小型致動與教育平台<br><br>Suitable for compact motion, small actuators, education kits, and lower-power robotic modules."},
+      {tag:"RC50",title:"Mid-power Servo",text:"中功率伺服與關節模組<br><br>Suitable for servo modules, AMR / AGV motion, gimbal, and mid-power robotic actuation."},
+      {tag:"RC75",title:"High-dynamic Actuator",text:"高動態致動器<br><br>Suitable for high-dynamic joints, industrial motion, and higher torque-density robotic modules."},
+      {tag:"RC100",title:"1000 W-class Indicator",text:"高功率密度指標模組<br><br>Suitable for high-power-density joint actuator validation, advanced thermal-path review, and RobiSoC design-in discussion."}
+    ], "four"), "tint")}
+    ${section("Start a Pilot Discussion", "Validate Your Next Robotics Actuator", "開始你的下一個機器人致動器驗證<br>RobiTorque is available for pilot discussion, actuator validation planning, MCU / control-board collaboration, and RobiSoC design-in alignment.<br><br>RobiTorque 可用於 pilot 討論、致動器驗證規劃、MCU / 控制板合作，以及 RobiSoC design-in 對位。", `<div class="actions">${link(BD,"bd@robichip.com","btn primary")}${link(CONTACT,"contact@robichip.com","btn")}${link("/robidev","RobiDev","btn")}${link("/robisoc","RobiSoC","btn")}${link("/partnership","Partnership","btn")}</div><p class="public-note">Detailed actuator configuration, torque range, gear ratio, control interface, mechanical structure, and validation support require technical discussion before pilot definition.<br><br>詳細致動器組態、扭力範圍、減速比、控制介面、機構結構與驗證支援，需在 pilot 定義前先進行技術討論。</p>`, "tint")}`;
+
 
   const robiagentPage = () => `
     ${hero({

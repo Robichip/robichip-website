@@ -456,3 +456,12 @@ tr:last-child td { border-bottom: 0; }
 .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .static-metrics { position: static; left: auto; right: auto; bottom: auto; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 22px; }
 @media (max-width: 760px) { .video-frame { min-height: 220px; } .static-metrics { grid-template-columns: 1fr; } }
+
+/* RobiTorque demo-kit source assets */
+.demo-kit-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+.demo-kit-card { overflow:hidden; margin:0; border:1px solid var(--line); border-radius:var(--radius); background:rgba(255,255,255,.035); }
+.demo-kit-card img { display:block; width:100%; height:auto; background:#06101a; }
+.demo-kit-card figcaption { display:flex; flex-wrap:wrap; justify-content:space-between; gap:7px 16px; padding:13px 16px 15px; color:#fff; }
+.demo-kit-card figcaption strong { font-size:14px; }
+.demo-kit-card figcaption span { color:var(--muted); font-size:13px; }
+@media (max-width:760px) { .demo-kit-gallery { grid-template-columns:1fr; } }
