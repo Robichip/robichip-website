@@ -692,10 +692,10 @@
     '/robithrust': {title:'RobiThrust', render:() => sourceRoute('/assets/source/robithrust.html?v=frozen-reference-v1', 'robithrust'), reference:true},
     '/robitorque': {title:'RobiTorque', render:robitorquePage},
     '/technology-insights': {title:'Technology Insights', render:insightsPage},
-    '/robiagent': {title:'RobiAgent', render:robiagentPage},
-    '/robilab': {title:'RobiLab', render:robilabPage},
+    '/robiagent': {title:'RobiAgent', render:() => sourceRoute('/assets/source/robiagent.html?v=frozen-reference-v1', 'robiagent'), reference:true},
+    '/robilab': {title:'RobiLab', render:() => sourceRoute('/assets/source/robilab.html?v=frozen-reference-v1', 'robilab'), reference:true},
     '/news-events': {title:'News & Events', render:newsPage},
-    '/partnership': {title:'Partnership', render:partnershipPage},
+    '/partnership': {title:'Partnership', render:() => sourceRoute('/assets/source/partnership.html?v=frozen-reference-v1'), reference:true},
     '/join-us': {title:'Join Us', render:joinPage, reference:true},
     '/privacy-policy': {title:'Privacy Policy', render:privacyPage},
     '/private-policy': {title:'Private Policy', render:privacyPage, noindex:true}
@@ -863,6 +863,21 @@
           gallery.className = 'robithrust-legacy-gallery';
           gallery.innerHTML = '<figure><img src="' + BASE_PATH + '/assets/images/robithrust-platform-reference-1.jpg" alt="RobiThrust UAV propulsion validation platform"></figure><figure><img src="' + BASE_PATH + '/assets/images/robithrust-platform-reference-2.jpg" alt="RobiThrust Heavy UAV propulsion test platform"></figure>';
           blocks[1]?.before(gallery);
+        }
+        if (sourceMount.dataset.sourceLayout === 'robiagent') {
+          const blocks = sourceMount.querySelectorAll(':scope > .google-source-block');
+          const intro = document.createElement('section');
+          intro.className = 'google-source-block robiagent-source-intro';
+          intro.innerHTML = '<div class="robiagent-standard-copy"><h1>RobiAgent | AI-assisted Engineering Workflow</h1><p>RobiAgent connects technical query, thermal pre-check, layout review, validation data, and design-in decisions. RobiAgent 串接技術查詢、熱預評估、layout 檢視、驗證資料與 design-in 決策。</p><img src="' + BASE_PATH + '/assets/images/robiagent-workflow-reference.jpg" alt="RobiGPT AI-assisted engineering workflow"></div>';
+          blocks[1]?.before(intro);
+          intro.append(blocks[1]);
+        }
+        if (sourceMount.dataset.sourceLayout === 'robilab') {
+          const blocks = sourceMount.querySelectorAll(':scope > .google-source-block');
+          const intro = document.createElement('section');
+          intro.className = 'robilab-source-intro';
+          intro.innerHTML = '<h1>RobiLab | Measurement, Thermal &amp; System Validation</h1><p>RobiLab connects RobiDev evaluation, RobiThrust propulsion validation, RobiTorque actuator pilot, and RobiSoC design-in through measurable engineering data.</p><p>RobiLab 透過可量測的工程數據，連接 RobiDev 評估、RobiThrust 推進驗證、RobiTorque 致動器 pilot 與 RobiSoC design-in。</p><img src="' + BASE_PATH + '/assets/images/robilab-validation.png" alt="RobiLab measurement and validation environment">';
+          blocks[1]?.before(intro);
         }
         if (BASE_PATH) {
           sourceMount.querySelectorAll('[href]').forEach((element) => {

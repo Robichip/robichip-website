@@ -1,0 +1,1658 @@
+<section class="ra-hero">
+  <style>
+    .ra-hero {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.28), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 54px 40px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255,255,255,0.12);
+      overflow: hidden;
+    }
+
+    .ra-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .ra-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .ra-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .ra-hero h1 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -0.065em;
+      font-weight: 950;
+    }
+
+    .ra-hero h2 {
+      margin: 18px 0 0;
+      color: #d9ecff;
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .ra-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .ra-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 26px;
+    }
+
+    .ra-tag {
+      padding: 8px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(101, 241, 255, 0.36);
+      background: rgba(101, 241, 255, 0.14);
+      color: #eafcff;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1;
+    }
+
+    .ra-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .ra-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #f8fbff;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .ra-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #031120;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37,99,235,0.28);
+    }
+
+    @media (max-width: 900px) {
+      .ra-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .ra-hero { padding: 36px 24px; }
+    }
+  </style>
+
+  <div class="ra-grid">
+    <div>
+      <div class="ra-eyebrow">RobiAgent</div>
+      <h1>AI-assisted Engineering Workflow</h1>
+      <h2>AI 輔助工程導入流程</h2>
+    </div>
+
+    <div class="ra-copy">
+      <p>
+        RobiAgent helps customers move from technical questions to thermal pre-check,
+        layout support, validation data review, and RobiSoC / RobiDev design-in decisions.
+      </p>
+      <p>
+        RobiAgent 協助客戶從技術問題查詢，進一步走向熱預評估、layout 支援、
+        驗證資料檢視，以及 RobiSoC / RobiDev 的 design-in 決策。
+      </p>
+
+      <div class="ra-tags">
+        <span class="ra-tag">RobiGPT</span>
+        <span class="ra-tag">RobiFlux</span>
+        <span class="ra-tag">RobiLayout</span>
+        <span class="ra-tag">Thermal Pre-check</span>
+        <span class="ra-tag">Design-in Support</span>
+        <span class="ra-tag">Engineer-reviewed</span>
+      </div>
+
+      <div class="ra-buttons">
+  <a class="ra-btn primary" href="mailto:bd@robichip.com">
+    Request Engineering Review
+  </a>
+
+  <a
+    class="ra-btn"
+    href="https://robigpt-webapp-26642801715.asia-east1.run.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Try RobiGPT (early access)
+  </a>
+
+  <a
+    class="ra-btn"
+    href="https://www.robichip.com/robidev"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Start with RobiDev
+  </a>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="ra-notice">
+  <style>
+    .ra-notice {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 22px;
+      padding: 26px 28px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37, 99, 235, 0.14);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    .ra-notice-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #075985;
+      background: rgba(34, 211, 238, 0.13);
+      border: 1px solid rgba(14, 165, 233, 0.28);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 12px;
+      line-height: 1;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .ra-notice h3 {
+      margin: 0 0 10px;
+      color: #06111f;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.22;
+      letter-spacing: -0.04em;
+      font-weight: 950;
+    }
+
+    .ra-notice p {
+      margin: 0 0 10px;
+      color: #526174;
+      font-size: 15px;
+      line-height: 1.75;
+      font-weight: 650;
+    }
+
+    .ra-notice strong {
+      color: #1e3a8a;
+      font-weight: 950;
+    }
+
+    .ra-notice-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .ra-notice-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #ffffff;
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.18);
+    }
+
+    .ra-notice-btn.secondary {
+      background: #ffffff;
+      color: #0f172a;
+      border: 1px solid rgba(37, 99, 235, 0.16);
+      box-shadow: none;
+    }
+
+    @media (max-width: 560px) {
+      .ra-notice {
+        padding: 22px 20px;
+      }
+    }
+  </style>
+
+  <span class="ra-notice-pill">Early Access Notice</span>
+  <h3>Available by Pilot Discussion & Engineering Review</h3>
+
+  <p>
+    RobiAgent services are currently provided on a <strong>pilot / engineering-review basis</strong>.
+    Please contact Robichip to discuss project scope, data requirements, NDA needs, review depth,
+    and expected deliverables.
+  </p>
+
+  <p>
+    RobiAgent 目前採 <strong>pilot / engineering-review</strong> 方式提供服務。
+    請與羅比芯聯繫，以確認專案範圍、資料需求、NDA 需求、審查深度與交付內容。
+  </p>
+
+  <div class="ra-notice-actions">
+    <a class="ra-notice-btn" href="mailto:bd@robichip.com">Request Pilot Discussion</a>
+    <a class="ra-notice-btn secondary" href="mailto:contact@robichip.com">General Inquiry</a>
+  </div>
+</section>
+
+<section class="ra-what">
+  <style>
+    .ra-what {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    .ra-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .ra-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .ra-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .ra-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .ra-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .ra-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .ra-flow {
+      margin-top: 30px;
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(37,99,235,0.06);
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    .ra-flow h4 {
+      margin: 0 0 16px;
+      color: #06111f;
+      font-size: 23px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .ra-flow-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .ra-step {
+      border-radius: 18px;
+      padding: 16px 12px;
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    .ra-step strong {
+      display: block;
+      color: #06111f;
+      font-size: 14px;
+      line-height: 1.3;
+      margin-bottom: 6px;
+      font-weight: 950;
+    }
+
+    .ra-step span {
+      display: block;
+      color: #64748b;
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    @media (max-width: 1020px) {
+      .ra-grid,
+      .ra-flow-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .ra-what { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="ra-grid">
+    <div class="ra-title">
+      <div class="ra-eyebrow">What RobiAgent Does</div>
+      <h2>From Query to Engineering Decision</h2>
+      <h3>從技術查詢走向工程決策</h3>
+    </div>
+
+    <div class="ra-copy">
+      <p>
+        RobiAgent is not just a chatbot. It is Robichip’s AI-assisted engineering workflow
+        that connects technical query, thermal pre-check, layout support, validation data,
+        and design-in recommendations.
+      </p>
+      <p>
+        RobiAgent 不只是聊天機器人，而是羅比芯的 AI 輔助工程流程，串接技術查詢、
+        熱預評估、layout 支援、驗證資料與 design-in 建議。
+      </p>
+    </div>
+  </div>
+
+  <div class="ra-flow">
+    <h4>RobiAgent Engineering Path｜RobiAgent 工程導入路徑</h4>
+    <div class="ra-flow-grid">
+      <div class="ra-step">
+        <strong>1. Technical Query</strong>
+        <span>RobiGPT guided Q&A</span>
+      </div>
+
+      <div class="ra-step">
+        <strong>2. Thermal Pre-check</strong>
+        <span>RobiFlux power / heat path review</span>
+      </div>
+
+      <div class="ra-step">
+        <strong>3. Layout Support</strong>
+        <span>RobiLayout board-level review</span>
+      </div>
+
+      <div class="ra-step">
+        <strong>4. Design-in Decision</strong>
+        <span>report, recommendation, next action</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ra-services">
+  <style>
+    .ra-services {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34,211,238,0.25), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .ra-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .ra-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .ra-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .ra-title h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .ra-title h3 {
+      margin: 14px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .ra-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .ra-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .ra-card {
+      background: rgba(255,255,255,0.075);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 26px;
+      padding: 28px;
+      min-height: 330px;
+      box-shadow: 0 18px 38px rgba(0,0,0,0.16);
+    }
+
+    .ra-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #f2fdff;
+      background: rgba(34,211,238,0.26);
+      border: 1px solid rgba(101,241,255,0.56);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .ra-card h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 28px;
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+      font-weight: 950;
+    }
+
+    .ra-card h5 {
+      margin: 0 0 14px;
+      color: #d9ecff;
+      font-size: 18px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .ra-card p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .ra-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .ra-list div {
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.09);
+      color: #e6f0fb;
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    @media (max-width: 1020px) {
+      .ra-grid,
+      .ra-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .ra-services { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="ra-grid">
+    <div class="ra-title">
+      <div class="ra-eyebrow">Service Modules</div>
+      <h2>RobiGPT / RobiFlux / RobiLayout</h2>
+      <h3>三個 AI 輔助工程服務模組</h3>
+    </div>
+
+    <div class="ra-copy">
+      <p>
+        RobiAgent starts with three engineering service modules:
+        knowledge query, thermal and power pre-check, and aluminum substrate re-layout support.
+      </p>
+      <p>
+        RobiAgent 先以三個工程服務模組啟動：知識查詢、熱與功率預評估，
+        以及單層鋁基板 re-layout 支援。
+      </p>
+    </div>
+  </div>
+
+  <div class="ra-card-grid">
+    <article class="ra-card">
+      <span class="ra-pill">RobiGPT</span>
+      <h4>Engineering Knowledge Query</h4>
+      <h5>工程知識查詢與文件導覽</h5>
+      <p>
+        RobiGPT provides guided engineering Q&A for RobiSoC, RobiDev, RobiThrust,
+        RobiTorque, thermal path, validation workflow, and design-in preparation.
+      </p>
+      <p>
+        RobiGPT 提供 RobiSoC、RobiDev、RobiThrust、RobiTorque、熱路徑、
+        驗證流程與 design-in 準備的工程知識查詢。
+      </p>
+      <div class="ra-list">
+        <div>Technical Q&A</div>
+        <div>Document-assisted engineering support</div>
+        <div>Design-in preparation</div>
+        <div>Product navigation and explanation</div>
+      </div>
+    </article>
+
+    <article class="ra-card">
+      <span class="ra-pill">RobiFlux</span>
+      <h4>Thermal & Power Pre-check</h4>
+      <h5>熱與功率預評估</h5>
+      <p>
+        RobiFlux supports early thermal and power feasibility review, helping customers
+        understand heat path, package-to-board behavior, board-level constraints,
+        and system-level cooling direction.
+      </p>
+      <p>
+        RobiFlux 支援早期熱與功率可行性評估，協助客戶理解熱路徑、封裝到板級的熱行為、
+        板級限制與系統散熱方向。
+      </p>
+      <div class="ra-list">
+        <div>Thermal path pre-check</div>
+        <div>Power density review</div>
+        <div>Board-level constraint discussion</div>
+        <div>System cooling direction</div>
+      </div>
+    </article>
+
+    <article class="ra-card">
+      <span class="ra-pill">RobiLayout</span>
+      <h4>Aluminum Substrate Re-layout Support</h4>
+      <h5>單層鋁基板 re-layout 支援</h5>
+      <p>
+        RobiLayout supports RobiDev single-layer aluminum substrate re-layout review,
+        including component placement, power path, thermal path, connector position,
+        and manufacturability-oriented design guidance.
+      </p>
+      <p>
+        RobiLayout 支援 RobiDev 單層鋁基板 re-layout 檢視，包含元件擺放、功率路徑、
+        熱路徑、連接器位置與可製造性導向的設計建議。
+      </p>
+      <div class="ra-list">
+        <div>Single-layer aluminum substrate review</div>
+        <div>Component placement guidance</div>
+        <div>Power path and thermal path review</div>
+        <div>Engineer-reviewed layout support</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="ra-platforms">
+  <style>
+    .ra-platforms {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    .ra-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .ra-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .ra-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .ra-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .ra-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .ra-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .ra-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .ra-card {
+      background: #ffffff;
+      border: 1px solid rgba(37,99,235,0.12);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 260px;
+      box-shadow: 0 16px 34px rgba(15,23,42,0.07);
+    }
+
+    .ra-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #075985;
+      background: rgba(34,211,238,0.13);
+      border: 1px solid rgba(14,165,233,0.28);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .ra-card h4 {
+      margin: 0 0 10px;
+      color: #06111f;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .ra-card h5 {
+      margin: 0 0 14px;
+      color: #1e3a8a;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .ra-card p {
+      margin: 0;
+      color: #5b6b80;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 1020px) {
+      .ra-grid,
+      .ra-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .ra-platforms { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="ra-grid">
+    <div class="ra-title">
+      <div class="ra-eyebrow">Platform Support</div>
+      <h2>RobiAgent Supports the Full Robichip Platform</h2>
+      <h3>RobiAgent 支援羅比芯完整平台導入</h3>
+    </div>
+
+    <div class="ra-copy">
+      <p>
+        RobiAgent connects technical intake across RobiDev, RobiThrust, RobiTorque,
+        RobiSoC, and partnership discussions.
+      </p>
+      <p>
+        RobiAgent 串接 RobiDev、RobiThrust、RobiTorque、RobiSoC 與合作洽談中的
+        technical intake。
+      </p>
+    </div>
+  </div>
+
+  <div class="ra-card-grid">
+    <article class="ra-card">
+      <span class="ra-pill">RobiDev</span>
+      <h4>Layout and Bring-up Support</h4>
+      <h5>layout 與 bring-up 支援</h5>
+      <p>
+        Supports RobiDev Gen.1 aluminum substrate re-layout review, interface questions,
+        bring-up preparation, and design-in documentation.
+      </p>
+    </article>
+
+    <article class="ra-card">
+      <span class="ra-pill">RobiThrust</span>
+      <h4>Propulsion Validation Review</h4>
+      <h5>推進驗證資料檢視</h5>
+      <p>
+        Supports RobiThrust product-family interpretation, test report review,
+        thermal observation, and propulsion validation package discussion.
+      </p>
+    </article>
+
+    <article class="ra-card">
+      <span class="ra-pill">RobiTorque</span>
+      <h4>Actuator Pilot Planning</h4>
+      <h5>致動器 pilot 規劃</h5>
+      <p>
+        Supports actuator requirement intake, torque-speed discussion,
+        thermal-path planning, control-interface review, and pilot scope definition.
+      </p>
+    </article>
+
+    <article class="ra-card">
+      <span class="ra-pill">RobiSoC</span>
+      <h4>Design-in Pre-check</h4>
+      <h5>Power SoC 導入預評估</h5>
+      <p>
+        Supports RobiSoC RC25 / RC50 / RC75 / RC100 mapping, M1 / M2 discussion,
+        thermal feasibility, and early design-in recommendations.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="ra-workflow">
+  <style>
+    .ra-workflow {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34,211,238,0.25), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .ra-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .ra-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .ra-workflow h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .ra-workflow h3 {
+      margin: 14px 0 24px;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .ra-steps {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .ra-step {
+      background: rgba(255,255,255,0.075);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 22px;
+      padding: 18px 14px;
+      box-shadow: 0 16px 34px rgba(0,0,0,0.14);
+      text-align: center;
+    }
+
+    .ra-step strong {
+      display: block;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 1.3;
+      margin-bottom: 6px;
+      font-weight: 950;
+    }
+
+    .ra-step span {
+      display: block;
+      color: #b9c7da;
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .ra-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1120px) {
+      .ra-steps { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .ra-steps { grid-template-columns: 1fr; }
+      .ra-workflow { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="ra-eyebrow">Engineering Workflow</div>
+  <h2>From Technical Intake to Design-in Recommendation</h2>
+  <h3>從技術需求收斂到 design-in 建議</h3>
+
+  <div class="ra-steps">
+    <div class="ra-step">
+      <strong>1. Technical Inquiry</strong>
+      <span>question, product, use case, constraint</span>
+    </div>
+
+    <div class="ra-step">
+      <strong>2. Data Intake</strong>
+      <span>voltage, current, board, motor, thermal condition</span>
+    </div>
+
+    <div class="ra-step">
+      <strong>3. RobiGPT Query</strong>
+      <span>document-assisted engineering Q&A</span>
+    </div>
+
+    <div class="ra-step">
+      <strong>4. RobiFlux Review</strong>
+      <span>thermal / power feasibility pre-check</span>
+    </div>
+
+    <div class="ra-step">
+      <strong>5. RobiLayout Support</strong>
+      <span>aluminum substrate re-layout review</span>
+    </div>
+
+    <div class="ra-step">
+      <strong>6. Engineering Output</strong>
+      <span>summary, note, recommendation, next action</span>
+    </div>
+  </div>
+
+  <div class="ra-note">
+    RobiAgent is intended to accelerate technical discussion and engineering decision-making.
+    It does not replace engineer review, DFM review, validation testing, or customer approval.
+    <br><br>
+    RobiAgent 用於加速技術討論與工程決策，不取代工程師審查、DFM review、驗證測試或客戶核准。
+  </div>
+</section>
+
+<section class="ra-deliverables">
+  <style>
+    .ra-deliverables {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    .ra-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .ra-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .ra-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .ra-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .ra-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .ra-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .ra-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .ra-card {
+      background: #ffffff;
+      border: 1px solid rgba(37,99,235,0.12);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 230px;
+      box-shadow: 0 16px 34px rgba(15,23,42,0.07);
+    }
+
+    .ra-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #075985;
+      background: rgba(34,211,238,0.13);
+      border: 1px solid rgba(14,165,233,0.28);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .ra-card h4 {
+      margin: 0 0 10px;
+      color: #06111f;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .ra-card h5 {
+      margin: 0 0 14px;
+      color: #1e3a8a;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .ra-card p {
+      margin: 0;
+      color: #5b6b80;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .ra-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
+      border: 1px solid rgba(37,99,235,0.12);
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .ra-note strong {
+      color: #06111f;
+      font-weight: 950;
+    }
+
+    @media (max-width: 1020px) {
+      .ra-grid,
+      .ra-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .ra-deliverables { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="ra-grid">
+    <div class="ra-title">
+      <div class="ra-eyebrow">Deliverables & Boundary</div>
+      <h2>Clear Outputs, Engineer-reviewed Boundary</h2>
+      <h3>清楚產出，工程師審查邊界</h3>
+    </div>
+
+    <div class="ra-copy">
+      <p>
+        RobiAgent delivers engineering summaries, pre-check notes, layout review notes,
+        and design-in recommendations. Final decisions remain engineer-reviewed.
+      </p>
+      <p>
+        RobiAgent 產出工程摘要、預評估筆記、layout 檢視建議與 design-in 建議。
+        最終決策仍需工程師審查。
+      </p>
+    </div>
+  </div>
+
+  <div class="ra-card-grid">
+    <article class="ra-card">
+      <span class="ra-pill">RobiGPT Output</span>
+      <h4>Q&A Summary</h4>
+      <h5>技術問答摘要</h5>
+      <p>
+        Structured response for product selection, technical questions,
+        validation workflow, and design-in preparation.
+      </p>
+    </article>
+
+    <article class="ra-card">
+      <span class="ra-pill">RobiFlux Output</span>
+      <h4>Thermal Pre-check Note</h4>
+      <h5>熱預評估筆記</h5>
+      <p>
+        Early review of power density, heat path, thermal constraints,
+        board behavior, and cooling direction.
+      </p>
+    </article>
+
+    <article class="ra-card">
+      <span class="ra-pill">RobiLayout Output</span>
+      <h4>Layout Review Note</h4>
+      <h5>layout 檢視建議</h5>
+      <p>
+        Review of aluminum substrate layout direction, component placement,
+        power path, thermal path, and connector arrangement.
+      </p>
+    </article>
+
+    <article class="ra-card">
+      <span class="ra-pill">Design-in Output</span>
+      <h4>Next-step Recommendation</h4>
+      <h5>下一步導入建議</h5>
+      <p>
+        Suggested next action for RobiDev evaluation, RobiFlux review,
+        RobiLayout support, RobiLab validation, or RobiSoC design-in.
+      </p>
+    </article>
+  </div>
+
+  <div class="ra-note">
+    <strong>Service boundary｜服務邊界：</strong>
+    RobiAgent provides AI-assisted review and engineering support. Final layout release,
+    thermal validation, DFM review, safety review, and customer approval remain subject to engineer review
+    and project-specific agreement.
+    <br><br>
+    <strong>服務邊界：</strong>
+    RobiAgent 提供 AI 輔助檢視與工程支援。最終 layout release、熱驗證、DFM review、
+    安全檢視與客戶核准，仍需依工程師審查與專案協議執行。
+  </div>
+</section>
+
+<section class="ra-cta">
+  <style>
+    .ra-cta {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34,211,238,0.28), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .ra-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .ra-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .ra-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .ra-title h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 1.06;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .ra-title h3 {
+      margin: 14px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .ra-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .ra-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .ra-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #f8fbff;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .ra-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #031120;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37,99,235,0.28);
+    }
+
+    .ra-note {
+      margin-top: 22px;
+      color: #8fa1b8;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 900px) {
+      .ra-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .ra-cta { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="ra-grid">
+    <div class="ra-title">
+      <div class="ra-eyebrow">Start an Engineering Review</div>
+      <h2>Move Faster from Question to Design-in</h2>
+      <h3>從問題查詢更快走向 design-in</h3>
+    </div>
+
+    <div class="ra-copy">
+      <p>
+        Use RobiAgent to start a guided engineering review for RobiDev, RobiThrust,
+        RobiTorque, RobiSoC, thermal feasibility, or aluminum substrate re-layout support.
+      </p>
+      <p>
+        你可以透過 RobiAgent 啟動 RobiDev、RobiThrust、RobiTorque、RobiSoC、
+        熱可行性或單層鋁基板 re-layout 的工程檢視。
+      </p>
+
+      <div class="ra-buttons">
+        <a class="ra-btn primary" href="mailto:bd@robichip.com">bd@robichip.com</a>
+        <a class="ra-btn" href="mailto:contact@robichip.com">contact@robichip.com</a>
+        <a class="ra-btn" href="https://www.robichip.com/robidev" target="_blank">RobiDev</a>
+        <a class="ra-btn" href="https://www.robichip.com/robisoc" target="_blank">RobiSoC</a>
+        <a class="ra-btn" href="https://www.robichip.com/partnership" target="_blank">Partnership</a>
+      </div>
+
+      <div class="ra-note">
+        RobiAgent service scope, data requirements, NDA needs, engineering review depth,
+        and deliverables will be defined by project.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="robi-footer">
+  <style>
+    .robi-footer {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: #050b14;
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 42px 38px 26px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .robi-footer::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -120px;
+      top: -130px;
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 70%);
+      pointer-events: none;
+    }
+
+    .footer-wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.8fr 0.8fr 0.9fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .footer-brand h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+      font-weight: 950;
+    }
+
+    .footer-brand h3 {
+      margin: 8px 0 0;
+      color: #d9ecff;
+      font-size: 18px;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+      font-weight: 850;
+    }
+
+    .footer-brand p {
+      margin: 16px 0 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    .footer-col h4 {
+      margin: 0 0 13px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-link {
+      display: block;
+      color: #d9ecff;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.55;
+      margin: 0 0 9px;
+      font-weight: 700;
+    }
+
+    .footer-link:hover {
+      color: #65f1ff;
+    }
+
+    .footer-info {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer-address h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 17px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      font-weight: 900;
+    }
+
+    .footer-address p {
+      margin: 0 0 8px;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .footer-address a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .footer-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .footer-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(101, 241, 255, 0.09);
+      border: 1px solid rgba(101, 241, 255, 0.20);
+      color: #dffcff;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .footer-bottom {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+      justify-content: space-between;
+      color: #8fa1b8;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-bottom a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-info {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-badges {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .robi-footer {
+        padding: 34px 24px 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        display: block;
+      }
+
+      .footer-bottom div {
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>RobiChip Technology Co., Ltd.</h2>
+        <h3>羅比芯科技股份有限公司</h3>
+        <p>
+          Power SoC platform for intelligent machines. Robichip integrates Power SoC,
+          RobiDev, RobiThrust, RobiAgent, and validation workflows for robotics,
+          UAVs, and high-power-density motion systems.
+        </p>
+        <p>
+          羅比芯聚焦 Power + AI + Robotics，建構從 Power SoC、開發驗證、
+          無人機推進平台到 AI-assisted design-in 的智慧動力半導體平台。
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a class="footer-link" href="https://www.robichip.com/robisoc" target="_blank">RobiSoC</a>
+        <a class="footer-link" href="https://www.robichip.com/robidev" target="_blank">RobiDev</a>
+        <a class="footer-link" href="https://www.robichip.com/robithrust" target="_blank">RobiThrust</a>
+        <a class="footer-link" href="https://www.robichip.com/robitorque" target="_blank">RobiTorque</a>
+        <a class="footer-link" href="https://www.robichip.com/robiagent" target="_blank">RobiAgent</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a class="footer-link" href="https://www.robichip.com/technology-insights" target="_blank">Technology Insights</a>
+        <a class="footer-link" href="https://www.robichip.com/news-events" target="_blank">News & Events</a>
+        <a class="footer-link" href="https://www.robichip.com/robilab" target="_blank">RobiLab Validation</a>
+        <a class="footer-link" href="https://www.youtube.com/channel/UCqp-CDSVPCX8TfYT_aVScpg" target="_blank">Youtube channel</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Partnership</a>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Technical Discussion</a>
+        <a class="footer-link" href="https://www.robichip.com/join-us" target="_blank">Join Us</a>
+        <a class="footer-link" href="tel:+886277015728">+886-2-7701-5728</a>
+        <a class="footer-link" href="mailto:contact@robichip.com">contact@robichip.com</a>
+        <a class="footer-link" href="mailto:bd@robichip.com">bd@robichip.com</a>
+      </div>
+    </div>
+
+    <div class="footer-info">
+      <div class="footer-address">
+        <h4>Company Information｜公司資訊</h4>
+        <p><strong>RobiChip Technology Co., Ltd.｜羅比芯科技股份有限公司</strong></p>
+
+        <p>
+          National Taiwan University of Science and Technology, International Building 11F, Room 1105<br>
+          No. 43, Sec. 4, Keelung Rd., Da’an Dist., Taipei City, Taiwan
+        </p>
+
+        <p>
+          台北市大安區基隆路四段 43 號<br>
+          國立臺灣科技大學 國際大樓 11F 1105 室
+        </p>
+
+        <p>
+          Tel｜電話：
+          <a href="tel:+886277015728">+886-2-7701-5728</a><br>
+          General Contact｜一般聯絡：
+          <a href="mailto:contact@robichip.com">contact@robichip.com</a><br>
+          Business Development｜商務合作：
+          <a href="mailto:bd@robichip.com">bd@robichip.com</a>
+        </p>
+      </div>
+
+      <div class="footer-badges">
+        <span class="footer-badge">Power SoC</span>
+        <span class="footer-badge">Robotics</span>
+        <span class="footer-badge">UAV</span>
+        <span class="footer-badge">Advanced Packaging</span>
+        <span class="footer-badge">Thermal Path</span>
+        <span class="footer-badge">Design-in</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        © 2026 RobiChip Technology Co., Ltd. All rights reserved.
+      </div>
+      <div>
+        Public website content is for general information only. Detailed specifications are subject to official release, NDA, or partner discussion.
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ROBIAGENT SOURCE BLOCKS -->

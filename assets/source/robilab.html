@@ -1,0 +1,1790 @@
+<section class="rl-hero">
+  <style>
+    .rl-hero {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.28), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 54px 40px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+    }
+
+    .rl-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rl-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rl-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rl-hero h1 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -0.065em;
+      font-weight: 950;
+    }
+
+    .rl-hero h2 {
+      margin: 18px 0 0;
+      color: #d9ecff;
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rl-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rl-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 26px;
+    }
+
+    .rl-tag {
+      padding: 8px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(101, 241, 255, 0.36);
+      background: rgba(101, 241, 255, 0.14);
+      color: #eafcff;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1;
+    }
+
+    .rl-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .rl-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #f8fbff;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .rl-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #031120;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.28);
+    }
+
+    @media (max-width: 900px) {
+      .rl-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rl-hero { padding: 36px 24px; }
+    }
+  </style>
+
+  <div class="rl-grid">
+    <div>
+      <div class="rl-eyebrow">RobiLab</div>
+      <h1>Measurement & System Validation Service</h1>
+      <h2>量測與系統驗證服務平台</h2>
+    </div>
+
+    <div class="rl-copy">
+      <p>
+        RobiLab turns RobiDev, RobiThrust, RobiTorque, and RobiSoC validation into
+        measurable data, engineering reports, and design-in decisions.
+      </p>
+      <p>
+        RobiLab 將 RobiDev、RobiThrust、RobiTorque 與 RobiSoC 的驗證，
+        轉化為可量測數據、工程報告與 design-in 決策依據。
+      </p>
+
+      <div class="rl-tags">
+        <span class="rl-tag">Dynamic Load</span>
+        <span class="rl-tag">Thermal Validation</span>
+        <span class="rl-tag">T-N Curve</span>
+        <span class="rl-tag">Propulsion Test</span>
+        <span class="rl-tag">Actuator Pilot</span>
+        <span class="rl-tag">Design-in Report</span>
+      </div>
+
+      <div class="rl-buttons">
+        <a class="rl-btn primary" href="mailto:bd@robichip.com">Request Validation Support</a>
+        <a class="rl-btn" href="https://www.robichip.com/robidev" target="_blank">Start with RobiDev</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rl-what">
+  <style>
+    .rl-what {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .rl-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rl-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rl-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rl-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rl-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rl-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rl-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .rl-card {
+      background: #ffffff;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 230px;
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.07);
+    }
+
+    .rl-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #075985;
+      background: rgba(34, 211, 238, 0.13);
+      border: 1px solid rgba(14, 165, 233, 0.28);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rl-card h4 {
+      margin: 0 0 10px;
+      color: #06111f;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rl-card h5 {
+      margin: 0 0 14px;
+      color: #1e3a8a;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rl-card p {
+      margin: 0;
+      color: #5b6b80;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 1020px) {
+      .rl-grid,
+      .rl-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rl-what { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rl-grid">
+    <div class="rl-title">
+      <div class="rl-eyebrow">What is RobiLab</div>
+      <h2>The Measurement Layer of Robichip Platform</h2>
+      <h3>羅比芯平台的量測驗證層</h3>
+    </div>
+
+    <div class="rl-copy">
+      <p>
+        RobiLab is the physical measurement and validation service layer that connects
+        early engineering assumptions with real test data and design-in recommendations.
+      </p>
+      <p>
+        RobiLab 是實體量測與驗證服務層，將早期工程假設連接到實際測試數據與
+        design-in 建議。
+      </p>
+    </div>
+  </div>
+
+  <div class="rl-card-grid">
+    <article class="rl-card">
+      <span class="rl-pill">Measure</span>
+      <h4>Real Test Data</h4>
+      <h5>實體量測數據</h5>
+      <p>
+        Voltage, current, RPM, thrust, torque, temperature, and system-level behavior
+        are captured under defined test conditions.
+      </p>
+    </article>
+
+    <article class="rl-card">
+      <span class="rl-pill">Validate</span>
+      <h4>Thermal & Dynamic Behavior</h4>
+      <h5>熱與動態行為驗證</h5>
+      <p>
+        RobiLab supports temperature-rise observation, dynamic load validation,
+        T-N curve, and board-to-system correlation.
+      </p>
+    </article>
+
+    <article class="rl-card">
+      <span class="rl-pill">Report</span>
+      <h4>Engineering Report</h4>
+      <h5>工程驗證報告</h5>
+      <p>
+        Test conditions, measured data, observations, limits, and next-step recommendations
+        are summarized for customer discussion.
+      </p>
+    </article>
+
+    <article class="rl-card">
+      <span class="rl-pill">Design-in</span>
+      <h4>Decision Support</h4>
+      <h5>導入決策支援</h5>
+      <p>
+        RobiLab helps translate validation results into RobiDev, RobiThrust,
+        RobiTorque, or RobiSoC design-in decisions.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="rl-services">
+  <style>
+    .rl-services {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.25), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .rl-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rl-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rl-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rl-title h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rl-title h3 {
+      margin: 14px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rl-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rl-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .rl-card {
+      background: rgba(255, 255, 255, 0.075);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 295px;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.16);
+    }
+
+    .rl-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #f2fdff;
+      background: rgba(34, 211, 238, 0.26);
+      border: 1px solid rgba(101, 241, 255, 0.56);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rl-card h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rl-card h5 {
+      margin: 0 0 14px;
+      color: #d9ecff;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rl-card p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .rl-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .rl-list div {
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      color: #e6f0fb;
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    @media (max-width: 1020px) {
+      .rl-grid,
+      .rl-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rl-services { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rl-grid">
+    <div class="rl-title">
+      <div class="rl-eyebrow">Validation Service Packages</div>
+      <h2>From Basic Measurement to System Validation</h2>
+      <h3>從基本量測到系統驗證</h3>
+    </div>
+
+    <div class="rl-copy">
+      <p>
+        RobiLab services are organized as engineering validation packages, not generic lab rental.
+        Each package is designed to support customer evaluation, pilot validation, or design-in decisions.
+      </p>
+      <p>
+        RobiLab 以工程驗證服務包方式提供，而不是一般實驗室出租。每個服務包都對應客戶評估、
+        pilot 驗證或 design-in 決策。
+      </p>
+    </div>
+  </div>
+
+  <div class="rl-card-grid">
+    <article class="rl-card">
+      <span class="rl-pill">Basic Validation</span>
+      <h4>RobiLab Basic</h4>
+      <h5>馬達驅動基本驗證</h5>
+      <p>
+        Motor-drive basic validation for voltage, current, RPM, temperature rise,
+        board-level behavior, and early bring-up review.
+      </p>
+      <div class="rl-list">
+        <div>Voltage / current observation</div>
+        <div>RPM and load behavior</div>
+        <div>Board temperature rise</div>
+        <div>RobiDev Gen.1 evaluation support</div>
+      </div>
+    </article>
+
+    <article class="rl-card">
+      <span class="rl-pill">Propulsion Validation</span>
+      <h4>RobiLab Propulsion</h4>
+      <h5>推進系統驗證</h5>
+      <p>
+        Propulsion validation for thrust, RPM, input power, gf/W, motor-driver matching,
+        and thermal observation.
+      </p>
+      <div class="rl-list">
+        <div>Thrust / RPM / input power</div>
+        <div>gf/W and efficiency observation</div>
+        <div>Motor-driver matching</div>
+        <div>RobiThrust validation support</div>
+      </div>
+    </article>
+
+    <article class="rl-card">
+      <span class="rl-pill">Actuator Validation</span>
+      <h4>RobiLab Actuator</h4>
+      <h5>致動器驗證</h5>
+      <p>
+        Actuator validation for dynamic load, torque-speed behavior, temperature rise,
+        and control-interface review.
+      </p>
+      <div class="rl-list">
+        <div>Dynamic load validation</div>
+        <div>T-N curve / torque-speed behavior</div>
+        <div>Thermal response</div>
+        <div>RobiTorque pilot support</div>
+      </div>
+    </article>
+
+    <article class="rl-card">
+      <span class="rl-pill">Thermal Review</span>
+      <h4>RobiLab Thermal</h4>
+      <h5>熱路徑與系統散熱檢視</h5>
+      <p>
+        Thermal review from pre-check to physical measurement, including temperature rise,
+        hotspot observation, cooling direction, and package-to-system discussion.
+      </p>
+      <div class="rl-list">
+        <div>Temperature-rise review</div>
+        <div>Hotspot observation</div>
+        <div>Cooling direction discussion</div>
+        <div>RobiFlux / RobiAgent linkage</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="rl-platforms">
+  <style>
+    .rl-platforms {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .rl-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rl-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rl-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rl-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rl-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rl-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rl-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .rl-card {
+      background: #ffffff;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 255px;
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.07);
+    }
+
+    .rl-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #075985;
+      background: rgba(34, 211, 238, 0.13);
+      border: 1px solid rgba(14, 165, 233, 0.28);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rl-card h4 {
+      margin: 0 0 10px;
+      color: #06111f;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rl-card h5 {
+      margin: 0 0 14px;
+      color: #1e3a8a;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rl-card p {
+      margin: 0;
+      color: #5b6b80;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .rl-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .rl-note strong {
+      color: #06111f;
+      font-weight: 950;
+    }
+
+    @media (max-width: 1020px) {
+      .rl-grid,
+      .rl-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rl-platforms { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rl-grid">
+    <div class="rl-title">
+      <div class="rl-eyebrow">Platform Support</div>
+      <h2>RobiLab Supports the Full Robichip Platform</h2>
+      <h3>RobiLab 支援羅比芯完整平台</h3>
+    </div>
+
+    <div class="rl-copy">
+      <p>
+        RobiLab connects RobiDev evaluation, RobiThrust propulsion validation,
+        RobiTorque actuator pilot, RobiAgent pre-check, and RobiSoC design-in.
+      </p>
+      <p>
+        RobiLab 連接 RobiDev 評估、RobiThrust 推進驗證、RobiTorque 致動器 pilot、
+        RobiAgent 預評估與 RobiSoC design-in。
+      </p>
+    </div>
+  </div>
+
+  <div class="rl-card-grid">
+    <article class="rl-card">
+      <span class="rl-pill">RobiDev</span>
+      <h4>Board-level Evaluation</h4>
+      <h5>板級驗證與 bring-up</h5>
+      <p>
+        Supports RobiDev Gen.1 evaluation, motor-drive bring-up,
+        board-level temperature observation, and customer pre-design-in assessment.
+      </p>
+    </article>
+
+    <article class="rl-card">
+      <span class="rl-pill">RobiThrust</span>
+      <h4>Propulsion Validation</h4>
+      <h5>無人機推進驗證</h5>
+      <p>
+        Supports RobiThrust with RobiDev Gen.1, static thrust test,
+        motor-prop matching, input power, gf/W, and thermal observation.
+      </p>
+    </article>
+
+    <article class="rl-card">
+      <span class="rl-pill">RobiTorque</span>
+      <h4>Actuator Pilot</h4>
+      <h5>致動器 pilot 驗證</h5>
+      <p>
+        Supports robotics actuator pilot planning, dynamic-load measurement,
+        torque-speed behavior, temperature rise, and control-interface review.
+      </p>
+    </article>
+
+    <article class="rl-card">
+      <span class="rl-pill">RobiAgent</span>
+      <h4>Pre-check to Measurement</h4>
+      <h5>從預評估到實體量測</h5>
+      <p>
+        RobiAgent helps prepare technical questions, thermal pre-check,
+        and layout review before RobiLab turns assumptions into measured data.
+      </p>
+    </article>
+  </div>
+
+  <div class="rl-note">
+    <strong>RobiAgent → RobiLab workflow：</strong>
+    RobiAgent helps customers prepare technical questions, thermal pre-check, and layout review before physical validation.
+    RobiLab then turns the engineering assumptions into measurable test data and reports.
+    <br><br>
+    <strong>RobiAgent → RobiLab 流程：</strong>
+    RobiAgent 協助客戶在實體驗證前完成技術問題整理、熱預評估與 layout 檢視；
+    RobiLab 則將這些工程假設轉化為可量測的測試數據與報告。
+  </div>
+</section>
+
+<section class="rl-workflow">
+  <style>
+    .rl-workflow {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.25), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .rl-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rl-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rl-workflow h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rl-workflow h3 {
+      margin: 14px 0 24px;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rl-steps {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .rl-step {
+      background: rgba(255, 255, 255, 0.075);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 22px;
+      padding: 18px 14px;
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.14);
+      text-align: center;
+    }
+
+    .rl-step strong {
+      display: block;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 1.3;
+      margin-bottom: 6px;
+      font-weight: 950;
+    }
+
+    .rl-step span {
+      display: block;
+      color: #b9c7da;
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .rl-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1120px) {
+      .rl-steps { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .rl-steps { grid-template-columns: 1fr; }
+      .rl-workflow { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rl-eyebrow">Measurement Workflow</div>
+  <h2>From Requirement to Design-in Recommendation</h2>
+  <h3>從需求定義到 design-in 建議</h3>
+
+  <div class="rl-steps">
+    <div class="rl-step">
+      <strong>1. Requirement</strong>
+      <span>motor, load, voltage, target, constraint</span>
+    </div>
+
+    <div class="rl-step">
+      <strong>2. Test Setup</strong>
+      <span>fixture, RobiDev, sensor, power source</span>
+    </div>
+
+    <div class="rl-step">
+      <strong>3. Data Capture</strong>
+      <span>current, voltage, RPM, thrust, torque</span>
+    </div>
+
+    <div class="rl-step">
+      <strong>4. Thermal Review</strong>
+      <span>temperature rise, hotspot, cooling direction</span>
+    </div>
+
+    <div class="rl-step">
+      <strong>5. Report</strong>
+      <span>condition, data, observation, limitation</span>
+    </div>
+
+    <div class="rl-step">
+      <strong>6. Recommendation</strong>
+      <span>next test, design-in path, RobiSoC mapping</span>
+    </div>
+  </div>
+
+  <div class="rl-note">
+    RobiLab is intended for engineering validation, pilot validation, and design-in support.
+    Each validation scope should define test conditions, data items, limitations, and expected deliverables before execution.
+    <br><br>
+    RobiLab 用於工程驗證、pilot 驗證與 design-in 支援。每次驗證前應先定義測試條件、
+    量測項目、限制條件與預期交付內容。
+  </div>
+</section>
+
+<section class="rl-calibration">
+  <style>
+    .rl-calibration {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .rl-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rl-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rl-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rl-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rl-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rl-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rl-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .rl-card {
+      background: #ffffff;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 245px;
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.07);
+    }
+
+    .rl-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #075985;
+      background: rgba(34, 211, 238, 0.13);
+      border: 1px solid rgba(14, 165, 233, 0.28);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rl-card h4 {
+      margin: 0 0 10px;
+      color: #06111f;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rl-card h5 {
+      margin: 0 0 14px;
+      color: #1e3a8a;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rl-card p {
+      margin: 0;
+      color: #5b6b80;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .rl-note {
+      margin-top: 28px;
+      padding: 20px 22px;
+      border-radius: 22px;
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .rl-note strong {
+      color: #06111f;
+      font-weight: 950;
+    }
+
+    @media (max-width: 1020px) {
+      .rl-grid,
+      .rl-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rl-calibration { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rl-grid">
+    <div class="rl-title">
+      <div class="rl-eyebrow">Calibration-aware Validation</div>
+      <h2>Narrowing the Gap Between Simulation and Measurement</h2>
+      <h3>縮小模擬與實測之間的落差</h3>
+    </div>
+
+    <div class="rl-copy">
+      <p>
+        RobiLab measurement data can support future simulation-to-measurement correlation,
+        helping customers improve boundary conditions, thermal assumptions, load profiles,
+        and design exploration workflows.
+      </p>
+      <p>
+        RobiLab 的量測資料未來可支援 simulation-to-measurement correlation，
+        協助客戶改善邊界條件、熱假設、負載曲線與設計探索流程。
+      </p>
+    </div>
+  </div>
+
+  <div class="rl-card-grid">
+    <article class="rl-card">
+      <span class="rl-pill">Measurement Data</span>
+      <h4>Simulation-ready Data Points</h4>
+      <h5>可支援模擬校準的量測資料</h5>
+      <p>
+        RobiLab can organize measured voltage, current, RPM, thrust, torque,
+        temperature, airflow condition, and load profile into structured engineering data.
+      </p>
+    </article>
+
+    <article class="rl-card">
+      <span class="rl-pill">Correlation</span>
+      <h4>Model Assumption Review</h4>
+      <h5>模型假設檢視</h5>
+      <p>
+        Measurement results can help review thermal path assumptions, contact resistance,
+        convection conditions, power-loss estimation, and system-level cooling direction.
+      </p>
+    </article>
+
+    <article class="rl-card">
+      <span class="rl-pill">CAE / DOE Workflow</span>
+      <h4>Third-party Tool Compatibility</h4>
+      <h5>支援客戶既有 CAE / DOE 流程</h5>
+      <p>
+        RobiLab does not replace third-party CAE tools. It provides vertical validation data
+        for customer-side simulation, DOE, and design optimization workflows.
+      </p>
+    </article>
+  </div>
+
+  <div class="rl-note">
+    <strong>Roadmap note｜路線說明：</strong>
+    Calibration workflow and third-party simulation support are currently positioned as a roadmap direction
+    and project-based discussion, not a standard online service. RobiChip does not claim official integration
+    or certification with third-party CAE software unless covered by a specific partnership or project agreement.
+    <br><br>
+    <strong>路線說明：</strong>
+    模擬－量測校準流程與第三方 simulation 支援目前定位為 roadmap direction 與專案型討論，
+    尚非標準線上服務。除非已有特定合作或專案協議，羅比芯不宣稱與第三方 CAE 軟體具備官方整合或認證關係。
+  </div>
+</section>
+
+<section class="rl-deliverables">
+  <style>
+    .rl-deliverables {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .rl-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rl-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rl-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rl-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rl-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rl-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rl-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .rl-card {
+      background: #ffffff;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 230px;
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.07);
+    }
+
+    .rl-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #075985;
+      background: rgba(34, 211, 238, 0.13);
+      border: 1px solid rgba(14, 165, 233, 0.28);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rl-card h4 {
+      margin: 0 0 10px;
+      color: #06111f;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rl-card h5 {
+      margin: 0 0 14px;
+      color: #1e3a8a;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rl-card p {
+      margin: 0;
+      color: #5b6b80;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .rl-boundary {
+      margin-top: 28px;
+      padding: 20px 22px;
+      border-radius: 22px;
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .rl-boundary strong {
+      color: #06111f;
+      font-weight: 950;
+    }
+
+    @media (max-width: 1020px) {
+      .rl-grid,
+      .rl-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rl-deliverables { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rl-grid">
+    <div class="rl-title">
+      <div class="rl-eyebrow">Report Deliverables & Boundary</div>
+      <h2>Clear Data, Clear Scope, Clear Limits</h2>
+      <h3>清楚數據、清楚範圍、清楚限制</h3>
+    </div>
+
+    <div class="rl-copy">
+      <p>
+        RobiLab reports are designed to support engineering decisions.
+        Each report should clarify test conditions, measured data, thermal observation,
+        findings, limitations, and next-step recommendations.
+      </p>
+      <p>
+        RobiLab 報告用於支援工程決策。每份報告應清楚說明測試條件、量測數據、
+        熱觀察、發現、限制與下一步建議。
+      </p>
+    </div>
+  </div>
+
+  <div class="rl-card-grid">
+    <article class="rl-card">
+      <span class="rl-pill">Test Condition</span>
+      <h4>Setup Definition</h4>
+      <h5>測試條件定義</h5>
+      <p>
+        Motor, propeller, actuator, voltage, load profile, fixture, sensor,
+        cooling condition, and test objective.
+      </p>
+    </article>
+
+    <article class="rl-card">
+      <span class="rl-pill">Measurement Data</span>
+      <h4>Captured Results</h4>
+      <h5>量測結果</h5>
+      <p>
+        Voltage, current, RPM, thrust, torque, power, temperature,
+        efficiency indicator, and time-domain observation.
+      </p>
+    </article>
+
+    <article class="rl-card">
+      <span class="rl-pill">Observation</span>
+      <h4>Engineering Findings</h4>
+      <h5>工程觀察</h5>
+      <p>
+        Thermal behavior, load response, operating limits, motor-driver matching,
+        system trade-offs, and risk items.
+      </p>
+    </article>
+
+    <article class="rl-card">
+      <span class="rl-pill">Recommendation</span>
+      <h4>Next-step Action</h4>
+      <h5>下一步建議</h5>
+      <p>
+        Follow-up test, cooling change, layout review, RobiAgent pre-check,
+        RobiSoC mapping, or customer pilot planning.
+      </p>
+    </article>
+  </div>
+
+  <div class="rl-boundary">
+    <strong>Service boundary｜服務邊界：</strong>
+    RobiLab is an engineering validation and design-in support service. It is not positioned as a certified compliance laboratory unless explicitly agreed in a specific project scope. Results are based on defined test conditions and should not be interpreted as final certification, mass-production qualification, or guaranteed field performance.
+    <br><br>
+    <strong>服務邊界：</strong>
+    RobiLab 是工程驗證與 design-in 支援服務，除非專案範圍另有明確約定，否則不定位為正式認證實驗室。量測結果基於特定測試條件，不應直接解讀為最終認證、量產資格或保證實際場域表現。
+  </div>
+</section>
+
+<section class="rl-cta">
+  <style>
+    .rl-cta {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.28), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .rl-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .rl-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rl-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rl-title h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 1.06;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rl-title h3 {
+      margin: 14px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rl-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rl-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .rl-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #f8fbff;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .rl-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #031120;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.28);
+    }
+
+    .rl-note {
+      margin-top: 22px;
+      color: #8fa1b8;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 900px) {
+      .rl-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rl-cta { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rl-grid">
+    <div class="rl-title">
+      <div class="rl-eyebrow">Start Validation Support</div>
+      <h2>Turn Engineering Assumptions into Measured Data</h2>
+      <h3>將工程假設轉化為可量測數據</h3>
+    </div>
+
+    <div class="rl-copy">
+      <p>
+        Use RobiLab to support RobiDev evaluation, RobiThrust propulsion validation,
+        RobiTorque actuator pilot, RobiAgent pre-check, and RobiSoC design-in decisions.
+      </p>
+      <p>
+        你可以透過 RobiLab 支援 RobiDev 評估、RobiThrust 推進驗證、
+        RobiTorque 致動器 pilot、RobiAgent 預評估與 RobiSoC design-in 決策。
+      </p>
+
+      <div class="rl-buttons">
+        <a class="rl-btn primary" href="mailto:bd@robichip.com">bd@robichip.com</a>
+        <a class="rl-btn" href="mailto:contact@robichip.com">contact@robichip.com</a>
+        <a class="rl-btn" href="https://www.robichip.com/robidev" target="_blank">RobiDev</a>
+        <a class="rl-btn" href="https://www.robichip.com/robithrust" target="_blank">RobiThrust</a>
+        <a class="rl-btn" href="https://www.robichip.com/robiagent" target="_blank">RobiAgent</a>
+      </div>
+
+      <div class="rl-note">
+        Validation scope, measurement items, report depth, sample preparation, NDA needs,
+        delivery schedule, and pricing will be defined by project.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="robi-footer">
+  <style>
+    .robi-footer {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: #050b14;
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 42px 38px 26px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .robi-footer::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -120px;
+      top: -130px;
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 70%);
+      pointer-events: none;
+    }
+
+    .footer-wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.8fr 0.8fr 0.9fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .footer-brand h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+      font-weight: 950;
+    }
+
+    .footer-brand h3 {
+      margin: 8px 0 0;
+      color: #d9ecff;
+      font-size: 18px;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+      font-weight: 850;
+    }
+
+    .footer-brand p {
+      margin: 16px 0 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    .footer-col h4 {
+      margin: 0 0 13px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-link {
+      display: block;
+      color: #d9ecff;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.55;
+      margin: 0 0 9px;
+      font-weight: 700;
+    }
+
+    .footer-link:hover {
+      color: #65f1ff;
+    }
+
+    .footer-info {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer-address h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 17px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      font-weight: 900;
+    }
+
+    .footer-address p {
+      margin: 0 0 8px;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .footer-address a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .footer-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .footer-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(101, 241, 255, 0.09);
+      border: 1px solid rgba(101, 241, 255, 0.20);
+      color: #dffcff;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .footer-bottom {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+      justify-content: space-between;
+      color: #8fa1b8;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-bottom a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-info {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-badges {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .robi-footer {
+        padding: 34px 24px 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        display: block;
+      }
+
+      .footer-bottom div {
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>RobiChip Technology Co., Ltd.</h2>
+        <h3>羅比芯科技股份有限公司</h3>
+        <p>
+          Power SoC platform for intelligent machines. Robichip integrates Power SoC,
+          RobiDev, RobiThrust, RobiAgent, and validation workflows for robotics,
+          UAVs, and high-power-density motion systems.
+        </p>
+        <p>
+          羅比芯聚焦 Power + AI + Robotics，建構從 Power SoC、開發驗證、
+          無人機推進平台到 AI-assisted design-in 的智慧動力半導體平台。
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a class="footer-link" href="https://www.robichip.com/robisoc" target="_blank">RobiSoC</a>
+        <a class="footer-link" href="https://www.robichip.com/robidev" target="_blank">RobiDev</a>
+        <a class="footer-link" href="https://www.robichip.com/robithrust" target="_blank">RobiThrust</a>
+        <a class="footer-link" href="https://www.robichip.com/robitorque" target="_blank">RobiTorque</a>
+        <a class="footer-link" href="https://www.robichip.com/robiagent" target="_blank">RobiAgent</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a class="footer-link" href="https://www.robichip.com/technology-insights" target="_blank">Technology Insights</a>
+        <a class="footer-link" href="https://www.robichip.com/news-events" target="_blank">News & Events</a>
+        <a class="footer-link" href="https://www.robichip.com/robilab" target="_blank">RobiLab Validation</a>
+        <a class="footer-link" href="https://www.youtube.com/channel/UCqp-CDSVPCX8TfYT_aVScpg" target="_blank">Youtube channel</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Partnership</a>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Technical Discussion</a>
+        <a class="footer-link" href="https://www.robichip.com/join-us" target="_blank">Join Us</a>
+        <a class="footer-link" href="tel:+886277015728">+886-2-7701-5728</a>
+        <a class="footer-link" href="mailto:contact@robichip.com">contact@robichip.com</a>
+        <a class="footer-link" href="mailto:bd@robichip.com">bd@robichip.com</a>
+      </div>
+    </div>
+
+    <div class="footer-info">
+      <div class="footer-address">
+        <h4>Company Information｜公司資訊</h4>
+        <p><strong>RobiChip Technology Co., Ltd.｜羅比芯科技股份有限公司</strong></p>
+
+        <p>
+          National Taiwan University of Science and Technology, International Building 11F, Room 1105<br>
+          No. 43, Sec. 4, Keelung Rd., Da’an Dist., Taipei City, Taiwan
+        </p>
+
+        <p>
+          台北市大安區基隆路四段 43 號<br>
+          國立臺灣科技大學 國際大樓 11F 1105 室
+        </p>
+
+        <p>
+          Tel｜電話：
+          <a href="tel:+886277015728">+886-2-7701-5728</a><br>
+          General Contact｜一般聯絡：
+          <a href="mailto:contact@robichip.com">contact@robichip.com</a><br>
+          Business Development｜商務合作：
+          <a href="mailto:bd@robichip.com">bd@robichip.com</a>
+        </p>
+      </div>
+
+      <div class="footer-badges">
+        <span class="footer-badge">Power SoC</span>
+        <span class="footer-badge">Robotics</span>
+        <span class="footer-badge">UAV</span>
+        <span class="footer-badge">Advanced Packaging</span>
+        <span class="footer-badge">Thermal Path</span>
+        <span class="footer-badge">Design-in</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        © 2026 RobiChip Technology Co., Ltd. All rights reserved.
+      </div>
+      <div>
+        Public website content is for general information only. Detailed specifications are subject to official release, NDA, or partner discussion.
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ROBILAB SOURCE BLOCKS -->

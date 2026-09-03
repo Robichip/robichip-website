@@ -1,0 +1,3588 @@
+<section class="rp-hero-block">
+  <style>
+    .rp-hero-block {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.28), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 54px 40px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+    }
+
+    .rp-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rp-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rp-hero-block h1 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -0.065em;
+      font-weight: 950;
+    }
+
+    .rp-hero-block h2 {
+      margin: 18px 0 0;
+      color: #d9ecff;
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rp-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 26px;
+    }
+
+    .rp-tag {
+      padding: 8px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(101, 241, 255, 0.36);
+      background: rgba(101, 241, 255, 0.14);
+      color: #eafcff;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1;
+    }
+
+    .rp-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .rp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #f8fbff;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .rp-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #031120;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.28);
+    }
+
+    @media (max-width: 900px) {
+      .rp-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rp-hero-block { padding: 36px 24px; }
+    }
+  </style>
+
+  <div class="rp-grid">
+    <div>
+      <div class="rp-eyebrow">Partnership</div>
+      <h1>Build the Smart Motion Platform Together</h1>
+      <h2>與羅比芯共同打造智慧動力平台</h2>
+    </div>
+
+    <div class="rp-copy">
+      <p>
+        Robichip partners with system companies, MCU and control-board vendors,
+        packaging and material partners, universities, and developer ecosystems
+        to accelerate high-power-density smart motion platforms from validation
+        to design-in readiness.
+      </p>
+      <p>
+        羅比芯與系統廠、MCU 與控制板夥伴、封裝材料夥伴、學研單位與開發者生態合作，
+        將高功率密度智慧動力平台從驗證推進到客戶導入準備。
+      </p>
+
+      <div class="rp-tags">
+        <span class="rp-tag">RobiSoC</span>
+        <span class="rp-tag">M2 Custom Control</span>
+        <span class="rp-tag">RobiDev</span>
+        <span class="rp-tag">RobiLab</span>
+        <span class="rp-tag">RobiThrust</span>
+        <span class="rp-tag">Packaging / Materials</span>
+      </div>
+
+      <div class="rp-buttons">
+        <a class="rp-btn primary" href="mailto:bd@robichip.com">Start Partnership Discussion</a>
+        <a class="rp-btn" href="https://www.robichip.com/robisoc" target="_blank">Explore RobiSoC</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rp-tracks-block">
+  <style>
+    .rp-tracks-block,
+    .rp-tracks-block * {
+      box-sizing: border-box;
+    }
+
+    .rp-tracks-block {
+      font-family:
+        Inter,
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        Arial,
+        sans-serif;
+
+      color: #071426;
+
+      background:
+        radial-gradient(
+          circle at 90% 8%,
+          rgba(34, 211, 238, 0.10),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #f7fbff 48%,
+          #eef6ff 100%
+        );
+
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 28px;
+
+      padding: 50px 38px;
+    }
+
+    /* Header */
+
+    .rp-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-bottom: 16px;
+
+      color: #2563eb;
+
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .rp-eyebrow::before {
+      content: "";
+
+      display: inline-block;
+
+      width: 30px;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #2563eb,
+          #22d3ee
+        );
+    }
+
+    .rp-title h2 {
+      margin: 0;
+
+      color: #06111f;
+
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rp-title h3 {
+      margin: 14px 0 0;
+
+      color: #1e3a8a;
+
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rp-copy p {
+      margin: 0 0 12px;
+
+      color: #526174;
+
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rp-highlight {
+      margin-top: 18px;
+      padding: 17px 19px;
+
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 18px;
+
+      color: #475569;
+      background: rgba(37, 99, 235, 0.06);
+
+      font-size: 14px;
+      line-height: 1.72;
+      font-weight: 700;
+    }
+
+    .rp-highlight strong {
+      color: #153e75;
+      font-weight: 900;
+    }
+
+    /* Four ecosystem cards */
+
+    .rp-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+
+      margin-top: 30px;
+    }
+
+    .rp-card {
+      min-height: 440px;
+      padding: 24px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 24px;
+
+      background: #ffffff;
+
+      box-shadow:
+        0 16px 34px rgba(15, 23, 42, 0.07);
+    }
+
+    .rp-card.featured {
+      border-color: rgba(14, 165, 233, 0.32);
+
+      background:
+        linear-gradient(
+          155deg,
+          #eef8ff 0%,
+          #ffffff 74%
+        );
+
+      box-shadow:
+        0 18px 38px rgba(37, 99, 235, 0.10);
+    }
+
+    .rp-card-main {
+      display: block;
+    }
+
+    .rp-pill {
+      display: inline-flex;
+      width: fit-content;
+
+      margin-bottom: 14px;
+      padding: 7px 11px;
+
+      border: 1px solid rgba(14, 165, 233, 0.28);
+      border-radius: 999px;
+
+      color: #075985;
+      background: rgba(34, 211, 238, 0.13);
+
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .rp-card h4 {
+      margin: 0 0 10px;
+
+      color: #06111f;
+
+      font-size: 21px;
+      line-height: 1.28;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rp-card h5 {
+      margin: 0 0 14px;
+
+      color: #1e3a8a;
+
+      font-size: 16px;
+      line-height: 1.42;
+      font-weight: 850;
+    }
+
+    .rp-card p {
+      margin: 0 0 12px;
+
+      color: #5b6b80;
+
+      font-size: 14px;
+      line-height: 1.68;
+    }
+
+    .rp-card-note {
+      margin-top: 15px;
+      padding: 13px 14px;
+
+      border: 1px solid rgba(37, 99, 235, 0.10);
+      border-radius: 16px;
+
+      color: #475569;
+      background: rgba(37, 99, 235, 0.055);
+
+      font-size: 13px;
+      line-height: 1.6;
+      font-weight: 700;
+    }
+
+    .rp-card-note strong {
+      display: block;
+
+      margin-bottom: 4px;
+
+      color: #173f75;
+
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .rp-card-cta {
+      margin-top: 20px;
+    }
+
+    .rp-card-btn,
+    .rp-sub-btn {
+      width: 100%;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 999px;
+
+      text-align: center;
+      text-decoration: none;
+
+      line-height: 1.3;
+      font-weight: 900;
+
+      transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        background 0.18s ease;
+    }
+
+    .rp-card-btn {
+      min-height: 45px;
+      padding: 12px 14px;
+
+      border: 0;
+
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #2563eb,
+          #0ea5e9
+        );
+
+      font-size: 13px;
+
+      box-shadow:
+        0 12px 24px rgba(37, 99, 235, 0.18);
+    }
+
+    .rp-sub-btn {
+      min-height: 43px;
+      margin-top: 9px;
+      padding: 11px 14px;
+
+      border: 1px solid rgba(37, 99, 235, 0.16);
+
+      color: #0f172a;
+      background: #ffffff;
+
+      font-size: 13px;
+    }
+
+    .rp-card-btn:hover,
+    .rp-sub-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .rp-card-btn:hover {
+      box-shadow:
+        0 16px 28px rgba(37, 99, 235, 0.24);
+    }
+
+    .rp-sub-btn:hover {
+      background: #f2f8ff;
+    }
+
+    .rp-card-btn:focus-visible,
+    .rp-sub-btn:focus-visible,
+    .rp-strategic-btn:focus-visible {
+      outline: 3px solid rgba(37, 99, 235, 0.22);
+      outline-offset: 3px;
+    }
+
+    /* Strategic customer program bridge */
+
+    .rp-strategic {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+
+      margin-top: 20px;
+      padding: 23px 25px;
+
+      border: 1px solid rgba(14, 165, 233, 0.24);
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(219, 241, 255, 0.88),
+          rgba(255, 255, 255, 0.90)
+        );
+    }
+
+    .rp-strategic-label {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: #1674d1;
+
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .rp-strategic strong {
+      display: block;
+
+      color: #071426;
+
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: 950;
+    }
+
+    .rp-strategic p {
+      max-width: 850px;
+
+      margin: 7px 0 0;
+
+      color: #526174;
+
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .rp-strategic-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 9px;
+    }
+
+    .rp-strategic-btn {
+      min-height: 45px;
+      padding: 12px 17px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 999px;
+
+      color: #ffffff;
+      background: #102944;
+
+      text-align: center;
+      text-decoration: none;
+
+      font-size: 13px;
+      line-height: 1.35;
+      font-weight: 900;
+
+      transition:
+        transform 0.18s ease,
+        background 0.18s ease;
+    }
+
+    .rp-strategic-btn:hover {
+      transform: translateY(-1px);
+      background: #173b61;
+    }
+
+    /* Terminology note */
+
+    .rp-terminology {
+      margin-top: 15px;
+      padding: 15px 18px;
+
+      border: 1px solid rgba(37, 99, 235, 0.09);
+      border-radius: 16px;
+
+      color: #64748b;
+      background: rgba(255, 255, 255, 0.66);
+
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .rp-terminology strong {
+      color: #24486f;
+    }
+
+    /* Tablet */
+
+    @media (max-width: 1100px) {
+      .rp-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .rp-card {
+        min-height: 400px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .rp-grid,
+      .rp-strategic {
+        grid-template-columns: 1fr;
+      }
+
+      .rp-strategic-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .rp-card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rp-card {
+        min-height: auto;
+      }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 560px) {
+      .rp-tracks-block {
+        padding: 34px 22px;
+        border-radius: 22px;
+      }
+
+      .rp-card {
+        padding: 22px;
+      }
+
+      .rp-card p {
+        font-size: 15px;
+      }
+
+      .rp-card-note {
+        font-size: 14px;
+      }
+
+      .rp-strategic {
+        padding: 21px;
+      }
+
+      .rp-strategic p {
+        font-size: 15px;
+      }
+
+      .rp-strategic-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .rp-strategic-btn {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <div class="rp-grid">
+
+    <div class="rp-title">
+
+      <div class="rp-eyebrow">
+        Ecosystem Partner Tracks
+      </div>
+
+      <h2>
+        Four Ecosystem Collaboration Tracks
+      </h2>
+
+      <h3>
+        四種生態系合作模式
+      </h3>
+
+    </div>
+
+    <div class="rp-copy">
+
+      <p>
+        RobiChip’s ecosystem partnerships are organized around four
+        complementary layers: system and application validation,
+        configurable control, packaging and thermal engineering,
+        and developer ecosystem expansion.
+      </p>
+
+      <p>
+        羅比芯的生態系合作聚焦四個互補層次：
+        系統與應用驗證、可配置控制層、封裝與熱工程，
+        以及教育與開發者生態。
+      </p>
+
+      <div class="rp-highlight">
+
+        <strong>
+          Recommended entry path｜建議導入路徑
+        </strong>
+
+        RobiDev Discrete can serve as the reference baseline for
+        early motor-control development. RobiDev High-Density supports
+        RobiSoC evaluation and design-in, while the RobiThrust +
+        RobiDev Integration Bundle extends validation to UAV propulsion
+        and application-level performance.
+
+        <br><br>
+
+        RobiDev Discrete 可作為早期馬達控制開發的參考基準；
+        RobiDev High-Density 支援 RobiSoC 評估與 Design-in；
+        RobiThrust + RobiDev Integration Bundle 則進一步延伸至
+        無人機推進與應用層性能驗證。
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="rp-card-grid">
+
+    <!-- System partners -->
+    <article class="rp-card featured">
+
+      <div class="rp-card-main">
+
+        <span class="rp-pill">
+          System & Application Partners
+        </span>
+
+        <h4>
+          Robotics / UAV / Motion Systems
+        </h4>
+
+        <h5>
+          機器人、無人機與智慧運動系統廠
+        </h5>
+
+        <p>
+          For robotics, UAV, AMR / AGV, gimbal, actuator,
+          industrial automation, and intelligent-machine companies
+          evaluating compact, high-power-density motor-drive
+          and propulsion platforms.
+        </p>
+
+        <p>
+          適合機器人、無人機、AMR／AGV、雲台、致動器、
+          工業自動化及智慧設備廠商，進行高功率密度馬達驅動、
+          推進組態與系統應用驗證。
+        </p>
+
+        <div class="rp-card-note">
+
+          <strong>
+            Recommended first step
+          </strong>
+
+          Start with RobiDev Discrete or High-Density for motor-drive
+          evaluation, or combine RobiDev with RobiThrust for
+          propulsion and application-level validation.
+
+        </div>
+
+      </div>
+
+      <div class="rp-card-cta">
+
+        <a
+          class="rp-card-btn"
+          href="https://www.robichip.com/robidev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore RobiDev Platforms
+        </a>
+
+        <a
+          class="rp-sub-btn"
+          href="https://www.robichip.com/robithrust"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore RobiThrust Validation
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- MCU partners -->
+    <article class="rp-card">
+
+      <div class="rp-card-main">
+
+        <span class="rp-pill">
+          MCU & Control Partners
+        </span>
+
+        <h4>
+          MCU & Control Board Collaboration
+        </h4>
+
+        <h5>
+          MCU、控制器與控制板合作
+        </h5>
+
+        <p>
+          For MCU vendors, motor-control IC companies,
+          embedded-control partners, firmware teams,
+          and controller suppliers exploring configurable
+          control-layer or co-developed board solutions.
+        </p>
+
+        <p>
+          適合 MCU、馬達控制 IC、嵌入式控制、韌體及控制器夥伴，
+          共同評估可配置控制層、客製控制板與應用專屬控制方案。
+        </p>
+
+        <div class="rp-card-note">
+
+          <strong>
+            Recommended first step
+          </strong>
+
+          Use RobiDev Discrete as a transparent reference baseline,
+          then move toward customer-specific controller integration
+          or RobiDev High-Density co-development.
+
+        </div>
+
+      </div>
+
+      <div class="rp-card-cta">
+
+        <a
+          class="rp-card-btn"
+          href="https://www.robichip.com/robidev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View RobiDev Platforms
+        </a>
+
+        <a
+          class="rp-sub-btn"
+          href="mailto:bd@robichip.com?subject=MCU%20and%20Control%20Board%20Collaboration&body=Company%3A%0AContact%20Person%3A%0AMCU%20or%20Controller%3A%0ATarget%20Application%3A%0AMotor%20Type%3A%0ARequired%20Interfaces%3A%0AFirmware%20Scope%3A%0ATarget%20Schedule%3A%0AAdditional%20Information%3A"
+        >
+          Discuss Control Collaboration
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- Packaging partners -->
+    <article class="rp-card">
+
+      <div class="rp-card-main">
+
+        <span class="rp-pill">
+          Packaging & Thermal Partners
+        </span>
+
+        <h4>
+          Packaging / Materials / Thermal
+        </h4>
+
+        <h5>
+          封裝、材料、散熱與可靠度夥伴
+        </h5>
+
+        <p>
+          For OSAT, substrate, high-power module,
+          thermal-material, cooling, and reliability partners
+          supporting DFM, qualification, pilot production,
+          thermal-path optimization, and manufacturing scale-up.
+        </p>
+
+        <p>
+          適合封裝廠、基板、高功率模組、熱材料、冷卻及可靠度夥伴，
+          共同推進 DFM、資格驗證、試產、熱路徑最佳化與量產放大。
+        </p>
+
+        <div class="rp-card-note">
+
+          <strong>
+            Recommended first step
+          </strong>
+
+          Use RobiDev High-Density, RobiSoC samples,
+          and RobiThrust system evidence to align electrical,
+          thermal, mechanical, and package-to-system requirements.
+
+        </div>
+
+      </div>
+
+      <div class="rp-card-cta">
+
+        <a
+          class="rp-card-btn"
+          href="https://www.robichip.com/robisoc"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore RobiSoC Architecture
+        </a>
+
+        <a
+          class="rp-sub-btn"
+          href="mailto:bd@robichip.com?subject=Packaging%20Materials%20and%20Thermal%20Collaboration&body=Company%3A%0AContact%20Person%3A%0ACapability%20or%20Technology%3A%0ATarget%20Application%3A%0ADFM%20or%20Reliability%20Scope%3A%0APilot%20Production%20Capability%3A%0ATarget%20Schedule%3A%0AAdditional%20Information%3A"
+        >
+          Discuss Packaging Collaboration
+        </a>
+
+      </div>
+
+    </article>
+
+    <!-- Education partners -->
+    <article class="rp-card">
+
+      <div class="rp-card-main">
+
+        <span class="rp-pill">
+          Education & Developer Partners
+        </span>
+
+        <h4>
+          Education & Developer Ecosystem
+        </h4>
+
+        <h5>
+          教育、研究與開發者生態
+        </h5>
+
+        <p>
+          For universities, laboratories, research teams,
+          developer communities, and education platforms
+          building motor-control, power-electronics,
+          robotics, and UAV validation courses or workshops.
+        </p>
+
+        <p>
+          適合大學、實驗室、研究團隊、開發者社群及教育平台，
+          建立馬達控制、電力電子、機器人與無人機驗證課程或工作坊。
+        </p>
+
+        <div class="rp-card-note">
+
+          <strong>
+            Recommended first step
+          </strong>
+
+          Use RobiDev Discrete as an accessible reference
+          and engineering-validation platform for teaching,
+          firmware development, and laboratory exercises.
+
+        </div>
+
+      </div>
+
+      <div class="rp-card-cta">
+
+        <a
+          class="rp-card-btn"
+          href="https://www.robichip.com/robidev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Build with RobiDev Discrete
+        </a>
+
+        <a
+          class="rp-sub-btn"
+          href="mailto:contact@robichip.com?subject=RobiDev%20Education%20and%20Developer%20Ecosystem%20Inquiry&body=Institution%20or%20Organization%3A%0AContact%20Person%3A%0ACourse%20or%20Research%20Topic%3A%0AExpected%20Number%20of%20Kits%3A%0ATarget%20Schedule%3A%0AAdditional%20Information%3A"
+        >
+          Education Partnership Inquiry
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+  <div class="rp-strategic">
+
+    <div>
+
+      <span class="rp-strategic-label">
+        Strategic Customer Program
+      </span>
+
+      <strong>
+        Need to integrate proprietary control intelligence into
+        a customer-specific RobiSoC or RobiSoC-based module?
+      </strong>
+
+      <p>
+        When a collaboration involves customer-owned algorithms,
+        firmware, communication protocols, protection logic,
+        application-specific behavior, or exclusive product requirements,
+        the project should enter RobiChip’s Custom RobiSoC &
+        Embedded IP Co-Development program.
+
+        <br><br>
+
+        若合作內容涉及客戶自有演算法、韌體、通訊協定、保護邏輯、
+        應用專屬控制行為或專屬產品需求，則應進入羅比芯的
+        Custom RobiSoC 與客戶 IP 整合開發方案。
+
+      </p>
+
+    </div>
+
+    <div class="rp-strategic-actions">
+
+      <a
+        class="rp-strategic-btn"
+        href="mailto:bd@robichip.com?subject=Confidential%20Custom%20RobiSoC%20Feasibility%20Review&body=Company%3A%0AContact%20Person%3A%0AApplication%3A%0AExisting%20Control%20Technology%3A%0ATarget%20Motor%20or%20Actuator%3A%0ATarget%20Voltage%20and%20Power%3A%0ARequired%20Interfaces%3A%0ATarget%20Schedule%3A%0ANDA%20Required%3A%0AAdditional%20Information%3A"
+      >
+        Request Confidential Review
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="rp-terminology">
+
+    <strong>Collaboration structure｜合作架構：</strong>
+
+    The four cards above describe RobiChip’s ecosystem partnership tracks.
+    Customer-specific silicon and proprietary-IP integration are handled
+    through the separate Strategic Customer Program.
+
+    <br><br>
+
+    上述四張卡片代表羅比芯的生態系合作模式；
+    客戶專屬晶片與自有 IP 整合則由獨立的
+    Strategic Customer Program 處理。
+
+  </div>
+
+</section>
+
+<section id="custom-robisoc-partnership" class="rc-csp">
+  <style>
+    .rc-csp,
+    .rc-csp * {
+      box-sizing: border-box;
+    }
+
+    .rc-csp {
+      font-family:
+        Inter,
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        Arial,
+        sans-serif;
+
+      color: #f8fbff;
+
+      background:
+        linear-gradient(
+          rgba(92, 196, 255, 0.035) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(92, 196, 255, 0.035) 1px,
+          transparent 1px
+        ),
+        radial-gradient(
+          circle at 88% 12%,
+          rgba(34, 211, 238, 0.22),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 6% 94%,
+          rgba(37, 99, 235, 0.18),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #04111e 0%,
+          #071b2f 52%,
+          #0b3154 100%
+        );
+
+      background-size:
+        32px 32px,
+        32px 32px,
+        auto,
+        auto,
+        auto;
+
+      border: 1px solid rgba(126, 211, 255, 0.20);
+      border-radius: 28px;
+
+      padding: 52px 40px;
+      overflow: hidden;
+    }
+
+    /* Header */
+
+    .rc-csp-head {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 42px;
+      align-items: end;
+    }
+
+    .rc-csp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-bottom: 16px;
+
+      color: #65d8ff;
+
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .rc-csp-eyebrow::before {
+      content: "";
+
+      width: 30px;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #65d8ff,
+          transparent
+        );
+    }
+
+    .rc-csp-title h2 {
+      max-width: 720px;
+      margin: 0;
+
+      color: #ffffff;
+
+      font-size: clamp(35px, 4.8vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rc-csp-title h3 {
+      margin: 15px 0 0;
+
+      color: #d8edfb;
+
+      font-size: clamp(21px, 2.7vw, 31px);
+      line-height: 1.3;
+      letter-spacing: -0.035em;
+      font-weight: 850;
+    }
+
+    .rc-csp-intro p {
+      margin: 0 0 12px;
+
+      color: #b8cbd9;
+
+      font-size: 16px;
+      line-height: 1.78;
+    }
+
+    .rc-csp-fit {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      margin-top: 19px;
+    }
+
+    .rc-csp-fit span {
+      padding: 8px 11px;
+
+      border: 1px solid rgba(101, 216, 255, 0.28);
+      border-radius: 999px;
+
+      color: #ccefff;
+      background: rgba(55, 181, 237, 0.10);
+
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 850;
+    }
+
+    /* Value proposition */
+
+    .rc-csp-value {
+      margin-top: 30px;
+      padding: 23px 25px;
+
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: center;
+
+      border: 1px solid rgba(101, 216, 255, 0.24);
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.16),
+          rgba(34, 211, 238, 0.08)
+        );
+    }
+
+    .rc-csp-value-icon {
+      width: 54px;
+      height: 54px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid rgba(101, 216, 255, 0.38);
+      border-radius: 16px;
+
+      color: #78e2ff;
+      background: rgba(34, 211, 238, 0.10);
+
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .rc-csp-value strong {
+      display: block;
+
+      color: #ffffff;
+
+      font-size: clamp(19px, 2vw, 24px);
+      line-height: 1.4;
+      font-weight: 900;
+    }
+
+    .rc-csp-value p {
+      margin: 7px 0 0;
+
+      color: #aec3d2;
+
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* Four collaboration stages */
+
+    .rc-csp-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+
+      margin-top: 22px;
+    }
+
+    .rc-csp-card {
+      min-height: 340px;
+      padding: 23px;
+
+      display: flex;
+      flex-direction: column;
+
+      border: 1px solid rgba(186, 223, 245, 0.16);
+      border-radius: 20px;
+
+      background: rgba(255, 255, 255, 0.065);
+
+      box-shadow:
+        0 18px 36px rgba(0, 0, 0, 0.12);
+    }
+
+    .rc-csp-card.featured {
+      border-color: rgba(101, 216, 255, 0.43);
+
+      background:
+        radial-gradient(
+          circle at 92% 5%,
+          rgba(34, 211, 238, 0.15),
+          transparent 36%
+        ),
+        rgba(255, 255, 255, 0.075);
+    }
+
+    .rc-csp-number {
+      width: 34px;
+      height: 34px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid rgba(101, 216, 255, 0.28);
+      border-radius: 10px;
+
+      color: #65d8ff;
+      background: rgba(34, 211, 238, 0.09);
+
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .rc-csp-card h4 {
+      margin: 18px 0 7px;
+
+      color: #ffffff;
+
+      font-size: 20px;
+      line-height: 1.32;
+      font-weight: 900;
+      letter-spacing: -0.025em;
+    }
+
+    .rc-csp-card h5 {
+      margin: 0 0 13px;
+
+      color: #9fc9df;
+
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 800;
+    }
+
+    .rc-csp-card p {
+      margin: 0;
+
+      color: #afc1cf;
+
+      font-size: 14px;
+      line-height: 1.72;
+    }
+
+    .rc-csp-card ul {
+      margin: 15px 0 0;
+      padding-left: 18px;
+
+      color: #d3e1eb;
+
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .rc-csp-card li {
+      margin-bottom: 2px;
+    }
+
+    .rc-csp-card li::marker {
+      color: #5fd4ff;
+    }
+
+    .rc-csp-card-tag {
+      width: fit-content;
+
+      margin-top: auto;
+      padding-top: 18px;
+    }
+
+    .rc-csp-card-tag span {
+      display: inline-flex;
+
+      padding: 7px 10px;
+
+      border-radius: 999px;
+
+      color: #8bddff;
+      background: rgba(34, 211, 238, 0.09);
+
+      font-size: 10px;
+      line-height: 1.25;
+      font-weight: 900;
+      letter-spacing: 0.055em;
+      text-transform: uppercase;
+    }
+
+    /* IP framework */
+
+    .rc-csp-ip {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 16px;
+
+      margin-top: 22px;
+    }
+
+    .rc-csp-ip-title,
+    .rc-csp-ip-terms {
+      padding: 23px 24px;
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 19px;
+
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .rc-csp-ip-title span {
+      display: block;
+
+      margin-bottom: 9px;
+
+      color: #65d8ff;
+
+      font-size: 11px;
+      line-height: 1.25;
+      font-weight: 900;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .rc-csp-ip-title strong {
+      display: block;
+
+      color: #ffffff;
+
+      font-size: 21px;
+      line-height: 1.42;
+      font-weight: 900;
+    }
+
+    .rc-csp-ip-title p {
+      margin: 8px 0 0;
+
+      color: #aec0cf;
+
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .rc-csp-ip-terms {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .rc-csp-ip-item {
+      padding: 14px;
+
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 14px;
+
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .rc-csp-ip-item strong {
+      display: block;
+
+      color: #eaf7ff;
+
+      font-size: 13px;
+      line-height: 1.45;
+      font-weight: 900;
+    }
+
+    .rc-csp-ip-item small {
+      display: block;
+
+      margin-top: 6px;
+
+      color: #9bb0c0;
+
+      font-size: 11px;
+      line-height: 1.55;
+      font-weight: 600;
+    }
+
+    /* Process path */
+
+    .rc-csp-path {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+
+      margin-top: 22px;
+      padding: 18px 20px;
+
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      border-radius: 18px;
+
+      background: rgba(0, 0, 0, 0.15);
+    }
+
+    .rc-csp-step {
+      padding: 8px 11px;
+
+      border-radius: 999px;
+
+      color: #dcecf7;
+      background: rgba(255, 255, 255, 0.07);
+
+      font-size: 12px;
+      line-height: 1.3;
+      font-weight: 850;
+    }
+
+    .rc-csp-arrow {
+      color: #65d8ff;
+
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    /* CTA */
+
+    .rc-csp-cta {
+      margin-top: 22px;
+      padding: 25px;
+
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+
+      border: 1px solid rgba(101, 216, 255, 0.24);
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(22, 96, 155, 0.26),
+          rgba(34, 211, 238, 0.08)
+        );
+    }
+
+    .rc-csp-cta strong {
+      display: block;
+
+      color: #ffffff;
+
+      font-size: 21px;
+      line-height: 1.42;
+      font-weight: 900;
+    }
+
+    .rc-csp-cta p {
+      margin: 7px 0 0;
+
+      color: #afc3d2;
+
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .rc-csp-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .rc-csp-btn {
+      min-height: 46px;
+      padding: 12px 17px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+
+      text-align: center;
+      text-decoration: none;
+
+      font-size: 13px;
+      line-height: 1.35;
+      font-weight: 900;
+
+      transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        box-shadow 0.18s ease;
+    }
+
+    .rc-csp-btn:hover {
+      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.13);
+    }
+
+    .rc-csp-btn.primary {
+      border: 0;
+
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #2563eb,
+          #0ea5e9
+        );
+
+      box-shadow:
+        0 13px 27px rgba(37, 99, 235, 0.28);
+    }
+
+    .rc-csp-btn.primary:hover {
+      box-shadow:
+        0 17px 32px rgba(37, 99, 235, 0.35);
+    }
+
+    .rc-csp-btn:focus-visible {
+      outline: 3px solid rgba(101, 216, 255, 0.32);
+      outline-offset: 3px;
+    }
+
+    /* Disclaimer */
+
+    .rc-csp-note {
+      margin-top: 14px;
+      padding: 0 2px;
+
+      color: #91a7b8;
+
+      font-size: 11.5px;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    /* Tablet */
+
+    @media (max-width: 1050px) {
+      .rc-csp-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .rc-csp-card {
+        min-height: 320px;
+      }
+
+      .rc-csp-ip {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .rc-csp-head,
+      .rc-csp-cta {
+        grid-template-columns: 1fr;
+      }
+
+      .rc-csp-buttons {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .rc-csp-grid,
+      .rc-csp-ip-terms {
+        grid-template-columns: 1fr;
+      }
+
+      .rc-csp-card {
+        min-height: auto;
+      }
+
+      .rc-csp-value {
+        grid-template-columns: 1fr;
+      }
+
+      .rc-csp-value-icon {
+        width: 48px;
+        height: 48px;
+      }
+
+      .rc-csp-path {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .rc-csp-arrow {
+        width: fit-content;
+        margin-left: 12px;
+
+        transform: rotate(90deg);
+      }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 560px) {
+      .rc-csp {
+        padding: 38px 23px;
+        border-radius: 22px;
+      }
+
+      .rc-csp-intro p,
+      .rc-csp-value p,
+      .rc-csp-card p,
+      .rc-csp-ip-title p,
+      .rc-csp-cta p {
+        font-size: 15px;
+      }
+
+      .rc-csp-card {
+        padding: 22px;
+      }
+
+      .rc-csp-card h4 {
+        font-size: 21px;
+      }
+
+      .rc-csp-card h5 {
+        font-size: 15px;
+      }
+
+      .rc-csp-card ul {
+        font-size: 14px;
+      }
+
+      .rc-csp-ip-title,
+      .rc-csp-ip-terms,
+      .rc-csp-cta {
+        padding: 21px;
+      }
+
+      .rc-csp-ip-item small,
+      .rc-csp-note {
+        font-size: 12px;
+      }
+
+      .rc-csp-buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .rc-csp-btn {
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <div class="rc-csp-head">
+
+    <div class="rc-csp-title">
+
+      <div class="rc-csp-eyebrow">
+        Strategic Customer Program
+      </div>
+
+      <h2>
+        Turn Your Control Know-How into Customer-Specific Silicon
+      </h2>
+
+      <h3>
+        將控制技術與應用 know-how 轉化為客戶專屬的動力半導體平台
+      </h3>
+
+    </div>
+
+    <div class="rc-csp-intro">
+
+      <p>
+        RobiChip works with robotics, industrial automation,
+        servo and motion-control, and intelligent-machine companies
+        to integrate proprietary control intelligence into a
+        customer-specific RobiSoC or RobiSoC-based module.
+      </p>
+
+      <p>
+        羅比芯可與機器人、工業自動化、伺服與運動控制及智慧設備廠商合作，
+        將客戶自有的控制演算法、韌體、通訊介面、保護邏輯與應用經驗，
+        整合至客戶專屬的 RobiSoC 或 RobiSoC-based module。
+      </p>
+
+      <div class="rc-csp-fit">
+        <span>Robot OEMs</span>
+        <span>Industrial Automation</span>
+        <span>Servo & Motion Control</span>
+        <span>Intelligent Machines</span>
+        <span>UAV & Actuator Systems</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="rc-csp-value">
+
+    <div class="rc-csp-value-icon" aria-hidden="true">
+      IP
+    </div>
+
+    <div>
+
+      <strong>
+        Your differentiated control intelligence, integrated and protected
+        within a RobiChip power and motion platform.
+      </strong>
+
+      <p>
+        客戶保留其核心控制技術與應用差異化；羅比芯提供 Power SoC、
+        高功率密度封裝、板級整合、熱路徑及系統驗證能力，
+        共同建立更難被複製的產品平台。
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="rc-csp-grid">
+
+    <article class="rc-csp-card">
+
+      <div class="rc-csp-number">
+        01
+      </div>
+
+      <h4>
+        Customer IP Integration
+      </h4>
+
+      <h5>
+        客戶控制技術與專屬 IP 整合
+      </h5>
+
+      <p>
+        Integrate customer-owned algorithms, firmware,
+        communication protocols, sensing functions,
+        protection logic, and application-specific know-how.
+      </p>
+
+      <ul>
+        <li>Control algorithms and firmware</li>
+        <li>Proprietary communication interfaces</li>
+        <li>Sensing and protection logic</li>
+        <li>Application-specific control behavior</li>
+      </ul>
+
+      <div class="rc-csp-card-tag">
+        <span>Customer-Owned Intelligence</span>
+      </div>
+
+    </article>
+
+    <article class="rc-csp-card featured">
+
+      <div class="rc-csp-number">
+        02
+      </div>
+
+      <h4>
+        Custom RobiSoC Architecture
+      </h4>
+
+      <h5>
+        客戶專屬 RobiSoC 與模組架構
+      </h5>
+
+      <p>
+        Define a customer-specific architecture combining
+        control, power stage, sensing, interfaces, protection,
+        packaging, and thermal-path requirements.
+      </p>
+
+      <ul>
+        <li>MCU and controller configuration</li>
+        <li>Power-stage and voltage-current range</li>
+        <li>Custom interfaces and I/O</li>
+        <li>Package and thermal architecture</li>
+      </ul>
+
+      <div class="rc-csp-card-tag">
+        <span>Customer-Specific Silicon</span>
+      </div>
+
+    </article>
+
+    <article class="rc-csp-card">
+
+      <div class="rc-csp-number">
+        03
+      </div>
+
+      <h4>
+        Confidential Engineering Validation
+      </h4>
+
+      <h5>
+        NDA 下的工程樣品與驗證
+      </h5>
+
+      <p>
+        Validate the architecture through RobiDev, RobiLab,
+        application fixtures, motor matching, dynamic loading,
+        thermal observation, and system-level testing.
+      </p>
+
+      <ul>
+        <li>RobiDev engineering evaluation</li>
+        <li>Motor and actuator matching</li>
+        <li>Power and thermal validation</li>
+        <li>Application-level test environment</li>
+      </ul>
+
+      <div class="rc-csp-card-tag">
+        <span>Confidential Validation</span>
+      </div>
+
+    </article>
+
+    <article class="rc-csp-card">
+
+      <div class="rc-csp-number">
+        04
+      </div>
+
+      <h4>
+        NRE to Production Supply
+      </h4>
+
+      <h5>
+        從客製開發到後續產品供應
+      </h5>
+
+      <p>
+        Move from feasibility review and NRE development
+        toward engineering samples, pilot builds,
+        qualification, and future chip or module supply.
+      </p>
+
+      <ul>
+        <li>Feasibility and architecture review</li>
+        <li>NRE and engineering development</li>
+        <li>Pilot samples and qualification</li>
+        <li>Future SoC or module production supply</li>
+      </ul>
+
+      <div class="rc-csp-card-tag">
+        <span>Design-in to Production</span>
+      </div>
+
+    </article>
+
+  </div>
+
+  <div class="rc-csp-ip">
+
+    <div class="rc-csp-ip-title">
+
+      <span>
+        IP & Collaboration Framework
+      </span>
+
+      <strong>
+        Protect each party’s technology while defining how joint
+        improvements can be commercialized.
+      </strong>
+
+      <p>
+        合作初期即透過 NDA、技術範圍與 IP 邊界確認，
+        清楚區分客戶既有技術、羅比芯平台技術及共同開發成果。
+      </p>
+
+    </div>
+
+    <div class="rc-csp-ip-terms">
+
+      <div class="rc-csp-ip-item">
+
+        <strong>
+          Customer Background IP
+        </strong>
+
+        <small>
+          客戶原有演算法、韌體、協定與應用技術
+        </small>
+
+      </div>
+
+      <div class="rc-csp-ip-item">
+
+        <strong>
+          RobiChip Platform IP
+        </strong>
+
+        <small>
+          RobiSoC、封裝、功率級、熱路徑與驗證平台
+        </small>
+
+      </div>
+
+      <div class="rc-csp-ip-item">
+
+        <strong>
+          Joint Improvements
+        </strong>
+
+        <small>
+          共同成果之所有權、授權與應用領域依合約定義
+        </small>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="rc-csp-path">
+
+    <span class="rc-csp-step">
+      Confidential Discussion
+    </span>
+
+    <span class="rc-csp-arrow">→</span>
+
+    <span class="rc-csp-step">
+      NDA & IP Boundary
+    </span>
+
+    <span class="rc-csp-arrow">→</span>
+
+    <span class="rc-csp-step">
+      Feasibility Review
+    </span>
+
+    <span class="rc-csp-arrow">→</span>
+
+    <span class="rc-csp-step">
+      Architecture & NRE
+    </span>
+
+    <span class="rc-csp-arrow">→</span>
+
+    <span class="rc-csp-step">
+      Engineering Sample
+    </span>
+
+    <span class="rc-csp-arrow">→</span>
+
+    <span class="rc-csp-step">
+      Pilot & Production
+    </span>
+
+  </div>
+
+  <div class="rc-csp-cta">
+
+    <div>
+
+      <strong>
+        Let’s evaluate whether your control technology can become
+        a customer-specific RobiSoC platform.
+      </strong>
+
+      <p>
+        歡迎以保密方式討論控制技術、系統需求、應用場景及潛在產品化路徑。
+      </p>
+
+    </div>
+
+    <div class="rc-csp-buttons">
+
+      <a
+        class="rc-csp-btn primary"
+        href="mailto:bd@robichip.com?subject=Confidential%20Custom%20RobiSoC%20Feasibility%20Review&body=Company%3A%0AContact%20Person%3A%0AApplication%3A%0AExisting%20Control%20Technology%3A%0ATarget%20Motor%20or%20Actuator%3A%0ATarget%20Voltage%20and%20Power%3A%0ARequired%20Interfaces%3A%0ATarget%20Schedule%3A%0ANDA%20Required%3A%0AAdditional%20Information%3A"
+      >
+        Request Confidential Feasibility Review
+      </a>
+
+      <a
+        class="rc-csp-btn"
+        href="mailto:bd@robichip.com?subject=Custom%20RobiSoC%20Co-Development%20Discussion"
+      >
+        Discuss a Custom RobiSoC
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="rc-csp-note">
+    Customer-specific integration is subject to technical feasibility,
+    commercial review, NDA, IP-boundary agreement, development scope,
+    validation requirements, and production planning.
+    客戶專屬整合須經技術可行性、商業條件、保密協議、智慧財產權邊界、
+    開發範圍、驗證需求及量產規劃確認。
+  </div>
+
+</section>
+
+<section class="rp-swancor-block">
+  <style>
+    .rp-swancor-block {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.25), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .rp-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rp-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rp-title h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rp-title h3 {
+      margin: 14px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rp-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .case-card {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
+      background: rgba(255, 255, 255, 0.075);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.16);
+    }
+
+    .rp-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #f2fdff;
+      background: rgba(34, 211, 238, 0.26);
+      border: 1px solid rgba(101, 241, 255, 0.56);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .case-card h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: clamp(26px, 3.6vw, 42px);
+      line-height: 1.1;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .case-card h5 {
+      margin: 0 0 16px;
+      color: #d9ecff;
+      font-size: 20px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .case-card p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .case-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .case-item {
+      padding: 14px 15px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.075);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+    }
+
+    .case-item strong {
+      display: block;
+      color: #ffffff;
+      font-size: 15px;
+      line-height: 1.35;
+      margin-bottom: 4px;
+      font-weight: 950;
+    }
+
+    .case-item span {
+      display: block;
+      color: #9fb0c5;
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    .rp-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .rp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #f8fbff;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .rp-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #031120;
+      border: 0;
+    }
+
+    .rp-note {
+      margin-top: 24px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 980px) {
+      .rp-grid,
+      .case-card { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rp-swancor-block { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rp-grid">
+    <div class="rp-title">
+      <div class="rp-eyebrow">Public Collaboration Evidence : Case Study</div>
+      <h2>Swancor × Robichip Strategic Collaboration</h2>
+      <h3>上緯投控 × 羅比芯公開策略合作案例</h3>
+    </div>
+
+    <div class="rp-copy">
+      <p>
+        Robichip has publicly initiated a strategic collaboration with Swancor Holding,
+        focusing on advanced packaging materials, thermal solutions, and high-power-density
+        motion systems for next-generation intelligent machines.
+      </p>
+      <p>
+        羅比芯已與上緯投控公開啟動策略合作，聚焦先進封裝材料、散熱解決方案，
+        以及面向次世代智慧機器的高功率密度動力系統。
+      </p>
+    </div>
+  </div>
+
+  <article class="case-card">
+    <div>
+      <span class="rp-pill">Public MOU｜公開合作紀錄</span>
+      <h4>Advanced Packaging Materials for High-Power-Density Motion</h4>
+      <h5>先進封裝材料 × 高功率密度智慧動力平台</h5>
+
+      <p>
+        The collaboration connects Swancor’s material and thermal-solution strengths
+        with Robichip’s Power SoC, Hybrid Substrate, system validation, and smart motion platform direction.
+      </p>
+
+      <p>
+        此合作連結上緯在材料與散熱解決方案上的優勢，以及羅比芯在 Power SoC、
+        Hybrid Substrate、系統驗證與智慧動力平台上的技術方向。
+      </p>
+
+      <div class="rp-buttons">
+        <a class="rp-btn primary" href="https://www.robichip.com/news-events" target="_blank">View News & Events</a>
+        <a class="rp-btn" href="https://www.robichip.com/robisoc" target="_blank">Explore RobiSoC</a>
+      </div>
+    </div>
+
+    <div class="case-list">
+      <div class="case-item">
+        <strong>Advanced Packaging Materials</strong>
+        <span>Material and thermal-solution collaboration direction</span>
+      </div>
+
+      <div class="case-item">
+        <strong>High-Power-Density Motion</strong>
+        <span>Robotics, robot dogs, UAV, and smart motion applications</span>
+      </div>
+
+      <div class="case-item">
+        <strong>System Validation Path</strong>
+        <span>From material / package discussion to RobiSoC, RobiDev, and RobiThrust validation</span>
+      </div>
+
+      <div class="case-item">
+        <strong>Public Partnership Signal</strong>
+        <span>A visible collaboration reference for future packaging, material, and system partners</span>
+      </div>
+    </div>
+  </article>
+
+  <div class="rp-note">
+    This public collaboration reference is intended to show Robichip’s packaging and material partnership direction.
+    It should not be interpreted as an exclusive production agreement, final product qualification,
+    or completed volume manufacturing commitment.
+    <br><br>
+    本公開合作案例用於說明羅比芯的封裝與材料合作方向；不應解讀為排他性量產協議、
+    最終產品認證或已完成量產承諾。
+  </div>
+</section>
+
+<section class="rp-mcu-block">
+  <style>
+    .rp-mcu-block {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .rp-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rp-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rp-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rp-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rp-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rp-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .rp-card {
+      background: #ffffff;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 230px;
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.07);
+    }
+
+    .rp-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #075985;
+      background: rgba(34, 211, 238, 0.13);
+      border: 1px solid rgba(14, 165, 233, 0.28);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rp-card h4 {
+      margin: 0 0 10px;
+      color: #06111f;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rp-card h5 {
+      margin: 0 0 14px;
+      color: #1e3a8a;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rp-card p {
+      margin: 0;
+      color: #5b6b80;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .rp-table {
+      margin-top: 30px;
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      background: #ffffff;
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.07);
+    }
+
+    .rp-table-row {
+      display: grid;
+      grid-template-columns: 0.62fr 1.38fr;
+      border-bottom: 1px solid rgba(37, 99, 235, 0.10);
+    }
+
+    .rp-table-row:last-child {
+      border-bottom: 0;
+    }
+
+    .rp-table-label {
+      padding: 14px 16px;
+      background: rgba(37, 99, 235, 0.06);
+      color: #075985;
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .rp-table-value {
+      padding: 14px 16px;
+      color: #1f2937;
+      font-size: 14px;
+      line-height: 1.55;
+      font-weight: 750;
+    }
+
+    .rp-note {
+      margin-top: 28px;
+      padding: 20px 22px;
+      border-radius: 22px;
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .rp-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .rp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(37, 99, 235, 0.18);
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: #ffffff;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
+    }
+
+    .rp-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #ffffff;
+      border: 0;
+    }
+
+    @media (max-width: 1020px) {
+      .rp-grid,
+      .rp-card-grid,
+      .rp-table-row { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rp-mcu-block { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rp-grid">
+    <div class="rp-title">
+      <div class="rp-eyebrow">M2 Custom Control Layer</div>
+      <h2>MCU & Control Board Collaboration</h2>
+      <h3>MCU 與控制板客製化合作</h3>
+    </div>
+
+    <div class="rp-copy">
+      <p>
+        RobiSoC supports a configurable control-layer strategy. The M1 baseline
+        uses an STM32G4x-series motor-control MCU for early validation, while M2
+        enables project-based custom controller and firmware integration for MCU partners,
+        system customers, education platforms, and application-specific reference designs.
+      </p>
+      <p>
+        RobiSoC 支援可配置控制層策略。M1 baseline 採用 STM32G4x-series 馬達控制 MCU
+        進行早期驗證；M2 則支援專案型客製化控制器與韌體整合，適用於 MCU 夥伴、
+        系統客戶、教育平台與特定應用 reference design。
+      </p>
+    </div>
+  </div>
+
+  <div class="rp-card-grid">
+    <article class="rp-card">
+      <span class="rp-pill">M1 Baseline</span>
+      <h4>Standard Validation Path</h4>
+      <h5>標準驗證路徑</h5>
+      <p>
+        M1 supports early validation, firmware bring-up, motor-control evaluation,
+        and RobiDev / RobiLab measurement workflow.
+      </p>
+    </article>
+
+    <article class="rp-card">
+      <span class="rp-pill">M2 Custom</span>
+      <h4>Custom Controller Option</h4>
+      <h5>客製化控制器選項</h5>
+      <p>
+        M2 supports MCU partner evaluation, custom control-board variants,
+        firmware integration, toolchain alignment, and reference design collaboration.
+      </p>
+    </article>
+
+    <article class="rp-card">
+      <span class="rp-pill">Interface</span>
+      <h4>Application-specific I/O</h4>
+      <h5>應用別控制介面</h5>
+      <p>
+        Collaboration may involve CANBus, RS-485, UART, SPI, PWM, encoder feedback,
+        current sensing, and host-control integration.
+      </p>
+    </article>
+
+    <article class="rp-card">
+      <span class="rp-pill">Reference Design</span>
+      <h4>Co-developed Demo Platform</h4>
+      <h5>共同開發示範平台</h5>
+      <p>
+        Potential outputs include education kits, actuator reference designs,
+        UAV / gimbal motor-control demos, or selected customer design-in pilots.
+      </p>
+    </article>
+  </div>
+
+  <div class="rp-table">
+    <div class="rp-table-row">
+      <div class="rp-table-label">Robichip Scope</div>
+      <div class="rp-table-value">
+        Power architecture, GaN module direction, hybrid substrate, thermal path,
+        RobiSoC roadmap, RobiDev / RobiLab validation, and system-level application proof.
+      </div>
+    </div>
+
+    <div class="rp-table-row">
+      <div class="rp-table-label">MCU Partner Scope</div>
+      <div class="rp-table-value">
+        MCU, motor-control firmware, toolchain, communication interface,
+        developer ecosystem, education kit support, and co-branded reference design option.
+      </div>
+    </div>
+
+    <div class="rp-table-row">
+      <div class="rp-table-label">Positioning</div>
+      <div class="rp-table-value">
+        M2 is not positioned as a simple MCU replacement. It is a project-based control-layer option
+        for partner-ready smart motion platforms.
+      </div>
+    </div>
+  </div>
+
+  <div class="rp-note">
+    M2 collaboration should start with a feasibility note or pilot scope. The recommended first tangible output
+    is an MCU-based control-board feasibility review, education kit pilot, actuator reference design,
+    or UAV / gimbal motion-control demo.
+    <br><br>
+    M2 合作建議先以 feasibility note 或 pilot scope 作為第一個具體成果，例如 MCU-based control-board
+    可行性評估、教育開發套件 pilot、致動器 reference design，或 UAV / gimbal motion-control demo。
+  </div>
+
+  <div class="rp-buttons">
+    <a class="rp-btn primary" href="mailto:bd@robichip.com">Discuss M2 Collaboration</a>
+    <a class="rp-btn" href="https://www.robichip.com/robisoc" target="_blank">View RobiSoC</a>
+    <a class="rp-btn" href="https://www.robichip.com/robidev" target="_blank">View RobiDev</a>
+  </div>
+</section>
+
+<section class="rp-packaging-block">
+  <style>
+    .rp-packaging-block {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.25), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .rp-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rp-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rp-title h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rp-title h3 {
+      margin: 14px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rp-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rp-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .rp-card {
+      background: rgba(255, 255, 255, 0.075);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 230px;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.16);
+    }
+
+    .rp-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #f2fdff;
+      background: rgba(34, 211, 238, 0.26);
+      border: 1px solid rgba(101, 241, 255, 0.56);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rp-card h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rp-card h5 {
+      margin: 0 0 14px;
+      color: #d9ecff;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rp-card p {
+      margin: 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .rp-note {
+      margin-top: 28px;
+      padding: 20px 22px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1020px) {
+      .rp-grid,
+      .rp-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rp-packaging-block { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rp-grid">
+    <div class="rp-title">
+      <div class="rp-eyebrow">Packaging & Materials Partners</div>
+      <h2>From Prototype Validation to Manufacturable Packaging Platform</h2>
+      <h3>從原型驗證走向可製造的封裝平台</h3>
+    </div>
+
+    <div class="rp-copy">
+      <p>
+        Robichip seeks packaging, substrate, material, and thermal partners
+        to support RobiSoC DFM, reliability validation, pilot samples,
+        and future volume-readiness.
+      </p>
+      <p>
+        羅比芯尋求封裝、基板、材料與散熱夥伴，共同推進 RobiSoC 的 DFM、
+        可靠度驗證、pilot sample 與未來量產準備。
+      </p>
+    </div>
+  </div>
+
+  <div class="rp-card-grid">
+    <article class="rp-card">
+      <span class="rp-pill">DFM</span>
+      <h4>Design for Manufacturing</h4>
+      <h5>量產前設計收斂</h5>
+      <p>
+        Hybrid substrate process rules, thermal interface specification,
+        die attach, interconnect, and layout manufacturability.
+      </p>
+    </article>
+
+    <article class="rp-card">
+      <span class="rp-pill">Reliability</span>
+      <h4>Reliability Validation</h4>
+      <h5>可靠度驗證</h5>
+      <p>
+        Thermal cycling, power cycling, mechanical stress, vibration,
+        failure analysis, and package-to-system validation.
+      </p>
+    </article>
+
+    <article class="rp-card">
+      <span class="rp-pill">Pilot</span>
+      <h4>Pilot Production</h4>
+      <h5>試產與樣品批次</h5>
+      <p>
+        Sample lots, process window, yield learning, qualification planning,
+        and production-readiness review.
+      </p>
+    </article>
+
+    <article class="rp-card">
+      <span class="rp-pill">Scale-up</span>
+      <h4>Future Volume Readiness</h4>
+      <h5>未來量產準備</h5>
+      <p>
+        Preferred production framework, cost reduction, capacity alignment,
+        and high-power-density packaging standardization.
+      </p>
+    </article>
+  </div>
+
+  <div class="rp-note">
+    Partnership positioning: Robichip is not looking for a vendor-only relationship.
+    We seek co-development partners who can help define the packaging and thermal path for
+    robotics and UAV high-power-density Power SoC modules.
+    <br><br>
+    合作定位：羅比芯不是只尋找代工報價，而是尋找能共同定義機器人與無人機高功率密度
+    Power SoC 封裝與熱路徑的 co-development partner。
+  </div>
+</section>
+
+<section class="rp-process-block">
+  <style>
+    .rp-process-block {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .rp-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rp-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rp-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rp-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rp-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rp-flow {
+      margin-top: 30px;
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .rp-flow h4 {
+      margin: 0 0 16px;
+      color: #06111f;
+      font-size: 23px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rp-flow-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    .rp-flow-step {
+      border-radius: 18px;
+      padding: 16px 12px;
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .rp-flow-step strong {
+      display: block;
+      color: #06111f;
+      font-size: 14px;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .rp-flow-step span {
+      display: block;
+      color: #64748b;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .rp-table {
+      margin-top: 30px;
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      background: #ffffff;
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.07);
+    }
+
+    .rp-table-row {
+      display: grid;
+      grid-template-columns: 0.62fr 1.38fr;
+      border-bottom: 1px solid rgba(37, 99, 235, 0.10);
+    }
+
+    .rp-table-row:last-child {
+      border-bottom: 0;
+    }
+
+    .rp-table-label {
+      padding: 14px 16px;
+      background: rgba(37, 99, 235, 0.06);
+      color: #075985;
+      font-size: 12px;
+      font-weight: 950;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .rp-table-value {
+      padding: 14px 16px;
+      color: #1f2937;
+      font-size: 14px;
+      line-height: 1.55;
+      font-weight: 750;
+    }
+
+    .rp-note {
+      margin-top: 28px;
+      padding: 20px 22px;
+      border-radius: 22px;
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1020px) {
+      .rp-grid,
+      .rp-flow-grid,
+      .rp-table-row { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rp-process-block { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rp-grid">
+    <div class="rp-title">
+      <div class="rp-eyebrow">Collaboration Path</div>
+      <h2>From First Discussion to Joint Validation</h2>
+      <h3>從初步討論到共同驗證</h3>
+    </div>
+
+    <div class="rp-copy">
+      <p>
+        Partnership should move through clear, verifiable outputs rather than staying at slide exchange.
+        Each stage should define scope, owner, validation method, and next decision point.
+      </p>
+      <p>
+        合作不應停留在交換簡報，而應逐步形成可驗證產出。每個階段都應定義 scope、
+        owner、validation method 與下一個決策點。
+      </p>
+    </div>
+  </div>
+
+  <div class="rp-flow">
+    <h4>Partnership Workflow｜合作流程</h4>
+    <div class="rp-flow-grid">
+      <div class="rp-flow-step">
+        <strong>Mutual Understanding</strong>
+        <span>company / roadmap exchange</span>
+      </div>
+
+      <div class="rp-flow-step">
+        <strong>Technical Alignment</strong>
+        <span>interface, power stage, thermal path</span>
+      </div>
+
+      <div class="rp-flow-step">
+        <strong>Pilot Definition</strong>
+        <span>kit, actuator, UAV, packaging scope</span>
+      </div>
+
+      <div class="rp-flow-step">
+        <strong>Joint Validation</strong>
+        <span>RobiLab measurement, thermal test</span>
+      </div>
+
+      <div class="rp-flow-step">
+        <strong>Go-to-market Option</strong>
+        <span>demo, co-branding, design-in</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rp-table">
+    <div class="rp-table-row">
+      <div class="rp-table-label">Public Materials</div>
+      <div class="rp-table-value">
+        Website pages, public technology notes, high-level product descriptions,
+        public event materials, and non-confidential partnership introduction.
+      </div>
+    </div>
+
+    <div class="rp-table-row">
+      <div class="rp-table-label">NDA Materials</div>
+      <div class="rp-table-value">
+        Detailed datasheets, raw validation data, design files, DFM discussions,
+        pilot planning, partner-specific technical reviews, and sample exchange details.
+      </div>
+    </div>
+
+    <div class="rp-table-row">
+      <div class="rp-table-label">Robichip Pre-existing IP</div>
+      <div class="rp-table-value">
+        RobiSoC, Hybrid Substrate, thermal-domain architecture,
+        RobiDev / RobiLab / RobiThrust validation methods, and related platform know-how.
+      </div>
+    </div>
+
+    <div class="rp-table-row">
+      <div class="rp-table-label">Partner Know-how</div>
+      <div class="rp-table-value">
+        MCU / firmware / toolchain know-how, packaging process know-how,
+        material know-how, manufacturing methods, and confidential partner workflows.
+      </div>
+    </div>
+
+    <div class="rp-table-row">
+      <div class="rp-table-label">Joint Improvements</div>
+      <div class="rp-table-value">
+        DFM rules, control-board variants, package improvements, process windows,
+        reference designs, field-of-use, ownership, license, and publication terms
+        should be defined under JDA / SCA / pilot MOU.
+      </div>
+    </div>
+  </div>
+
+  <div class="rp-note">
+    Public statement: Robichip welcomes partnership discussions, but detailed technical information,
+    sample exchange, DFM review, partner-specific data, or joint-improvement discussions may require NDA
+    and formal collaboration documents.
+    <br><br>
+    公開說明：羅比芯歡迎合作洽談；但詳細技術資料、樣品交換、DFM review、夥伴別資料或
+    joint-improvement 討論，可能需要 NDA 與正式合作文件。
+  </div>
+</section>
+
+<section class="rp-cta-block">
+  <style>
+    .rp-cta-block {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.28), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .rp-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .rp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rp-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rp-title h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 1.06;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rp-title h3 {
+      margin: 14px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rp-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rp-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .rp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #f8fbff;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .rp-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #031120;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.28);
+    }
+
+    .rp-note {
+      margin-top: 22px;
+      color: #8fa1b8;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 900px) {
+      .rp-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rp-cta-block { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rp-grid">
+    <div class="rp-title">
+      <div class="rp-eyebrow">Start a Discussion</div>
+      <h2>Let’s Define the First Pilot Together</h2>
+      <h3>讓我們一起定義第一個合作 pilot</h3>
+    </div>
+
+    <div class="rp-copy">
+      <p>
+        Whether you are a system company, MCU partner, packaging / material partner,
+        university lab, or developer ecosystem partner, the best next step is to define
+        one clear technical pilot with scope, owner, validation method, and timeline.
+      </p>
+      <p>
+        無論你是系統廠、MCU 夥伴、封裝材料夥伴、學研實驗室或開發者生態夥伴，
+        最好的下一步是定義一個清楚的 technical pilot：scope、owner、驗證方法與時程。
+      </p>
+
+      <div class="rp-buttons">
+        <a class="rp-btn primary" href="mailto:bd@robichip.com">bd@robichip.com</a>
+        <a class="rp-btn" href="mailto:contact@robichip.com">contact@robichip.com</a>
+        <a class="rp-btn" href="https://www.robichip.com/robisoc" target="_blank">RobiSoC</a>
+        <a class="rp-btn" href="https://www.robichip.com/technology-insights" target="_blank">Technology Insights</a>
+      </div>
+
+      <div class="rp-note">
+        Detailed technical materials, sample exchange, DFM review, and partner-specific discussions may require NDA.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="robi-footer">
+  <style>
+    .robi-footer {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: #050b14;
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 42px 38px 26px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .robi-footer::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -120px;
+      top: -130px;
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 70%);
+      pointer-events: none;
+    }
+
+    .footer-wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.8fr 0.8fr 0.9fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .footer-brand h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+      font-weight: 950;
+    }
+
+    .footer-brand h3 {
+      margin: 8px 0 0;
+      color: #d9ecff;
+      font-size: 18px;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+      font-weight: 850;
+    }
+
+    .footer-brand p {
+      margin: 16px 0 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    .footer-col h4 {
+      margin: 0 0 13px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-link {
+      display: block;
+      color: #d9ecff;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.55;
+      margin: 0 0 9px;
+      font-weight: 700;
+    }
+
+    .footer-link:hover {
+      color: #65f1ff;
+    }
+
+    .footer-info {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer-address h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 17px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      font-weight: 900;
+    }
+
+    .footer-address p {
+      margin: 0 0 8px;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .footer-address a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .footer-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .footer-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(101, 241, 255, 0.09);
+      border: 1px solid rgba(101, 241, 255, 0.20);
+      color: #dffcff;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .footer-bottom {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+      justify-content: space-between;
+      color: #8fa1b8;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-bottom a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-info {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-badges {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .robi-footer {
+        padding: 34px 24px 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        display: block;
+      }
+
+      .footer-bottom div {
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>RobiChip Technology Co., Ltd.</h2>
+        <h3>羅比芯科技股份有限公司</h3>
+        <p>
+          Power SoC platform for intelligent machines. Robichip integrates Power SoC,
+          RobiDev, RobiThrust, RobiAgent, and validation workflows for robotics,
+          UAVs, and high-power-density motion systems.
+        </p>
+        <p>
+          羅比芯聚焦 Power + AI + Robotics，建構從 Power SoC、開發驗證、
+          無人機推進平台到 AI-assisted design-in 的智慧動力半導體平台。
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a class="footer-link" href="https://www.robichip.com/robisoc" target="_blank">RobiSoC</a>
+        <a class="footer-link" href="https://www.robichip.com/robidev" target="_blank">RobiDev</a>
+        <a class="footer-link" href="https://www.robichip.com/robithrust" target="_blank">RobiThrust</a>
+        <a class="footer-link" href="https://www.robichip.com/robitorque" target="_blank">RobiTorque</a>
+        <a class="footer-link" href="https://www.robichip.com/robiagent" target="_blank">RobiAgent</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a class="footer-link" href="https://www.robichip.com/technology-insights" target="_blank">Technology Insights</a>
+        <a class="footer-link" href="https://www.robichip.com/news-events" target="_blank">News & Events</a>
+        <a class="footer-link" href="https://www.robichip.com/robilab" target="_blank">RobiLab Validation</a>
+        <a class="footer-link" href="https://www.youtube.com/channel/UCqp-CDSVPCX8TfYT_aVScpg" target="_blank">Youtube channel</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Partnership</a>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Technical Discussion</a>
+        <a class="footer-link" href="https://www.robichip.com/join-us" target="_blank">Join Us</a>
+        <a class="footer-link" href="tel:+886277015728">+886-2-7701-5728</a>
+        <a class="footer-link" href="mailto:contact@robichip.com">contact@robichip.com</a>
+        <a class="footer-link" href="mailto:bd@robichip.com">bd@robichip.com</a>
+      </div>
+    </div>
+
+    <div class="footer-info">
+      <div class="footer-address">
+        <h4>Company Information｜公司資訊</h4>
+        <p><strong>RobiChip Technology Co., Ltd.｜羅比芯科技股份有限公司</strong></p>
+
+        <p>
+          National Taiwan University of Science and Technology, International Building 11F, Room 1105<br>
+          No. 43, Sec. 4, Keelung Rd., Da’an Dist., Taipei City, Taiwan
+        </p>
+
+        <p>
+          台北市大安區基隆路四段 43 號<br>
+          國立臺灣科技大學 國際大樓 11F 1105 室
+        </p>
+
+        <p>
+          Tel｜電話：
+          <a href="tel:+886277015728">+886-2-7701-5728</a><br>
+          General Contact｜一般聯絡：
+          <a href="mailto:contact@robichip.com">contact@robichip.com</a><br>
+          Business Development｜商務合作：
+          <a href="mailto:bd@robichip.com">bd@robichip.com</a>
+        </p>
+      </div>
+
+      <div class="footer-badges">
+        <span class="footer-badge">Power SoC</span>
+        <span class="footer-badge">Robotics</span>
+        <span class="footer-badge">UAV</span>
+        <span class="footer-badge">Advanced Packaging</span>
+        <span class="footer-badge">Thermal Path</span>
+        <span class="footer-badge">Design-in</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        © 2026 RobiChip Technology Co., Ltd. All rights reserved.
+      </div>
+      <div>
+        Public website content is for general information only. Detailed specifications are subject to official release, NDA, or partner discussion.
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- PARTNERSHIP SOURCE BLOCKS -->
