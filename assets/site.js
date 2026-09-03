@@ -687,7 +687,7 @@
   const routeTable = {
     '/': {title:'Power SoC Platform for Intelligent Machines', render:homePage},
     '/首頁': {title:'Power SoC Platform for Intelligent Machines', render:homePage},
-    '/robisoc': {title:'RobiSoC', render:robisocPage},
+    '/robisoc': {title:'RobiSoC', render:() => sourceRoute('/assets/source/robisoc.html?v=frozen-reference-v6'), reference:true},
     '/robidev': {title:'RobiDev', render:robidevPage},
     '/robithrust': {title:'RobiThrust', render:robithrustPage},
     '/robitorque': {title:'RobiTorque', render:robitorquePage},
@@ -828,6 +828,15 @@
           block.before(wrapper);
           wrapper.append(block);
         });
+        if (BASE_PATH) {
+          sourceMount.querySelectorAll('[href]').forEach((element) => {
+            const href = element.getAttribute('href');
+            if (href?.startsWith(ORIGIN)) {
+              const target = new URL(href);
+              element.setAttribute('href', `${BASE_PATH}${target.pathname}${target.search}${target.hash}`);
+            }
+          });
+        }
       })
       .catch(() => { sourceMount.innerHTML = '<p class="source-load-error">Source content is temporarily unavailable.</p>'; });
   }
