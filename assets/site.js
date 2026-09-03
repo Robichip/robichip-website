@@ -689,7 +689,7 @@
     '/首頁': {title:'Power SoC Platform for Intelligent Machines', render:homePage},
     '/robisoc': {title:'RobiSoC', render:() => sourceRoute('/assets/source/robisoc.html?v=frozen-reference-v7', 'robisoc'), reference:true},
     '/robidev': {title:'RobiDev', render:() => sourceRoute('/assets/source/robidev.html?v=frozen-reference-v1', 'robidev'), reference:true},
-    '/robithrust': {title:'RobiThrust', render:() => sourceRoute('/assets/source/robithrust.html?v=frozen-reference-v1'), reference:true},
+    '/robithrust': {title:'RobiThrust', render:() => sourceRoute('/assets/source/robithrust.html?v=frozen-reference-v1', 'robithrust'), reference:true},
     '/robitorque': {title:'RobiTorque', render:robitorquePage},
     '/technology-insights': {title:'Technology Insights', render:insightsPage},
     '/robiagent': {title:'RobiAgent', render:robiagentPage},
@@ -856,6 +856,13 @@
           discrete.innerHTML = '<figure><img src="' + BASE_PATH + '/assets/images/robidev-discrete-reference.jpg" alt="RobiDev Discrete"><figcaption>Diameter=30mm, up to 500W</figcaption></figure><div class="robidev-legacy-copy"><h1>RobiDev Discrete</h1><h2>6-Layer Discrete Reference &amp; Validation Platform</h2><p>RobiDev-Discrete is a 6-layer total discrete validation model, corresponding to the RobiSoC M1/G1 SKU architecture in discrete implementation.</p><p>RobiDev-Discrete 為六層板 total discrete 驗證平台，可視為 RobiSoC 之 M1/G1 SKU 架構的分離式實作版本。</p></div>';
           blocks[1]?.before(highDensity);
           blocks[2]?.before(discrete);
+        }
+        if (sourceMount.dataset.sourceLayout === 'robithrust') {
+          const blocks = sourceMount.querySelectorAll(':scope > .google-source-block');
+          const gallery = document.createElement('section');
+          gallery.className = 'robithrust-legacy-gallery';
+          gallery.innerHTML = '<figure><img src="' + BASE_PATH + '/assets/images/robithrust-platform-reference-1.jpg" alt="RobiThrust UAV propulsion validation platform"></figure><figure><img src="' + BASE_PATH + '/assets/images/robithrust-platform-reference-2.jpg" alt="RobiThrust Heavy UAV propulsion test platform"></figure>';
+          blocks[1]?.before(gallery);
         }
         if (BASE_PATH) {
           sourceMount.querySelectorAll('[href]').forEach((element) => {

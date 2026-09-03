@@ -85,6 +85,9 @@ body.google-reference .robidev-legacy-copy { padding-top: 18px; }
 body.google-reference .robidev-legacy-copy h1 { margin: 0 0 38px; color: #95205c; font-size: 46px; font-weight: 300; line-height: 1.18; letter-spacing: .01em; }
 body.google-reference .robidev-legacy-copy h2 { margin: 0 0 26px; color: #95205c; font-size: 30px; font-weight: 300; line-height: 1.75; letter-spacing: .01em; }
 body.google-reference .robidev-legacy-copy p { margin: 0 0 18px; font-size: 16px; font-weight: 400; line-height: 1.85; }
+body.google-reference .robithrust-legacy-gallery { width: min(958px, calc(100% - 48px)); margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; align-items: start; }
+body.google-reference .robithrust-legacy-gallery figure { margin: 0; }
+body.google-reference .robithrust-legacy-gallery img { display: block; width: 100%; height: auto; }
 @media (max-width: 900px) {
   body.google-reference .nav-shell { width: min(100% - 32px, 1304px); min-height: 66px; }
   body.google-reference .brand img { width: 164px; height: 38px; }
@@ -99,6 +102,7 @@ body.google-reference .robidev-legacy-copy p { margin: 0 0 18px; font-size: 16px
   body.google-reference .robidev-legacy-copy { padding-top: 0; }
   body.google-reference .robidev-legacy-copy h1 { margin-bottom: 20px; font-size: 36px; }
   body.google-reference .robidev-legacy-copy h2 { margin-bottom: 18px; font-size: 24px; line-height: 1.5; }
+  body.google-reference .robithrust-legacy-gallery { width: min(100% - 32px, 640px); grid-template-columns: 1fr; gap: 22px; }
 }
 
 a { color: inherit; text-decoration: none; }
