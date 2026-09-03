@@ -688,7 +688,7 @@
     '/': {title:'Power SoC Platform for Intelligent Machines', render:homePage},
     '/首頁': {title:'Power SoC Platform for Intelligent Machines', render:homePage},
     '/robisoc': {title:'RobiSoC', render:() => sourceRoute('/assets/source/robisoc.html?v=frozen-reference-v7', 'robisoc'), reference:true},
-    '/robidev': {title:'RobiDev', render:() => sourceRoute('/assets/source/robidev.html?v=frozen-reference-v1'), reference:true},
+    '/robidev': {title:'RobiDev', render:() => sourceRoute('/assets/source/robidev.html?v=frozen-reference-v1', 'robidev'), reference:true},
     '/robithrust': {title:'RobiThrust', render:robithrustPage},
     '/robitorque': {title:'RobiTorque', render:robitorquePage},
     '/technology-insights': {title:'Technology Insights', render:insightsPage},
@@ -825,6 +825,12 @@
         [...sourceMount.children].forEach((block) => {
           const wrapper = document.createElement('div');
           wrapper.className = 'google-source-block';
+          wrapper.style.containerType = 'inline-size';
+          block.querySelectorAll('style').forEach((style) => {
+            style.textContent = style.textContent
+              .replace(/@media\s*\(\s*max-width\s*:\s*(\d+(?:\.\d+)?)px\s*\)/g, '@container (max-width: $1px)')
+              .replace(/(\d+(?:\.\d+)?)vw\b/g, '$1cqw');
+          });
           block.before(wrapper);
           wrapper.append(block);
         });
