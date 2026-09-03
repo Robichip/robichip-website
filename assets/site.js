@@ -689,7 +689,7 @@
     '/首頁': {title:'Power SoC Platform for Intelligent Machines', render:homePage},
     '/robisoc': {title:'RobiSoC', render:() => sourceRoute('/assets/source/robisoc.html?v=frozen-reference-v7', 'robisoc'), reference:true},
     '/robidev': {title:'RobiDev', render:() => sourceRoute('/assets/source/robidev.html?v=frozen-reference-v1', 'robidev'), reference:true},
-    '/robithrust': {title:'RobiThrust', render:robithrustPage},
+    '/robithrust': {title:'RobiThrust', render:() => sourceRoute('/assets/source/robithrust.html?v=frozen-reference-v1'), reference:true},
     '/robitorque': {title:'RobiTorque', render:robitorquePage},
     '/technology-insights': {title:'Technology Insights', render:insightsPage},
     '/robiagent': {title:'RobiAgent', render:robiagentPage},

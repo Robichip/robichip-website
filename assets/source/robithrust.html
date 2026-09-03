@@ -1,0 +1,4021 @@
+<section class="rt-hero">
+  <style>
+    .rt-hero {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.28), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 54px 40px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+    }
+
+    .rt-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rt-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rt-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rt-hero h1 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -0.065em;
+      font-weight: 950;
+    }
+
+    .rt-hero h2 {
+      margin: 18px 0 0;
+      color: #d9ecff;
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rt-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rt-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 26px;
+    }
+
+    .rt-tag {
+      padding: 8px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(101, 241, 255, 0.36);
+      background: rgba(101, 241, 255, 0.14);
+      color: #eafcff;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1;
+    }
+
+    .rt-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .rt-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #f8fbff;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .rt-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #031120;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.28);
+    }
+
+    @media (max-width: 900px) {
+      .rt-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rt-hero { padding: 36px 24px; }
+    }
+  </style>
+
+  <div class="rt-grid">
+    <div>
+      <div class="rt-eyebrow">RobiThrust</div>
+      <h1>UAV Propulsion Validation Platform</h1>
+      <h2>無人機高推力密度推進系統驗證平台</h2>
+    </div>
+
+    <div class="rt-copy">
+      <p>
+        RobiThrust is Robichip’s integrated propulsion validation platform,
+        combining RobiDev, motor, propeller, thrust measurement, and thermal observation
+        into a practical path toward UAV motor-drive evaluation and RobiSoC design-in.
+      </p>
+      <p>
+        RobiThrust 是羅比芯的整合式推進系統驗證平台，結合 RobiDev、馬達、槳、
+        推力量測與熱觀察，協助客戶從無人機馬達驅動評估走向 RobiSoC design-in。
+      </p>
+
+      <div class="rt-tags">
+        <span class="rt-tag">RobiDev + Motor + Propeller</span>
+        <span class="rt-tag">mini-E / E / P / X / XL</span>
+        <span class="rt-tag">UAV Propulsion</span>
+        <span class="rt-tag">Thrust Test</span>
+        <span class="rt-tag">Thermal Observation</span>
+        <span class="rt-tag">Design-in</span>
+      </div>
+
+      <div class="rt-buttons">
+        <a class="rt-btn primary" href="mailto:bd@robichip.com?subject=RobiThrust%20Quotation%20Request">Request a Quotation</a>
+        <a class="rt-btn" href="https://www.robichip.com/robidev" target="_blank">Explore RobiDev</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rct-perspective">
+  <div class="rct-perspective-inner">
+
+    <!-- Heading -->
+    <header class="rct-perspective-heading">
+
+      <div class="rct-perspective-eyebrow">
+        INDUSTRY PERSPECTIVE
+      </div>
+
+      <h2>
+        Evolution of UAV Propulsion Architecture
+      </h2>
+
+      <h3>
+        From Propulsion Gen.1 to Gen.3
+      </h3>
+
+      <div class="rct-perspective-zh-title">
+        無人機推進架構的世代演進：從分離式系統走向半導體定義推進
+      </div>
+
+      <p>
+        RobiChip proposes a three-generation framework to describe how
+        UAV propulsion may evolve from discrete components, to integrated
+        modules, and toward semiconductor-defined systems built around
+        power intelligence.
+      </p>
+
+      <p class="rct-perspective-zh">
+        羅比芯提出無人機推進架構的三代演進框架：從 ESC、馬達與螺旋槳
+        分離的傳統系統，走向基礎整合模組，再進一步邁向以 Power SoC
+        為核心，整合功率、感測、控制、保護與熱管理的半導體定義推進架構。
+      </p>
+
+    </header>
+
+    <!-- Generation cards -->
+    <div class="rct-generation-grid">
+
+      <!-- Propulsion Gen.1 -->
+      <article class="rct-generation-card">
+
+        <div class="rct-generation-card-header">
+          <div class="rct-generation-number">
+            PROPULSION GEN.1
+          </div>
+
+          <div class="rct-generation-status">
+            DISCRETE
+          </div>
+        </div>
+
+        <h4>Discrete Architecture</h4>
+        <h5>傳統分離式架構</h5>
+
+        <p>
+          ESC, motor, and propeller are selected, connected, and validated
+          as separate components.
+        </p>
+
+        <p class="rct-generation-zh">
+          ESC、馬達與螺旋槳分別選型與整合，系統設計主要由個別零組件規格決定。
+        </p>
+
+        <ul>
+          <li>Separate ESC, motor, and propeller</li>
+          <li>Longer electrical and thermal paths</li>
+          <li>Higher wiring and integration effort</li>
+        </ul>
+
+        <div class="rct-generation-definition">
+          Component-defined
+        </div>
+
+      </article>
+
+      <div class="rct-generation-arrow" aria-hidden="true">
+        <span>→</span>
+      </div>
+
+      <!-- Propulsion Gen.2 -->
+      <article class="rct-generation-card">
+
+        <div class="rct-generation-card-header">
+          <div class="rct-generation-number">
+            PROPULSION GEN.2
+          </div>
+
+          <div class="rct-generation-status">
+            INTEGRATED MODULE
+          </div>
+        </div>
+
+        <h4>Integrated Module</h4>
+        <h5>基礎整合模組</h5>
+
+        <p>
+          Drive electronics and motor functions begin to move into a
+          more compact and modular propulsion architecture.
+        </p>
+
+        <p class="rct-generation-zh">
+          驅動器與馬達開始整合，降低配線與體積，但功率、控制、熱路徑及槳葉
+          尚未形成完整的跨領域協同設計。
+        </p>
+
+        <ul>
+          <li>Driver and motor integration</li>
+          <li>Reduced system size and wiring</li>
+          <li>Partial electrical and mechanical integration</li>
+        </ul>
+
+        <div class="rct-generation-definition">
+          Module-defined
+        </div>
+
+      </article>
+
+      <div class="rct-generation-arrow" aria-hidden="true">
+        <span>→</span>
+      </div>
+
+      <!-- Propulsion Gen.3 -->
+      <article class="rct-generation-card rct-generation-featured">
+
+        <div class="rct-generation-card-header">
+          <div class="rct-generation-number">
+            PROPULSION GEN.3
+          </div>
+
+          <div class="rct-generation-status">
+            SEMICONDUCTOR-DEFINED
+          </div>
+        </div>
+
+        <h4>Semiconductor-Defined Propulsion</h4>
+        <h5>半導體定義推進架構</h5>
+
+        <p>
+          Power SoC becomes the intelligence core connecting power,
+          sensing, control, protection, thermal design, motor, and propeller.
+        </p>
+
+        <p class="rct-generation-zh">
+          以 Power SoC 作為功率智慧核心，整合功率、感測、控制、保護、
+          熱管理、馬達與槳葉，形成可量測、可驗證與可模組化的推進平台。
+        </p>
+
+        <ul>
+          <li>Power, sensing, control, and protection</li>
+          <li>Motor, propeller, and thermal-path co-design</li>
+          <li>Measurable and repeatable validation</li>
+        </ul>
+
+        <div class="rct-generation-definition rct-generation-definition-featured">
+          Power-intelligence-defined
+        </div>
+
+      </article>
+
+    </div>
+
+    <!-- Key transition -->
+    <div class="rct-transition">
+
+      <div class="rct-transition-label">
+        THE KEY TRANSITION
+      </div>
+
+      <blockquote>
+        UAV propulsion is evolving from component-defined systems
+        toward semiconductor-defined power and motion platforms.
+      </blockquote>
+
+      <p>
+        無人機推進系統正從由個別零組件規格主導的架構，
+        逐步走向由半導體層級的功率智慧、控制、感測與熱管理共同定義的平台。
+      </p>
+
+    </div>
+
+    <!-- Platform relationship -->
+    <div class="rct-platform-relationship">
+
+      <article class="rct-platform-card">
+
+        <div class="rct-platform-label">
+          POWER INTELLIGENCE CORE
+        </div>
+
+        <h4>RobiSoC</h4>
+
+        <p>
+          Converts upper-level control commands into efficient,
+          monitored, and protected electrical power and physical motion.
+        </p>
+
+        <p class="rct-platform-zh">
+          將上位控制指令轉化為高效率、可監測且具保護能力的電力輸出與物理動作。
+        </p>
+
+        <a
+          href="https://www.robichip.com/robisoc"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore RobiSoC →
+        </a>
+
+      </article>
+
+      <div class="rct-platform-symbol" aria-hidden="true">
+        +
+      </div>
+
+      <article class="rct-platform-card rct-platform-card-featured">
+
+        <div class="rct-platform-label">
+          SYSTEM-LEVEL VALIDATION
+        </div>
+
+        <h4>RobiThrust</h4>
+
+        <p>
+          Connects motor drive, motor, propeller, thrust measurement,
+          power data, and thermal observation in one validation environment.
+        </p>
+
+        <p class="rct-platform-zh">
+          將驅動器、馬達、螺旋槳、推力量測、功耗與溫升觀察整合於同一驗證環境。
+        </p>
+
+        <div class="rct-platform-position">
+          Validation Bridge toward Propulsion Gen.3
+        </div>
+
+      </article>
+
+    </div>
+
+    <!-- Terminology summary -->
+    <div class="rct-summary">
+
+      <div class="rct-summary-item">
+        <span>Propulsion Gen.1–3</span>
+
+        <strong>
+          UAV propulsion architecture framework
+        </strong>
+
+        <small>
+          無人機推進架構演進框架
+        </small>
+      </div>
+
+      <div class="rct-summary-item">
+        <span>RobiDev</span>
+
+        <strong>
+          Semiconductor and motor-drive evaluation
+        </strong>
+
+        <small>
+          半導體與馬達驅動評估平台
+        </small>
+      </div>
+
+      <div class="rct-summary-item">
+        <span>RobiThrust</span>
+
+        <strong>
+          Application-level propulsion validation
+        </strong>
+
+        <small>
+          推進系統與應用層驗證平台
+        </small>
+      </div>
+
+    </div>
+
+    <!-- Terminology note -->
+    <div class="rct-terminology-note">
+
+      <strong>Terminology note｜名詞說明：</strong>
+
+      “Propulsion Gen.1–Gen.3” is a framework proposed by RobiChip
+      to describe the evolution of UAV propulsion-system architecture.
+      It does not refer to RobiDev product versions, hardware revisions,
+      or manufacturing-readiness stages.
+
+      <br><br>
+
+      「Propulsion Gen.1–Gen.3」是羅比芯用來描述無人機推進系統架構
+      演進的框架，不代表 RobiDev 的產品版本、硬體修訂版次或量產成熟度。
+      RobiDev 對外使用功能型名稱，例如 RobiDev Discrete 與
+      RobiDev High-Density。
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-family:
+      Arial,
+      "Noto Sans TC",
+      "Microsoft JhengHei",
+      sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .rct-perspective {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 28px;
+    color: #ffffff;
+
+    background:
+      linear-gradient(
+        rgba(93, 184, 255, 0.035) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(93, 184, 255, 0.035) 1px,
+        transparent 1px
+      ),
+      radial-gradient(
+        circle at 88% 9%,
+        rgba(31, 154, 255, 0.23),
+        transparent 27%
+      ),
+      radial-gradient(
+        circle at 10% 94%,
+        rgba(0, 210, 194, 0.09),
+        transparent 25%
+      ),
+      linear-gradient(
+        135deg,
+        #061522 0%,
+        #09243c 52%,
+        #0b3154 100%
+      );
+
+    background-size:
+      34px 34px,
+      34px 34px,
+      auto,
+      auto,
+      auto;
+  }
+
+  .rct-perspective-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 62px 42px 45px;
+  }
+
+  /* Heading */
+
+  .rct-perspective-heading {
+    max-width: 950px;
+    margin-bottom: 40px;
+  }
+
+  .rct-perspective-eyebrow {
+    margin-bottom: 12px;
+    color: #5ec7ff;
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+  }
+
+  .rct-perspective-heading h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(35px, 4vw, 57px);
+    line-height: 1.04;
+    font-weight: 800;
+    letter-spacing: -0.045em;
+  }
+
+  .rct-perspective-heading h3 {
+    margin: 9px 0 0;
+    color: #57d2ff;
+    font-size: clamp(21px, 2.25vw, 31px);
+    line-height: 1.25;
+    font-weight: 700;
+  }
+
+  .rct-perspective-zh-title {
+    margin-top: 9px;
+    color: #dceaf5;
+    font-size: clamp(18px, 1.65vw, 23px);
+    line-height: 1.45;
+    font-weight: 700;
+  }
+
+  .rct-perspective-heading p {
+    max-width: 920px;
+    margin: 18px 0 0;
+    color: #b9ccdc;
+    font-size: 14px;
+    line-height: 1.72;
+  }
+
+  .rct-perspective-heading .rct-perspective-zh {
+    margin-top: 7px;
+    color: #a9bfd1;
+  }
+
+  /* Generation cards */
+
+  .rct-generation-grid {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1fr)
+      48px
+      minmax(0, 1fr)
+      48px
+      minmax(0, 1.08fr);
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .rct-generation-card {
+    min-height: 430px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid rgba(182, 218, 242, 0.18);
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.065);
+
+    box-shadow:
+      0 22px 45px rgba(0, 0, 0, 0.13);
+
+    backdrop-filter: blur(9px);
+  }
+
+  .rct-generation-featured {
+    border-color: rgba(69, 191, 255, 0.74);
+
+    background:
+      radial-gradient(
+        circle at 90% 5%,
+        rgba(68, 196, 255, 0.23),
+        transparent 32%
+      ),
+      linear-gradient(
+        145deg,
+        rgba(21, 111, 176, 0.32),
+        rgba(255, 255, 255, 0.075)
+      );
+
+    box-shadow:
+      0 24px 55px rgba(0, 105, 183, 0.22);
+  }
+
+  .rct-generation-card-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .rct-generation-number {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+  }
+
+  .rct-generation-status {
+    padding: 6px 8px;
+
+    border: 1px solid rgba(98, 200, 255, 0.26);
+    border-radius: 999px;
+
+    color: #73ccff;
+
+    font-size: 8px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+
+    white-space: nowrap;
+  }
+
+  .rct-generation-card h4 {
+    margin: 29px 0 4px;
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 1.28;
+  }
+
+  .rct-generation-card h5 {
+    margin: 0 0 16px;
+    color: #9cc9e4;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .rct-generation-card p {
+    margin: 0 0 8px;
+    color: #c2d2de;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .rct-generation-card .rct-generation-zh {
+    margin-bottom: 15px;
+    color: #9fb6c7;
+  }
+
+  .rct-generation-card ul {
+    margin: 0;
+    padding-left: 18px;
+    color: #aebfcd;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .rct-generation-card li::marker {
+    color: #50c5ff;
+  }
+
+  .rct-generation-definition {
+    width: fit-content;
+    margin-top: auto;
+    padding: 8px 11px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: #b5c9d7;
+
+    font-size: 10px;
+    font-weight: 800;
+  }
+
+  .rct-generation-definition-featured {
+    background: rgba(58, 184, 255, 0.18);
+    color: #84d6ff;
+  }
+
+  .rct-generation-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #55c8ff;
+  }
+
+  .rct-generation-arrow span {
+    font-size: 29px;
+    line-height: 1;
+    font-weight: 800;
+  }
+
+  /* Key transition */
+
+  .rct-transition {
+    margin-top: 22px;
+    padding: 25px 28px;
+
+    border: 1px solid rgba(99, 198, 255, 0.20);
+    border-radius: 20px;
+
+    background: rgba(1, 12, 22, 0.30);
+  }
+
+  .rct-transition-label {
+    margin-bottom: 13px;
+    color: #58c7ff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+  }
+
+  .rct-transition blockquote {
+    max-width: 1040px;
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(18px, 1.75vw, 24px);
+    line-height: 1.45;
+    font-weight: 700;
+  }
+
+  .rct-transition p {
+    margin: 12px 0 0;
+    color: #afc6d6;
+    font-size: 14px;
+    line-height: 1.68;
+  }
+
+  /* Platform relationship */
+
+  .rct-platform-relationship {
+    margin-top: 22px;
+
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1fr)
+      46px
+      minmax(0, 1fr);
+
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .rct-platform-card {
+    padding: 25px 27px;
+
+    border: 1px solid rgba(180, 218, 242, 0.17);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.065);
+  }
+
+  .rct-platform-card-featured {
+    border-color: rgba(79, 192, 255, 0.42);
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(29, 119, 185, 0.21),
+        rgba(255, 255, 255, 0.06)
+      );
+  }
+
+  .rct-platform-label {
+    color: #5cc8ff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+  }
+
+  .rct-platform-card h4 {
+    margin: 11px 0 9px;
+    color: #ffffff;
+    font-size: 25px;
+  }
+
+  .rct-platform-card p {
+    margin: 0;
+    color: #b9cbd8;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .rct-platform-card .rct-platform-zh {
+    margin-top: 6px;
+    color: #9db5c6;
+  }
+
+  .rct-platform-card a {
+    margin-top: 17px;
+    display: inline-flex;
+
+    color: #69ceff;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .rct-platform-card a:hover {
+    color: #ffffff;
+  }
+
+  .rct-platform-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #5bc9ff;
+
+    font-size: 28px;
+    font-weight: 800;
+  }
+
+  .rct-platform-position {
+    width: fit-content;
+    margin-top: 17px;
+    padding: 8px 11px;
+
+    border: 1px solid rgba(93, 201, 255, 0.28);
+    border-radius: 999px;
+
+    color: #69ceff;
+
+    font-size: 10px;
+    font-weight: 800;
+  }
+
+  /* Enlarged terminology summary */
+
+  .rct-summary {
+    margin-top: 24px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .rct-summary-item {
+    min-height: 112px;
+    padding: 20px 22px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 1px solid rgba(180, 218, 242, 0.18);
+    border-radius: 17px;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.075),
+        rgba(255, 255, 255, 0.045)
+      );
+  }
+
+  .rct-summary-item span {
+    display: block;
+    margin-bottom: 9px;
+
+    color: #64caff;
+
+    font-size: 11.5px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: 0.055em;
+  }
+
+  .rct-summary-item strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    line-height: 1.42;
+    font-weight: 800;
+  }
+
+  .rct-summary-item small {
+    display: block;
+    margin-top: 6px;
+
+    color: #afc2d0;
+
+    font-size: 12.5px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  /* Terminology note */
+
+  .rct-terminology-note {
+    margin-top: 20px;
+    padding: 15px 18px;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.055);
+    color: #8fa8ba;
+
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  .rct-terminology-note strong {
+    color: #bed1df;
+  }
+
+  /* Tablet */
+
+  @media (max-width: 980px) {
+    .rct-perspective-inner {
+      padding: 52px 28px 40px;
+    }
+
+    .rct-generation-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .rct-generation-arrow {
+      min-height: 42px;
+    }
+
+    .rct-generation-arrow span {
+      transform: rotate(90deg);
+    }
+
+    .rct-generation-card {
+      min-height: auto;
+    }
+
+    .rct-platform-relationship {
+      grid-template-columns: 1fr;
+    }
+
+    .rct-platform-symbol {
+      min-height: 34px;
+    }
+
+    .rct-summary {
+      grid-template-columns: 1fr;
+    }
+
+    .rct-summary-item {
+      min-height: auto;
+      padding: 19px 20px;
+    }
+  }
+
+  /* Mobile */
+
+  @media (max-width: 560px) {
+    .rct-perspective {
+      border-radius: 22px;
+    }
+
+    .rct-perspective-inner {
+      padding: 42px 19px 30px;
+    }
+
+    .rct-perspective-heading {
+      margin-bottom: 29px;
+    }
+
+    .rct-generation-card,
+    .rct-platform-card {
+      padding: 22px;
+    }
+
+    .rct-generation-card-header {
+      flex-direction: column;
+    }
+
+    .rct-generation-card h4 {
+      margin-top: 22px;
+    }
+
+    .rct-transition {
+      padding: 22px;
+    }
+
+    .rct-summary-item span {
+      font-size: 12px;
+    }
+
+    .rct-summary-item strong {
+      font-size: 15px;
+    }
+
+    .rct-summary-item small {
+      font-size: 13px;
+    }
+  }
+</style>
+
+<section id="robithrust-kits" class="rt-kits">
+  <style>
+    .rt-kits,
+    .rt-kits * {
+      box-sizing: border-box;
+    }
+
+    .rt-kits {
+      font-family:
+        Inter,
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        Arial,
+        sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 92% 8%,
+          rgba(34, 211, 238, 0.10),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #f7fbff 50%,
+          #eef6ff 100%
+        );
+
+      color: #071426;
+
+      border: 1px solid rgba(37, 99, 235, 0.16);
+      border-radius: 28px;
+
+      padding: 50px 38px;
+    }
+
+    .rt-kit-head {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rt-kit-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-bottom: 16px;
+
+      color: #2563eb;
+
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .rt-kit-eyebrow::before {
+      content: "";
+
+      width: 30px;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #2563eb,
+          #22d3ee
+        );
+    }
+
+    .rt-kit-title h2 {
+      margin: 0;
+
+      color: #06111f;
+
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.06;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rt-kit-title h3 {
+      margin: 14px 0 0;
+
+      color: #1e3a8a;
+
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rt-kit-intro p {
+      margin: 0 0 12px;
+
+      color: #526174;
+
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rt-kit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+
+      margin-top: 30px;
+    }
+
+    .rt-kit-card {
+      display: flex;
+      flex-direction: column;
+
+      min-height: 540px;
+      padding: 26px;
+
+      border: 1px solid rgba(37, 99, 235, 0.14);
+      border-radius: 24px;
+
+      background: #ffffff;
+
+      box-shadow:
+        0 16px 34px rgba(15, 23, 42, 0.07);
+    }
+
+    .rt-kit-card.featured {
+      border-color: rgba(14, 165, 233, 0.38);
+
+      background:
+        linear-gradient(
+          155deg,
+          #f2f9ff 0%,
+          #ffffff 72%
+        );
+
+      box-shadow:
+        0 18px 38px rgba(37, 99, 235, 0.12);
+    }
+
+    .rt-kit-card.future {
+      background:
+        radial-gradient(
+          circle at 90% 8%,
+          rgba(34, 211, 238, 0.11),
+          transparent 38%
+        ),
+        #ffffff;
+    }
+
+    .rt-kit-label {
+      display: inline-flex;
+      width: fit-content;
+
+      padding: 8px 11px;
+
+      border: 1px solid rgba(14, 165, 233, 0.26);
+      border-radius: 999px;
+
+      color: #075985;
+      background: rgba(34, 211, 238, 0.13);
+
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .rt-kit-label.roadmap {
+      color: #92400e;
+      background: rgba(245, 158, 11, 0.12);
+      border-color: rgba(245, 158, 11, 0.27);
+    }
+
+    .rt-kit-card h4 {
+      margin: 18px 0 7px;
+
+      color: #06111f;
+
+      font-size: clamp(24px, 2.7vw, 32px);
+      line-height: 1.16;
+      letter-spacing: -0.045em;
+      font-weight: 950;
+    }
+
+    .rt-kit-card h5 {
+      margin: 0 0 15px;
+
+      color: #1e3a8a;
+
+      font-size: 18px;
+      line-height: 1.4;
+      font-weight: 850;
+    }
+
+    .rt-kit-card p {
+      margin: 0 0 12px;
+
+      color: #526174;
+
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .rt-kit-list {
+      display: grid;
+      gap: 8px;
+
+      margin: 15px 0 22px;
+    }
+
+    .rt-kit-list div {
+      padding: 10px 12px;
+
+      border: 1px solid rgba(37, 99, 235, 0.10);
+      border-radius: 14px;
+
+      color: #435268;
+      background: rgba(37, 99, 235, 0.055);
+
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 750;
+    }
+
+    .rt-kit-status {
+      width: fit-content;
+
+      margin: 3px 0 16px;
+      padding: 7px 10px;
+
+      border-radius: 999px;
+
+      color: #405b73;
+      background: #eef4f9;
+
+      font-size: 11px;
+      font-weight: 850;
+    }
+
+    .rt-kit-status.active {
+      color: #075985;
+      background: #e1f4ff;
+    }
+
+    .rt-kit-status.project {
+      color: #92400e;
+      background: #fff4db;
+    }
+
+    .rt-kit-action {
+      margin-top: auto;
+    }
+
+    .rt-kit-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 46px;
+      padding: 13px 18px;
+
+      border-radius: 999px;
+
+      color: #ffffff;
+      background:
+        linear-gradient(
+          135deg,
+          #2563eb,
+          #0ea5e9
+        );
+
+      text-decoration: none;
+
+      font-size: 14px;
+      font-weight: 900;
+
+      box-shadow:
+        0 14px 28px rgba(37, 99, 235, 0.22);
+
+      transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+    }
+
+    .rt-kit-btn:hover {
+      transform: translateY(-1px);
+
+      box-shadow:
+        0 18px 32px rgba(37, 99, 235, 0.28);
+    }
+
+    .rt-kit-btn.secondary {
+      color: #ffffff;
+      background: #102944;
+      box-shadow: none;
+    }
+
+    .rt-kit-btn:focus-visible {
+      outline: 3px solid rgba(37, 99, 235, 0.25);
+      outline-offset: 3px;
+    }
+
+    .rt-kit-terminology {
+      margin-top: 20px;
+      padding: 17px 19px;
+
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 16px;
+
+      color: #506176;
+      background: rgba(234, 245, 255, 0.72);
+
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .rt-kit-terminology strong {
+      color: #183b66;
+    }
+
+    .rt-kit-note {
+      margin-top: 14px;
+      padding: 16px 18px;
+
+      border: 1px solid rgba(37, 99, 235, 0.10);
+      border-radius: 16px;
+
+      color: #64748b;
+      background: rgba(255, 255, 255, 0.72);
+
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1000px) {
+      .rt-kit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rt-kit-card {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .rt-kit-head {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .rt-kits {
+        padding: 36px 24px;
+        border-radius: 22px;
+      }
+
+      .rt-kit-btn {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <div class="rt-kit-head">
+
+    <div class="rt-kit-title">
+
+      <div class="rt-kit-eyebrow">
+        Development & Validation Kits
+      </div>
+
+      <h2>
+        Choose Your RobiThrust Validation Platform
+      </h2>
+
+      <h3>
+        從基礎推進量測到 Heavy UAV 實驗平台
+      </h3>
+
+    </div>
+
+    <div class="rt-kit-intro">
+
+      <p>
+        RobiThrust kits provide the test structure, measurement path,
+        RobiDev integration, fixtures, and engineering support required
+        to evaluate and validate UAV propulsion configurations.
+      </p>
+
+      <p>
+        RobiThrust 套件提供推進總成所需的測試結構、量測路徑、
+        RobiDev 整合、治具與工程支援。實際交付內容將依馬達、
+        槳徑、電壓、功率、量測範圍與專案需求確認。
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="rt-kit-grid">
+
+    <!-- Base Validation Kit -->
+    <article class="rt-kit-card">
+
+      <span class="rt-kit-label">
+        Entry Professional Kit
+      </span>
+
+      <h4>
+        RobiThrust Base Validation Kit
+      </h4>
+
+      <h5>
+        入門型推進驗證套件
+      </h5>
+
+      <div class="rt-kit-status active">
+        Standard Validation Configuration
+      </div>
+
+      <p>
+        Designed for universities, UAV startups, engineering teams,
+        and early-stage propulsion evaluation.
+      </p>
+
+      <div class="rt-kit-list">
+        <div>RobiThrust base propulsion test structure</div>
+        <div>Basic thrust, voltage, and current measurement path</div>
+        <div>13–15 inch propeller test compatibility</div>
+        <div>Selected mini-E / E / P / X configuration support</div>
+        <div>Basic setup documentation and system handover</div>
+      </div>
+
+      <div class="rt-kit-action">
+        <a
+          class="rt-kit-btn"
+          href="mailto:bd@robichip.com?subject=RobiThrust%20Base%20Validation%20Kit%20Quotation"
+        >
+          Request Base Kit Quote
+        </a>
+      </div>
+
+    </article>
+
+    <!-- RobiDev Integration Bundle -->
+    <article class="rt-kit-card featured">
+
+      <span class="rt-kit-label">
+        Platform Adoption Package
+      </span>
+
+      <h4>
+        RobiThrust + RobiDev Integration Bundle
+      </h4>
+
+      <h5>
+        RobiThrust 生態與 Design-in 導入套件
+      </h5>
+
+      <div class="rt-kit-status active">
+        Evaluation & Design-in Package
+      </div>
+
+      <p>
+        A more complete package for teams evaluating RobiDev,
+        RobiSoC-based motor-drive architecture, motor-driver matching,
+        and future customer design-in.
+      </p>
+
+      <div class="rt-kit-list">
+        <div>RobiThrust propulsion validation platform</div>
+        <div>RobiDev evaluation hardware</div>
+        <div>RobiSoC-based motor-drive reference configuration</div>
+        <div>mini-E / E / P / X motor adapter kit</div>
+        <div>Initial parameter files and engineering onboarding</div>
+      </div>
+
+      <div class="rt-kit-action">
+        <a
+          class="rt-kit-btn"
+          href="mailto:bd@robichip.com?subject=RobiThrust%20RobiDev%20Integration%20Bundle%20Quotation"
+        >
+          Request Integration Bundle Quote
+        </a>
+      </div>
+
+    </article>
+
+    <!-- Heavy Platform -->
+    <article class="rt-kit-card future">
+
+      <span class="rt-kit-label roadmap">
+        Heavy UAV / Project-Based
+      </span>
+
+      <h4>
+        RobiThrust-Heavy Development Platform
+      </h4>
+
+      <h5>
+        Heavy UAV 開發與動力測試平台
+      </h5>
+
+      <div class="rt-kit-status project">
+        Feasibility Review Required
+      </div>
+
+      <p>
+        A project-based laboratory development platform for X / XL-class
+        propulsion, larger propellers, higher power, torque loading,
+        and heavy-UAV feasibility validation.
+      </p>
+
+      <div class="rt-kit-list">
+        <div>Heavy-UAV project-specific configuration</div>
+        <div>24–30 inch propeller-class mechanical interface</div>
+        <div>High-power supply and safety-structure interface</div>
+        <div>Optional dynamometer and torque-load module</div>
+        <div>Project scope and engineering feasibility review</div>
+      </div>
+
+      <div class="rt-kit-action">
+        <a
+          class="rt-kit-btn secondary"
+          href="mailto:bd@robichip.com?subject=RobiThrust-Heavy%20Development%20Platform%20Feasibility%20Review"
+        >
+          Request Heavy Platform Review
+        </a>
+      </div>
+
+    </article>
+
+  </div>
+
+  <div class="rt-kit-terminology">
+
+    <strong>Terminology note｜名詞說明：</strong>
+
+    The names in this section describe RobiThrust product configurations
+    and validation packages. They do not represent Propulsion Gen.1,
+    Gen.2, or Gen.3 architecture generations.
+
+    <br><br>
+
+    本區名稱代表 RobiThrust 的產品配置、驗證套件與專案型平台，
+    並非 Propulsion Gen.1、Gen.2 或 Gen.3 的推進架構世代。
+    「Propulsion Gen.1–Gen.3」僅用於描述無人機推進系統架構的演進。
+
+  </div>
+
+  <div class="rt-kit-note">
+
+    Final quotation may include test structure, sensors, calibration scope,
+    motor and propeller fixtures, RobiDev hardware, power-supply interface,
+    software, training, engineering reports, shipping, and warranty.
+
+    <br><br>
+
+    正式報價可能包含測試結構、感測器、校正範圍、馬達與螺旋槳治具、
+    RobiDev 硬體、電源介面、軟體、教育訓練、工程報告、運送與保固。
+    mini-E 等小型推進組態將依治具、電壓與量測範圍另行確認。
+
+  </div>
+</section>
+
+<section id="robithrust-models" class="rt-models">
+  <style>
+    .rt-models,
+    .rt-models * {
+      box-sizing: border-box;
+    }
+
+    .rt-models {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background:
+        radial-gradient(circle at 86% 12%, rgba(34,211,238,.24), transparent 34%),
+        linear-gradient(135deg,#050b14 0%,#06111f 48%,#0a1f3a 100%);
+      color: #f8fbff;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 28px;
+      padding: 50px 38px;
+    }
+
+    .rt-model-head {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rt-model-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .rt-model-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg,#65f1ff,transparent);
+    }
+
+    .rt-model-title h2 {
+      margin: 0;
+      color: #fff;
+      font-size: clamp(34px,5vw,60px);
+      line-height: 1.06;
+      letter-spacing: -.055em;
+      font-weight: 950;
+    }
+
+    .rt-model-title h3 {
+      margin: 14px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px,3vw,32px);
+      line-height: 1.28;
+      letter-spacing: -.04em;
+      font-weight: 850;
+    }
+
+    .rt-model-intro p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rt-formula {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(101,241,255,.09);
+      border: 1px solid rgba(101,241,255,.22);
+      color: #eafcff;
+      font-size: 15px;
+      line-height: 1.6;
+      font-weight: 850;
+    }
+
+    .rt-model-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .rt-model-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 430px;
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.075);
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 18px 38px rgba(0,0,0,.16);
+    }
+
+    .rt-model-card.xl {
+      background:
+        radial-gradient(circle at 90% 10%, rgba(34,211,238,.18), transparent 38%),
+        rgba(255,255,255,.075);
+    }
+
+    .rt-status {
+      display: inline-flex;
+      width: fit-content;
+      padding: 8px 11px;
+      border-radius: 999px;
+      color: #eafcff;
+      background: rgba(101,241,255,.14);
+      border: 1px solid rgba(101,241,255,.34);
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .rt-status.roadmap {
+      color: #fdecc8;
+      background: rgba(245,158,11,.13);
+      border-color: rgba(245,158,11,.32);
+    }
+
+    .rt-model-card h4 {
+      margin: 18px 0 7px;
+      color: #fff;
+      font-size: clamp(25px,3vw,35px);
+      line-height: 1.1;
+      letter-spacing: -.05em;
+      font-weight: 950;
+    }
+
+    .rt-model-card h5 {
+      margin: 0 0 14px;
+      color: #d9ecff;
+      font-size: 18px;
+      line-height: 1.4;
+      font-weight: 850;
+    }
+
+    .rt-model-card p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .rt-model-specs {
+      display: grid;
+      gap: 8px;
+      margin: 14px 0 22px;
+    }
+
+    .rt-model-specs div {
+      padding: 10px 12px;
+      border-radius: 14px;
+      color: #dce8f6;
+      background: rgba(255,255,255,.055);
+      border: 1px solid rgba(255,255,255,.09);
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 750;
+    }
+
+    .rt-model-action {
+      margin-top: auto;
+    }
+
+    .rt-model-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      color: #031120;
+      background: linear-gradient(135deg,#2563eb,#22d3ee);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 900;
+      box-shadow: 0 14px 28px rgba(37,99,235,.25);
+    }
+
+    .rt-model-btn.secondary {
+      color: #fff;
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: none;
+    }
+
+    .rt-model-note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      color: #9fb0c4;
+      background: rgba(255,255,255,.055);
+      border: 1px solid rgba(255,255,255,.1);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1050px) {
+      .rt-model-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .rt-model-head {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .rt-model-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rt-models {
+        padding: 36px 24px;
+      }
+
+      .rt-model-card {
+        min-height: auto;
+      }
+    }
+  </style>
+
+  <div class="rt-model-head">
+    <div class="rt-model-title">
+      <div class="rt-model-eyebrow">3-in-1 Propulsion Models</div>
+
+      <h2>Choose Your RobiThrust Propulsion Model</h2>
+
+      <h3>選擇適合任務條件的三合一推進總成</h3>
+    </div>
+
+    <div class="rt-model-intro">
+      <p>
+        Each RobiThrust model combines RobiDev power electronics,
+        a selected motor, and a matched propeller into an integrated
+        propulsion configuration.
+      </p>
+
+      <p>
+        每一款 RobiThrust Model 均以 RobiDev 為核心，
+        搭配經選型的馬達與螺旋槳，形成可量測、可調校、
+        可依任務條件配置的整合推進總成。
+      </p>
+
+      <div class="rt-formula">
+        RobiDev + Motor + Propeller<br>
+        ＝ RobiThrust 3-in-1 Propulsion Model
+      </div>
+    </div>
+  </div>
+
+  <div class="rt-model-grid">
+
+    <article class="rt-model-card">
+      <span class="rt-status">Bench-evaluated Configuration</span>
+
+      <h4>RobiThrust mini-E</h4>
+      <h5>Mini / Light UAV Efficiency Model</h5>
+
+      <p>
+        Compact propulsion configuration for education, research,
+        inspection, light payloads, and efficient small multirotor platforms.
+      </p>
+
+      <div class="rt-model-specs">
+        <div>Motor class｜maxon ECX-32 Flat UAV</div>
+        <div>Propeller class｜10–11 inch</div>
+        <div>Voltage reference｜16.8 V / 4S test configuration</div>
+        <div>Focus｜compact size, efficiency and low system mass</div>
+      </div>
+
+      <div class="rt-model-action">
+        <a class="rt-model-btn"
+           href="mailto:bd@robichip.com?subject=RobiThrust%20mini-E%20Quotation">
+          Request mini-E Quote
+        </a>
+      </div>
+    </article>
+
+    <article class="rt-model-card">
+      <span class="rt-status">Configuration Review</span>
+
+      <h4>RobiThrust-E</h4>
+      <h5>Light UAV Volume Model</h5>
+
+      <p>
+        Efficiency-first propulsion model for inspection,
+        light logistics, service UAVs, and scalable fleet applications.
+      </p>
+
+      <div class="rt-model-specs">
+        <div>Motor concept｜RUM-4523Y / 650 KV class</div>
+        <div>Propeller class｜13-inch 2-blade</div>
+        <div>Voltage / power｜6S / 300–500 W target window</div>
+        <div>Focus｜efficient, scalable and deployment-friendly</div>
+      </div>
+
+      <div class="rt-model-action">
+        <a class="rt-model-btn"
+           href="mailto:bd@robichip.com?subject=RobiThrust-E%20Quotation">
+          Request E Model Quote
+        </a>
+      </div>
+    </article>
+
+    <article class="rt-model-card">
+      <span class="rt-status">EVT Bench Evidence</span>
+
+      <h4>RobiThrust-P</h4>
+      <h5>Premium Type-I UAV Model</h5>
+
+      <p>
+        Premium low-profile propulsion configuration emphasizing
+        large-prop efficiency, low acoustic pressure, endurance,
+        and controlled thermal behavior.
+      </p>
+
+      <div class="rt-model-specs">
+        <div>Motor｜maxon ECX-42 Flat</div>
+        <div>Propeller｜FALCON 15×6 class</div>
+        <div>EVT reference｜24 V / 240 W tested</div>
+        <div>Measured reference｜1,615 gf / 6.73 gf/W</div>
+      </div>
+
+      <div class="rt-model-action">
+        <a class="rt-model-btn"
+           href="mailto:bd@robichip.com?subject=RobiThrust-P%20Quotation">
+          Request P Model Quote
+        </a>
+      </div>
+    </article>
+
+    <article class="rt-model-card">
+      <span class="rt-status">Project-based Configuration</span>
+
+      <h4>RobiThrust-X</h4>
+      <h5>Performance UAV Model</h5>
+
+      <p>
+        High-dynamics propulsion model for performance UAVs,
+        responsive attitude control, and higher power-density applications.
+      </p>
+
+      <div class="rt-model-specs">
+        <div>Motor concept｜RUM-3848Y / equivalent class</div>
+        <div>Propeller class｜13–15 inch / 10×5 tri-blade option</div>
+        <div>Power window｜500–1200 W target class</div>
+        <div>Focus｜thrust density, dynamic response and thermal headroom</div>
+      </div>
+
+      <div class="rt-model-action">
+        <a class="rt-model-btn"
+           href="mailto:bd@robichip.com?subject=RobiThrust-X%20Configuration%20Quotation">
+          Request X Configuration Quote
+        </a>
+      </div>
+    </article>
+
+    <article class="rt-model-card xl">
+      <span class="rt-status roadmap">Roadmap / Feasibility</span>
+
+      <h4>RobiThrust-XL</h4>
+      <h5>Heavy UAV Future Model</h5>
+
+      <p>
+        Future heavy-lift propulsion platform for large propellers,
+        high-voltage systems, controlled load simulation,
+        redundancy, and mission-grade development.
+      </p>
+
+      <div class="rt-model-specs">
+        <div>Motor｜selected according to mission requirements</div>
+        <div>Propeller class｜24–30 inch future platform</div>
+        <div>Voltage class｜12S / 18S / 24S future study</div>
+        <div>Status｜feasibility and project-planning discussion</div>
+      </div>
+
+      <div class="rt-model-action">
+        <a class="rt-model-btn secondary"
+           href="mailto:bd@robichip.com?subject=RobiThrust-XL%20Feasibility%20Quotation">
+          Request XL Feasibility Quote
+        </a>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="rt-model-note">
+    mini-E and P include existing bench-evaluation references. E and X are
+    provided through configuration and engineering review. XL remains a future
+    heavy-UAV roadmap platform and is currently available only for feasibility
+    discussion and project-based planning.
+    <br><br>
+    mini-E 與 P 已有台架評估參考；E 與 X 目前採組態確認及工程審查方式提供。
+    XL 仍屬 Heavy UAV 未來平台，目前僅開放可行性討論與專案型規劃，
+    不應視為現行標準量產品。
+  </div>
+</section>
+
+<section class="rt-evidence">
+  <style>
+    .rt-evidence {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .rt-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rt-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rt-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rt-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rt-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rt-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rt-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .rt-card {
+      background: #ffffff;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 275px;
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.07);
+    }
+
+    .rt-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #075985;
+      background: rgba(34, 211, 238, 0.13);
+      border: 1px solid rgba(14, 165, 233, 0.28);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rt-card h4 {
+      margin: 0 0 10px;
+      color: #06111f;
+      font-size: 22px;
+      line-height: 1.22;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rt-card h5 {
+      margin: 0 0 14px;
+      color: #1e3a8a;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rt-card p {
+      margin: 0 0 10px;
+      color: #526174;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .rt-metric {
+      margin-top: 12px;
+      padding: 12px 13px;
+      border-radius: 16px;
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.10);
+      color: #475569;
+      font-size: 13px;
+      line-height: 1.55;
+      font-weight: 750;
+    }
+
+    .rt-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1020px) {
+      .rt-grid,
+      .rt-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rt-evidence { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rt-grid">
+    <div class="rt-title">
+      <div class="rt-eyebrow">Validation Evidence & Downloads</div>
+      <h2>From Product Deck to Test Bench Evidence</h2>
+      <h3>從產品簡報到台架測試證據</h3>
+    </div>
+
+    <div class="rt-copy">
+      <p>
+        RobiThrust product positioning is supported by product-family definition,
+        EVT bench data, motor-driver matching, thrust measurement, and thermal observation.
+      </p>
+      <p>
+        RobiThrust 的產品定位由產品家族定義、EVT 台架測試、motor-driver matching、
+        推力量測與熱觀察共同支撐。
+      </p>
+    </div>
+  </div>
+
+  <div class="rt-card-grid">
+    <article class="rt-card">
+      <span class="rt-pill">Product Deck</span>
+      <h4>RobiThrust Product Family Intro</h4>
+      <h5>產品家族介紹簡報</h5>
+      <p>
+        Defines RobiThrust as an integrated high-thrust-density propulsion platform:
+        RobiDev + Motor + Propeller.
+      </p>
+      <div class="rt-metric">
+        Covers mini-E / E / P / X / XL product positioning, test platform roadmap,
+        and validation package direction.
+      </div>
+    </article>
+
+    <article class="rt-card">
+      <span class="rt-pill">P Series Evidence</span>
+      <h4>Maxon ECX-42 Flat</h4>
+      <h5>Premium Type-I UAV Validation</h5>
+      <p>
+        EVT bench validation using Maxon ECX-42 Flat with 15×6 propeller and RobiDev RC50.
+      </p>
+      <div class="rt-metric">
+        Max tested thrust: 1,615 gf<br>
+        Input power: 240 W<br>
+        Efficiency: 6.73 gf/W<br>
+        T1 @ max: 47°C
+      </div>
+    </article>
+
+    <article class="rt-card">
+      <span class="rt-pill">X Series Evidence</span>
+      <h4>RUM-3848Y</h4>
+      <h5>Performance UAV Validation</h5>
+      <p>
+        Validation direction for high-thrust, high-dynamic, high-power-density UAV propulsion.
+      </p>
+      <div class="rt-metric">
+        Product role: performance flagship<br>
+        Direction: high thrust / high dynamics<br>
+        Report: RUM-3848Y test bench data
+      </div>
+    </article>
+
+    <article class="rt-card">
+      <span class="rt-pill">mini-E Evidence</span>
+      <h4>Maxon ECX-32</h4>
+      <h5>Mini / Light UAV Validation</h5>
+      <p>
+        Compact propulsion validation direction for smaller UAVs and early efficiency-oriented motor-driver matching.
+      </p>
+      <div class="rt-metric">
+        Suggested positioning: mini-E Series<br>
+        Use case: compact UAV propulsion<br>
+        Source: technology insight / validation note
+      </div>
+    </article>
+  </div>
+
+  <div class="rt-note">
+    Recommended structure: summarize key evidence on this page, then provide the full product deck
+    and validation reports as Google Sites native file embeds or buttons below this section.
+    <br><br>
+    建議結構：本頁先節錄重點證據，再於此區塊下方用 Google Sites 原生檔案或按鈕提供完整產品簡報與測試報告。
+  </div>
+</section>
+
+<section class="rt-platform">
+  <style>
+    .rt-platform,
+    .rt-platform * {
+      box-sizing: border-box;
+    }
+
+    .rt-platform {
+      font-family:
+        Inter,
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        Arial,
+        sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(34, 211, 238, 0.25),
+          transparent 34%
+        ),
+        linear-gradient(
+          135deg,
+          #050b14 0%,
+          #06111f 48%,
+          #0a1f3a 100%
+        );
+
+      color: #f8fbff;
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 28px;
+
+      padding: 50px 38px;
+    }
+
+    .rt-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rt-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-bottom: 16px;
+
+      color: #65f1ff;
+
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .rt-eyebrow::before {
+      content: "";
+
+      display: inline-block;
+
+      width: 30px;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #65f1ff,
+          transparent
+        );
+    }
+
+    .rt-title h2 {
+      margin: 0;
+
+      color: #ffffff;
+
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rt-title h3 {
+      margin: 14px 0 0;
+
+      color: #d9ecff;
+
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rt-copy p {
+      margin: 0 0 12px;
+
+      color: #b9c7da;
+
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rt-roadmap-line {
+      margin-top: 30px;
+      padding: 14px 18px;
+
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 16px;
+      align-items: center;
+
+      border: 1px solid rgba(101, 241, 255, 0.16);
+      border-radius: 18px;
+
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .rt-roadmap-stage {
+      text-align: center;
+    }
+
+    .rt-roadmap-stage span {
+      display: block;
+
+      color: #65f1ff;
+
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+    }
+
+    .rt-roadmap-stage strong {
+      display: block;
+
+      margin-top: 5px;
+
+      color: #ffffff;
+
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    .rt-roadmap-arrow {
+      color: #65f1ff;
+
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .rt-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+
+      margin-top: 20px;
+    }
+
+    .rt-card {
+      display: flex;
+      flex-direction: column;
+
+      min-height: 470px;
+      padding: 28px;
+
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 24px;
+
+      background: rgba(255, 255, 255, 0.075);
+
+      box-shadow:
+        0 18px 38px rgba(0, 0, 0, 0.16);
+    }
+
+    .rt-card.current {
+      border-color: rgba(101, 241, 255, 0.33);
+    }
+
+    .rt-card.roadmap {
+      background:
+        radial-gradient(
+          circle at 92% 8%,
+          rgba(34, 211, 238, 0.15),
+          transparent 35%
+        ),
+        rgba(255, 255, 255, 0.075);
+    }
+
+    .rt-pill {
+      display: inline-flex;
+      width: fit-content;
+
+      margin-bottom: 14px;
+      padding: 7px 11px;
+
+      border: 1px solid rgba(101, 241, 255, 0.56);
+      border-radius: 999px;
+
+      color: #f2fdff;
+      background: rgba(34, 211, 238, 0.26);
+
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .rt-pill.future {
+      color: #fff4d7;
+      background: rgba(245, 158, 11, 0.15);
+      border-color: rgba(251, 191, 36, 0.45);
+    }
+
+    .rt-stage {
+      width: fit-content;
+
+      margin-bottom: 18px;
+      padding: 7px 10px;
+
+      border-radius: 999px;
+
+      color: #9fdcff;
+      background: rgba(37, 99, 235, 0.16);
+
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.07em;
+    }
+
+    .rt-stage.future {
+      color: #ffd78a;
+      background: rgba(245, 158, 11, 0.13);
+    }
+
+    .rt-card h4 {
+      margin: 0 0 10px;
+
+      color: #ffffff;
+
+      font-size: clamp(25px, 3vw, 34px);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+      font-weight: 950;
+    }
+
+    .rt-card h5 {
+      margin: 0 0 14px;
+
+      color: #d9ecff;
+
+      font-size: 18px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rt-card p {
+      margin: 0 0 12px;
+
+      color: #b9c7da;
+
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .rt-list {
+      display: grid;
+      gap: 8px;
+
+      margin-top: 14px;
+    }
+
+    .rt-list div {
+      padding: 10px 12px;
+
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 14px;
+
+      color: #e6f0fb;
+      background: rgba(255, 255, 255, 0.06);
+
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    .rt-card-footer {
+      margin-top: auto;
+      padding-top: 20px;
+    }
+
+    .rt-card-footer span {
+      display: inline-flex;
+
+      padding: 8px 11px;
+
+      border: 1px solid rgba(101, 241, 255, 0.24);
+      border-radius: 999px;
+
+      color: #7ddfff;
+      background: rgba(34, 211, 238, 0.08);
+
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    .rt-card-footer span.future {
+      color: #ffd78a;
+      border-color: rgba(245, 158, 11, 0.28);
+      background: rgba(245, 158, 11, 0.08);
+    }
+
+    .rt-note {
+      margin-top: 22px;
+      padding: 18px 20px;
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+
+      color: #b9c7da;
+      background: rgba(255, 255, 255, 0.07);
+
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .rt-note strong {
+      color: #eaf7ff;
+    }
+
+    .rt-terminology {
+      margin-top: 14px;
+      padding: 15px 18px;
+
+      border-radius: 16px;
+
+      color: #8fa8bd;
+      background: rgba(255, 255, 255, 0.045);
+
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .rt-terminology strong {
+      color: #c8dce9;
+    }
+
+    @media (max-width: 980px) {
+      .rt-grid,
+      .rt-card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rt-roadmap-line {
+        grid-template-columns: 1fr;
+      }
+
+      .rt-roadmap-arrow {
+        transform: rotate(90deg);
+        text-align: center;
+      }
+
+      .rt-card {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .rt-platform {
+        padding: 34px 22px;
+        border-radius: 22px;
+      }
+
+      .rt-card {
+        padding: 23px;
+      }
+    }
+  </style>
+
+  <div class="rt-grid">
+
+    <div class="rt-title">
+      <div class="rt-eyebrow">
+        Test Platform Roadmap
+      </div>
+
+      <h2>
+        Current Platform → RobiThrust-Heavy
+      </h2>
+
+      <h3>
+        從現行推進驗證平台到 Heavy UAV 動力測試平台
+      </h3>
+    </div>
+
+    <div class="rt-copy">
+      <p>
+        The current RobiThrust platform supports mini-E, E, P, and X-class
+        thrust, power, efficiency, and thermal validation.
+        RobiThrust-Heavy extends the roadmap toward XL and Heavy UAV
+        feasibility with optional dynamometer and torque-load simulation.
+      </p>
+
+      <p>
+        現行 RobiThrust 平台支援 mini-E、E、P 與 X 級推進組態的推力、
+        功耗、效率與溫升驗證；RobiThrust-Heavy 則將平台能力延伸至
+        XL 與 Heavy UAV 可行性研究，並可選配動力計及扭力負載模組。
+      </p>
+    </div>
+
+  </div>
+
+  <div class="rt-roadmap-line">
+
+    <div class="rt-roadmap-stage">
+      <span>CURRENT VALIDATION PLATFORM</span>
+      <strong>RobiThrust Base Validation Platform</strong>
+    </div>
+
+    <div class="rt-roadmap-arrow" aria-hidden="true">
+      →
+    </div>
+
+    <div class="rt-roadmap-stage">
+      <span>PROJECT-BASED ROADMAP</span>
+      <strong>RobiThrust-Heavy Development Platform</strong>
+    </div>
+
+  </div>
+
+  <div class="rt-card-grid">
+
+    <article class="rt-card current">
+
+      <span class="rt-pill">
+        Current Platform
+      </span>
+
+      <div class="rt-stage">
+        EVT / PRE-COMMERCIAL VALIDATION
+      </div>
+
+      <h4>
+        RobiThrust Base Validation Platform
+      </h4>
+
+      <h5>
+        現行無人機推進驗證平台
+      </h5>
+
+      <p>
+        Supports static thrust, RPM, input power, system efficiency,
+        and RobiDev temperature observation for early propulsion
+        configuration evaluation.
+      </p>
+
+      <p>
+        支援靜態推力、轉速、輸入功率、系統效率及 RobiDev 溫度觀察，
+        適合早期推進組態評估與客戶技術溝通。
+      </p>
+
+      <div class="rt-list">
+        <div>Optimized for mini-E / E / P / X-class validation</div>
+        <div>Static thrust, RPM, voltage, current, power, and efficiency</div>
+        <div>Supports RobiDev Discrete or High-Density configurations</div>
+        <div>Suitable for EVT and pre-commercial engineering validation</div>
+      </div>
+
+      <div class="rt-card-footer">
+        <span>
+          Available Validation Scope
+        </span>
+      </div>
+
+    </article>
+
+    <article class="rt-card roadmap">
+
+      <span class="rt-pill future">
+        Roadmap Platform
+      </span>
+
+      <div class="rt-stage future">
+        PROJECT-BASED FEASIBILITY
+      </div>
+
+      <h4>
+        RobiThrust-Heavy Development Platform
+      </h4>
+
+      <h5>
+        Heavy UAV 開發與動力測試平台
+      </h5>
+
+      <p>
+        A project-based laboratory platform for larger propulsion systems,
+        higher power, external-load simulation, torque mapping,
+        and heavy-UAV feasibility validation.
+      </p>
+
+      <p>
+        面向大型推進系統、高功率輸出、外部負載模擬、扭力特性量測，
+        以及 Heavy UAV 系統可行性驗證的專案型實驗平台。
+      </p>
+
+      <div class="rt-list">
+        <div>Designed for XL / Heavy UAV-class feasibility projects</div>
+        <div>Optional dynamometer and torque-load simulation module</div>
+        <div>Supports torque-current-temperature and thermal-derating maps</div>
+        <div>24–30 inch propeller-class interface under project review</div>
+      </div>
+
+      <div class="rt-card-footer">
+        <span class="future">
+          Roadmap — Feasibility Review Required
+        </span>
+      </div>
+
+    </article>
+
+  </div>
+
+  <div class="rt-note">
+
+    <strong>Public positioning｜對外定位：</strong>
+
+    The RobiThrust Base Validation Platform represents the currently
+    available evaluation and pre-commercial engineering environment.
+    RobiThrust-Heavy is a project-based roadmap platform for Heavy UAV
+    feasibility, external-load simulation, and higher-power validation.
+
+    <br><br>
+
+    RobiThrust Base Validation Platform 是目前可用於推進系統評估與
+    商品化前期工程驗證的平台；RobiThrust-Heavy 則是面向 Heavy UAV
+    可行性研究、外部負載模擬及高功率驗證的專案型 roadmap 平台。
+
+  </div>
+
+  <div class="rt-terminology">
+
+    <strong>Terminology note｜名詞說明：</strong>
+
+    “Current Platform” and “Roadmap Platform” describe RobiThrust
+    test-platform availability and scope. They do not refer to
+    Propulsion Gen.1, Gen.2, or Gen.3 architecture generations.
+
+    <br><br>
+
+    「Current Platform」與「Roadmap Platform」描述的是 RobiThrust
+    測試平台的可用狀態與驗證範圍，並非 Propulsion Gen.1、Gen.2
+    或 Gen.3 的推進架構世代。
+
+  </div>
+
+</section>
+
+<section class="rt-workflow">
+  <style>
+    .rt-workflow {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .rt-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rt-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rt-workflow h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rt-workflow h3 {
+      margin: 14px 0 24px;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rt-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .rt-step {
+      background: #ffffff;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 22px;
+      padding: 20px 16px;
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.07);
+      text-align: center;
+    }
+
+    .rt-step strong {
+      display: block;
+      color: #06111f;
+      font-size: 15px;
+      line-height: 1.35;
+      margin-bottom: 6px;
+      font-weight: 950;
+    }
+
+    .rt-step span {
+      display: block;
+      color: #64748b;
+      font-size: 13px;
+      line-height: 1.55;
+      font-weight: 700;
+    }
+
+    .rt-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1020px) {
+      .rt-steps { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rt-workflow { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rt-eyebrow">Validation Workflow</div>
+  <h2>From Bench Test to Customer Pilot</h2>
+  <h3>從台架測試走向客戶 pilot</h3>
+
+  <div class="rt-steps">
+    <div class="rt-step">
+      <strong>1. Setup Definition</strong>
+      <span>motor, propeller, RobiDev, voltage, fixture</span>
+    </div>
+
+    <div class="rt-step">
+      <strong>2. Static Thrust Test</strong>
+      <span>thrust, RPM, input power, current observation</span>
+    </div>
+
+    <div class="rt-step">
+      <strong>3. Thermal Observation</strong>
+      <span>RobiDev T1, motor temperature, housing temperature</span>
+    </div>
+
+    <div class="rt-step">
+      <strong>4. Product Mapping</strong>
+      <span>mini-E / E / P / X / XL positioning</span>
+    </div>
+
+    <div class="rt-step">
+      <strong>5. Pilot Recommendation</strong>
+      <span>next test, design-in path, package quotation</span>
+    </div>
+  </div>
+
+  <div class="rt-note">
+    RobiThrust validation does not rely on ESC current rating alone.
+    It uses system-level evidence such as thrust efficiency, motor-driver matching,
+    total system weight, wiring, control behavior, and thermal observation.
+    <br><br>
+    RobiThrust 的驗證不只看 ESC 電流規格，而是從推力效率、motor-driver matching、
+    系統重量、線束、控制行為與熱觀察等系統級證據進行評估。
+  </div>
+</section>
+
+<section class="rt-to-torque">
+  <style>
+    .rt-to-torque {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .rtt-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rtt-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rtt-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rtt-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rtt-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rtt-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rtt-flow {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 0.35fr 1fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .rtt-card {
+      background: #ffffff;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
+      min-height: 280px;
+    }
+
+    .rtt-card.dark {
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.22), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 52%, #0a1f3a 100%);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+    }
+
+    .rtt-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #075985;
+      background: rgba(34, 211, 238, 0.13);
+      border: 1px solid rgba(14, 165, 233, 0.28);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rtt-card.dark .rtt-pill {
+      color: #f2fdff;
+      background: rgba(34, 211, 238, 0.26);
+      border: 1px solid rgba(101, 241, 255, 0.56);
+    }
+
+    .rtt-card h4 {
+      margin: 0 0 10px;
+      color: #06111f;
+      font-size: clamp(25px, 3.1vw, 36px);
+      line-height: 1.12;
+      letter-spacing: -0.05em;
+      font-weight: 950;
+    }
+
+    .rtt-card.dark h4 {
+      color: #ffffff;
+    }
+
+    .rtt-card h5 {
+      margin: 0 0 16px;
+      color: #1e3a8a;
+      font-size: 18px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rtt-card.dark h5 {
+      color: #d9ecff;
+    }
+
+    .rtt-card p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .rtt-card.dark p {
+      color: #b9c7da;
+    }
+
+    .rtt-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .rtt-list div {
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.10);
+      color: #475569;
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 750;
+    }
+
+    .rtt-card.dark .rtt-list div {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      color: #e6f0fb;
+    }
+
+    .rtt-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2563eb;
+      font-size: 42px;
+      font-weight: 950;
+      letter-spacing: -0.08em;
+    }
+
+    .rtt-shared {
+      margin-top: 18px;
+      padding: 20px 22px;
+      border-radius: 22px;
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .rtt-shared strong {
+      color: #06111f;
+      font-weight: 950;
+    }
+
+    .rtt-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .rtt-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(37, 99, 235, 0.18);
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: #ffffff;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
+    }
+
+    .rtt-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #ffffff;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.22);
+    }
+
+    .rtt-note {
+      margin-top: 22px;
+      color: #64748b;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 980px) {
+      .rtt-grid,
+      .rtt-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .rtt-arrow {
+        transform: rotate(90deg);
+        font-size: 34px;
+        padding: 4px 0;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .rt-to-torque {
+        padding: 34px 22px;
+      }
+    }
+  </style>
+
+  <div class="rtt-grid">
+    <div class="rtt-title">
+      <div class="rtt-eyebrow">Beyond UAV Propulsion</div>
+      <h2>From RobiThrust to RobiTorque</h2>
+      <h3>從無人機推進到機器人致動器</h3>
+    </div>
+
+    <div class="rtt-copy">
+      <p>
+        RobiThrust validates thrust density, motor-driver matching, and thermal behavior
+        in UAV propulsion systems. The same Power SoC, motor-drive, and thermal-path logic
+        extends to RobiTorque, Robichip’s planned robotics actuator validation platform.
+      </p>
+      <p>
+        RobiThrust 驗證無人機推進系統中的推力密度、motor-driver matching 與熱行為；
+        相同的 Power SoC、馬達驅動與熱路徑邏輯，將延伸至 RobiTorque，
+        作為羅比芯規劃中的機器人致動器驗證平台。
+      </p>
+    </div>
+  </div>
+
+  <div class="rtt-flow">
+    <article class="rtt-card">
+      <span class="rtt-pill">Current Commercial Entry</span>
+      <h4>RobiThrust</h4>
+      <h5>UAV Propulsion Validation</h5>
+      <p>
+        RobiThrust focuses on UAV propulsion validation, including thrust measurement,
+        propeller matching, input power, RPM, thermal observation, and early customer pilot projects.
+      </p>
+      <div class="rtt-list">
+        <div>UAV propulsion validation</div>
+        <div>RobiDev + Motor + Propeller</div>
+        <div>Thrust / RPM / power / thermal observation</div>
+        <div>Available as RobiThrust with RobiDev Gen.1</div>
+      </div>
+    </article>
+
+    <div class="rtt-arrow">→</div>
+
+    <article class="rtt-card dark">
+      <span class="rtt-pill">Next Scale Out Track</span>
+      <h4>RobiTorque</h4>
+      <h5>Robotics Actuator Validation</h5>
+      <p>
+        RobiTorque is positioned as a planned robotics actuator validation platform
+        for joint motors, servo modules, and high-torque-density smart motion systems.
+      </p>
+      <div class="rtt-list">
+        <div>Joint motor / actuator validation</div>
+        <div>Servo module and compact motion systems</div>
+        <div>Torque density and thermal-path review</div>
+        <div>Pilot discussion before RobiSoC design-in</div>
+      </div>
+    </article>
+  </div>
+
+  <div class="rtt-shared">
+    <strong>Shared platform logic｜共用平台邏輯：</strong>
+    RobiDev provides early motor-drive evaluation, RobiLab supports dynamic-load and thermal validation,
+    and RobiSoC captures the future high-density design-in path.
+    <br><br>
+    <strong>共用導入路徑：</strong>
+    RobiDev 提供早期馬達驅動評估，RobiLab 支援動態負載與熱驗證，
+    RobiSoC 則承接後續高功率密度 design-in。
+  </div>
+
+  <div class="rtt-buttons">
+    <a class="rtt-btn primary" href="https://www.robichip.com/robitorque" target="_blank">
+      Explore RobiTorque
+    </a>
+    <a class="rtt-btn" href="https://www.robichip.com/robidev" target="_blank">
+      Start with RobiDev
+    </a>
+    <a class="rtt-btn" href="mailto:bd@robichip.com">
+      Discuss Actuator Pilot
+    </a>
+  </div>
+
+  <div class="rtt-note">
+    RobiTorque is currently positioned as a planned actuator validation platform and pilot collaboration track.
+    Detailed configurations will depend on motor type, gear ratio, torque range, control interface, and thermal requirements.
+  </div>
+</section>
+
+<section class="rt-quote-cta">
+  <style>
+    .rt-quote-cta,
+    .rt-quote-cta * {
+      box-sizing: border-box;
+    }
+
+    .rt-quote-cta {
+      font-family:
+        Inter,
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        Arial,
+        sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 86% 14%,
+          rgba(34, 211, 238, 0.24),
+          transparent 34%
+        ),
+        linear-gradient(
+          135deg,
+          #050b14 0%,
+          #06111f 48%,
+          #0a1f3a 100%
+        );
+
+      color: #f8fbff;
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 28px;
+
+      padding: 50px 38px;
+    }
+
+    .rt-quote-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .rt-quote-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-bottom: 16px;
+
+      color: #65f1ff;
+
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .rt-quote-eyebrow::before {
+      content: "";
+
+      width: 30px;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #65f1ff,
+          transparent
+        );
+    }
+
+    .rt-quote-title h2 {
+      margin: 0;
+
+      color: #ffffff;
+
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 1.06;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rt-quote-title h3 {
+      margin: 14px 0 0;
+
+      color: #d9ecff;
+
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rt-quote-title-note {
+      max-width: 620px;
+
+      margin-top: 20px;
+
+      color: #a9bbcf;
+
+      font-size: 14px;
+      line-height: 1.72;
+    }
+
+    .rt-quote-copy p {
+      margin: 0 0 12px;
+
+      color: #b9c7da;
+
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rt-quote-fields {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      margin-top: 20px;
+    }
+
+    .rt-quote-field {
+      padding: 8px 11px;
+
+      border: 1px solid rgba(101, 241, 255, 0.34);
+      border-radius: 999px;
+
+      color: #eafcff;
+      background: rgba(101, 241, 255, 0.14);
+
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1;
+    }
+
+    .rt-quote-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 11px;
+
+      margin-top: 24px;
+    }
+
+    .rt-quote-btn {
+      min-height: 48px;
+      padding: 13px 17px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+
+      color: #f8fbff;
+      background: rgba(255, 255, 255, 0.08);
+
+      text-align: center;
+      text-decoration: none;
+
+      font-size: 13px;
+      line-height: 1.35;
+      font-weight: 900;
+
+      transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+    }
+
+    .rt-quote-btn:hover {
+      transform: translateY(-1px);
+
+      background: rgba(255, 255, 255, 0.13);
+      border-color: rgba(101, 241, 255, 0.42);
+    }
+
+    .rt-quote-btn.primary {
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #2563eb,
+          #0ea5e9
+        );
+
+      border: 0;
+
+      box-shadow:
+        0 14px 28px rgba(37, 99, 235, 0.28);
+    }
+
+    .rt-quote-btn.primary:hover {
+      box-shadow:
+        0 18px 34px rgba(37, 99, 235, 0.34);
+    }
+
+    .rt-quote-btn.heavy {
+      color: #fff3d6;
+
+      border-color: rgba(245, 158, 11, 0.34);
+      background: rgba(245, 158, 11, 0.10);
+    }
+
+    .rt-quote-btn:focus-visible {
+      outline: 3px solid rgba(101, 241, 255, 0.30);
+      outline-offset: 3px;
+    }
+
+    .rt-quote-general {
+      margin-top: 15px;
+
+      color: #9fb0c4;
+
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .rt-quote-general a {
+      color: #65d8ff;
+      text-decoration: none;
+      font-weight: 850;
+    }
+
+    .rt-quote-general a:hover {
+      color: #ffffff;
+    }
+
+    .rt-quote-process {
+      margin-top: 20px;
+      padding: 16px 17px;
+
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      border-radius: 17px;
+
+      color: #aebed0;
+      background: rgba(255, 255, 255, 0.055);
+
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .rt-quote-process strong {
+      color: #e9f7ff;
+    }
+
+    .rt-quote-steps {
+      margin-top: 10px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+
+    .rt-quote-step {
+      padding: 7px 9px;
+
+      border-radius: 999px;
+
+      color: #dcebf6;
+      background: rgba(255, 255, 255, 0.07);
+
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .rt-quote-arrow {
+      color: #65d8ff;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .rt-quote-terminology {
+      margin-top: 14px;
+      padding: 14px 16px;
+
+      border-radius: 15px;
+
+      color: #8298ad;
+      background: rgba(255, 255, 255, 0.035);
+
+      font-size: 11px;
+      line-height: 1.65;
+    }
+
+    .rt-quote-terminology strong {
+      color: #b9cede;
+    }
+
+    @media (max-width: 900px) {
+      .rt-quote-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .rt-quote-buttons {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .rt-quote-cta {
+        padding: 36px 24px;
+        border-radius: 22px;
+      }
+
+      .rt-quote-btn {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <div class="rt-quote-grid">
+
+    <div class="rt-quote-title">
+
+      <div class="rt-quote-eyebrow">
+        Request a Quotation
+      </div>
+
+      <h2>
+        Configure Your RobiThrust Solution
+      </h2>
+
+      <h3>
+        取得推進系統、驗證套件或 Heavy UAV 平台正式報價
+      </h3>
+
+      <div class="rt-quote-title-note">
+        Select the product or validation platform that best matches
+        your current engineering objective. RobiChip will review the
+        propulsion configuration, measurement scope, safety requirements,
+        and delivery conditions before issuing a formal quotation.
+      </div>
+
+    </div>
+
+    <div class="rt-quote-copy">
+
+      <p>
+        Tell us whether you need a RobiThrust 3-in-1 propulsion model,
+        a Base Validation Kit, a RobiThrust + RobiDev Integration Bundle,
+        or a RobiThrust-Heavy project review.
+      </p>
+
+      <p>
+        請告訴我們您需要 RobiThrust 三合一推進系統、
+        基礎驗證套件、RobiThrust + RobiDev 整合套件，
+        或 RobiThrust-Heavy 專案型平台。
+        羅比芯將依應用條件確認組態、量測範圍與正式報價。
+      </p>
+
+      <div class="rt-quote-fields">
+        <span class="rt-quote-field">UAV Application</span>
+        <span class="rt-quote-field">Product / Platform</span>
+        <span class="rt-quote-field">Target Thrust</span>
+        <span class="rt-quote-field">Motor</span>
+        <span class="rt-quote-field">Propeller</span>
+        <span class="rt-quote-field">DC Bus</span>
+        <span class="rt-quote-field">Measurement Scope</span>
+        <span class="rt-quote-field">Quantity</span>
+        <span class="rt-quote-field">Delivery Schedule</span>
+      </div>
+
+      <div class="rt-quote-buttons">
+
+        <a
+          class="rt-quote-btn primary"
+          aria-label="Request a quotation for a RobiThrust 3-in-1 propulsion model"
+          href="mailto:bd@robichip.com?subject=RobiThrust%203-in-1%20Propulsion%20Model%20Quotation&body=Company%3A%0AContact%20Person%3A%0AUAV%20Application%3A%0ATarget%20Thrust%3A%0AMotor%3A%0APropeller%3A%0ADC%20Bus%3A%0AQuantity%3A%0ADelivery%20Schedule%3A%0AAdditional%20Requirements%3A"
+        >
+          Quote a 3-in-1 Model
+        </a>
+
+        <a
+          class="rt-quote-btn"
+          aria-label="Request a quotation for the RobiThrust Base Validation Kit"
+          href="mailto:bd@robichip.com?subject=RobiThrust%20Base%20Validation%20Kit%20Quotation&body=Company%3A%0AContact%20Person%3A%0AUAV%20Application%3A%0ATarget%20Thrust%3A%0AMotor%3A%0APropeller%3A%0ADC%20Bus%3A%0AMeasurement%20Scope%3A%0AQuantity%3A%0ADelivery%20Schedule%3A%0AAdditional%20Requirements%3A"
+        >
+          Quote a Base Validation Kit
+        </a>
+
+        <a
+          class="rt-quote-btn"
+          aria-label="Request a quotation for the RobiThrust and RobiDev Integration Bundle"
+          href="mailto:bd@robichip.com?subject=RobiThrust%20%2B%20RobiDev%20Integration%20Bundle%20Quotation&body=Company%3A%0AContact%20Person%3A%0AMotor-Drive%20Application%3A%0ATarget%20Motor%3A%0ATarget%20Propeller%3A%0ADC%20Bus%3A%0ARobiDev%20Configuration%3A%0AMeasurement%20Scope%3A%0AQuantity%3A%0ADelivery%20Schedule%3A%0AAdditional%20Requirements%3A"
+        >
+          Quote an Integration Bundle
+        </a>
+
+        <a
+          class="rt-quote-btn heavy"
+          aria-label="Request a feasibility review for the RobiThrust-Heavy Development Platform"
+          href="mailto:bd@robichip.com?subject=RobiThrust-Heavy%20Development%20Platform%20Feasibility%20Review&body=Company%3A%0AContact%20Person%3A%0AHeavy%20UAV%20Application%3A%0ATarget%20Thrust%3A%0ATarget%20Power%3A%0AMotor%3A%0APropeller%20Diameter%3A%0ADC%20Bus%3A%0ADynamometer%20or%20Torque-Load%20Requirement%3A%0ATarget%20Schedule%3A%0AAdditional%20Requirements%3A"
+        >
+          Request Heavy Platform Review
+        </a>
+
+      </div>
+
+      <div class="rt-quote-general">
+        For partnership, custom engineering, or general questions:
+        <a
+          href="mailto:contact@robichip.com?subject=RobiThrust%20General%20Inquiry"
+        >
+          contact@robichip.com
+        </a>
+      </div>
+
+      <div class="rt-quote-process">
+
+        <strong>Commercial process｜商業流程</strong>
+
+        <div class="rt-quote-steps">
+          <span class="rt-quote-step">Requirement Submission</span>
+          <span class="rt-quote-arrow">→</span>
+          <span class="rt-quote-step">Configuration Review</span>
+          <span class="rt-quote-arrow">→</span>
+          <span class="rt-quote-step">Formal Quotation</span>
+          <span class="rt-quote-arrow">→</span>
+          <span class="rt-quote-step">PO / Payment</span>
+          <span class="rt-quote-arrow">→</span>
+          <span class="rt-quote-step">Build & Validation</span>
+          <span class="rt-quote-arrow">→</span>
+          <span class="rt-quote-step">Delivery & Support</span>
+        </div>
+
+      </div>
+
+      <div class="rt-quote-terminology">
+
+        <strong>Product naming｜產品名稱：</strong>
+
+        This section uses product and platform names rather than
+        Propulsion Gen.1–Gen.3 architecture terminology.
+
+        <br><br>
+
+        本區使用產品配置與平台名稱，不以 Propulsion Gen.1–Gen.3
+        表示報價項目，避免與無人機推進架構世代混淆。
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer class="robi-footer">
+  <style>
+    .robi-footer {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: #050b14;
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 42px 38px 26px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .robi-footer::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -120px;
+      top: -130px;
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 70%);
+      pointer-events: none;
+    }
+
+    .footer-wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.8fr 0.8fr 0.9fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .footer-brand h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+      font-weight: 950;
+    }
+
+    .footer-brand h3 {
+      margin: 8px 0 0;
+      color: #d9ecff;
+      font-size: 18px;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+      font-weight: 850;
+    }
+
+    .footer-brand p {
+      margin: 16px 0 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    .footer-col h4 {
+      margin: 0 0 13px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-link {
+      display: block;
+      color: #d9ecff;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.55;
+      margin: 0 0 9px;
+      font-weight: 700;
+    }
+
+    .footer-link:hover {
+      color: #65f1ff;
+    }
+
+    .footer-info {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer-address h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 17px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      font-weight: 900;
+    }
+
+    .footer-address p {
+      margin: 0 0 8px;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .footer-address a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .footer-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .footer-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(101, 241, 255, 0.09);
+      border: 1px solid rgba(101, 241, 255, 0.20);
+      color: #dffcff;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .footer-bottom {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+      justify-content: space-between;
+      color: #8fa1b8;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-bottom a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-info {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-badges {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .robi-footer {
+        padding: 34px 24px 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        display: block;
+      }
+
+      .footer-bottom div {
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>RobiChip Technology Co., Ltd.</h2>
+        <h3>羅比芯科技股份有限公司</h3>
+        <p>
+          Power SoC platform for intelligent machines. Robichip integrates Power SoC,
+          RobiDev, RobiThrust, RobiAgent, and validation workflows for robotics,
+          UAVs, and high-power-density motion systems.
+        </p>
+        <p>
+          羅比芯聚焦 Power + AI + Robotics，建構從 Power SoC、開發驗證、
+          無人機推進平台到 AI-assisted design-in 的智慧動力半導體平台。
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a class="footer-link" href="https://www.robichip.com/robisoc" target="_blank">RobiSoC</a>
+        <a class="footer-link" href="https://www.robichip.com/robidev" target="_blank">RobiDev</a>
+        <a class="footer-link" href="https://www.robichip.com/robithrust" target="_blank">RobiThrust</a>
+        <a class="footer-link" href="https://www.robichip.com/robitorque" target="_blank">RobiTorque</a>
+        <a class="footer-link" href="https://www.robichip.com/robiagent" target="_blank">RobiAgent</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a class="footer-link" href="https://www.robichip.com/technology-insights" target="_blank">Technology Insights</a>
+        <a class="footer-link" href="https://www.robichip.com/news-events" target="_blank">News & Events</a>
+        <a class="footer-link" href="https://www.robichip.com/robilab" target="_blank">RobiLab Validation</a>
+        <a class="footer-link" href="https://www.youtube.com/channel/UCqp-CDSVPCX8TfYT_aVScpg" target="_blank">Youtube channel</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Partnership</a>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Technical Discussion</a>
+        <a class="footer-link" href="https://www.robichip.com/join-us" target="_blank">Join Us</a>
+        <a class="footer-link" href="tel:+886277015728">+886-2-7701-5728</a>
+        <a class="footer-link" href="mailto:contact@robichip.com">contact@robichip.com</a>
+        <a class="footer-link" href="mailto:bd@robichip.com">bd@robichip.com</a>
+      </div>
+    </div>
+
+    <div class="footer-info">
+      <div class="footer-address">
+        <h4>Company Information｜公司資訊</h4>
+        <p><strong>RobiChip Technology Co., Ltd.｜羅比芯科技股份有限公司</strong></p>
+
+        <p>
+          National Taiwan University of Science and Technology, International Building 11F, Room 1105<br>
+          No. 43, Sec. 4, Keelung Rd., Da’an Dist., Taipei City, Taiwan
+        </p>
+
+        <p>
+          台北市大安區基隆路四段 43 號<br>
+          國立臺灣科技大學 國際大樓 11F 1105 室
+        </p>
+
+        <p>
+          Tel｜電話：
+          <a href="tel:+886277015728">+886-2-7701-5728</a><br>
+          General Contact｜一般聯絡：
+          <a href="mailto:contact@robichip.com">contact@robichip.com</a><br>
+          Business Development｜商務合作：
+          <a href="mailto:bd@robichip.com">bd@robichip.com</a>
+        </p>
+      </div>
+
+      <div class="footer-badges">
+        <span class="footer-badge">Power SoC</span>
+        <span class="footer-badge">Robotics</span>
+        <span class="footer-badge">UAV</span>
+        <span class="footer-badge">Advanced Packaging</span>
+        <span class="footer-badge">Thermal Path</span>
+        <span class="footer-badge">Design-in</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        © 2026 RobiChip Technology Co., Ltd. All rights reserved.
+      </div>
+      <div>
+        Public website content is for general information only. Detailed specifications are subject to official release, NDA, or partner discussion.
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ROBITHRUST SOURCE BLOCKS -->
