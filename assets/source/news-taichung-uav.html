@@ -1,0 +1,472 @@
+<section class="news-uav-hero">
+  <style>
+    .news-uav-hero {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.28), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 54px 40px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .news-uav-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .news-uav-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .news-uav-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .news-uav-hero h1 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(38px, 5.6vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -0.06em;
+      font-weight: 950;
+    }
+
+    .news-uav-hero h2 {
+      margin: 18px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 34px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .news-uav-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .news-uav-meta {
+      display: grid;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .news-uav-meta div {
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.075);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #e6f0fb;
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 750;
+    }
+
+    .news-uav-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .news-uav-tag {
+      padding: 8px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(101, 241, 255, 0.36);
+      background: rgba(101, 241, 255, 0.14);
+      color: #eafcff;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1;
+    }
+
+    @media (max-width: 900px) {
+      .news-uav-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .news-uav-hero { padding: 36px 24px; }
+    }
+  </style>
+
+  <div class="news-uav-grid">
+    <div>
+      <div class="news-uav-eyebrow">Public Talk Recap</div>
+      <h1>Power SoC for Physical AI and UAV Propulsion</h1>
+      <h2>面向 Physical AI 與無人機推進的 Power SoC 平台</h2>
+
+      <div class="news-uav-meta">
+        <div>Event｜Leading 2026｜Taichung UAV Industry and Overseas Business Opportunities Forum</div>
+        <div>活動｜領航 2026｜臺中無人載具產業與海外商機論壇</div>
+        <div>Date｜2026.07.02　Speaker｜Henry Gong, Founder & CEO, RobiChip Technology</div>
+      </div>
+    </div>
+
+    <div class="news-uav-copy">
+      <p>
+        RobiChip was invited to speak at the Taichung UAV forum, sharing our view on
+        Physical AI, UAV propulsion, high-power-density motor drive, and the role of
+        Power SoC in next-generation unmanned systems.
+      </p>
+      <p>
+        羅比芯受邀於臺中無人載具論壇分享 Physical AI、無人機推進、高功率密度馬達驅動，
+        以及 Power SoC 在下一代無人載具中的角色。
+      </p>
+
+      <div class="news-uav-tags">
+        <span class="news-uav-tag">Physical AI</span>
+        <span class="news-uav-tag">UAV Propulsion</span>
+        <span class="news-uav-tag">Power SoC</span>
+        <span class="news-uav-tag">RobiThrust</span>
+        <span class="news-uav-tag">RobiDev</span>
+        <span class="news-uav-tag">International Partners</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="news-uav-takeaways">
+  <style>
+    .news-uav-takeaways {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    .news-uav-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .news-uav-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .news-uav-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .news-uav-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .news-uav-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .news-uav-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .news-uav-card-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .news-uav-card {
+      background: #ffffff;
+      border: 1px solid rgba(37,99,235,0.12);
+      border-radius: 22px;
+      padding: 20px;
+      min-height: 220px;
+      box-shadow: 0 14px 30px rgba(15,23,42,0.06);
+    }
+
+    .news-uav-card strong {
+      display: block;
+      color: #06111f;
+      font-size: 17px;
+      line-height: 1.3;
+      margin-bottom: 8px;
+      font-weight: 950;
+    }
+
+    .news-uav-card span {
+      display: block;
+      color: #1e3a8a;
+      font-size: 14px;
+      line-height: 1.45;
+      margin-bottom: 10px;
+      font-weight: 850;
+    }
+
+    .news-uav-card p {
+      margin: 0;
+      color: #5b6b80;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1120px) {
+      .news-uav-card-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 900px) {
+      .news-uav-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .news-uav-card-grid { grid-template-columns: 1fr; }
+      .news-uav-takeaways { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="news-uav-grid">
+    <div class="news-uav-title">
+      <div class="news-uav-eyebrow">Key Takeaways</div>
+      <h2>Why Power Density Matters for Physical AI</h2>
+      <h3>為什麼 Physical AI 需要高功率密度動力系統</h3>
+    </div>
+
+    <div class="news-uav-copy">
+      <p>
+        The talk focused on how UAVs and intelligent machines require a new power platform:
+        compact, thermally aware, measurable, and ready for real system validation.
+      </p>
+      <p>
+        本次演講聚焦於無人機與智慧機器為何需要新的動力平台：更小型化、具備熱路徑思維、
+        可量測，並能支援真實系統驗證。
+      </p>
+    </div>
+  </div>
+
+  <div class="news-uav-card-grid">
+    <article class="news-uav-card">
+      <strong>Physical AI Needs Motion</strong>
+      <span>Physical AI 需要動力系統</span>
+      <p>AI moving into the physical world requires reliable, compact, and efficient motion systems.</p>
+    </article>
+
+    <article class="news-uav-card">
+      <strong>UAV Propulsion Is System-level</strong>
+      <span>無人機推進是系統問題</span>
+      <p>ESC current rating alone is not enough. Motor-driver matching, thermal path, weight, and validation matter.</p>
+    </article>
+
+    <article class="news-uav-card">
+      <strong>Power SoC Enables Integration</strong>
+      <span>Power SoC 支援高整合</span>
+      <p>RobiSoC aims to integrate power, control, packaging, and thermal path into a compact motion platform.</p>
+    </article>
+
+    <article class="news-uav-card">
+      <strong>RobiThrust Validates Propulsion</strong>
+      <span>RobiThrust 驗證推進系統</span>
+      <p>RobiThrust connects RobiDev, motor, propeller, measurement, and thermal observation for UAV validation.</p>
+    </article>
+
+    <article class="news-uav-card">
+      <strong>Partners Are Welcome</strong>
+      <span>歡迎國際與產業合作</span>
+      <p>RobiChip welcomes UAV, robotics, MCU, packaging, system, and overseas partners for pilot collaboration.</p>
+    </article>
+  </div>
+</section>
+
+<section class="news-uav-final-cta">
+  <style>
+    .news-uav-final-cta {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34,211,238,0.25), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .news-uav-final-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .news-uav-final-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .news-uav-final-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .news-uav-final-title h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 1.06;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .news-uav-final-title h3 {
+      margin: 14px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .news-uav-final-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .news-uav-final-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .news-uav-final-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #f8fbff;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .news-uav-final-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #031120;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37,99,235,0.28);
+    }
+
+    .news-uav-final-note {
+      margin-top: 22px;
+      color: #8fa1b8;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 900px) {
+      .news-uav-final-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .news-uav-final-cta { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="news-uav-final-grid">
+    <div class="news-uav-final-title">
+      <div class="news-uav-final-eyebrow">Continue the Conversation</div>
+      <h2>Let’s Discuss UAV, Robotics, and Physical AI Power Systems</h2>
+      <h3>洽談無人機、機器人與 Physical AI 動力系統合作</h3>
+    </div>
+
+    <div class="news-uav-final-copy">
+      <p>
+        RobiChip welcomes UAV, robotics, MCU, packaging, system integration, and international partners
+        to discuss pilot collaboration, validation projects, and Power SoC design-in opportunities.
+      </p>
+      <p>
+        羅比芯歡迎無人機、機器人、MCU、封裝、系統整合與國際夥伴洽談 pilot 合作、
+        驗證專案與 Power SoC design-in 機會。
+      </p>
+
+      <div class="news-uav-final-buttons">
+        <a class="news-uav-final-btn primary" href="mailto:bd@robichip.com">
+          Discuss Partnership
+        </a>
+        <a class="news-uav-final-btn" href="mailto:contact@robichip.com">
+          Contact RobiChip
+        </a>
+        <a class="news-uav-final-btn" href="https://www.robichip.com/robithrust" target="_blank">
+          Explore RobiThrust
+        </a>
+        <a class="news-uav-final-btn" href="https://www.robichip.com/robidev" target="_blank">
+          Start with RobiDev
+        </a>
+        <a class="news-uav-final-btn" href="https://www.robichip.com/robisoc" target="_blank">
+          Learn about RobiSoC
+        </a>
+        <a class="news-uav-final-btn" href="https://www.linkedin.com/company/robichip/" target="_blank">
+          Follow RobiChip on LinkedIn
+        </a>
+      </div>
+
+      <div class="news-uav-final-note">
+        Suggested email subject: UAV / Robotics Partnership Discussion｜Taichung UAV Forum.
+        <br>
+        建議信件主旨：無人機 / 機器人合作洽談｜臺中無人載具論壇。
+      </div>
+    </div>
+  </div>
+</section>
+<!-- TAICHUNG UAV SOURCE BLOCKS -->

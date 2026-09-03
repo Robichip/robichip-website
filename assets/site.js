@@ -707,6 +707,11 @@
   Object.entries(events).forEach(([route, event]) => {
     routeTable[route] = {title:event.title, render:() => eventPage(event)};
   });
+  routeTable['/news-events/2026-TAIROS'] = {title:events['/news-events/2026-TAIROS'].title, render:() => sourceRoute('/assets/source/news-2026-tairos.html?v=frozen-reference-v1'), reference:true};
+  routeTable['/news-events/news-events-TaiChung-UAV'] = {title:'Taichung UAV Forum', render:() => sourceRoute('/assets/source/news-taichung-uav.html?v=frozen-reference-v1'), reference:true};
+  routeTable['/news-events/news-events-best-AI-Awards'] = {title:events['/news-events/news-events-best-AI-Awards'].title, render:() => sourceRoute('/assets/source/news-best-ai-awards.html?v=frozen-reference-v1'), reference:true};
+  routeTable['/news-events/news-events-computex-InnoVEX'] = {title:'COMPUTEX InnoVEX', render:() => sourceRoute('/assets/source/news-computex-innovex.html?v=frozen-reference-v1'), reference:true};
+  routeTable['/news-events/news-events-swancor-MOU'] = {title:'Swancor × RobiChip', render:() => sourceRoute('/assets/source/news-swancor-mou.html?v=frozen-reference-v1'), reference:true};
   ['/work','/v1','/v2','/v3','/temp','/robigrip'].forEach((route) => {
     routeTable[route] = {title:'Legacy Draft Page', render:legacyPage, noindex:true};
   });
