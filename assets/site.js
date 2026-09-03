@@ -520,6 +520,18 @@
     }
   };
 
+  const articlePage = (article) => `
+    ${hero({
+      eyebrow:'Technology Insights',
+      title:article.title,
+      zh:article.zh,
+      lead:article.lead,
+      sublead:article.sublead,
+      metrics:article.metrics,
+      actions:[{href:'/technology-insights',label:'All Technology Insights'},{href:'/partnership',label:'Discuss Technical Collaboration'}]
+    })}
+    <section class="section tint"><div class="wrap article">${article.body}<div class="actions">${link('/robithrust','Explore RobiThrust','btn primary')}${link('/robidev','Explore RobiDev','btn')}${link('/partnership','Discuss Collaboration','btn')}</div><p class="public-note">This public engineering note is intended for technical communication and early design-in education. Detailed specifications, raw data, and project-specific recommendations require formal technical discussion or NDA-controlled access.</p></div></section>`;
+
   const newsPage = () => `
     ${hero({
       eyebrow:"News & Events",
@@ -601,6 +613,18 @@
       placeholder:'Forum event image placeholder'
     }
   };
+
+  const eventPage = (event) => `
+    ${hero({
+      eyebrow:event.tag || 'News & Events',
+      title:event.title,
+      zh:event.zh,
+      lead:event.lead,
+      sublead:event.sublead,
+      metrics:event.metrics,
+      actions:[{href:'/news-events',label:'All News & Events'},{href:'/partnership',label:'Discuss Partnership'}]
+    })}
+    ${section('Event Details', event.title, event.meta ? event.meta.join(' · ') : '', `<div class="article">${event.body || ''}${event.video ? `<div class="video-frame"><iframe src="${event.video}" title="${esc(event.title)} video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>` : ''}${event.placeholder ? mediaPlaceholder(event.placeholder, 'Source event media remains to be supplied from the Google Sites archive.') : ''}<div class="actions">${link('/news-events','All News & Events','btn primary')}${link('/partnership','Discuss Collaboration','btn')}</div></div>`, 'tint')}`;
 
   const partnershipPage = () => `
     ${hero({
