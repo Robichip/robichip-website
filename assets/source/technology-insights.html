@@ -1,0 +1,1063 @@
+<section class="robi-tech-page">
+  <style>
+    .robi-tech-page {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      color: #071426;
+      box-sizing: border-box;
+    }
+
+    .rt-section {
+      border-radius: 28px;
+      padding: 48px 38px;
+      margin-bottom: 28px;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .rt-dark {
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.28), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .rt-light {
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .rt-wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    .rt-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rt-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rt-light .rt-eyebrow {
+      color: #2563eb;
+    }
+
+    .rt-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rt-light .rt-eyebrow::before {
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+    }
+
+    .rt-hero h1 {
+      margin: 0;
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: 1.03;
+      letter-spacing: -0.065em;
+      font-weight: 950;
+      color: #ffffff;
+    }
+
+    .rt-hero h2 {
+      margin: 18px 0 0;
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+      color: #d9ecff;
+      font-weight: 850;
+    }
+
+    .rt-dark p {
+      color: #b9c7da;
+    }
+
+    .rt-light p {
+      color: #526174;
+    }
+
+    .rt-copy p {
+      margin: 0 0 12px;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rt-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 26px;
+    }
+
+    .rt-tag {
+      padding: 8px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(101, 241, 255, 0.36);
+      background: rgba(101, 241, 255, 0.14);
+      color: #eafcff;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1;
+    }
+
+    .rt-title h2 {
+      margin: 0;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rt-light .rt-title h2 {
+      color: #06111f;
+    }
+
+    .rt-dark .rt-title h2 {
+      color: #ffffff;
+    }
+
+    .rt-title h3 {
+      margin: 14px 0 0;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rt-light .rt-title h3 {
+      color: #1e3a8a;
+    }
+
+    .rt-dark .rt-title h3 {
+      color: #d9ecff;
+    }
+
+    .pill-blue {
+      display: inline-flex;
+      width: fit-content;
+      color: #ffffff;
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.24);
+    }
+
+    .pill-lightbg {
+      display: inline-flex;
+      width: fit-content;
+      color: #075985;
+      background: rgba(34, 211, 238, 0.13);
+      border: 1px solid rgba(14, 165, 233, 0.28);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+      letter-spacing: 0.01em;
+    }
+
+    .pill-darkbg {
+      display: inline-flex;
+      width: fit-content;
+      color: #f2fdff;
+      background: rgba(34, 211, 238, 0.26);
+      border: 1px solid rgba(101, 241, 255, 0.56);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+      letter-spacing: 0.01em;
+    }
+
+    .featured-card {
+      margin-top: 30px;
+      background: #ffffff;
+      border: 1px solid rgba(37, 99, 235, 0.14);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 26px;
+    }
+
+    .featured-card h3 {
+      margin: 0 0 10px;
+      color: #06111f;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .featured-card h4 {
+      margin: 0 0 16px;
+      color: #1e3a8a;
+      font-size: 21px;
+      line-height: 1.35;
+      letter-spacing: -0.03em;
+      font-weight: 850;
+    }
+
+    .featured-card p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .metric-box {
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 18px;
+      padding: 15px;
+    }
+
+    .metric-box strong {
+      display: block;
+      color: #06111f;
+      font-size: 24px;
+      line-height: 1.15;
+      margin-bottom: 5px;
+      letter-spacing: -0.035em;
+    }
+
+    .metric-box span {
+      display: block;
+      color: #64748b;
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .card-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .dark-card {
+      background: rgba(255, 255, 255, 0.075);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 240px;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.16);
+    }
+
+    .dark-card h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .dark-card h5 {
+      margin: 0 0 14px;
+      color: #d9ecff;
+      font-size: 16px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      font-weight: 850;
+    }
+
+    .dark-card p {
+      margin: 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .rt-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .rt-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(37, 99, 235, 0.18);
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: #ffffff;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
+    }
+
+    .rt-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #ffffff;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.22);
+    }
+
+    @media (max-width: 1020px) {
+      .rt-grid,
+      .featured-card,
+      .card-grid-4 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .rt-section {
+        padding: 34px 22px;
+      }
+
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <section class="rt-section rt-dark rt-hero">
+    <div class="rt-wrap">
+      <div class="rt-grid">
+        <div>
+          <div class="rt-eyebrow">Technology Insights</div>
+          <h1>Engineering Notes for High-Power-Density Motion</h1>
+          <h2>高功率密度智慧動力平台的工程筆記</h2>
+        </div>
+
+        <div class="rt-copy">
+          <p>
+            Robichip Technology Insights shares public engineering notes on RobiThrust validation,
+            Power SoC, RobiDev design-in workflows, motor-driver matching, thermal path,
+            and advanced packaging considerations for intelligent machines.
+          </p>
+          <p>
+            羅比芯技術洞察分享 RobiThrust 實測、Power SoC、RobiDev 導入流程、
+            馬達與驅動匹配、熱路徑與先進封裝相關的公開工程筆記。
+          </p>
+
+          <div class="rt-tags">
+            <span class="rt-tag">RobiThrust</span>
+            <span class="rt-tag">Power SoC</span>
+            <span class="rt-tag">RobiDev</span>
+            <span class="rt-tag">Thermal Path</span>
+            <span class="rt-tag">Design-in</span>
+            <span class="rt-tag">Advanced Packaging</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rt-section rt-light">
+    <div class="rt-wrap">
+      <div class="rt-grid">
+        <div class="rt-title">
+          <div class="rt-eyebrow">Featured Insight</div>
+          <h2>Published Engineering Note</h2>
+          <h3>代表性技術實測文章</h3>
+        </div>
+
+        <div class="rt-copy">
+          <p>
+            Featured Insight highlights one representative engineering note. This section does not need to be updated for every new article.
+          </p>
+          <p>
+            Featured Insight 建議只放一篇代表性文章，不需要每次新增文章都更動。日常更新請放在下方 Google Sites 原生文章列表。
+          </p>
+        </div>
+      </div>
+
+      <article class="featured-card">
+        <div>
+          <span class="pill-blue">Featured｜代表文章</span>
+          <h3>RobiThrust ECX-32 Test Observation</h3>
+          <h4>從 Motor-Driver Matching 到續航力優化</h4>
+
+          <p>
+            This note uses maxon ECX32-Flat-UAV motor, APC 10x4.5MR propeller,
+            and 16.8V input to evaluate thrust efficiency, current-to-thrust behavior,
+            propulsion weight, thermal management, and endurance sensitivity.
+          </p>
+
+          <p>
+            本文以 maxon ECX32-Flat-UAV 馬達、APC 10x4.5MR 螺旋槳與 16.8V 輸入條件，
+            評估推力效率、current-to-thrust、推進系統重量、熱管理與續航力敏感度。
+          </p>
+
+          <div class="rt-buttons">
+            <a class="rt-btn primary" href="https://www.robichip.com/technology-insights/robithrust-ecx32-test-observation" target="_blank">Read Full Report</a>
+            <a class="rt-btn" href="https://www.robichip.com/robithrust" target="_blank">Explore RobiThrust</a>
+          </div>
+        </div>
+
+        <div>
+          <span class="pill-lightbg">Key Observations</span>
+
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <strong>+6.3%</strong>
+              <span>G2 average gf/W advantage in 3100 to 5600 rpm useful operating band</span>
+            </div>
+
+            <div class="metric-box">
+              <strong>+7.8%</strong>
+              <span>G2 average gf/W advantage in 3100 to 4500 rpm low-speed band</span>
+            </div>
+
+            <div class="metric-box">
+              <strong>ECX-32</strong>
+              <span>Light UAV motor-prop validation setup</span>
+            </div>
+
+            <div class="metric-box">
+              <strong>A/B Flight</strong>
+              <span>Next validation step for real endurance comparison</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="rt-section rt-dark">
+    <div class="rt-wrap">
+      <div class="rt-grid">
+        <div class="rt-title">
+          <div class="rt-eyebrow">Insight Series</div>
+          <h2>Four Technical Tracks</h2>
+          <h3>四個技術系列</h3>
+        </div>
+
+        <div class="rt-copy">
+          <p>
+            Technology Insights is organized into technical tracks so readers can follow Robichip’s
+            platform logic from validation, Power SoC fundamentals, RobiDev design-in,
+            to thermal path and packaging.
+          </p>
+          <p>
+            技術洞察將以系列方式整理，讓讀者從實測驗證、Power SoC 基礎、RobiDev 導入，
+            逐步理解熱路徑與先進封裝的工程脈絡。
+          </p>
+        </div>
+      </div>
+
+      <div class="card-grid-4">
+        <article class="dark-card">
+          <span class="pill-darkbg">Validation Notes</span>
+          <h4>RobiThrust Validation Notes</h4>
+          <h5>推進系統實測筆記</h5>
+          <p>
+            Bench testing, motor-driver matching, propeller selection, thrust efficiency,
+            current-to-thrust behavior, and UAV propulsion validation.
+          </p>
+        </article>
+
+        <article class="dark-card">
+          <span class="pill-darkbg">Power SoC</span>
+          <h4>Power SoC Fundamentals</h4>
+          <h5>Power SoC 基礎觀點</h5>
+          <p>
+            Public engineering perspectives on high-power-density drive architecture,
+            power integration, hybrid substrate, and silicon-to-system design.
+          </p>
+        </article>
+
+        <article class="dark-card">
+          <span class="pill-darkbg">Design-in</span>
+          <h4>RobiDev Design-in Notes</h4>
+          <h5>RobiDev 導入筆記</h5>
+          <p>
+            Evaluation workflow, electrical interface checks, firmware bring-up,
+            thermal evaluation, dynamic load validation, and customer design-in preparation.
+          </p>
+        </article>
+
+        <article class="dark-card">
+          <span class="pill-darkbg">Thermal Path</span>
+          <h4>Thermal Path & Packaging</h4>
+          <h5>熱路徑與先進封裝</h5>
+          <p>
+            Notes on package-to-board, board-to-structure, airflow, thermal interface,
+            reliability, and advanced packaging considerations.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section class="robi-tech-bottom">
+  <style>
+    .robi-tech-bottom {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      color: #f8fbff;
+      box-sizing: border-box;
+    }
+
+    .rtb-section {
+      border-radius: 28px;
+      padding: 48px 38px;
+      margin-bottom: 28px;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.28), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .rtb-wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    .rtb-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rtb-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rtb-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rtb-title h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rtb-title h3 {
+      margin: 14px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rtb-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rtb-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .rtb-card {
+      background: rgba(255, 255, 255, 0.075);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 230px;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.16);
+    }
+
+    .rtb-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #f2fdff;
+      background: rgba(34, 211, 238, 0.26);
+      border: 1px solid rgba(101, 241, 255, 0.56);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rtb-card h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rtb-card h5 {
+      margin: 0 0 14px;
+      color: #d9ecff;
+      font-size: 16px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      font-weight: 850;
+    }
+
+    .rtb-card p {
+      margin: 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .rtb-note {
+      margin-top: 28px;
+      padding: 20px 22px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .rtb-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .rtb-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #f8fbff;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .rtb-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #031120;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.22);
+    }
+
+    @media (max-width: 1020px) {
+      .rtb-grid,
+      .rtb-card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .rtb-section {
+        padding: 34px 22px;
+      }
+    }
+  </style>
+
+  <section class="rtb-section">
+    <div class="rtb-wrap">
+      <div class="rtb-grid">
+        <div class="rtb-title">
+          <div class="rtb-eyebrow">Technical Access Policy</div>
+          <h2>Public Notes, Partner Discussion, NDA Materials</h2>
+          <h3>公開筆記、夥伴討論與 NDA 技術資料分級</h3>
+        </div>
+
+        <div class="rtb-copy">
+          <p>
+            Robichip shares public engineering perspectives through Technology Insights,
+            while detailed specifications, raw data, design files, and partner-only materials
+            are handled through official discussion and controlled access.
+          </p>
+          <p>
+            羅比芯透過 Technology Insights 分享公開工程觀點；詳細規格、原始測試資料、
+            設計檔案與 partner-only 技術資料，則透過正式洽談與授權機制提供。
+          </p>
+        </div>
+      </div>
+
+      <div class="rtb-card-grid">
+        <article class="rtb-card">
+          <span class="rtb-pill">Public Notes</span>
+          <h4>Public Engineering Notes</h4>
+          <h5>公開技術洞察</h5>
+          <p>
+            Public articles, validation observations, engineering perspectives,
+            and application-level explanations.
+          </p>
+        </article>
+
+        <article class="rtb-card">
+          <span class="rtb-pill">Partner Discussion</span>
+          <h4>Technical Alignment</h4>
+          <h5>夥伴技術討論</h5>
+          <p>
+            Application requirements, test conditions, design-in direction,
+            thermal path discussion, and feasibility review.
+          </p>
+        </article>
+
+        <article class="rtb-card">
+          <span class="rtb-pill">NDA / Partner-only</span>
+          <h4>Controlled Materials</h4>
+          <h5>NDA 或指定夥伴資料</h5>
+          <p>
+            Detailed specifications, raw validation data, design files,
+            DFM or reliability discussion, and partner-only documents.
+          </p>
+        </article>
+      </div>
+
+      <div class="rtb-note">
+        Technology Insights is intended for public technical communication and early design-in education.
+        It does not replace official datasheets, partner documents, engineering change notices,
+        or NDA-controlled materials.
+        <br><br>
+        Technology Insights 用於公開技術溝通與早期 design-in 教育，不取代正式 datasheet、
+        partner 文件、工程變更通知或 NDA 管制資料。
+      </div>
+
+      <div class="rtb-buttons">
+        <a class="rtb-btn primary" href="https://www.robichip.com/partnership" target="_blank">Discuss Technical Collaboration</a>
+        <a class="rtb-btn" href="https://www.robichip.com/robithrust" target="_blank">Explore RobiThrust</a>
+        <a class="rtb-btn" href="https://www.robichip.com/robidev" target="_blank">Explore RobiDev</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<footer class="robi-footer">
+  <style>
+    .robi-footer {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: #050b14;
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 42px 38px 26px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .robi-footer::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -120px;
+      top: -130px;
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 70%);
+      pointer-events: none;
+    }
+
+    .footer-wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.8fr 0.8fr 0.9fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .footer-brand h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+      font-weight: 950;
+    }
+
+    .footer-brand h3 {
+      margin: 8px 0 0;
+      color: #d9ecff;
+      font-size: 18px;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+      font-weight: 850;
+    }
+
+    .footer-brand p {
+      margin: 16px 0 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    .footer-col h4 {
+      margin: 0 0 13px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-link {
+      display: block;
+      color: #d9ecff;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.55;
+      margin: 0 0 9px;
+      font-weight: 700;
+    }
+
+    .footer-link:hover {
+      color: #65f1ff;
+    }
+
+    .footer-info {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer-address h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 17px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      font-weight: 900;
+    }
+
+    .footer-address p {
+      margin: 0 0 8px;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .footer-address a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .footer-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .footer-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(101, 241, 255, 0.09);
+      border: 1px solid rgba(101, 241, 255, 0.20);
+      color: #dffcff;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .footer-bottom {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+      justify-content: space-between;
+      color: #8fa1b8;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-bottom a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-info {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-badges {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .robi-footer {
+        padding: 34px 24px 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        display: block;
+      }
+
+      .footer-bottom div {
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>RobiChip Technology Co., Ltd.</h2>
+        <h3>羅比芯科技股份有限公司</h3>
+        <p>
+          Power SoC platform for intelligent machines. Robichip integrates Power SoC,
+          RobiDev, RobiThrust, RobiAgent, and validation workflows for robotics,
+          UAVs, and high-power-density motion systems.
+        </p>
+        <p>
+          羅比芯聚焦 Power + AI + Robotics，建構從 Power SoC、開發驗證、
+          無人機推進平台到 AI-assisted design-in 的智慧動力半導體平台。
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a class="footer-link" href="https://www.robichip.com/robisoc" target="_blank">RobiSoC</a>
+        <a class="footer-link" href="https://www.robichip.com/robidev" target="_blank">RobiDev</a>
+        <a class="footer-link" href="https://www.robichip.com/robithrust" target="_blank">RobiThrust</a>
+        <a class="footer-link" href="https://www.robichip.com/robitorque" target="_blank">RobiTorque</a>
+        <a class="footer-link" href="https://www.robichip.com/robiagent" target="_blank">RobiAgent</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a class="footer-link" href="https://www.robichip.com/technology-insights" target="_blank">Technology Insights</a>
+        <a class="footer-link" href="https://www.robichip.com/news-events" target="_blank">News & Events</a>
+        <a class="footer-link" href="https://www.robichip.com/robilab" target="_blank">RobiLab Validation</a>
+        <a class="footer-link" href="https://www.youtube.com/channel/UCqp-CDSVPCX8TfYT_aVScpg" target="_blank">Youtube channel</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Partnership</a>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Technical Discussion</a>
+        <a class="footer-link" href="https://www.robichip.com/join-us" target="_blank">Join Us</a>
+        <a class="footer-link" href="tel:+886277015728">+886-2-7701-5728</a>
+        <a class="footer-link" href="mailto:contact@robichip.com">contact@robichip.com</a>
+        <a class="footer-link" href="mailto:bd@robichip.com">bd@robichip.com</a>
+      </div>
+    </div>
+
+    <div class="footer-info">
+      <div class="footer-address">
+        <h4>Company Information｜公司資訊</h4>
+        <p><strong>RobiChip Technology Co., Ltd.｜羅比芯科技股份有限公司</strong></p>
+
+        <p>
+          National Taiwan University of Science and Technology, International Building 11F, Room 1105<br>
+          No. 43, Sec. 4, Keelung Rd., Da’an Dist., Taipei City, Taiwan
+        </p>
+
+        <p>
+          台北市大安區基隆路四段 43 號<br>
+          國立臺灣科技大學 國際大樓 11F 1105 室
+        </p>
+
+        <p>
+          Tel｜電話：
+          <a href="tel:+886277015728">+886-2-7701-5728</a><br>
+          General Contact｜一般聯絡：
+          <a href="mailto:contact@robichip.com">contact@robichip.com</a><br>
+          Business Development｜商務合作：
+          <a href="mailto:bd@robichip.com">bd@robichip.com</a>
+        </p>
+      </div>
+
+      <div class="footer-badges">
+        <span class="footer-badge">Power SoC</span>
+        <span class="footer-badge">Robotics</span>
+        <span class="footer-badge">UAV</span>
+        <span class="footer-badge">Advanced Packaging</span>
+        <span class="footer-badge">Thermal Path</span>
+        <span class="footer-badge">Design-in</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        © 2026 RobiChip Technology Co., Ltd. All rights reserved.
+      </div>
+      <div>
+        Public website content is for general information only. Detailed specifications are subject to official release, NDA, or partner discussion.
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- TECHNOLOGY INSIGHTS SOURCE BLOCKS -->

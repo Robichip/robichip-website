@@ -1,0 +1,2031 @@
+<section class="robi-news-page">
+  <style>
+    .robi-news-page {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      color: #071426;
+      box-sizing: border-box;
+    }
+
+    .rn-section {
+      border-radius: 28px;
+      padding: 48px 38px;
+      margin-bottom: 28px;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .rn-dark {
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.28), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .rn-light {
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .rn-wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    .rn-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rn-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rn-light .rn-eyebrow {
+      color: #2563eb;
+    }
+
+    .rn-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rn-light .rn-eyebrow::before {
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+    }
+
+    .rn-hero h1 {
+      margin: 0;
+      font-size: clamp(42px, 6vw, 74px);
+      line-height: 1.02;
+      letter-spacing: -0.065em;
+      font-weight: 950;
+      color: #ffffff;
+    }
+
+    .rn-hero h2 {
+      margin: 18px 0 0;
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+      color: #d9ecff;
+      font-weight: 850;
+    }
+
+    .rn-copy p {
+      margin: 0 0 12px;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rn-dark p {
+      color: #b9c7da;
+    }
+
+    .rn-light p {
+      color: #526174;
+    }
+
+    .rn-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 26px;
+    }
+
+    .rn-tag {
+      padding: 8px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(101, 241, 255, 0.36);
+      background: rgba(101, 241, 255, 0.14);
+      color: #eafcff;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1;
+    }
+
+    .rn-title h2 {
+      margin: 0;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rn-light .rn-title h2 {
+      color: #06111f;
+    }
+
+    .rn-dark .rn-title h2 {
+      color: #ffffff;
+    }
+
+    .rn-title h3 {
+      margin: 14px 0 0;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rn-light .rn-title h3 {
+      color: #1e3a8a;
+    }
+
+    .rn-dark .rn-title h3 {
+      color: #d9ecff;
+    }
+
+    .rn-pill-blue {
+      display: inline-flex;
+      width: fit-content;
+      color: #ffffff;
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.24);
+    }
+
+    .rn-pill-light {
+      display: inline-flex;
+      width: fit-content;
+      color: #075985;
+      background: rgba(34, 211, 238, 0.13);
+      border: 1px solid rgba(14, 165, 233, 0.28);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rn-pill-dark {
+      display: inline-flex;
+      width: fit-content;
+      color: #f2fdff;
+      background: rgba(34, 211, 238, 0.26);
+      border: 1px solid rgba(101, 241, 255, 0.56);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .featured-news-card {
+      margin-top: 30px;
+      background: #ffffff;
+      border: 1px solid rgba(37, 99, 235, 0.14);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
+    }
+
+    .featured-news-card h3 {
+      margin: 0 0 10px;
+      color: #06111f;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .featured-news-card h4 {
+      margin: 0 0 16px;
+      color: #1e3a8a;
+      font-size: 21px;
+      line-height: 1.35;
+      letter-spacing: -0.03em;
+      font-weight: 850;
+    }
+
+    .featured-news-card p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .news-highlight-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .news-highlight {
+      background: rgba(37, 99, 235, 0.06);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      border-radius: 18px;
+      padding: 15px;
+    }
+
+    .news-highlight strong {
+      display: block;
+      color: #06111f;
+      font-size: 18px;
+      line-height: 1.2;
+      margin-bottom: 5px;
+      letter-spacing: -0.025em;
+    }
+
+    .news-highlight span {
+      display: block;
+      color: #64748b;
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .rn-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .rn-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(37, 99, 235, 0.18);
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: #ffffff;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
+    }
+
+    .rn-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #ffffff;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.22);
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .category-card {
+      background: rgba(255, 255, 255, 0.075);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 220px;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.16);
+    }
+
+    .category-card h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .category-card h5 {
+      margin: 0 0 14px;
+      color: #d9ecff;
+      font-size: 16px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      font-weight: 850;
+    }
+
+    .category-card p {
+      margin: 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 1020px) {
+      .rn-grid,
+      .featured-news-card,
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .rn-section {
+        padding: 34px 22px;
+      }
+
+      .news-highlight-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <section class="rn-section rn-dark rn-hero">
+    <div class="rn-wrap">
+      <div class="rn-grid">
+        <div>
+          <div class="rn-eyebrow">News & Events</div>
+          <h1>Robichip Updates, Milestones, and Industry Engagements</h1>
+          <h2>羅比芯活動消息、里程碑與產業交流</h2>
+        </div>
+
+        <div class="rn-copy">
+          <p>
+            Follow Robichip’s latest company updates, public showcases, technology milestones,
+            industry forums, awards, and partnership activities across robotics, UAVs,
+            Power SoC, and high-power-density motion systems.
+          </p>
+          <p>
+            追蹤羅比芯在智慧機器人、無人機、Power SoC、高功率密度動力系統相關的
+            公司動態、公開展示、技術里程碑、產業論壇、獎項與合作活動。
+          </p>
+
+          <div class="rn-tags">
+            <span class="rn-tag">Company Updates</span>
+            <span class="rn-tag">Events</span>
+            <span class="rn-tag">Awards</span>
+            <span class="rn-tag">Partnership</span>
+            <span class="rn-tag">Robotics</span>
+            <span class="rn-tag">UAV</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rn-section rn-light">
+    <div class="rn-wrap">
+      <div class="rn-grid">
+        <div class="rn-title">
+          <div class="rn-eyebrow">Featured Event</div>
+          <h2>Upcoming Showcase</h2>
+          <h3>近期重點展示活動</h3>
+        </div>
+
+        <div class="rn-copy">
+          <p>
+            Featured Event highlights one representative public activity. General news updates
+            should be maintained in the Google Sites native list below.
+          </p>
+          <p>
+            Featured Event 建議只放一個近期重點活動；一般活動消息請維護在下方
+            Google Sites 原生文章列表，避免每次都修改 HTML。
+          </p>
+        </div>
+      </div>
+
+      <article class="featured-news-card">
+        <div>
+          <span class="rn-pill-blue">Upcoming｜近期活動</span>
+          <h3>TAIROS 2026 Showcase</h3>
+          <h4>2026 台灣機器人與智慧自動化展</h4>
+
+          <p>
+            Robichip plans to showcase its next-generation intelligent motion platform direction,
+            connecting Power SoC, high-power-density drive validation, and robotics / UAV application scenarios.
+          </p>
+
+          <p>
+            羅比芯將展示次世代智慧動力平台方向，連結 Power SoC、高功率密度驅動驗證，
+            以及機器人與無人機應用情境。
+          </p>
+
+          <div class="rn-buttons">
+            <a class="rn-btn primary" href="https://www.robichip.com/news-events/2026-TAIROS" target="_blank">Read Event Update</a>
+            <a class="rn-btn" href="https://www.robichip.com/partnership" target="_blank">Discuss Partnership</a>
+          </div>
+        </div>
+
+        <div>
+          <span class="rn-pill-light">Event Focus</span>
+
+          <div class="news-highlight-grid">
+            <div class="news-highlight">
+              <strong>Power SoC</strong>
+              <span>High-power-density intelligent motion platform</span>
+            </div>
+
+            <div class="news-highlight">
+              <strong>RobiThrust</strong>
+              <span>UAV propulsion and motor-driver validation</span>
+            </div>
+
+            <div class="news-highlight">
+              <strong>Robotics</strong>
+              <span>Motion control and actuator system opportunities</span>
+            </div>
+
+            <div class="news-highlight">
+              <strong>Partners</strong>
+              <span>System, packaging, material, and application partners</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="rn-section rn-dark">
+    <div class="rn-wrap">
+      <div class="rn-grid">
+        <div class="rn-title">
+          <div class="rn-eyebrow">News Categories</div>
+          <h2>What We Share</h2>
+          <h3>活動消息分類</h3>
+        </div>
+
+        <div class="rn-copy">
+          <p>
+            News & Events is organized around Robichip’s external milestones:
+            exhibitions, technology partnerships, awards, public talks, and company updates.
+          </p>
+          <p>
+            活動消息頁面聚焦羅比芯對外里程碑：展會展示、技術合作、獎項肯定、
+            公開演講與公司更新。
+          </p>
+        </div>
+      </div>
+
+      <div class="category-grid">
+        <article class="category-card">
+          <span class="rn-pill-dark">Showcase</span>
+          <h4>Exhibitions & Demo</h4>
+          <h5>展會與技術展示</h5>
+          <p>
+            Public showcases of RobiSoC, RobiThrust, RobiDev, and intelligent motion platform demos.
+          </p>
+        </article>
+
+        <article class="category-card">
+          <span class="rn-pill-dark">Partnership</span>
+          <h4>Strategic Collaboration</h4>
+          <h5>策略合作與 MOU</h5>
+          <p>
+            Partnership updates with material, packaging, system, robotics, UAV, and industrial partners.
+          </p>
+        </article>
+
+        <article class="category-card">
+          <span class="rn-pill-dark">Recognition</span>
+          <h4>Awards & Programs</h4>
+          <h5>獎項與計畫參與</h5>
+          <p>
+            Awards, innovation programs, startup showcases, and public recognition related to Robichip’s platform.
+          </p>
+        </article>
+
+        <article class="category-card">
+          <span class="rn-pill-dark">Forum</span>
+          <h4>Talks & Industry Forums</h4>
+          <h5>演講與產業論壇</h5>
+          <p>
+            Public talks and forum participation on Physical AI, robotics, UAVs, and high-power-density motion.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section id="robichip-news-events" class="rn-news">
+  <style>
+    .rn-news,
+    .rn-news * {
+      box-sizing: border-box;
+    }
+
+    .rn-news {
+      position: relative;
+      overflow: hidden;
+
+      width: 100%;
+
+      font-family:
+        Inter,
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        Arial,
+        sans-serif;
+
+      color: #f8fbff;
+
+      background:
+        linear-gradient(
+          rgba(92, 196, 255, 0.035) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(92, 196, 255, 0.035) 1px,
+          transparent 1px
+        ),
+        radial-gradient(
+          circle at 90% 5%,
+          rgba(34, 211, 238, 0.20),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 8% 96%,
+          rgba(37, 99, 235, 0.20),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #04111e 0%,
+          #071b2f 52%,
+          #0b3154 100%
+        );
+
+      background-size:
+        34px 34px,
+        34px 34px,
+        auto,
+        auto,
+        auto;
+
+      border: 1px solid rgba(126, 211, 255, 0.18);
+      border-radius: 28px;
+
+      padding: 54px 40px 42px;
+    }
+
+    .rn-news-inner {
+      position: relative;
+      z-index: 1;
+
+      width: 100%;
+      max-width: 1240px;
+
+      margin: 0 auto;
+    }
+
+    /* Header */
+
+    .rn-news-head {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 42px;
+      align-items: end;
+    }
+
+    .rn-news-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-bottom: 16px;
+
+      color: #65d8ff;
+
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .rn-news-eyebrow::before {
+      content: "";
+
+      display: block;
+
+      width: 30px;
+      height: 2px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #65d8ff,
+          transparent
+        );
+    }
+
+    .rn-news-title h2 {
+      margin: 0;
+
+      color: #ffffff;
+
+      font-size: clamp(36px, 5vw, 60px);
+      line-height: 1.05;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rn-news-title h3 {
+      margin: 14px 0 0;
+
+      color: #d9ecff;
+
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.3;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rn-news-intro p {
+      margin: 0 0 11px;
+
+      color: #b9cad8;
+
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    /* Featured event */
+
+    .rn-featured {
+      display: grid;
+      grid-template-columns: 135px minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+
+      margin-top: 32px;
+      padding: 26px;
+
+      border: 1px solid rgba(101, 216, 255, 0.40);
+      border-radius: 24px;
+
+      background:
+        radial-gradient(
+          circle at 92% 5%,
+          rgba(34, 211, 238, 0.16),
+          transparent 32%
+        ),
+        linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.18),
+          rgba(255, 255, 255, 0.075)
+        );
+
+      box-shadow:
+        0 24px 48px rgba(0, 0, 0, 0.18);
+    }
+
+    .rn-date-box {
+      min-height: 132px;
+      padding: 17px 14px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid rgba(101, 216, 255, 0.28);
+      border-radius: 18px;
+
+      background: rgba(4, 17, 30, 0.34);
+
+      text-align: center;
+    }
+
+    .rn-date-year {
+      color: #8fcde7;
+
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+    }
+
+    .rn-date-month {
+      margin-top: 10px;
+
+      color: #65d8ff;
+
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+    }
+
+    .rn-date-day {
+      margin-top: 4px;
+
+      color: #ffffff;
+
+      font-size: 42px;
+      line-height: 1;
+      font-weight: 950;
+      letter-spacing: -0.05em;
+    }
+
+    .rn-featured-content {
+      min-width: 0;
+    }
+
+    .rn-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+
+      margin-bottom: 11px;
+    }
+
+    .rn-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+
+      padding: 7px 10px;
+
+      border: 1px solid rgba(101, 216, 255, 0.30);
+      border-radius: 999px;
+
+      color: #bdeeff;
+      background: rgba(34, 211, 238, 0.10);
+
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .rn-badge.upcoming::before {
+      content: "";
+
+      width: 7px;
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: #65f1ff;
+
+      box-shadow:
+        0 0 0 4px rgba(101, 241, 255, 0.12);
+    }
+
+    .rn-category {
+      color: #98adbd;
+
+      font-size: 12px;
+      line-height: 1.3;
+      font-weight: 800;
+    }
+
+    .rn-featured h4 {
+      margin: 0;
+
+      color: #ffffff;
+
+      font-size: clamp(25px, 3vw, 35px);
+      line-height: 1.18;
+      letter-spacing: -0.04em;
+      font-weight: 950;
+    }
+
+    .rn-featured h5 {
+      margin: 7px 0 0;
+
+      color: #a9d2e7;
+
+      font-size: 17px;
+      line-height: 1.45;
+      font-weight: 850;
+    }
+
+    .rn-featured p {
+      max-width: 760px;
+
+      margin: 14px 0 0;
+
+      color: #b9cad8;
+
+      font-size: 15px;
+      line-height: 1.72;
+    }
+
+    .rn-featured p.rn-zh {
+      margin-top: 6px;
+
+      color: #a8bdcc;
+    }
+
+    .rn-featured-action {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .rn-primary-btn {
+      min-height: 47px;
+      padding: 13px 18px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 0;
+      border-radius: 999px;
+
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #2563eb,
+          #0ea5e9
+        );
+
+      text-align: center;
+      text-decoration: none;
+
+      font-size: 13px;
+      line-height: 1.35;
+      font-weight: 900;
+      white-space: nowrap;
+
+      box-shadow:
+        0 14px 28px rgba(37, 99, 235, 0.30);
+
+      transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+    }
+
+    .rn-primary-btn:hover {
+      transform: translateY(-1px);
+
+      box-shadow:
+        0 18px 34px rgba(37, 99, 235, 0.38);
+    }
+
+    
+/* Latest announcement */
+.rn-announcement {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr) auto;
+  gap: 22px;
+  align-items: center;
+  margin-top: 20px;
+  padding: 24px;
+  border: 1px solid rgba(101, 216, 255, 0.32);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 92% 10%, rgba(34, 211, 238, 0.13), transparent 34%),
+    linear-gradient(135deg, rgba(37, 99, 235, 0.14), rgba(255, 255, 255, 0.055));
+}
+.rn-announcement-date {
+  min-height: 104px;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(101, 216, 255, 0.24);
+  border-radius: 17px;
+  background: rgba(4, 17, 30, 0.30);
+  text-align: center;
+}
+.rn-announcement-date span:first-child {
+  color: #8fcde7;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+}
+.rn-announcement-date span:last-child {
+  margin-top: 8px;
+  color: #ffffff;
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 950;
+  letter-spacing: -0.04em;
+}
+.rn-announcement h4 {
+  margin: 11px 0 0;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+  font-weight: 950;
+}
+.rn-announcement h5 {
+  margin: 6px 0 0;
+  color: #a7cde1;
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 850;
+}
+.rn-announcement p {
+  margin: 12px 0 0;
+  color: #b7c8d5;
+  font-size: 14px;
+  line-height: 1.68;
+}
+.rn-announcement p.rn-zh {
+  margin-top: 5px;
+  color: #9fb5c5;
+}
+.rn-announcement-action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media (max-width: 760px) {
+  .rn-announcement { grid-template-columns: 92px minmax(0, 1fr); }
+  .rn-announcement-action { grid-column: 1 / -1; justify-content: flex-start; }
+}
+@media (max-width: 560px) {
+  .rn-announcement { grid-template-columns: 1fr; padding: 22px; }
+  .rn-announcement-date { width: 104px; min-height: 92px; }
+  .rn-announcement h4 { font-size: 21px; }
+  .rn-announcement p { font-size: 15px; }
+  .rn-announcement-action .rn-primary-btn { width: 100%; }
+}
+
+/* News cards */
+
+    .rn-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+
+      margin-top: 20px;
+    }
+
+    .rn-event-card {
+      min-height: 355px;
+      padding: 24px;
+
+      display: flex;
+      flex-direction: column;
+
+      border: 1px solid rgba(186, 223, 245, 0.15);
+      border-radius: 22px;
+
+      background: rgba(255, 255, 255, 0.065);
+
+      box-shadow:
+        0 18px 38px rgba(0, 0, 0, 0.13);
+
+      transition:
+        transform 0.18s ease,
+        border-color 0.18s ease,
+        background 0.18s ease;
+    }
+
+    .rn-event-card:hover {
+      transform: translateY(-2px);
+
+      border-color: rgba(101, 216, 255, 0.34);
+      background: rgba(255, 255, 255, 0.085);
+    }
+
+    .rn-card-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .rn-card-type {
+      display: inline-flex;
+      width: fit-content;
+
+      padding: 7px 10px;
+
+      border: 1px solid rgba(101, 216, 255, 0.25);
+      border-radius: 999px;
+
+      color: #90dcfa;
+      background: rgba(34, 211, 238, 0.08);
+
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .rn-card-date {
+      color: #9fb3c2;
+
+      font-size: 12px;
+      line-height: 1.3;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .rn-event-card h4 {
+      margin: 21px 0 0;
+
+      color: #ffffff;
+
+      font-size: 22px;
+      line-height: 1.3;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rn-event-card h5 {
+      margin: 7px 0 0;
+
+      color: #a7cde1;
+
+      font-size: 16px;
+      line-height: 1.45;
+      font-weight: 850;
+    }
+
+    .rn-event-card p {
+      margin: 15px 0 0;
+
+      color: #b7c8d5;
+
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .rn-event-card p.rn-zh {
+      margin-top: 6px;
+
+      color: #9fb5c5;
+    }
+
+    .rn-card-action {
+      margin-top: auto;
+      padding-top: 21px;
+    }
+
+    .rn-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      color: #65d8ff;
+
+      text-decoration: none;
+
+      font-size: 13px;
+      line-height: 1.4;
+      font-weight: 900;
+    }
+
+    .rn-card-link::after {
+      content: "→";
+
+      transition:
+        transform 0.18s ease;
+    }
+
+    .rn-card-link:hover {
+      color: #ffffff;
+    }
+
+    .rn-card-link:hover::after {
+      transform: translateX(3px);
+    }
+
+    .rn-primary-btn:focus-visible,
+    .rn-card-link:focus-visible {
+      outline: 3px solid rgba(101, 216, 255, 0.30);
+      outline-offset: 3px;
+    }
+
+    /* Footer statement */
+
+    .rn-news-footer {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 14px;
+      align-items: center;
+
+      margin-top: 20px;
+      padding: 17px 19px;
+
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      border-radius: 17px;
+
+      background: rgba(0, 0, 0, 0.13);
+    }
+
+    .rn-news-footer-mark {
+      width: 34px;
+      height: 34px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid rgba(101, 216, 255, 0.26);
+      border-radius: 11px;
+
+      color: #65d8ff;
+      background: rgba(34, 211, 238, 0.08);
+
+      font-size: 15px;
+      font-weight: 950;
+    }
+
+    .rn-news-footer p {
+      margin: 0;
+
+      color: #92aaba;
+
+      font-size: 12.5px;
+      line-height: 1.65;
+    }
+
+    /* Tablet */
+
+    @media (max-width: 980px) {
+      .rn-news-head {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+
+      .rn-featured {
+        grid-template-columns: 110px minmax(0, 1fr);
+      }
+
+      .rn-featured-action {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+      }
+
+      .rn-date-box {
+        min-height: 115px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .rn-card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rn-event-card {
+        min-height: auto;
+      }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 560px) {
+      .rn-news {
+        padding: 39px 22px 30px;
+        border-radius: 22px;
+      }
+
+      .rn-news-intro p {
+        font-size: 15px;
+      }
+
+      .rn-featured {
+        grid-template-columns: 1fr;
+        padding: 22px;
+      }
+
+      .rn-date-box {
+        width: 110px;
+        min-height: 106px;
+      }
+
+      .rn-date-day {
+        font-size: 36px;
+      }
+
+      .rn-featured h4 {
+        font-size: 27px;
+      }
+
+      .rn-featured p,
+      .rn-event-card p {
+        font-size: 15px;
+      }
+
+      .rn-primary-btn {
+        width: 100%;
+      }
+
+      .rn-event-card {
+        padding: 22px;
+      }
+
+      .rn-card-top {
+        flex-direction: column;
+        gap: 9px;
+      }
+
+      .rn-event-card h4 {
+        margin-top: 17px;
+        font-size: 21px;
+      }
+
+      .rn-news-footer {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <div class="rn-news-inner">
+
+    <!-- Header -->
+    <div class="rn-news-head">
+
+      <div class="rn-news-title">
+
+        <div class="rn-news-eyebrow">
+          Newsroom
+        </div>
+
+        <h2>
+          Latest News & Events
+        </h2>
+
+        <h3>
+          最新活動消息
+        </h3>
+
+      </div>
+
+      <div class="rn-news-intro">
+
+        <p>
+          Follow RobiChip’s company updates, public showcases,
+          technology milestones, strategic partnerships,
+          and industry engagements.
+        </p>
+
+        <p>
+          掌握羅比芯的公司動態、公開展示、技術里程碑、
+          策略合作與產業交流。
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- Featured upcoming event -->
+    <article class="rn-featured">
+
+      <time class="rn-date-box" datetime="2026-08-19">
+
+        <span class="rn-date-year">
+          2026
+        </span>
+
+        <span class="rn-date-month">
+          AUG
+        </span>
+
+        <span class="rn-date-day">
+          19
+        </span>
+
+      </time>
+
+      <div class="rn-featured-content">
+
+        <div class="rn-meta">
+
+          <span class="rn-badge upcoming">
+            Upcoming
+          </span>
+
+          <span class="rn-category">
+            Exhibition · Taipei
+          </span>
+
+        </div>
+
+        <h4>
+          TAIROS 2026
+        </h4>
+
+        <h5>
+          台灣機器人與智慧自動化展
+        </h5>
+
+        <p>
+          RobiChip will showcase its next-generation intelligent-motion
+          platform direction for robotics, UAVs, and high-power-density
+          drive applications.
+        </p>
+
+        <p class="rn-zh">
+          羅比芯將展示面向機器人、無人機與高功率密度驅動應用的
+          下一代智慧動力平台方向。
+        </p>
+
+      </div>
+
+      <div class="rn-featured-action">
+
+        <a
+          class="rn-primary-btn"
+          href="https://www.robichip.com/news-events/2026-TAIROS"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Read more about RobiChip at TAIROS 2026"
+        >
+          View Event Details
+        </a>
+
+      </div>
+
+    </article>
+
+    
+<!-- Latest announcement: SEMICON Taiwan 2026 -->
+<article class="rn-announcement">
+  <time class="rn-announcement-date" datetime="2026-07-31">
+    <span>2026 · JUL</span>
+    <span>31</span>
+  </time>
+  <div class="rn-announcement-content">
+    <div class="rn-meta">
+      <span class="rn-badge upcoming">Accepted Speaker</span>
+      <span class="rn-category">SEMICON Taiwan · Silicon Startups Stage</span>
+    </div>
+    <h4>RobiChip Selected to Speak at SEMICON Taiwan 2026</h4>
+    <h5>羅比芯獲選為 SEMICON Taiwan 2026 Silicon Startups Stage 講者</h5>
+    <p>RobiChip will present “Semiconductor-Defined Motion: High-Power-Density Motor Drive Modules for Robotics and UAVs” at the Silicon Startups Stage.</p>
+    <p class="rn-zh">羅比芯將於 Silicon Startups Stage 分享半導體定義動力平台，連結高功率密度馬達驅動、機器人與無人機應用。</p>
+  </div>
+  <div class="rn-announcement-action">
+    <a class="rn-primary-btn" href="https://robichip-homepage.robichip-ai-8830.chatgpt.site/semicon-taiwan-2026" target="_blank" rel="noopener noreferrer" aria-label="View RobiChip SEMICON Taiwan 2026 event details">View Event Details</a>
+  </div>
+</article>
+
+<!-- News grid -->
+    <div class="rn-card-grid">
+
+      <!-- Taichung UAV Forum -->
+      <article class="rn-event-card">
+
+        <div class="rn-card-top">
+
+          <span class="rn-card-type">
+            Forum
+          </span>
+
+          <time class="rn-card-date" datetime="2026-07-02">
+            2026.07.02
+          </time>
+
+        </div>
+
+        <h4>
+          Leading 2026
+        </h4>
+
+        <h5>
+          臺中無人載具產業與海外商機論壇
+        </h5>
+
+        <p>
+          RobiChip joined the forum to share perspectives on Physical AI,
+          UAV propulsion, and high-power-density motion platforms.
+        </p>
+
+        <p class="rn-zh">
+          羅比芯於論壇中分享 Physical AI、無人機推進與
+          高功率密度智慧動力平台的產業觀點。
+        </p>
+
+        <div class="rn-card-action">
+
+          <a
+            class="rn-card-link"
+            href="https://www.robichip.com/news-events/news-events-TaiChung-UAV"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read Forum Highlights
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- COMPUTEX InnoVEX -->
+      <article class="rn-event-card">
+
+        <div class="rn-card-top">
+
+          <span class="rn-card-type">
+            Showcase
+          </span>
+
+          <time class="rn-card-date" datetime="2026-06-02">
+            2026.06.02
+          </time>
+
+        </div>
+
+        <h4>
+          COMPUTEX InnoVEX 2026
+        </h4>
+
+        <h5>
+          InnoVEX 新創展示牆
+        </h5>
+
+        <p>
+          RobiChip was selected for the InnoVEX showcase wall,
+          presenting RobiSoC, RobiThrust, and its intelligent-power
+          platform roadmap.
+        </p>
+
+        <p class="rn-zh">
+          羅比芯入選 COMPUTEX InnoVEX 展示牆，
+          展示 RobiSoC、RobiThrust 與智慧動力平台發展方向。
+        </p>
+
+        <div class="rn-card-action">
+
+          <a
+            class="rn-card-link"
+            href="https://www.robichip.com/news-events/news-events-computex-InnoVEX"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Showcase
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- Swancor partnership -->
+      <article class="rn-event-card">
+
+        <div class="rn-card-top">
+
+          <span class="rn-card-type">
+            Partnership
+          </span>
+
+          <time class="rn-card-date" datetime="2026-05-14">
+            2026.05.14
+          </time>
+
+        </div>
+
+        <h4>
+          Swancor × RobiChip
+        </h4>
+
+        <h5>
+          策略技術合作備忘錄簽署
+        </h5>
+
+        <p>
+          RobiChip and Swancor Holding signed a strategic technology MOU
+          focused on advanced packaging materials, thermal engineering,
+          robotics, and high-power-density motion systems.
+        </p>
+
+        <p class="rn-zh">
+          羅比芯與上緯投控啟動策略合作，聚焦先進封裝材料、
+          熱管理、機器人與高功率密度動力系統。
+        </p>
+
+        <div class="rn-card-action">
+
+          <a
+            class="rn-card-link"
+            href="https://www.robichip.com/news-events/news-events-swancor-MOU"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore the Partnership
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- Best AI Awards -->
+      <article class="rn-event-card">
+
+        <div class="rn-card-top">
+
+          <span class="rn-card-type">
+            Award
+          </span>
+
+          <time class="rn-card-date" datetime="2026-04-25">
+            2026.04.25
+          </time>
+
+        </div>
+
+        <h4>
+          2026 Best AI Awards
+        </h4>
+
+        <h5>
+          IC 設計新創及中小企業組佳作
+        </h5>
+
+        <p>
+          RobiChip received recognition for its high-power-density
+          Power SoC platform for intelligent robotics and UAV
+          motion-control applications.
+        </p>
+
+        <p class="rn-zh">
+          羅比芯以智慧機器人與無人機動力控制 Power SoC 平台，
+          獲得 IC 設計類別肯定。
+        </p>
+
+        <div class="rn-card-action">
+
+          <a
+            class="rn-card-link"
+            href="https://www.robichip.com/news-events/news-events-best-AI-Awards"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read Award Story
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="rn-news-footer">
+
+      <div class="rn-news-footer-mark" aria-hidden="true">
+        R
+      </div>
+
+      <p>
+        RobiChip news and event pages document public activities,
+        technology milestones, partnerships, and industry engagement.
+        羅比芯活動頁面記錄公開展示、技術進展、合作里程碑與產業交流。
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="robi-news-cta">
+  <style>
+    .robi-news-cta {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      box-sizing: border-box;
+    }
+
+    .rnc-section {
+      border-radius: 28px;
+      padding: 46px 38px;
+      margin-bottom: 28px;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+    }
+
+    .rnc-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .rnc-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rnc-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rnc-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rnc-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rnc-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rnc-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .rnc-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(37, 99, 235, 0.18);
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: #ffffff;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
+    }
+
+    .rnc-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #ffffff;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.22);
+    }
+
+    .rnc-note {
+      margin-top: 18px;
+      color: #64748b;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 900px) {
+      .rnc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .rnc-section {
+        padding: 34px 22px;
+      }
+    }
+  </style>
+
+  <section class="rnc-section">
+    <div class="rnc-grid">
+      <div class="rnc-title">
+        <div class="rnc-eyebrow">Media & Partnership</div>
+        <h2>Connect with Robichip</h2>
+        <h3>媒體、活動與合作洽詢</h3>
+      </div>
+
+      <div class="rnc-copy">
+        <p>
+          For media inquiries, event invitations, technical collaboration, or partnership discussions,
+          please contact Robichip through the official partnership channel.
+        </p>
+        <p>
+          若有媒體採訪、活動邀約、技術合作或策略夥伴洽談需求，歡迎透過官方合作管道與羅比芯聯繫。
+        </p>
+
+        <div class="rnc-buttons">
+          <a class="rnc-btn primary" href="https://www.robichip.com/partnership" target="_blank">Partnership Inquiry</a>
+          <a class="rnc-btn" href="mailto:bd@robichip.com">bd@robichip.com</a>
+          <a class="rnc-btn" href="mailto:contact@robichip.com">contact@robichip.com</a>
+        </div>
+
+        <div class="rnc-note">
+          Public website content is for general information only. Detailed technical specifications,
+          raw validation data, and partner-only materials may require official discussion or NDA.
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<footer class="robi-footer">
+  <style>
+    .robi-footer {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: #050b14;
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 42px 38px 26px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .robi-footer::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -120px;
+      top: -130px;
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 70%);
+      pointer-events: none;
+    }
+
+    .footer-wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.8fr 0.8fr 0.9fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .footer-brand h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+      font-weight: 950;
+    }
+
+    .footer-brand h3 {
+      margin: 8px 0 0;
+      color: #d9ecff;
+      font-size: 18px;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+      font-weight: 850;
+    }
+
+    .footer-brand p {
+      margin: 16px 0 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    .footer-col h4 {
+      margin: 0 0 13px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-link {
+      display: block;
+      color: #d9ecff;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.55;
+      margin: 0 0 9px;
+      font-weight: 700;
+    }
+
+    .footer-link:hover {
+      color: #65f1ff;
+    }
+
+    .footer-info {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer-address h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 17px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      font-weight: 900;
+    }
+
+    .footer-address p {
+      margin: 0 0 8px;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .footer-address a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .footer-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .footer-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(101, 241, 255, 0.09);
+      border: 1px solid rgba(101, 241, 255, 0.20);
+      color: #dffcff;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .footer-bottom {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+      justify-content: space-between;
+      color: #8fa1b8;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-bottom a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-info {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-badges {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .robi-footer {
+        padding: 34px 24px 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        display: block;
+      }
+
+      .footer-bottom div {
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>RobiChip Technology Co., Ltd.</h2>
+        <h3>羅比芯科技股份有限公司</h3>
+        <p>
+          Power SoC platform for intelligent machines. Robichip integrates Power SoC,
+          RobiDev, RobiThrust, RobiAgent, and validation workflows for robotics,
+          UAVs, and high-power-density motion systems.
+        </p>
+        <p>
+          羅比芯聚焦 Power + AI + Robotics，建構從 Power SoC、開發驗證、
+          無人機推進平台到 AI-assisted design-in 的智慧動力半導體平台。
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a class="footer-link" href="https://www.robichip.com/robisoc" target="_blank">RobiSoC</a>
+        <a class="footer-link" href="https://www.robichip.com/robidev" target="_blank">RobiDev</a>
+        <a class="footer-link" href="https://www.robichip.com/robithrust" target="_blank">RobiThrust</a>
+        <a class="footer-link" href="https://www.robichip.com/robitorque" target="_blank">RobiTorque</a>
+        <a class="footer-link" href="https://www.robichip.com/robiagent" target="_blank">RobiAgent</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a class="footer-link" href="https://www.robichip.com/technology-insights" target="_blank">Technology Insights</a>
+        <a class="footer-link" href="https://www.robichip.com/news-events" target="_blank">News & Events</a>
+        <a class="footer-link" href="https://www.robichip.com/robilab" target="_blank">RobiLab Validation</a>
+        <a class="footer-link" href="https://www.youtube.com/channel/UCqp-CDSVPCX8TfYT_aVScpg" target="_blank">Youtube channel</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Partnership</a>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Technical Discussion</a>
+        <a class="footer-link" href="https://www.robichip.com/join-us" target="_blank">Join Us</a>
+        <a class="footer-link" href="tel:+886277015728">+886-2-7701-5728</a>
+        <a class="footer-link" href="mailto:contact@robichip.com">contact@robichip.com</a>
+        <a class="footer-link" href="mailto:bd@robichip.com">bd@robichip.com</a>
+      </div>
+    </div>
+
+    <div class="footer-info">
+      <div class="footer-address">
+        <h4>Company Information｜公司資訊</h4>
+        <p><strong>RobiChip Technology Co., Ltd.｜羅比芯科技股份有限公司</strong></p>
+
+        <p>
+          National Taiwan University of Science and Technology, International Building 11F, Room 1105<br>
+          No. 43, Sec. 4, Keelung Rd., Da’an Dist., Taipei City, Taiwan
+        </p>
+
+        <p>
+          台北市大安區基隆路四段 43 號<br>
+          國立臺灣科技大學 國際大樓 11F 1105 室
+        </p>
+
+        <p>
+          Tel｜電話：
+          <a href="tel:+886277015728">+886-2-7701-5728</a><br>
+          General Contact｜一般聯絡：
+          <a href="mailto:contact@robichip.com">contact@robichip.com</a><br>
+          Business Development｜商務合作：
+          <a href="mailto:bd@robichip.com">bd@robichip.com</a>
+        </p>
+      </div>
+
+      <div class="footer-badges">
+        <span class="footer-badge">Power SoC</span>
+        <span class="footer-badge">Robotics</span>
+        <span class="footer-badge">UAV</span>
+        <span class="footer-badge">Advanced Packaging</span>
+        <span class="footer-badge">Thermal Path</span>
+        <span class="footer-badge">Design-in</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        © 2026 RobiChip Technology Co., Ltd. All rights reserved.
+      </div>
+      <div>
+        Public website content is for general information only. Detailed specifications are subject to official release, NDA, or partner discussion.
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- NEWS EVENTS SOURCE BLOCKS -->
