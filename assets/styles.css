@@ -102,6 +102,9 @@ body.google-reference .robitorque-source-intro { width: min(957px, calc(100% - 4
 body.google-reference .robitorque-source-intro h1 { margin: 0 0 20px; color: #95205c; font-size: 28px; font-weight: 300; line-height: 1.3; }
 body.google-reference .robitorque-source-intro p { margin: 0 0 18px; font-size: 16px; line-height: 1.75; }
 body.google-reference .robitorque-source-intro img { display: block; width: 100%; height: auto; margin-top: 28px; }
+body.google-reference .home-source-hero { width: min(1147px, calc(100% - 48px)); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) 365px; gap: 49px; align-items: start; }
+body.google-reference .home-source-hero > .google-source-block { width: auto; margin: 0; }
+body.google-reference .home-source-media img { display: block; width: 365px; max-width: 100%; height: auto; }
 @media (max-width: 900px) {
   body.google-reference .nav-shell { width: min(100% - 32px, 1304px); min-height: 66px; }
   body.google-reference .brand img { width: 164px; height: 38px; }
@@ -121,6 +124,8 @@ body.google-reference .robitorque-source-intro img { display: block; width: 100%
   body.google-reference .robiagent-standard-copy img { width: 100%; }
   body.google-reference .robilab-source-intro { width: min(100% - 32px, 640px); }
   body.google-reference .robitorque-source-intro { width: min(100% - 32px, 640px); }
+  body.google-reference .home-source-hero { width: min(100% - 32px, 640px); grid-template-columns: 1fr; gap: 24px; }
+  body.google-reference .home-source-media { text-align: center; }
 }
 
 a { color: inherit; text-decoration: none; }

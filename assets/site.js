@@ -685,8 +685,8 @@
     ${hero({eyebrow:'404',title:'Page Not Found',zh:'找不到此頁面',lead:'The requested page is not part of the migrated public website.',sublead:'Please use the navigation or return to the homepage.',actions:[{href:'/',label:'Return home'},{href:CONTACT,label:'Contact RobiChip'}]})}`;
 
   const routeTable = {
-    '/': {title:'Power SoC Platform for Intelligent Machines', render:homePage},
-    '/首頁': {title:'Power SoC Platform for Intelligent Machines', render:homePage},
+    '/': {title:'Power SoC Platform for Intelligent Machines', render:() => sourceRoute('/assets/source/home.html?v=frozen-reference-v1', 'home'), reference:true},
+    '/首頁': {title:'Power SoC Platform for Intelligent Machines', render:() => sourceRoute('/assets/source/home.html?v=frozen-reference-v1', 'home'), reference:true},
     '/robisoc': {title:'RobiSoC', render:() => sourceRoute('/assets/source/robisoc.html?v=frozen-reference-v7', 'robisoc'), reference:true},
     '/robidev': {title:'RobiDev', render:() => sourceRoute('/assets/source/robidev.html?v=frozen-reference-v1', 'robidev'), reference:true},
     '/robithrust': {title:'RobiThrust', render:() => sourceRoute('/assets/source/robithrust.html?v=frozen-reference-v1', 'robithrust'), reference:true},
@@ -885,6 +885,15 @@
           intro.className = 'robitorque-source-intro';
           intro.innerHTML = '<h1>RobiTorque | Robotics Actuator Validation Direction</h1><p>RobiTorque extends Robichip’s Power SoC, motor-drive, and thermal-path validation logic from UAV propulsion to robotics actuators, joint motors, and servo modules.</p><p>RobiTorque 將羅比芯在 Power SoC、馬達驅動與熱路徑驗證上的能力，從無人機推進延伸至機器人致動器、關節馬達與伺服模組。</p><img src="' + BASE_PATH + '/assets/images/robitorque-elbow-demo-kit.png" alt="RobiTorque Elbow Demo Kit"><img src="' + BASE_PATH + '/assets/images/robitorque-knee-demo-kit.png" alt="RobiTorque Knee Demo Kit">';
           blocks[1]?.before(intro);
+        }
+        if (sourceMount.dataset.sourceLayout === 'home') {
+          const blocks = sourceMount.querySelectorAll(':scope > .google-source-block');
+          const hero = blocks[1];
+          const layout = document.createElement('div');
+          layout.className = 'google-source-block home-source-hero';
+          hero?.before(layout);
+          if (hero) layout.append(hero);
+          layout.insertAdjacentHTML('beforeend', '<aside class="home-source-media"><img src="' + BASE_PATH + '/assets/images/home-hero-reference.jpg" alt="RobiThrust propulsion validation platform"></aside>');
         }
         if (BASE_PATH) {
           sourceMount.querySelectorAll('[href]').forEach((element) => {
