@@ -850,10 +850,10 @@
           const blocks = sourceMount.querySelectorAll(':scope > .google-source-block');
           const highDensity = document.createElement('section');
           highDensity.className = 'robidev-legacy-row robidev-high-density';
-          highDensity.innerHTML = '<figure><img src="\${BASE_PATH}/assets/images/robidev-high-density-reference.jpg" alt="RobiDev High-Density"></figure><div class="robidev-legacy-copy"><h1>RobiDev High-Density</h1><h2>RobiSoC Evaluation &amp; High-Density Motor-Drive Design-in Platform</h2><p>RobiDev-High-density supports RC100 / RobiSoC evaluation, thermal-path review, and high-density motor-drive design-in.</p><p>RobiDev-High-density 支援 RC100 / RobiSoC 評估、熱路徑檢視與高密度馬達驅動導入。</p></div>';
+          highDensity.innerHTML = '<figure><img src="' + BASE_PATH + '/assets/images/robidev-high-density-reference.jpg" alt="RobiDev High-Density"></figure><div class="robidev-legacy-copy"><h1>RobiDev High-Density</h1><h2>RobiSoC Evaluation &amp; High-Density Motor-Drive Design-in Platform</h2><p>RobiDev-High-density supports RC100 / RobiSoC evaluation, thermal-path review, and high-density motor-drive design-in.</p><p>RobiDev-High-density 支援 RC100 / RobiSoC 評估、熱路徑檢視與高密度馬達驅動導入。</p></div>';
           const discrete = document.createElement('section');
           discrete.className = 'robidev-legacy-row robidev-discrete';
-          discrete.innerHTML = '<figure><img src="\${BASE_PATH}/assets/images/robidev-discrete-reference.jpg" alt="RobiDev Discrete"><figcaption>Diameter=30mm, up to 500W</figcaption></figure><div class="robidev-legacy-copy"><h1>RobiDev Discrete</h1><h2>6-Layer Discrete Reference &amp; Validation Platform</h2><p>RobiDev-Discrete is a 6-layer total discrete validation model, corresponding to the RobiSoC M1/G1 SKU architecture in discrete implementation.</p><p>RobiDev-Discrete 為六層板 total discrete 驗證平台，可視為 RobiSoC 之 M1/G1 SKU 架構的分離式實作版本。</p></div>';
+          discrete.innerHTML = '<figure><img src="' + BASE_PATH + '/assets/images/robidev-discrete-reference.jpg" alt="RobiDev Discrete"><figcaption>Diameter=30mm, up to 500W</figcaption></figure><div class="robidev-legacy-copy"><h1>RobiDev Discrete</h1><h2>6-Layer Discrete Reference &amp; Validation Platform</h2><p>RobiDev-Discrete is a 6-layer total discrete validation model, corresponding to the RobiSoC M1/G1 SKU architecture in discrete implementation.</p><p>RobiDev-Discrete 為六層板 total discrete 驗證平台，可視為 RobiSoC 之 M1/G1 SKU 架構的分離式實作版本。</p></div>';
           blocks[1]?.before(highDensity);
           blocks[2]?.before(discrete);
         }
