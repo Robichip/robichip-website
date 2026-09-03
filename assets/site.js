@@ -836,8 +836,8 @@
           layout.append(hero);
           layout.insertAdjacentHTML('beforeend', `
             <aside class="robisoc-hero-media" aria-label="RobiSoC and RobiDev reference images">
-              <figure><img src="https://lh3.googleusercontent.com/sitesv/AG8ngQUmRlX6P77BSr8YJNH0YLU-gDgOWERi0_s6ysoIon-9Q1H5HG1LPaw-I-rI_OvLFFuCQ-2sCzFcVUoEMIJW8Ri8m2acWU0-GctaLJLR0US0VtEC3oLjvzSKq4mcQBvfaA_MVKvfULndlgA_hy6A5ShqsXdiokhX0p4EgtcSnol1bjw2DZyDkOmf_f2JPT6lBVvlpGiLRmBOwH6Pu-WzED1jYFDx8yQIgAKyOSBM=w1280" alt="RobiSoC Power SoC module"><figcaption>RobiSoC = 18.5mm X 22.5mm</figcaption></figure>
-              <figure><img src="https://lh3.googleusercontent.com/sitesv/AG8ngQVrKDKXMhcweji-XwiU6zZbBNXbc7lJmbH-Cv-IMdh64uKsmrzzfFWHOMac6NTVgd-GcUiMWgeBDxoCraNSdQvOKBWzkuSJ8bo629IwnAMrOnwH-XDOKTBxYNWg_rSeEn6Rbr9-v8tIHMiDswlTMlQGk47amOGMIh0Dl1Q46wNve_9R7QO9qWfmydDm2nhWiWNsyF2jhQpcQO85U91H0j6oRc17bSiEEAasZUsmH1k=w1280" alt="RobiDev reference platform"><figcaption>RobiDev diameter = 35mm</figcaption></figure>
+              <figure><img src="${BASE_PATH}/assets/images/robisoc-power-soc-reference.jpg" alt="RobiSoC Power SoC module"><figcaption>RobiSoC = 18.5mm X 22.5mm</figcaption></figure>
+              <figure><img src="${BASE_PATH}/assets/images/robidev-reference.jpg" alt="RobiDev reference platform"><figcaption>RobiDev diameter = 35mm</figcaption></figure>
             </aside>`);
         }
         if (BASE_PATH) {
