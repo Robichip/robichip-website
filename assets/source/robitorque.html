@@ -1,0 +1,1361 @@
+<section class="rq-hero">
+  <style>
+    .rq-hero {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34, 211, 238, 0.28), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 54px 40px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .rq-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rq-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rq-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rq-hero h1 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -0.065em;
+      font-weight: 950;
+    }
+
+    .rq-hero h2 {
+      margin: 18px 0 0;
+      color: #d9ecff;
+      font-size: clamp(24px, 3vw, 36px);
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rq-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rq-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 26px;
+    }
+
+    .rq-tag {
+      padding: 8px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(101, 241, 255, 0.36);
+      background: rgba(101, 241, 255, 0.14);
+      color: #eafcff;
+      font-size: 12px;
+      font-weight: 850;
+      line-height: 1;
+    }
+
+    .rq-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .rq-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #f8fbff;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .rq-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #031120;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37,99,235,0.28);
+    }
+
+    @media (max-width: 900px) {
+      .rq-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rq-hero { padding: 36px 24px; }
+    }
+  </style>
+
+  <div class="rq-grid">
+    <div>
+      <div class="rq-eyebrow">RobiTorque</div>
+      <h1>Robotics Actuator Validation Platform</h1>
+      <h2>機器人致動器驗證平台</h2>
+    </div>
+
+    <div class="rq-copy">
+      <p>
+        RobiTorque is Robichip’s planned robotics actuator validation platform
+        for joint motors, servo modules, and high-torque-density smart motion systems.
+      </p>
+      <p>
+        RobiTorque 是羅比芯規劃中的機器人致動器驗證平台，面向關節馬達、伺服模組
+        與高扭力密度智慧動力系統。
+      </p>
+
+      <div class="rq-tags">
+        <span class="rq-tag">Joint Motor</span>
+        <span class="rq-tag">Servo Module</span>
+        <span class="rq-tag">Torque Density</span>
+        <span class="rq-tag">Thermal Path</span>
+        <span class="rq-tag">RobiDev</span>
+        <span class="rq-tag">RobiLab</span>
+      </div>
+
+      <div class="rq-buttons">
+        <a class="rq-btn primary" href="mailto:bd@robichip.com">Discuss Actuator Pilot</a>
+        <a class="rq-btn" href="https://www.robichip.com/robidev" target="_blank">Start with RobiDev</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rq-why">
+  <style>
+    .rq-why {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    .rq-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rq-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rq-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rq-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rq-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rq-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rq-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .rq-card {
+      background: #ffffff;
+      border: 1px solid rgba(37,99,235,0.12);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 230px;
+      box-shadow: 0 16px 34px rgba(15,23,42,0.07);
+    }
+
+    .rq-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #075985;
+      background: rgba(34,211,238,0.13);
+      border: 1px solid rgba(14,165,233,0.28);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rq-card h4 {
+      margin: 0 0 10px;
+      color: #06111f;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rq-card h5 {
+      margin: 0 0 14px;
+      color: #1e3a8a;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rq-card p {
+      margin: 0;
+      color: #5b6b80;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 1020px) {
+      .rq-grid,
+      .rq-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rq-why { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rq-grid">
+    <div class="rq-title">
+      <div class="rq-eyebrow">Why RobiTorque</div>
+      <h2>Torque Density Becomes the Next System Bottleneck</h2>
+      <h3>扭力密度是機器人致動器的下一個瓶頸</h3>
+    </div>
+
+    <div class="rq-copy">
+      <p>
+        Robotics actuators are constrained by torque density, module volume,
+        thermal path, control integration, and reliability under dynamic load.
+      </p>
+      <p>
+        機器人致動器的瓶頸不只在馬達或控制演算法，而在扭力密度、模組體積、
+        熱路徑、控制整合與動態負載下的可靠度。
+      </p>
+    </div>
+  </div>
+
+  <div class="rq-card-grid">
+    <article class="rq-card">
+      <span class="rq-pill">Torque Density</span>
+      <h4>Higher Torque in Smaller Modules</h4>
+      <h5>更小體積中的更高扭力</h5>
+      <p>
+        Robotics joints and servo modules need compact high-power-density drive solutions
+        to reduce actuator size and integration friction.
+      </p>
+    </article>
+
+    <article class="rq-card">
+      <span class="rq-pill">Thermal Path</span>
+      <h4>Package-to-Structure Heat Flow</h4>
+      <h5>從封裝到結構的熱路徑</h5>
+      <p>
+        Heat must move from power stage and package into the mechanical structure
+        without compromising reliability or control behavior.
+      </p>
+    </article>
+
+    <article class="rq-card">
+      <span class="rq-pill">Control Layer</span>
+      <h4>FOC / Encoder / CANBus / RS-485</h4>
+      <h5>控制介面與韌體整合</h5>
+      <p>
+        Actuator systems require configurable control interfaces, position feedback,
+        current sensing, and application-specific control firmware.
+      </p>
+    </article>
+
+    <article class="rq-card">
+      <span class="rq-pill">Validation</span>
+      <h4>Dynamic Load and T-N Curve</h4>
+      <h5>動態負載與扭力轉速曲線</h5>
+      <p>
+        RobiTorque should move actuator discussion from datasheet assumptions
+        to measurable dynamic-load and thermal validation.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="rq-tracks">
+  <style>
+    .rq-tracks {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34,211,238,0.25), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .rq-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rq-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rq-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rq-title h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rq-title h3 {
+      margin: 14px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rq-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rq-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .rq-card {
+      background: rgba(255,255,255,0.075);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 260px;
+      box-shadow: 0 18px 38px rgba(0,0,0,0.16);
+    }
+
+    .rq-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #f2fdff;
+      background: rgba(34,211,238,0.26);
+      border: 1px solid rgba(101,241,255,0.56);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rq-card h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rq-card h5 {
+      margin: 0 0 14px;
+      color: #d9ecff;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rq-card p {
+      margin: 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .rq-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1020px) {
+      .rq-grid,
+      .rq-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rq-tracks { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rq-grid">
+    <div class="rq-title">
+      <div class="rq-eyebrow">Validation Tracks</div>
+      <h2>Robotics Actuator Validation Tracks</h2>
+      <h3>機器人致動器驗證方向</h3>
+    </div>
+
+    <div class="rq-copy">
+      <p>
+        RobiTorque can be organized into validation tracks for joint actuators,
+        servo modules, compact motion systems, and future dexterous-hand actuation.
+      </p>
+      <p>
+        RobiTorque 可依驗證方向整理為關節致動器、伺服模組、緊湊型運動系統，
+        以及未來靈巧手致動方向。
+      </p>
+    </div>
+  </div>
+
+  <div class="rq-card-grid">
+    <article class="rq-card">
+      <span class="rq-pill">RobiTorque-J</span>
+      <h4>Joint Actuator Validation</h4>
+      <h5>關節致動器驗證</h5>
+      <p>
+        For robot joints, humanoid joints, robot dogs, and compact actuator modules
+        requiring torque density, thermal-path review, and control integration.
+      </p>
+    </article>
+
+    <article class="rq-card">
+      <span class="rq-pill">RobiTorque-S</span>
+      <h4>Servo Module Validation</h4>
+      <h5>伺服模組驗證</h5>
+      <p>
+        For industrial servo, AMR / AGV motion, gimbal, and automation nodes
+        requiring compact drive electronics and measurable system behavior.
+      </p>
+    </article>
+
+    <article class="rq-card">
+      <span class="rq-pill">RobiTorque-G</span>
+      <h4>Gimbal / Compact Motion</h4>
+      <h5>雲台與小型運動控制</h5>
+      <p>
+        For gimbal, pan-tilt, camera-stabilization, and compact robotic motion systems
+        where smooth control and thermal stability are critical.
+      </p>
+    </article>
+
+    <article class="rq-card">
+      <span class="rq-pill">RobiGrip Roadmap</span>
+      <h4>Dexterous Hand Actuation</h4>
+      <h5>靈巧手與緊湊致動路線</h5>
+      <p>
+        Future compact actuation roadmap for dexterous-hand or small-form-factor robotic motion,
+        linked to RobiGrip and lower-power RobiSoC directions.
+      </p>
+    </article>
+  </div>
+
+  <div class="rq-note">
+    Public positioning: RobiTorque is currently a planned actuator validation platform and pilot collaboration track.
+    Detailed configurations will depend on motor type, gear ratio, torque range, control interface, encoder feedback,
+    mechanical structure, and thermal requirements.
+    <br><br>
+    對外定位：RobiTorque 目前為規劃中的致動器驗證平台與 pilot 合作方向。詳細組態將依馬達類型、
+    減速比、扭力範圍、控制介面、encoder feedback、機構結構與熱需求而定。
+  </div>
+</section>
+
+<section class="rq-devlab">
+  <style>
+    .rq-devlab {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    .rq-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rq-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rq-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rq-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rq-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rq-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rq-flow {
+      margin-top: 30px;
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(37,99,235,0.06);
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    .rq-flow h4 {
+      margin: 0 0 16px;
+      color: #06111f;
+      font-size: 23px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rq-flow-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    .rq-step {
+      border-radius: 18px;
+      padding: 16px 12px;
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    .rq-step strong {
+      display: block;
+      color: #06111f;
+      font-size: 14px;
+      line-height: 1.3;
+      margin-bottom: 6px;
+      font-weight: 950;
+    }
+
+    .rq-step span {
+      display: block;
+      color: #64748b;
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .rq-note {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(37,99,235,0.06);
+      border: 1px solid rgba(37,99,235,0.12);
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1020px) {
+      .rq-grid,
+      .rq-flow-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rq-devlab { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rq-grid">
+    <div class="rq-title">
+      <div class="rq-eyebrow">RobiDev + RobiLab</div>
+      <h2>From Motor Drive Evaluation to Actuator Validation</h2>
+      <h3>從馬達驅動評估到致動器驗證</h3>
+    </div>
+
+    <div class="rq-copy">
+      <p>
+        RobiDev provides the early motor-drive evaluation platform, while RobiLab supports
+        dynamic-load, T-N curve, temperature-rise, and board-to-system validation.
+      </p>
+      <p>
+        RobiDev 提供早期馬達驅動評估平台，RobiLab 則支援動態負載、T-N curve、
+        溫升與 board-to-system validation。
+      </p>
+    </div>
+  </div>
+
+  <div class="rq-flow">
+    <h4>RobiTorque Validation Flow｜RobiTorque 驗證流程</h4>
+    <div class="rq-flow-grid">
+      <div class="rq-step">
+        <strong>1. Requirement</strong>
+        <span>torque, speed, voltage, interface</span>
+      </div>
+
+      <div class="rq-step">
+        <strong>2. Motor Drive</strong>
+        <span>RobiDev bring-up and control review</span>
+      </div>
+
+      <div class="rq-step">
+        <strong>3. Dynamic Load</strong>
+        <span>T-N curve, load profile, torque behavior</span>
+      </div>
+
+      <div class="rq-step">
+        <strong>4. Thermal Review</strong>
+        <span>driver, motor, structure heat path</span>
+      </div>
+
+      <div class="rq-step">
+        <strong>5. Design-in Path</strong>
+        <span>RobiSoC RC25 / RC50 / RC75 / RC100 mapping</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rq-note">
+    Recommended first pilot: use RobiDev Gen.1 and RobiLab measurement to validate motor-drive behavior,
+    torque-speed behavior, thermal response, and control interface before committing to RobiSoC customization.
+    <br><br>
+    建議第一個 pilot：先使用 RobiDev Gen.1 與 RobiLab 量測能力，驗證馬達驅動行為、
+    扭力轉速行為、熱反應與控制介面，再進一步評估 RobiSoC 客製化導入。
+  </div>
+</section>
+
+<section class="rq-designin">
+  <style>
+    .rq-designin {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: radial-gradient(circle at 85% 15%, rgba(34,211,238,0.25), transparent 34%),
+                  linear-gradient(135deg, #050b14 0%, #06111f 48%, #0a1f3a 100%);
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .rq-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .rq-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rq-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #65f1ff, transparent);
+      display: inline-block;
+    }
+
+    .rq-title h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(32px, 4.8vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rq-title h3 {
+      margin: 14px 0 0;
+      color: #d9ecff;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rq-copy p {
+      margin: 0 0 12px;
+      color: #b9c7da;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rq-card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .rq-card {
+      background: rgba(255,255,255,0.075);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 24px;
+      padding: 24px;
+      min-height: 230px;
+      box-shadow: 0 18px 38px rgba(0,0,0,0.16);
+    }
+
+    .rq-pill {
+      display: inline-flex;
+      width: fit-content;
+      color: #f2fdff;
+      background: rgba(34,211,238,0.26);
+      border: 1px solid rgba(101,241,255,0.56);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    .rq-card h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 21px;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+      font-weight: 950;
+    }
+
+    .rq-card h5 {
+      margin: 0 0 14px;
+      color: #d9ecff;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 850;
+    }
+
+    .rq-card p {
+      margin: 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 1020px) {
+      .rq-grid,
+      .rq-card-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rq-designin { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rq-grid">
+    <div class="rq-title">
+      <div class="rq-eyebrow">Design-in Path</div>
+      <h2>From Actuator Pilot to RobiSoC Design-in</h2>
+      <h3>從致動器 pilot 走向 RobiSoC design-in</h3>
+    </div>
+
+    <div class="rq-copy">
+      <p>
+        RobiTorque is designed to help customers validate actuator requirements first,
+        then map the system into the appropriate RobiSoC power class and control-layer strategy.
+      </p>
+      <p>
+        RobiTorque 的目標是先協助客戶驗證致動器需求，再將系統映射到合適的 RobiSoC
+        功率等級與控制層策略。
+      </p>
+    </div>
+  </div>
+
+  <div class="rq-card-grid">
+    <article class="rq-card">
+      <span class="rq-pill">RC25</span>
+      <h4>Compact Actuation</h4>
+      <h5>小型致動與教育平台</h5>
+      <p>
+        Suitable for compact motion, small actuators, education kits,
+        and lower-power robotic modules.
+      </p>
+    </article>
+
+    <article class="rq-card">
+      <span class="rq-pill">RC50</span>
+      <h4>Mid-power Servo</h4>
+      <h5>中功率伺服與關節模組</h5>
+      <p>
+        Suitable for servo modules, AMR / AGV motion, gimbal,
+        and mid-power robotic actuation.
+      </p>
+    </article>
+
+    <article class="rq-card">
+      <span class="rq-pill">RC75</span>
+      <h4>High-dynamic Actuator</h4>
+      <h5>高動態致動器</h5>
+      <p>
+        Suitable for high-dynamic joints, industrial motion,
+        and higher torque-density robotic modules.
+      </p>
+    </article>
+
+    <article class="rq-card">
+      <span class="rq-pill">RC100</span>
+      <h4>1000 W-class Indicator</h4>
+      <h5>高功率密度指標模組</h5>
+      <p>
+        Suitable for high-power-density joint actuator validation,
+        advanced thermal-path review, and RobiSoC design-in discussion.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="rq-cta">
+  <style>
+    .rq-cta {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff 0%, #f7fbff 48%, #eef6ff 100%);
+      color: #071426;
+      border-radius: 28px;
+      padding: 50px 38px;
+      box-sizing: border-box;
+      border: 1px solid rgba(37,99,235,0.12);
+    }
+
+    .rq-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .rq-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .rq-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, #2563eb, #22d3ee);
+      display: inline-block;
+    }
+
+    .rq-title h2 {
+      margin: 0;
+      color: #06111f;
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 1.06;
+      letter-spacing: -0.055em;
+      font-weight: 950;
+    }
+
+    .rq-title h3 {
+      margin: 14px 0 0;
+      color: #1e3a8a;
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.28;
+      letter-spacing: -0.04em;
+      font-weight: 850;
+    }
+
+    .rq-copy p {
+      margin: 0 0 12px;
+      color: #526174;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .rq-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .rq-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(37,99,235,0.18);
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      background: #ffffff;
+      box-shadow: 0 12px 26px rgba(15,23,42,0.06);
+    }
+
+    .rq-btn.primary {
+      background: linear-gradient(135deg, #2563eb, #22d3ee);
+      color: #ffffff;
+      border: 0;
+      box-shadow: 0 14px 28px rgba(37,99,235,0.22);
+    }
+
+    .rq-note {
+      margin-top: 22px;
+      color: #64748b;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 900px) {
+      .rq-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .rq-cta { padding: 34px 22px; }
+    }
+  </style>
+
+  <div class="rq-grid">
+    <div class="rq-title">
+      <div class="rq-eyebrow">Start a Pilot Discussion</div>
+      <h2>Validate Your Next Robotics Actuator</h2>
+      <h3>開始你的下一個機器人致動器驗證</h3>
+    </div>
+
+    <div class="rq-copy">
+      <p>
+        RobiTorque is available for pilot discussion, actuator validation planning,
+        MCU / control-board collaboration, and RobiSoC design-in alignment.
+      </p>
+      <p>
+        RobiTorque 可用於 pilot 討論、致動器驗證規劃、MCU / 控制板合作，
+        以及 RobiSoC design-in 對位。
+      </p>
+
+      <div class="rq-buttons">
+        <a class="rq-btn primary" href="mailto:bd@robichip.com">bd@robichip.com</a>
+        <a class="rq-btn" href="mailto:contact@robichip.com">contact@robichip.com</a>
+        <a class="rq-btn" href="https://www.robichip.com/robidev" target="_blank">RobiDev</a>
+        <a class="rq-btn" href="https://www.robichip.com/robisoc" target="_blank">RobiSoC</a>
+        <a class="rq-btn" href="https://www.robichip.com/partnership" target="_blank">Partnership</a>
+      </div>
+
+      <div class="rq-note">
+        Detailed actuator configuration, torque range, gear ratio, control interface,
+        mechanical structure, and validation support require technical discussion before pilot definition.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="robi-footer">
+  <style>
+    .robi-footer {
+      font-family: Inter, "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background: #050b14;
+      color: #f8fbff;
+      border-radius: 28px;
+      padding: 42px 38px 26px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .robi-footer::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -120px;
+      top: -130px;
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 70%);
+      pointer-events: none;
+    }
+
+    .footer-wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.8fr 0.8fr 0.9fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .footer-brand h2 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: -0.045em;
+      font-weight: 950;
+    }
+
+    .footer-brand h3 {
+      margin: 8px 0 0;
+      color: #d9ecff;
+      font-size: 18px;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+      font-weight: 850;
+    }
+
+    .footer-brand p {
+      margin: 16px 0 0;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    .footer-col h4 {
+      margin: 0 0 13px;
+      color: #65f1ff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-link {
+      display: block;
+      color: #d9ecff;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.55;
+      margin: 0 0 9px;
+      font-weight: 700;
+    }
+
+    .footer-link:hover {
+      color: #65f1ff;
+    }
+
+    .footer-info {
+      margin-top: 30px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer-address h4 {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: 17px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      font-weight: 900;
+    }
+
+    .footer-address p {
+      margin: 0 0 8px;
+      color: #b9c7da;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .footer-address a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .footer-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .footer-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(101, 241, 255, 0.09);
+      border: 1px solid rgba(101, 241, 255, 0.20);
+      color: #dffcff;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .footer-bottom {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      align-items: center;
+      justify-content: space-between;
+      color: #8fa1b8;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-bottom a {
+      color: #9ed9ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-info {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-badges {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .robi-footer {
+        padding: 34px 24px 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        display: block;
+      }
+
+      .footer-bottom div {
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>RobiChip Technology Co., Ltd.</h2>
+        <h3>羅比芯科技股份有限公司</h3>
+        <p>
+          Power SoC platform for intelligent machines. Robichip integrates Power SoC,
+          RobiDev, RobiThrust, RobiAgent, and validation workflows for robotics,
+          UAVs, and high-power-density motion systems.
+        </p>
+        <p>
+          羅比芯聚焦 Power + AI + Robotics，建構從 Power SoC、開發驗證、
+          無人機推進平台到 AI-assisted design-in 的智慧動力半導體平台。
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a class="footer-link" href="https://www.robichip.com/robisoc" target="_blank">RobiSoC</a>
+        <a class="footer-link" href="https://www.robichip.com/robidev" target="_blank">RobiDev</a>
+        <a class="footer-link" href="https://www.robichip.com/robithrust" target="_blank">RobiThrust</a>
+        <a class="footer-link" href="https://www.robichip.com/robitorque" target="_blank">RobiTorque</a>
+        <a class="footer-link" href="https://www.robichip.com/robiagent" target="_blank">RobiAgent</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a class="footer-link" href="https://www.robichip.com/technology-insights" target="_blank">Technology Insights</a>
+        <a class="footer-link" href="https://www.robichip.com/news-events" target="_blank">News & Events</a>
+        <a class="footer-link" href="https://www.robichip.com/robilab" target="_blank">RobiLab Validation</a>
+        <a class="footer-link" href="https://www.youtube.com/channel/UCqp-CDSVPCX8TfYT_aVScpg" target="_blank">Youtube channel</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Partnership</a>
+        <a class="footer-link" href="https://www.robichip.com/partnership" target="_blank">Technical Discussion</a>
+        <a class="footer-link" href="https://www.robichip.com/join-us" target="_blank">Join Us</a>
+        <a class="footer-link" href="tel:+886277015728">+886-2-7701-5728</a>
+        <a class="footer-link" href="mailto:contact@robichip.com">contact@robichip.com</a>
+        <a class="footer-link" href="mailto:bd@robichip.com">bd@robichip.com</a>
+      </div>
+    </div>
+
+    <div class="footer-info">
+      <div class="footer-address">
+        <h4>Company Information｜公司資訊</h4>
+        <p><strong>RobiChip Technology Co., Ltd.｜羅比芯科技股份有限公司</strong></p>
+
+        <p>
+          National Taiwan University of Science and Technology, International Building 11F, Room 1105<br>
+          No. 43, Sec. 4, Keelung Rd., Da’an Dist., Taipei City, Taiwan
+        </p>
+
+        <p>
+          台北市大安區基隆路四段 43 號<br>
+          國立臺灣科技大學 國際大樓 11F 1105 室
+        </p>
+
+        <p>
+          Tel｜電話：
+          <a href="tel:+886277015728">+886-2-7701-5728</a><br>
+          General Contact｜一般聯絡：
+          <a href="mailto:contact@robichip.com">contact@robichip.com</a><br>
+          Business Development｜商務合作：
+          <a href="mailto:bd@robichip.com">bd@robichip.com</a>
+        </p>
+      </div>
+
+      <div class="footer-badges">
+        <span class="footer-badge">Power SoC</span>
+        <span class="footer-badge">Robotics</span>
+        <span class="footer-badge">UAV</span>
+        <span class="footer-badge">Advanced Packaging</span>
+        <span class="footer-badge">Thermal Path</span>
+        <span class="footer-badge">Design-in</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        © 2026 RobiChip Technology Co., Ltd. All rights reserved.
+      </div>
+      <div>
+        Public website content is for general information only. Detailed specifications are subject to official release, NDA, or partner discussion.
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ROBITORQUE SOURCE BLOCKS -->
