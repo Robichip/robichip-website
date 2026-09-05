@@ -59,6 +59,11 @@
   // Each frozen Google-Sites page is copied as its original custom-HTML
   // blocks in a static asset, keeping the shared renderer compact.
   const sourceRoute = (source, layout = '') => `<div class="google-source-route" data-source-route="${source}" data-source-layout="${layout}"></div>`;
+  // The frozen Technology Insights pages are Google Drive previews. Keeping
+  // their original viewer is closer to the source than re-authoring articles.
+  const documentReferencePage = (src, title, height) => '<section class="drive-reference" style="--reference-height:' + height + 'px"><iframe src="' + src + '" title="' + esc(title) + '" loading="eager"></iframe></section>';
+  const sourceMissingPage = () => '<section class="google-missing-page"><h1>404</h1><p>The page you have entered does not exist</p><a href="/">Go to site home</a></section>';
+  const sourceBlankPage = () => '<div class="source-blank-page" aria-label="Frozen empty source page"></div>';
   const hero = ({ eyebrow, title, zh, lead, sublead, image, caption, actions = [], metrics = [] }) => `
     <section class="hero">
       <div class="wrap hero-grid">
@@ -697,12 +702,21 @@
     '/news-events': {title:'News & Events', render:() => sourceRoute('/assets/source/news-events.html?v=frozen-reference-v1'), reference:true},
     '/partnership': {title:'Partnership', render:() => sourceRoute('/assets/source/partnership.html?v=frozen-reference-v1'), reference:true},
     '/join-us': {title:'Join Us', render:joinPage, reference:true},
-    '/privacy-policy': {title:'Privacy Policy', render:privacyPage},
-    '/private-policy': {title:'Private Policy', render:privacyPage, noindex:true}
+    '/privacy-policy': {title:'Page Not Found', render:sourceMissingPage, reference:true, noindex:true},
+    '/private-policy': {title:'Private Policy', render:() => sourceRoute('/assets/source/private-policy.html?v=frozen-reference-v1'), reference:true, noindex:true}
   };
 
   Object.entries(articles).forEach(([route, article]) => {
     routeTable[route] = {title:article.title, render:() => articlePage(article)};
+  });
+  const documentReferences = {
+    '/technology-insights/robithrust-ecx32-test-observation': {title:'從 Motor-Driver Matching 到續航⼒優化：RobiThrust ECX-32實測觀察', src:'https://drive.google.com/file/d/1EeVqOKub3fkCKRCAmzmA1yTm2LrVKl0x/preview', height:966},
+    '/technology-insights/why-power-density-matters': {title:'Why Power Density Matters in Intelligent Machines', src:'https://drive.google.com/file/d/1vSJq93IdNxjGVCWNFRzujY9O09rrRxva/preview', height:1041},
+    '/technology-insights/robidev-to-design-in': {title:'From RobiDev to Design-in Workflow', src:'https://drive.google.com/file/d/1LlMheDAlChFpM9BfL1ZnFtQwwERDsCKQ/preview', height:1034},
+    '/technology-insights/propulsion-validation': {title:'Propulsion Validation as a Design-in Entry', src:'https://drive.google.com/file/d/1nZAuE8sv3D6H071XOdnupYjx-et-aElD/preview', height:1031}
+  };
+  Object.entries(documentReferences).forEach(([route, reference]) => {
+    routeTable[route] = {title:reference.title, render:() => documentReferencePage(reference.src, reference.title, reference.height), reference:true};
   });
   Object.entries(events).forEach(([route, event]) => {
     routeTable[route] = {title:event.title, render:() => eventPage(event)};
@@ -712,9 +726,15 @@
   routeTable['/news-events/news-events-best-AI-Awards'] = {title:events['/news-events/news-events-best-AI-Awards'].title, render:() => sourceRoute('/assets/source/news-best-ai-awards.html?v=frozen-reference-v1'), reference:true};
   routeTable['/news-events/news-events-computex-InnoVEX'] = {title:'COMPUTEX InnoVEX', render:() => sourceRoute('/assets/source/news-computex-innovex.html?v=frozen-reference-v1'), reference:true};
   routeTable['/news-events/news-events-swancor-MOU'] = {title:'Swancor × RobiChip', render:() => sourceRoute('/assets/source/news-swancor-mou.html?v=frozen-reference-v1'), reference:true};
-  ['/work','/v1','/v2','/v3','/temp','/robigrip'].forEach((route) => {
-    routeTable[route] = {title:'Legacy Draft Page', render:legacyPage, noindex:true};
+  routeTable['/news-events/semicon-taiwan-2026'] = {title:'SEMICON Taiwan 2026', render:() => sourceRoute('/assets/source/news-semicon-taiwan-2026.html?v=frozen-reference-v1'), reference:true};
+  ['/news-events/swancor-tech-mou','/news-events/2026-computex-innovex','/news-events/taichung-unmanned-vehicle-forum','/robigrip'].forEach((route) => {
+    routeTable[route] = {title:'Page Not Found', render:sourceMissingPage, reference:true, noindex:true};
   });
+  routeTable['/work'] = {title:'work', render:sourceBlankPage, reference:true, noindex:true};
+  routeTable['/v1'] = {title:'v1', render:() => sourceRoute('/assets/source/v1.html?v=frozen-reference-v1'), reference:true, noindex:true};
+  routeTable['/v2'] = {title:'V2', render:() => sourceRoute('/assets/source/v2.html?v=frozen-reference-v1'), reference:true, noindex:true};
+  routeTable['/v3'] = {title:'v3', render:() => sourceRoute('/assets/source/v3.html?v=frozen-reference-v1'), reference:true, noindex:true};
+  routeTable['/temp'] = {title:'temp', render:() => sourceRoute('/assets/source/temp.html?v=frozen-reference-v1'), reference:true, noindex:true};
 
   const nav = () => {
     const active = (route) => path === route || (route !== '/' && path.startsWith(`${route}/`)) ? ' active' : '';
@@ -872,6 +892,14 @@
           gallery.className = 'robithrust-legacy-gallery';
           gallery.innerHTML = '<figure><img src="' + BASE_PATH + '/assets/images/robithrust-platform-reference-1.jpg" alt="RobiThrust UAV propulsion validation platform"></figure><figure><img src="' + BASE_PATH + '/assets/images/robithrust-platform-reference-2.jpg" alt="RobiThrust Heavy UAV propulsion test platform"></figure>';
           blocks[1]?.before(gallery);
+          const architecture = document.createElement('section');
+          architecture.className = 'robithrust-native-architecture';
+          architecture.innerHTML = '<article><img src="https://lh3.googleusercontent.com/sitesv/AG8ngQUK2tpFvOfI-Ixlpxq4JSvif1d5m6fmXJDEEs0G3J2BXZEmPn-ZfFs3bQMW1Dr_p5JQ72f0UTsBr7jo2L6rah5NnFZj2WJ4m0DES4INPrE4bvSRWo7flnhQ8t4uJ--MC-8NM_TlEQ8Lj2R80eJwSnbn6HhbrDGN24uJMJzSWi0dYtlRtj6AqEsu-mkI726S0_kp9KC0x4YQqei2Fz2-6wO2oeJJ7U93kIQ7shdD=w1280" alt="Evolution of UAV Propulsion Architecture"><h3>Evolution of UAV Propulsion Architecture</h3><h3>無人機推進架構的世代演進</h3><p>RobiChip’s framework illustrates the transition from discrete ESC, motor, and propeller configurations to integrated modules, and toward semiconductor-defined propulsion.</p><p>羅比芯提出無人機推進架構的三代演進框架：從 ESC、馬達與螺旋槳分離的傳統架構，逐步走向整合模組與半導體定義推進系統。</p></article><article><img src="https://lh3.googleusercontent.com/sitesv/AG8ngQWbhVVEBQA1mbJL41err48TMcxO9C1AglPiY62ey_O44ii2sHWOjYrMAymJqModLILdrYSN2uJc_4tZWuGa3j8-5afgPoSkrVL3aeTH0V4ZZ2YOkS1p3ZOGoF_hjvJWDVO9Rt5Erj6dkddV8qCMJAbEEMYSap4ZWIt-89ZcLBrAP9RuDXYRRb-aNhKFjG8X86tojPJ_gFVz-mT8nypM7UvI92z07KFM-rEe1jhI=w1280" alt="Propulsion Gen.3 Concept Architecture"><h3>Propulsion Gen.3 Concept Architecture</h3><h3>Propulsion Gen.3 半導體定義推進概念架構</h3><p>A Power SoC-centered architecture connecting power control, sensing, protection, thermal design, motor, and propeller within a more integrated propulsion platform.</p><p>以 Power SoC 為功率智慧核心，整合驅動控制、感測、保護、熱管理、馬達與螺旋槳，形成更緊湊且可驗證的推進平台。</p></article>';
+          blocks[2]?.before(architecture);
+          const series = document.createElement('section');
+          series.className = 'robithrust-native-series';
+          series.innerHTML = '<article><img src="https://lh3.googleusercontent.com/sitesv/AG8ngQV8SUTr67EnxgSXLxCS61CBPAxvUl8BnArOZxNqcPvgYKp2cYFNyh1khXprNTfCCnrn4wuZJJ1P4gOe2jPOuwSDTVwmN5pE-w_E1CmVoEjE-V7dXFEof6-yivz7mALLhPs3Ki6YSmW-mz6WJvfA2jZ4BAVwCWb7S-amOUxtfcX-X6DnBK4lJ6RDj_kjgksoW6IfBIo_AUjOicKc_ajncSHUjUbDjPoSstjo_zwi=w1280" alt="RobiThrust miniE ECX-32"><h2>RobiThrust-miniE(ECX-32)</h2></article><article><img src="https://lh3.googleusercontent.com/sitesv/AG8ngQXE2k20ULTKCNEDwBAuHO3ahkASSvOqSdKL69odDMWYPquAztSh-T6SQHHlDeQ0z_E_mHzKHyJ_VLszXoiBIim7IgAtcbj7rHS_6hxtw7wc_U4iOgUV2MYoxoWb8PnPvVVd_lqk19efYKIU6K2coePOr3xNw2Q5Rv70J7447SWaxK_G02EXDPAgJWRSo9N11fpqZGh8VRc4M5RLyU-4hTcWbAQIaXKfnDG1tif4pNs=w1280" alt="RobiThrust P ECX-42"><h2>RobiThrust-P(ECX-42)</h2></article><article><img src="https://lh3.googleusercontent.com/sitesv/AG8ngQUkq_6ThnpIZRMHqJ9mSXgjYov1VONg_nWhcKsz3p59j0hYTeVzXGEKnbU01goNO-pHxQzNbcd5YgjHqWu6HtFBi1rK9fZwgNweRRXFdAjxoj6XU1WNDrsbSTatWqVMAXYHtp498SfThLHslYfn96liurbiHb7w1hjzjUfU7kP0o7GaN9AUFJVA3pSTACH4bLs52WsTahj7Z4Vq0m2s5ya3SXaUFbvm_NY_BLhksQo=w1280" alt="RobiThrust X RUM3848"><h2>RobiThrust-X(RUM3848)</h2></article>';
+          blocks[4]?.before(series);
         }
         if (sourceMount.dataset.sourceLayout === 'robiagent') {
           const blocks = sourceMount.querySelectorAll(':scope > .google-source-block');

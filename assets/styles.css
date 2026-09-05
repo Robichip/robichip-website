@@ -107,6 +107,21 @@ body.google-reference .robitorque-source-intro img { display: block; width: 100%
 body.google-reference .home-source-hero { width: min(1147px, calc(100% - 48px)); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) 365px; gap: 49px; align-items: start; }
 body.google-reference .home-source-hero > .google-source-block { width: auto; margin: 0; }
 body.google-reference .home-source-media img { display: block; width: 365px; max-width: 100%; height: auto; }
+body.google-reference .drive-reference { width: min(760px, calc(100% - 48px)); margin: 0 auto; }
+body.google-reference .drive-reference iframe { display: block; width: 100%; height: var(--reference-height); border: 0; }
+body.google-reference .google-missing-page { width: min(760px, calc(100% - 48px)); min-height: 360px; margin: 0 auto; padding: 64px 0; color: #202124; font-family: Roboto, Arial, sans-serif; }
+body.google-reference .google-missing-page h1 { margin: 0 0 12px; font-size: 32px; font-weight: 400; }
+body.google-reference .google-missing-page p { margin: 0 0 24px; font-size: 16px; }
+body.google-reference .google-missing-page a { color: #1a73e8; font-size: 14px; }
+body.google-reference .source-blank-page { min-height: 320px; }
+body.google-reference .robithrust-native-architecture { width: min(1154px, calc(100% - 48px)); margin: 0 auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; color: #202124; font-family: Roboto, Arial, sans-serif; }
+body.google-reference .robithrust-native-architecture article { min-width: 0; }
+body.google-reference .robithrust-native-architecture img { display: block; width: 100%; height: auto; margin-bottom: 28px; }
+body.google-reference .robithrust-native-architecture h3 { margin: 0 8px 22px; color: #202124; font-size: 20px; font-weight: 400; line-height: 1.35; }
+body.google-reference .robithrust-native-architecture p { margin: 0 8px 14px; font-size: 16px; line-height: 1.65; }
+body.google-reference .robithrust-native-series { width: min(1154px, calc(100% - 48px)); margin: 0 auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; color: #202124; font-family: Roboto, Arial, sans-serif; }
+body.google-reference .robithrust-native-series img { display: block; width: 100%; height: auto; }
+body.google-reference .robithrust-native-series h2 { margin: 24px 8px 0; color: #202124; font-size: 25px; font-weight: 400; line-height: 1.35; }
 @media (max-width: 900px) {
   body.google-reference .nav-shell { width: min(100% - 32px, 1304px); min-height: 66px; }
   body.google-reference .brand img { width: 164px; height: 38px; }
@@ -130,6 +145,10 @@ body.google-reference .home-source-media img { display: block; width: 365px; max
   body.google-reference .robitorque-source-intro { width: min(100% - 32px, 640px); }
   body.google-reference .home-source-hero { width: min(100% - 32px, 640px); grid-template-columns: 1fr; gap: 24px; }
   body.google-reference .home-source-media { text-align: center; }
+  body.google-reference .drive-reference { width: min(100% - 32px, 760px); }
+  body.google-reference .drive-reference iframe { height: min(var(--reference-height), 840px); }
+  body.google-reference .robithrust-native-architecture { width: min(100% - 32px, 640px); grid-template-columns: 1fr; gap: 28px; }
+  body.google-reference .robithrust-native-series { width: min(100% - 32px, 640px); grid-template-columns: 1fr; gap: 28px; }
 }
 
 a { color: inherit; text-decoration: none; }

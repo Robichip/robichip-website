@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JMMFPY6RMQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JMMFPY6RMQ');
+</script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RobiChip Technology Co., Ltd. - Company Profile</title>
+  <style>
+    :root{--brand:#004080;--ink:#222;--muted:#666;--panel:#fff;--bg:#f7f7f8}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;line-height:1.6;margin:0;color:var(--ink);background:var(--bg)}
+    header{background:var(--brand);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:10px 14px;position:sticky;top:0;z-index:10}
+    nav{display:flex;flex-wrap:wrap;gap:16px}
+    nav a{color:#fff;text-decoration:none;font-weight:bold}
+    .lang-switch{display:flex;gap:8px}
+    .lang-switch button{background:#fff;border:0;border-radius:4px;padding:6px 10px;font-weight:bold;cursor:pointer}
+    section{padding:22px;max-width:980px;margin:14px auto;background:var(--panel);border-radius:6px;scroll-margin-top:72px} 
+    h1,h2{color:var(--brand);margin:0 0 10px}
+    p{margin:10px 0}
+    ul{padding-left:20px;margin:8px 0}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    th,td{border:1px solid #ddd;padding:8px;text-align:left}
+    th{background:#f0f2f5}
+    .btn{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;padding:8px 12px;border-radius:4px}
+    footer{padding:16px;text-align:center;color:var(--muted)}
+    .services-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:16px}
+    .service-card {background:#fff;border:1px solid #ddd;border-radius:8px;padding:16px}
+    .service-card h3 {margin-top:0;color:var(--brand)}
+    .media {display:grid;gap:12px;margin-top:10px}
+    .media.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .media.single{grid-template-columns:1fr}
+    .media figure{margin:0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;background:#fafafa;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .media img{display:block;width:100%;aspect-ratio:3/2;height:auto;object-fit:cover}
+    .caption{color:#999;font-size:.8rem;text-align:center;padding:4px 0}
+    .media figure{margin:0;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;background:#fafafa}
+    .media img{display:block;width:100%;height:140px;object-fit:contain}
+    .caption{color:#999;font-size:.8rem;text-align:center;padding:4px 0}
+    noscript{display:block;max-width:980px;margin:8px auto 0;color:#a00}
+  </style>
+  <script>
+    // --- Lightweight i18n: avoids navigation or external calls to be sandbox-safe ---
+    (function(){
+      function getPref(){ try{return localStorage.getItem('robichip_lang')||'';}catch(e){return'';} }
+      function setPref(v){ try{ localStorage.setItem('robichip_lang', v);}catch(e){} }
+      function initialLang(){ var p=getPref(); if(p==='zh'||p==='en') return p; var nav=(navigator.language||'en'); return /^zh/i.test(nav)?'zh':'en'; }
+      function setDocLang(lang){ document.documentElement.setAttribute('lang', lang==='zh'? 'zh-Hant':'en'); }
+      function apply(lang){ var nodes=document.querySelectorAll('[data-zh],[data-en],[data-zh-html],[data-en-html]');
+        for(var i=0;i<nodes.length;i++){
+          var el=nodes[i];
+          var html=el.getAttribute('data-'+lang+'-html');
+          var txt=el.getAttribute('data-'+lang);
+          if(html!==null){ el.innerHTML=html; }
+          else if(txt!==null){ el.textContent=txt; }
+        }
+      }
+      function switchLang(lang){ if(lang!=='zh'&&lang!=='en') return; setDocLang(lang); apply(lang); setPref(lang); }
+      window.RobiChipI18N={switchLang:switchLang};
+      function init(){ var lang=initialLang(); setDocLang(lang); apply(lang); }
+      if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
+    })();
+    </script>
+  <script>
+    // In-Sites anchor fix: Google Sites' embed sometimes blocks default hash jumps.
+    // Intercept internal links and scroll manually with a header offset.
+    (function(){
+      function headerH(){ var h=document.querySelector('header'); return (h&&h.offsetHeight)||72; }
+      function setCSSVar(){ document.documentElement.style.setProperty('--headerH', headerH()+'px'); }
+      function smoothTo(hash){
+        var id = hash && hash.replace(/^#/, ''); if(!id) return;
+        var el = document.getElementById(id); if(!el) return;
+        var y = el.getBoundingClientRect().top + window.pageYOffset - (headerH()+8);
+        window.scrollTo({ top:y, behavior:'smooth' });
+      }
+      document.addEventListener('click', function(e){
+        var a = e.target.closest && e.target.closest('a[href^="#"]');
+        if(!a) return; var href=a.getAttribute('href'); if(!href||href==='#') return;
+        e.preventDefault(); smoothTo(href);
+      }, false);
+      window.addEventListener('load', setCSSVar); window.addEventListener('resize', setCSSVar);
+      setCSSVar();
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#profile" data-zh="公司簡介" data-en="Company">Company</a>
+      <a href="#applications" data-zh="應用" data-en="Applications">Applications</a>
+      <a href="#services" data-zh="產品與服務" data-en="Products & Services">Products & Services</a>
+      <a href="#driver-specs" data-zh="驅動器規格" data-en="Driver Specs">Driver Specs</a>
+      <a href="#partners" data-zh="合作夥伴" data-en="Partners">Partners</a>
+      <a href="#career" data-zh="招募" data-en="Career">Career</a>
+      <a href="#contact" data-zh="聯絡我們" data-en="Contact Us">Contact Us</a>
+      <a href="https://dev.robichip.com" target="_blank" rel="noopener noreferrer" data-zh="開發者計劃" data-en="Dev Program">Dev Program</a>
+    </nav>
+    <div class="lang-switch">
+      <button type="button" onclick="window.RobiChipI18N && RobiChipI18N.switchLang('zh')">中文</button>
+      <button type="button" onclick="window.RobiChipI18N && RobiChipI18N.switchLang('en')">English</button>
+    </div>
+  </header>
+
+  <noscript data-en="JavaScript is required for language switch." data-zh="此頁面需要 JavaScript 才能切換語言。">JavaScript is required for language switch.</noscript>
+
+  <section id="profile" tabindex="-1">
+    <h1 data-zh="羅比芯科技股份有限公司" data-en="RobiChip Technology Co., Ltd.">RobiChip Technology Co., Ltd.</h1>
+    <p data-zh="羅比芯專注於高效率、小型化的運動控制晶片，整合 GaN 功率、MCU 控制與感測。以人形機器人關節與高功率機電系統為核心，提供高功率密度、低損耗與完備保護的一體化驅動架構。" data-en="RobiChip focuses on high‑efficiency, miniaturized motion‑control chips that integrate GaN power, MCU control, and sensing. Centered on humanoid‑robot joints and high‑power mechatronic systems, we deliver an all‑in‑one driver architecture with high power density, low losses, and robust protection."></p>
+    <p data-zh="產品藍圖涵蓋 IPM 模組（RC25/50/100）以及次世代 SoC（整合 GaN、閘極驅動、MCU 與保護），協助人形機器人關節實現標準化。" data-en="Our roadmap spans IPM modules (RC25/50/100) and a next‑generation SoC integrating GaN, gate driver, MCU and protection to standardize humanoid joint design."></p>
+  </section>
+
+  <section id="applications" tabindex="-1">
+    <h2 data-zh="應用" data-en="Applications">Applications</h2>
+    <ul>
+      <li data-zh="人形機器人關節 — 肩、肘、膝、頸；手部／手指微型致動器" data-en="Humanoid robot joints — shoulder, elbow, knee, neck; hand/finger miniature actuators"></li>
+      <li data-zh="工業手臂 — 輕型／協作型（3–7 kg）、多關節末端致動模組" data-en="Industrial arms — lightweight/cobot (3–7 kg), multi‑joint end actuators"></li>
+      <li data-zh="AMR／AGV — 300–800 W 等級之驅輪／驅動輪模組" data-en="AMR/AGV — 300–800 W class steer/drive modules"></li>
+      <li data-zh="無人機 — 中大型物流／巡航型 ESC" data-en="UAV — medium/large logistics & cruise ESC"></li>
+      <li data-zh="家用助理機器人與 AI 消費型機器人" data-en="Home assistant robots & AI consumer robotics"></li>
+    </ul>
+  </section>
+
+  <section id="services" tabindex="-1">
+    <h2 data-zh="產品與服務" data-en="Products & Services">Products & Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3 data-zh="關節模組開發套件" data-en="Joint Module Development Kits">Joint Module Development Kits</h3>
+        <p data-zh="Dev-Knee、Dev-Finger 套件，快速驗證驅動能力與尺寸匹配。" data-en="Dev-Knee, Dev-Finger kits for rapid validation of drive capability and size matching."></p>
+        <div class="media two" aria-label="Dev kits images">
+          <figure>
+            <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1CqrSX087Kq8FDfgIgBW885-h8ltpYmGc/view?usp=drive_link" data-testid="link-dev-knee">
+              <img loading="lazy" alt="Dev‑Knee module render" src="https://drive.google.com/thumbnail?id=1CqrSX087Kq8FDfgIgBW885-h8ltpYmGc" />
+            </a>
+            <figcaption class="caption" data-zh="示意圖" data-en="Illustration">Illustration</figcaption>
+          </figure>
+          <figure>
+            <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1gTbvESuNJ-inEOSZ6PpTyjM6pH5DIkNQ/view?usp=drive_link" data-testid="link-dev-finger">
+              <img loading="lazy" alt="Dev‑Finger module render" src="https://drive.google.com/thumbnail?id=1gTbvESuNJ-inEOSZ6PpTyjM6pH5DIkNQ" />
+            </a>
+            <figcaption class="caption" data-zh="示意圖" data-en="Illustration">Illustration</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="service-card">
+        <h3 data-zh="RoboChips SoC 模組" data-en="RoboChips SoC Module">RoboChips SoC Module</h3>
+        <p data-zh="GaN 功率、控制與保護電路整合的高密度 SoC 驅動解決方案。" data-en="High‑density SoC drive solutions integrating GaN power, control, and protection circuits."></p>
+        <div class="media two" aria-label="RoboChips SoC images">
+          <figure>
+            <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/19n0cpeNu_y2ekKx2UbHjB9Ufaiy8cawR/view?usp=drive_link" data-testid="link-soc">
+              <img loading="lazy" alt="RoboChips SoC render" src="https://drive.google.com/thumbnail?id=19n0cpeNu_y2ekKx2UbHjB9Ufaiy8cawR" />
+            </a>
+            <figcaption class="caption" data-zh="示意圖" data-en="Illustration">Illustration</figcaption>
+          </figure>
+          <figure>
+            <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1I6EKTmzkviQgCMKY638FRvdkGR7Kl8dq/view?usp=drive_link" data-testid="link-driverboard">
+              <img loading="lazy" alt="RoboChips driver board render" src="https://drive.google.com/thumbnail?id=1I6EKTmzkviQgCMKY638FRvdkGR7Kl8dq" />
+            </a>
+            <figcaption class="caption" data-zh="示意圖" data-en="Illustration">Illustration</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="service-card">
+        <h3 data-zh="客製化馬達驅動方案" data-en="Customized Motor Drive Solutions">Customized Motor Drive Solutions</h3>
+        <p data-zh="針對特殊需求設計最佳化的馬達驅動板與韌體。" data-en="Optimized motor drive boards and firmware designed for specific requirements."></p>
+        <div class="media single" aria-label="Customized joint module image">
+          <figure>
+            <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Fl0_RwgWVS2CCaRazEcm_7LgggXvRXaV/view?usp=drive_link" data-testid="link-customized">
+              <img loading="lazy" alt="Customized joint module" src="https://drive.google.com/thumbnail?id=1Fl0_RwgWVS2CCaRazEcm_7LgggXvRXaV" />
+            </a>
+            <figcaption class="caption" data-zh="示意圖" data-en="Illustration">Illustration</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="driver-specs" tabindex="-1">
+    <h2 data-zh="驅動器模組規格" data-en="Driver Module Specifications">Driver Module Specifications</h2>
+    <p data-zh="整合 MCU 與 GaN 功率級與感測，提供緊湊高效的 BLDC/PMSM 馬達控制。" data-en="Integrated MCU + GaN power stage + sensing for compact, efficient BLDC/PMSM motor control."></p>
+    <table>
+      <tr>
+        <th data-zh="參數" data-en="Parameter"></th>
+        <th data-zh="規格" data-en="Specification"></th>
+      </tr>
+      <tr>
+        <td data-zh="輸入電壓" data-en="Input Voltage"></td>
+        <td>DC 24–60V</td>
+      </tr>
+      <tr>
+        <td data-zh="相電流" data-en="Phase Current"></td>
+        <td>20A continuous, 140A peak (25°C, 300µs)</td>
+      </tr>
+      <tr>
+        <td data-zh="控制模式" data-en="Control Modes"></td>
+        <td>FOC / BLDC / Sine, PWM up to 100kHz</td>
+      </tr>
+      <tr>
+        <td data-zh="介面" data-en="Interfaces"></td>
+        <td>PWM, UART / CAN FD; Fault / Overtemp / Overcurrent flags</td>
+      </tr>
+      <tr>
+        <td data-zh="控制器" data-en="Controller"></td>
+        <td>STM32G4 @ 170MHz, 3‑phase PWM, ADC sampling</td>
+      </tr>
+      <tr>
+        <td data-zh="封裝與散熱" data-en="Packaging & Thermal"></td>
+        <td>QFN/LGA (exposed pad); natural convection; die → copper → pad → aluminum housing</td>
+      </tr>
+      <tr>
+        <td data-zh="功率密度" data-en="Power Density"></td>
+        <td>RC25: 31.25 W/cm²; RC50: 62.5 W/cm²; RC100: <strong>125 W/cm²</strong></td>
+      </tr>
+    </table>
+    <p>
+      <a class="btn" href="https://dev.robichip.com" target="_blank" rel="noopener noreferrer" data-zh="至開發者計劃註冊下載完整 PDF" data-en="Register in Dev Program to download full PDF">Register in Dev Program to download full PDF</a>
+    </p>
+  </section>
+
+  <section id="partners" tabindex="-1">
+    <h2 data-zh="合作夥伴" data-en="Partners">Partners</h2>
+    <p data-zh="弘訊科技 — 人型機器人關節模組供應商與應用商，並提供工業自動化系統整合服務。" data-en="Techmation — Supplier of humanoid‑robot joint modules and industrial‑automation system integrator."></p>
+    <p data-zh="UBLINK — AI 運算合作夥伴，提供高頻寬低延遲的邊緣運算連接解決方案。" data-en="UBLINK — AI compute partner providing high‑bandwidth, low‑latency edge connectivity solutions."></p>
+    <p data-zh-html="Email：<a href='mailto:partner@robichip.com'>partner@robichip.com</a>" data-en-html="Email: <a href='mailto:partner@robichip.com'>partner@robichip.com</a>">Email: <a href="mailto:partner@robichip.com">partner@robichip.com</a></p>
+  </section>
+
+  <section id="career" tabindex="-1">
+    <h2 data-zh="招募" data-en="Career">Career</h2>
+    <p data-zh="我們誠摯邀請優秀的工程師、設計師與創新者加入，共同塑造機器人未來。請點選職缺如下: " data-en="We warmly invite talented engineers, designers and innovators to join us in shaping the future of robotics."></p>
+    <p data-zh-html="Email：<a href='mailto:careers@robichip.com'>careers@robichip.com</a>" data-en-html="Email: <a href='mailto:careers@robichip.com'>careers@robichip.com</a>">Email: <a href="mailto:careers@robichip.com">careers@robichip.com</a></p>
+    <ul>
+      <li data-zh-html="<a target='_blank' rel='noopener noreferrer' href='https://drive.google.com/file/d/1n8-0ae_zGfKY9Kus5ExEPMKKxLdZOnIt/view?usp=drive_link'>Power SoC for Robotics × Advanced Packaging</a>" data-en-html="<a target='_blank' rel='noopener noreferrer' href='https://drive.google.com/file/d/1n8-0ae_zGfKY9Kus5ExEPMKKxLdZOnIt/view?usp=drive_link'>Power SoC for Robotics × Advanced Packaging</a>"></li>
+      <li data-zh-html="<a target='_blank' rel='noopener noreferrer' href='https://drive.google.com/file/d/1xYyo5LOLgekVIkj-asPVzqZbNgAs_9YK/view?usp=drive_link'>先進封裝 × SoC 整合</a>" data-en-html="<a target='_blank' rel='noopener noreferrer' href='https://drive.google.com/file/d/1xYyo5LOLgekVIkj-asPVzqZbNgAs_9YK/view?usp=drive_link'>Advanced Packaging × SoC Integration</a>"></li>
+      <li data-zh-html="<a target='_blank' rel='noopener noreferrer' href='https://drive.google.com/file/d/1PhefBF0PySNgdTPYh4_2U-yUp8d7xIzE/view?usp=drive_link'>伺服馬達 × 機器人應用</a>" data-en-html="<a target='_blank' rel='noopener noreferrer' href='https://drive.google.com/file/d/1PhefBF0PySNgdTPYh4_2U-yUp8d7xIzE/view?usp=drive_link'>Servo Motor × Robotics Applications</a>"></li>
+    </ul>
+  </section>
+
+  <section id="contact" tabindex="-1">
+    <h2 data-zh="聯絡我們" data-en="Contact Us">Contact Us</h2>
+    <p data-zh-html="台北市大安區基隆路四段43號,國立臺灣科技大學 國際大樓11F,1105室，email：<a href='mailto:contact@robichip.com'>contact@robichip.com</a>" data-en-html="Taiwan Tech Innovation Incubation Center, Contact: <a href='mailto:contact@robichip.com'>contact@robichip.com</a>">Taiwan Tech Innovation Incubation Center, Contact: <a href="mailto:contact@robichip.com">contact@robichip.com</a></p>
+  </section>
+
+  <footer>
+    <p data-zh="© 2025 羅比芯科技股份有限公司 版權所有。" data-en="© 2025 RobiChip Technology Co., Ltd. All rights reserved.">© 2025 RobiChip Technology Co., Ltd. All rights reserved.</p>
+  </footer>
+
+  <!-- Smoke tests: wrapped to avoid failures in environments without headless Chrome -->
+  <script>
+    (function(){
+      function safe(cb){ try{ cb(); } catch(e){ console.warn('Test skipped:', e && e.message || e); } }
+      function t(name, fn){ safe(function(){ fn(); console.log('✅', name); }); }
+      function bySel(q){ var el=document.querySelector(q); if(!el) throw new Error('Missing '+q); return el; }
+      function isRunnable(){
+        var ua=(navigator.userAgent||'');
+        return /Chrome|Chromium|HeadlessChrome/i.test(ua);
+      }
+      function run(){
+        if(!isRunnable()){ console.warn('Environment not Chrome-like; skipping DOM smoke tests.'); return; }
+        t('Anchors exist', function(){ ['#profile','#applications','#services','#driver-specs','#partners','#career','#contact'].forEach(function(id){ bySel(id); bySel('a[href="'+id+'"]'); }); });
+        t('Mailto links present', function(){ ['partner','careers','contact'].forEach(function(k){ if(!document.querySelector('a[href^="mailto:'+k+'@robichip.com"]')) throw new Error('mailto '+k+' missing'); }); });
+        t('Career links target _blank', function(){ document.querySelectorAll('#career a[href^="https://drive.google.com/"]').forEach(function(a){ if(a.getAttribute('target') !== '_blank') throw new Error('target missing'); }); });
+        t('i18n toggle works', function(){ var h=document.querySelector('#profile h1'); var zh=h.getAttribute('data-zh'); var en=h.getAttribute('data-en'); if(window.RobiChipI18N){ window.RobiChipI18N.switchLang('en'); if(h.textContent!==en) throw new Error('to EN failed'); window.RobiChipI18N.switchLang('zh'); if(h.textContent!==zh) throw new Error('back to ZH failed'); } });
+        t('Dev kit images exist', function(){ if(!document.querySelector('[data-testid="link-dev-knee"] img')) throw new Error('Dev‑Knee image missing'); if(!document.querySelector('[data-testid="link-dev-finger"] img')) throw new Error('Dev‑Finger image missing'); });
+        t('SoC images exist', function(){ if(!document.querySelector('[data-testid="link-soc"] img')) throw new Error('SoC image missing'); if(!document.querySelector('[data-testid="link-driverboard"] img')) throw new Error('Driver board image missing'); });
+        t('Customized image exists', function(){ if(!document.querySelector('[data-testid="link-customized"] img')) throw new Error('Customized joint module image missing'); });
+      }
+      if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', run); } else { run(); }
+    })();
+  </script>
+</body>
+</html>
+

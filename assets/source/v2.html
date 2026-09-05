@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RobiChip Technology Co., Ltd.</title>
+  <meta name="description" content="Empowering humanoid intelligence with GaN SoC and all-in-one motor driver technology.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#0057FF',
+            ink: '#1E1E1E',
+            muted: '#6B7280'
+          }
+        }
+      }
+    }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JMMFPY6RMQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JMMFPY6RMQ');
+  </script>
+  <script>
+    (function(){
+      function getPref(){ try{return localStorage.getItem('robichip_lang')||'';}catch(e){return'';} }
+      function setPref(v){ try{ localStorage.setItem('robichip_lang', v);}catch(e){} }
+      function initialLang(){ var p=getPref(); if(p==='zh'||p==='en') return p; var nav=(navigator.language||'en'); return /^zh/i.test(nav)?'zh':'en'; }
+      function setDocLang(lang){ document.documentElement.setAttribute('lang', lang==='zh'? 'zh-Hant':'en'); }
+      function apply(lang){ var nodes=document.querySelectorAll('[data-zh],[data-en],[data-zh-html],[data-en-html]');
+        for(var i=0;i<nodes.length;i++){
+          var el=nodes[i];
+          var html=el.getAttribute('data-'+lang+'-html');
+          var txt=el.getAttribute('data-'+lang);
+          if(html!==null){ el.innerHTML=html; }
+          else if(txt!==null){ el.textContent=txt; }
+        }
+      }
+      function switchLang(lang){ if(lang!=='zh'&&lang!=='en') return; setDocLang(lang); apply(lang); setPref(lang); }
+      window.RobiChipI18N={switchLang:switchLang};
+      function init(){ var lang=initialLang(); setDocLang(lang); apply(lang); }
+      if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
+    })();
+  </script>
+</head>
+<body class="text-ink bg-gray-50 font-sans antialiased">
+  <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md border-b border-gray-200 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
+      <a href="#" class="text-brand font-bold text-xl">RobiChip</a>
+      <button id="menu-btn" class="md:hidden text-brand focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5M3.75 12h16.5m-16.5 6.75h16.5" />
+        </svg>
+      </button>
+      <nav id="menu" class="hidden md:flex gap-6 text-sm font-semibold flex-col md:flex-row absolute md:static bg-white md:bg-transparent left-0 top-16 w-full md:w-auto shadow md:shadow-none">
+        <a href="#company" data-zh="公司" data-en="Company" class="hover:text-brand px-4 py-2">Company</a>
+        <a href="#technology" data-zh="技術" data-en="Technology" class="hover:text-brand px-4 py-2">Technology</a>
+        <a href="#products" data-zh="產品" data-en="Products" class="hover:text-brand px-4 py-2">Products</a>
+        <a href="#applications" data-zh="應用" data-en="Applications" class="hover:text-brand px-4 py-2">Applications</a>
+        <a href="#investor" data-zh="投資" data-en="Investor" class="hover:text-brand px-4 py-2">Investor</a>
+        <a href="#contact" data-zh="聯絡" data-en="Contact" class="hover:text-brand px-4 py-2">Contact</a>
+      </nav>
+      <div class="flex gap-3 items-center">
+        <button type="button" onclick="RobiChipI18N.switchLang('zh')" class="text-sm border rounded px-2 py-1 hover:bg-gray-200">中文</button>
+        <button type="button" onclick="RobiChipI18N.switchLang('en')" class="text-sm border rounded px-2 py-1 hover:bg-gray-200">EN</button>
+        <a href="https://robigpt-webapp-26642801715.asia-east1.run.app/auth" target="_blank" class="px-3 py-1.5 bg-brand text-white rounded-lg text-sm font-semibold hover:bg-blue-600 transition" data-zh="RobiGPT" data-en="RobiGPT">RobiGPT</a>
+        <a href="https://dev.robichip.com" target="_blank" class="px-3 py-1.5 border border-brand text-brand rounded-lg text-sm font-semibold hover:bg-brand hover:text-white transition" data-zh="開發者" data-en="Dev Portal">Dev Portal</a>
+      </div>
+    </div>
+  </header>
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', ()=>{
+      document.getElementById('menu').classList.toggle('hidden');
+    });
+  </script>
+
+  <section id="hero" class="relative h-[90vh] flex flex-col items-center justify-center text-center text-white bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1200&q=80');" data-aos="fade-up">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="relative z-10 px-6">
+      <h1 data-en="Empowering Humanoid Intelligence with GaN SoC" data-zh="以 GaN 晶片驅動人形智慧新世代" class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-up" data-aos-delay="100">Empowering Humanoid Intelligence with GaN SoC</h1>
+      <p data-en="High-efficiency motion-control chips integrating GaN power, MCU, and sensing for next-gen robotics." data-zh="高效率運動控制晶片，整合 GaN 功率、MCU 與感測，驅動次世代機器人。" class="max-w-2xl mx-auto text-lg text-gray-200 mb-6" data-aos="fade-up" data-aos-delay="200">High-efficiency motion-control chips integrating GaN power, MCU, and sensing for next-gen robotics.</p>
+      <p data-en="Compact. Intelligent. Integrated." data-zh="緊湊．智慧．整合。" class="text-xl md:text-2xl font-semibold mb-8 text-blue-200" data-aos="fade-up" data-aos-delay="300">Compact. Intelligent. Integrated.</p>
+      <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
+        <a href="#products" data-en="Explore Products" data-zh="探索產品" class="px-5 py-2 bg-brand rounded-lg text-white font-semibold hover:bg-blue-600 transition">Explore Products</a>
+        <a href="https://robigpt-webapp-26642801715.asia-east1.run.app/auth" target="_blank" data-en="Try RobiGPT" data-zh="體驗 RobiGPT" class="px-5 py-2 bg-white text-brand rounded-lg font-semibold hover:bg-gray-100 transition">Try RobiGPT</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="ai-dev" class="bg-gray-100 py-20" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-brand mb-8" data-en="AI & Developer Ecosystem" data-zh="AI 與開發者生態系">AI & Developer Ecosystem</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="RobiGPT Icon" class="w-16 h-16 mx-auto mb-4">
+          <h3 data-en="RobiGPT" data-zh="RobiGPT" class="text-xl font-semibold mb-2">RobiGPT</h3>
+          <p data-en="AI-powered assistant for robotics design and chip integration help." data-zh="AI 驅動的機器人設計助理，協助晶片與模組整合。" class="text-sm text-gray-700 mb-4">AI-powered assistant for robotics design and chip integration help.</p>
+          <a href="https://robigpt-webapp-26642801715.asia-east1.run.app/auth" target="_blank" data-en="Launch RobiGPT" data-zh="啟動 RobiGPT" class="px-4 py-2 bg-brand text-white rounded-lg font-semibold hover:bg-blue-600 transition">Launch RobiGPT</a>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://cdn-icons-png.flaticon.com/512/2721/2721262.png" alt="Dev Portal Icon" class="w-16 h-16 mx-auto mb-4">
+          <h3 data-en="RobiDev Portal" data-zh="RobiDev 開發者平台" class="text-xl font-semibold mb-2">RobiDev Portal</h3>
+          <p data-en="Access datasheets, Dev-Knee/Finger kits, and join early adopter program." data-zh="提供資料下載、Dev-Knee / Dev-Finger 套件與早期用戶計劃。" class="text-sm text-gray-700 mb-4">Access datasheets, Dev-Knee/Finger kits, and join early adopter program.</p>
+          <a href="https://dev.robichip.com" target="_blank" data-en="Go to Dev Portal" data-zh="前往開發者平台" class="px-4 py-2 bg-brand text-white rounded-lg font-semibold hover:bg-blue-600 transition">Go to Dev Portal</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-white border-t border-gray-200 py-8 text-center text-sm text-gray-500 space-y-3" data-aos="fade-up">
+    <p data-en="© 2025 RobiChip Technology Co., Ltd. • Empowering Modular Robotics" data-zh="© 2025 羅比芯科技股份有限公司 • 賦能模組化機器人">© 2025 RobiChip Technology Co., Ltd. • Empowering Modular Robotics</p>
+    <div>
+      <a href="https://robigpt-webapp-26642801715.asia-east1.run.app/auth" target="_blank" class="text-brand font-semibold hover:underline" data-en="Access RobiGPT" data-zh="前往 RobiGPT">Access RobiGPT</a>
+      <span class="mx-2 text-gray-400">|</span>
+      <a href="https://dev.robichip.com" target="_blank" class="text-brand font-semibold hover:underline" data-en="Developer Portal" data-zh="開發者平台">Developer Portal</a>
+    </div>
+  </footer>
+
+  <script>
+    AOS.init({duration:800,easing:'ease-in-out',once:true});
+  </script>
+</body>
+</html>

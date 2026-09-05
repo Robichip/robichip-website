@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Robichip | Power SoC Platform for Intelligent Machines</title>
+  <meta name="description" content="Robichip builds high-power-density Power SoC, developer platforms, and AI-assisted engineering tools for robotics, drones, and industrial motion systems." />
+  <style>
+    :root {
+      --bg: #06111f;
+      --bg2: #0b1c32;
+      --card: rgba(255,255,255,0.075);
+      --card2: rgba(255,255,255,0.11);
+      --line: rgba(255,255,255,0.16);
+      --text: #f5f8ff;
+      --muted: #b9c5d6;
+      --blue: #44a7ff;
+      --cyan: #65f1ff;
+      --green: #7fffd4;
+      --orange: #ffb25b;
+      --shadow: 0 24px 60px rgba(0,0,0,0.28);
+      --radius: 24px;
+      --max: 1180px;
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text);
+      background:
+        radial-gradient(circle at 18% 0%, rgba(68,167,255,0.26), transparent 34%),
+        radial-gradient(circle at 80% 12%, rgba(101,241,255,0.15), transparent 28%),
+        linear-gradient(135deg, #050b14 0%, var(--bg) 45%, #08172a 100%);
+      line-height: 1.62;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(6,17,31,0.82);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 160px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      color: #02101f;
+      font-weight: 900;
+      box-shadow: 0 12px 30px rgba(68,167,255,0.35);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section { padding: 86px 0; }
+    .section.compact { padding: 54px 0; }
+
+    .hero {
+      padding: 90px 0 72px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--cyan);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow:before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--cyan), transparent);
+      display: inline-block;
+    }
+
+    h1, h2, h3 { line-height: 1.13; margin: 0; }
+    h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      letter-spacing: -0.06em;
+      max-width: 880px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #fff, #9ed9ff 45%, var(--cyan));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lead {
+      font-size: clamp(18px, 2.2vw, 23px);
+      color: #d7e4f5;
+      margin: 24px 0 0;
+      max-width: 760px;
+    }
+
+    .sublead {
+      color: var(--muted);
+      max-width: 760px;
+      margin: 18px 0 0;
+      font-size: 16px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.07);
+      color: var(--text);
+      font-weight: 800;
+      font-size: 14px;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); border-color: rgba(101,241,255,0.55); background: rgba(255,255,255,0.12); }
+    .btn.primary { background: linear-gradient(135deg, var(--blue), var(--cyan)); color: #031120; border: none; }
+    .btn.primary:hover { background: linear-gradient(135deg, #7ac2ff, #99f7ff); }
+
+    .hero-card {
+      position: relative;
+      min-height: 430px;
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      background: linear-gradient(150deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      padding: 28px;
+    }
+
+    .chip-visual {
+      position: absolute;
+      inset: 46px 42px auto auto;
+      width: 250px;
+      height: 250px;
+      border-radius: 42px;
+      background:
+        linear-gradient(135deg, rgba(68,167,255,0.75), rgba(101,241,255,0.18)),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.16) 0 1px, transparent 1px 22px);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.22), 0 30px 80px rgba(68,167,255,0.2);
+      transform: rotate(8deg);
+    }
+
+    .chip-visual:before,
+    .chip-visual:after {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 28px;
+    }
+
+    .chip-visual:after {
+      inset: 68px;
+      border-color: rgba(255,255,255,0.33);
+      background: rgba(6,17,31,0.35);
+    }
+
+    .metric-stack {
+      position: absolute;
+      left: 28px;
+      bottom: 28px;
+      right: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .metric {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(5,11,20,0.66);
+    }
+
+    .metric strong { display: block; font-size: 24px; letter-spacing: -0.04em; color: #fff; }
+    .metric span { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; }
+
+    .section-head {
+      max-width: 820px;
+      margin-bottom: 34px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4.4vw, 52px);
+      letter-spacing: -0.045em;
+    }
+
+    .section-head p {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .grid { display: grid; gap: 18px; }
+    .grid.two { grid-template-columns: repeat(2, 1fr); }
+    .grid.three { grid-template-columns: repeat(3, 1fr); }
+    .grid.four { grid-template-columns: repeat(4, 1fr); }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      padding: 24px;
+      box-shadow: 0 18px 48px rgba(0,0,0,0.16);
+    }
+
+    .card:hover { background: var(--card2); }
+    .card h3 { font-size: 22px; letter-spacing: -0.03em; margin-bottom: 10px; }
+    .card p { color: var(--muted); margin: 0; }
+
+    .tag {
+      display: inline-flex;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(101,241,255,0.1);
+      color: var(--cyan);
+      border: 1px solid rgba(101,241,255,0.24);
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .product-card {
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .image-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .product-image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      background: rgba(255,255,255,0.06);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo-img {
+      height: 34px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .image-card .card-body {
+      padding: 22px;
+    }
+
+    .product-card .power {
+      color: #fff;
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      margin-top: 20px;
+    }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.055);
+      box-shadow: var(--shadow);
+    }
+
+    .spec-table th,
+    .spec-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .spec-table th {
+      color: var(--cyan);
+      width: 34%;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .spec-table td { color: #e9f2ff; }
+    .spec-table tr:last-child th,
+    .spec-table tr:last-child td { border-bottom: none; }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 14px;
+    }
+
+    .milestone {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .date {
+      color: var(--cyan);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .milestone h3 { font-size: 19px; margin-bottom: 6px; }
+    .milestone p { color: var(--muted); margin: 0; }
+
+    .notice {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255,178,91,0.11);
+      border: 1px solid rgba(255,178,91,0.26);
+      color: #ffe3be;
+      margin-top: 18px;
+      font-size: 14px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .mini-item {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.055);
+      color: #dfeaff;
+    }
+
+    .mini-item strong { color: #fff; }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 42px 0;
+      color: var(--muted);
+      background: rgba(0,0,0,0.12);
+    }
+
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid, .split { grid-template-columns: 1fr; }
+      .grid.two, .grid.three, .grid.four { grid-template-columns: 1fr; }
+      .metric-stack { position: relative; left: auto; right: auto; bottom: auto; margin-top: 250px; }
+      .hero-card { min-height: auto; }
+      .chip-visual { left: 50%; right: auto; transform: translateX(-50%) rotate(8deg); }
+      .nav-links { display: none; }
+      .milestone { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .section { padding: 62px 0; }
+      .hero { padding-top: 62px; }
+      .metric-stack { grid-template-columns: 1fr; margin-top: 230px; }
+      .spec-table th, .spec-table td { display: block; width: 100%; }
+      .spec-table th { border-bottom: none; padding-bottom: 2px; }
+      .spec-table td { padding-top: 2px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Robichip home">
+        <!-- Replace https://drive.google.com/uc?export=view&id=19v7mz5_f4O4P_jgKiDd_fZ-ZjHRczQGq with your public logo URL, or remove this img and keep the text mark. -->
+        <img class="logo-img" src="https://drive.google.com/uc?export=view&id=19v7mz5_f4O4P_jgKiDd_fZ-ZjHRczQGq" alt="Robichip" />
+      </a>
+      <div class="nav-links">
+        <a href="#robisoc">RobiSoC</a>
+        <a href="#robidev">RobiDev</a>
+        <a href="#robilab">RobiLab</a>
+        <a href="#applications">Applications</a>
+        <a href="#agent">RobiAgent</a>
+        <a href="#technology">Technology</a>
+        <a href="#investors">Investors</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Power + AI + Robotics</div>
+          <h1><span class="gradient-text">Power SoC Platform</span><br/>for Intelligent Machines</h1>
+          <p class="lead">Robichip builds high-power-density Power SoC, developer platforms, and AI-assisted engineering tools for robotics, drones, and industrial motion systems.</p>
+          <p class="sublead">從 RobiSoC 到 RobiDev、RobiLab、RobiThrust、RobiTorque 與 RobiAgent，Robichip 協助客戶從 prototype validation 走向 design-in、DFM、pilot production 與量產導入。</p>
+          <div class="cta-row">
+            <a class="btn primary" href="#robisoc">Explore RobiSoC RC100</a>
+            <a class="btn" href="#robidev">Request RobiDev Kit</a>
+            <a class="btn" href="#investors">Discuss Strategic Partnership</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Robichip platform highlights">
+          <div class="tag">Featured Product｜RC100 Preliminary</div>
+          <h3>1000 W-Class BLDC / PMSM Drive Module</h3>
+          <p>Controller + GaN power stage + phase-current sensing + protection + control interfaces in a compact module.</p>
+          <div class="chip-visual" aria-hidden="true"></div>
+          <div class="metric-stack">
+            <div class="metric"><strong>12–60V</strong><span>Operating voltage</span></div>
+            <div class="metric"><strong>140A</strong><span>Peak phase current</span></div>
+            <div class="metric"><strong>22×18mm</strong><span>Package size</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>智慧機器的瓶頸，正在從演算法轉移到功率密度、封裝與熱路徑。</h2>
+          <p>Robichip 聚焦智慧機器供應鏈中最難外包的一段：高功率密度動力控制。我們把 Power SoC、Hybrid Substrate、板級整合、熱管理與系統驗證收斂成可設計、可量測、可驗證的產品鏈。</p>
+        </div>
+        <div class="grid three">
+          <div class="card">
+            <span class="tag">Pain Point</span>
+            <h3>傳統分離式架構</h3>
+            <p>MCU、gate driver、功率級與感測分離，造成模組大、BOM 複雜、熱路徑長與系統整合摩擦高。</p>
+          </div>
+          <div class="card">
+            <span class="tag">Bottleneck</span>
+            <h3>高功率密度熱挑戰</h3>
+            <p>GaN / SiC 提高 switching density，但 junction heat flux、封閉空間散熱與可靠度驗證成為真正關卡。</p>
+          </div>
+          <div class="card">
+            <span class="tag">Solution</span>
+            <h3>Power SoC + System Heat Path</h3>
+            <p>在同一平台處理 power integration、thermal isolation、system-level heat extraction 與 design-in readiness。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="robisoc" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">RobiSoC</div>
+          <h2>Scalable Power SoC modules from 250 W to 1000 W.</h2>
+          <p>RobiSoC RC 系列面向機器人關節、無人機 ESC、AMR / AGV、工業自動化與高動態伺服驅動。RC100 是第一個對外主打產品，定位為 1000 W class 高整合三相 BLDC / PMSM 驅動模組。</p>
+        </div>
+
+        <div class="grid four">
+          <div class="card product-card">
+            <div><span class="tag">RC100</span><h3>1000 W Class</h3><p>High-integrated BLDC / PMSM drive module for robotics, UAV and industrial motion.</p></div>
+            <div class="power">1000W</div>
+          </div>
+          <div class="card product-card">
+            <div><span class="tag">RC75</span><h3>750 W Class</h3><p>Motion-control SoC module for compact actuators and high-density servo systems.</p></div>
+            <div class="power">750W</div>
+          </div>
+          <div class="card product-card">
+            <div><span class="tag">RC50</span><h3>500 W Class</h3><p>Compact actuator and servo module for mid-power robotics and automation nodes.</p></div>
+            <div class="power">500W</div>
+          </div>
+          <div class="card product-card">
+            <div><span class="tag">RC25</span><h3>250 W Class</h3><p>Lightweight motor-control module for smaller actuators, mobility and edge motion systems.</p></div>
+            <div class="power">250W</div>
+          </div>
+        </div>
+
+        <div class="section compact">
+          <div class="split">
+            <div>
+              <h2>RobiSoC RC100</h2>
+              <p class="lead">1000 W-Class High-Integrated Three-Phase BLDC / PMSM Drive Module</p>
+              <p class="sublead">RC100 integrates controller, GaN power stage, phase-current sensing, protection, and control interfaces into a compact 22 × 18 mm module. Designed for robotics joints, industrial automation, AMR / AGV, UAV ESC, and high-dynamic servo applications.</p>
+              <div class="notice">Preliminary specifications subject to change. Final electrical, thermal, mechanical and ordering parameters will be confirmed after validation and official release.</div>
+            </div>
+            <table class="spec-table" aria-label="RC100 preliminary specifications">
+              <tr><th>Product Class</th><td>1000 W-class three-phase BLDC / PMSM drive module</td></tr>
+              <tr><th>Input Voltage</th><td>12–60 V operating; 24–60 V robotic bus recommended</td></tr>
+              <tr><th>Phase Current</th><td>20 A continuous; 140 A peak @ 25°C, 300 µs</td></tr>
+              <tr><th>PWM Frequency</th><td>10–100 kHz</td></tr>
+              <tr><th>Controller</th><td>STM32G4x up to 170 MHz or custom controller</td></tr>
+              <tr><th>Control Modes</th><td>Sensorless FOC / 6-step / Sine</td></tr>
+              <tr><th>Interfaces</th><td>PWM / SPI / UART ×2 / Encoder / POT</td></tr>
+              <tr><th>Protection</th><td>OCP / OVP / UVLO / OTP</td></tr>
+              <tr><th>Package Size</th><td>22 × 18 mm</td></tr>
+              <tr><th>Power Density</th><td>104 W/cm² on RobiDev 35 mm circular aluminum-substrate reference board</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="robidev" class="section compact">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">RobiDev</div>
+          <h2>Design-in reference platform for RobiSoC evaluation and customer integration.</h2>
+          <p>RobiDev 是 RobiSoC 評估、客戶導入與系統驗證的前門，協助客戶快速完成電氣接口、韌體流程、熱路徑與動態負載測試。</p>
+        </div>
+        <div class="grid three">
+          <div class="card image-card">
+            <img class="product-image" src="https://drive.google.com/uc?export=view&id=1Tf52hYeZ-B48H-tS67L-PaS09hQAJ6R4" alt="RobiDev developer platform" />
+            <div class="card-body"><span class="tag">Evaluation</span><h3>快速評估 RC 系列</h3><p>支援客戶測試 RC100 / RC75 / RC50 / RC25 的功率、控制介面與系統相容性。</p></div>
+          </div>
+          <div class="card"><span class="tag">Integration</span><h3>PWM / SPI / UART / Encoder</h3><p>銜接上位控制器、FPGA、MCU 或 Jetson / robotics controller，縮短系統整合週期。</p></div>
+          <div class="card"><span class="tag">Validation</span><h3>動態負載與熱驗證</h3><p>透過 T-N curve、溫升校正與系統級量測，讓設計導入不是紙上談兵。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="robilab" class="section">
+      <div class="wrap split">
+        <div>
+          <div class="eyebrow">RobiLab</div>
+          <h2>Validation kits and engineering workflows for high-power-density motion systems.</h2>
+          <p class="sublead">RobiLab provides validation kits, reference test setups, firmware workflows, thermal evaluation data, and system-level measurement processes to help customers evaluate RobiSoC-based designs before design-in and pilot production.</p>
+        </div>
+        <div class="mini-list">
+          <div class="card image-card">
+            <img class="product-image" src="https://drive.google.com/uc?export=view&id=1SMJcvZ-NCZtDXGfYRMi3HfE91dGbxYsn" alt="RobiLab validation kits and engineering workflow" />
+            <div class="card-body"><span class="tag">RobiLab Product Image</span><h3>Validation kits and workflows</h3><p>Replace https://drive.google.com/uc?export=view&id=1SMJcvZ-NCZtDXGfYRMi3HfE91dGbxYsn with your public product image URL.</p></div>
+          </div>
+          <div class="mini-item"><strong>RC-AI Kits</strong>｜developer kits for robotics and UAV motion validation.</div>
+          <div class="mini-item"><strong>Thermal Evaluation</strong>｜thermal path, aluminum substrate, hybrid substrate and enclosure-level review.</div>
+          <div class="mini-item"><strong>Measurement Workflow</strong>｜SoC → board → system → measurement closed loop.</div>
+          <div class="mini-item"><strong>DFM Readiness</strong>｜support for pilot sample, package qualification and reliability build.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="applications" class="section compact">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Applications</div>
+          <h2>From UAV propulsion to robotics torque platforms.</h2>
+          <p>Robichip 以系統驗證帶動 RobiSoC design-in，近期主力聚焦 RobiThrust，同時布局 RobiTorque 作為機器人關節與致動器平台。</p>
+        </div>
+        <div class="grid two">
+          <div class="card image-card">
+            <img class="product-image" src="https://drive.google.com/uc?export=view&id=1OgILob2soG30ZcipdG0bumpTFKbRrsVN" alt="RobiThrust UAV propulsion validation platform" />
+            <div class="card-body">
+              <span class="tag">Drone｜RobiThrust</span>
+              <h3>High-density propulsion validation platform for UAV systems.</h3>
+              <p>RobiThrust 連結 ESC、motor、propulsion system、thermal path 與 measurement workflow，作為無人機與致動器系統級 validation platform。</p>
+            </div>
+          </div>
+          <div class="card">
+            <span class="tag">Robotics｜RobiTorque</span>
+            <h3>Compact actuator and torque platform for robotics motion systems.</h3>
+            <p>RobiTorque 面向人形機器人關節、機器狗、協作型機械手臂、末端執行器與 AMR / AGV 驅動模組。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="agent" class="section">
+      <div class="wrap split">
+        <div>
+          <div class="eyebrow">RobiAgent</div>
+          <h2>AI-assisted engineering layer for faster design-entry.</h2>
+          <p class="sublead">RobiAgent supports early feasibility, thermal / power evaluation, design-in workflow and engineering collaboration. It is the advanced packaging deal engine that turns customer requirements into RobiSoC product opportunities.</p>
+        </div>
+        <div class="grid two">
+          <div class="card"><span class="tag">RobiFlux</span><h3>Thermal / Power Workflow</h3><p>用於熱評估、功率路徑、材料選型與封裝前置判斷。</p></div>
+          <div class="card"><span class="tag">RobiGPT</span><h3>Engineering Assistant</h3><p>支援規格整理、design-in 問答、測試紀錄與跨團隊知識沉澱。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="technology" class="section compact">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Technology / Roadmap</div>
+          <h2>Patent-backed Power SoC and thermal-management platform.</h2>
+          <p>Robichip 的技術護城河不是單點元件，而是 Power SoC、Hybrid Substrate、Smart Substrate、multi-path thermal management 與 system-level heat extraction 的產品路線圖。</p>
+        </div>
+        <div class="grid four">
+          <div class="card"><h3>Power Integration</h3><p>Control SoC、PWM / ADC / protection 與 GaN high-frequency switching 整合。</p></div>
+          <div class="card"><h3>Hybrid Substrate</h3><p>thermal domain separation 與 package thermal path 作為產品架構核心。</p></div>
+          <div class="card"><h3>System Heat Path</h3><p>從 board-level integration 延伸至 shaft、skeleton、airflow 等系統散熱。</p></div>
+          <div class="card"><h3>DFM / Reliability</h3><p>以 design review、reliability build、pilot sample 與 package qualification 降低導入風險。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="milestones">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Milestones & External Recognition</div>
+          <h2>External validation signals for technology, partnership and market access.</h2>
+          <p>這些里程碑建議放在首頁與 Investors / Strategic Partners 頁，作為政府認可、產業合作與國際展會曝光的信任訊號。</p>
+        </div>
+        <div class="timeline">
+          <div class="milestone">
+            <div class="date">2026.04.25</div>
+            <div><h3>2026 Best AI Awards｜IC Design Startup Category Honorable Mention</h3><p>Robichip received recognition for its high-power-density Power SoC platform for intelligent robotics and UAV motion control.</p></div>
+          </div>
+          <div class="milestone">
+            <div class="date">2026.05.14</div>
+            <div><h3>Upcoming｜Strategic Technology MOU with Swancor Holding</h3><p>Robichip is scheduled to sign a strategic technology MOU with Swancor Holding, focusing on next-generation robotics, advanced packaging materials and high-power-density motion systems.</p></div>
+          </div>
+          <div class="milestone">
+            <div class="date">2026.06.02</div>
+            <div><h3>Upcoming｜COMPUTEX InnoVEX Showcase Wall</h3><p>Robichip has been selected to participate in the InnoVEX Showcase Wall at COMPUTEX 2026, presenting RobiSoC, RobiThrust and the intelligent power platform roadmap.</p></div>
+          </div>
+          <div class="milestone">
+            <div class="date">Coming Soon</div>
+            <div><h3>More product validation, ecosystem partnerships and technology milestones.</h3><p>Further updates will be announced after partner approval and official event disclosure.</p></div>
+          </div>
+        </div>
+        <div class="notice">For upcoming events and partnership announcements, publish only after partner alignment or official event confirmation. Use “Upcoming / Scheduled / Selected to participate” before formal completion.</div>
+      </div>
+    </section>
+
+    <section id="investors" class="section compact">
+      <div class="wrap split">
+        <div>
+          <div class="eyebrow">Investors / Strategic Partners</div>
+          <h2>Building the design-to-production power platform for intelligent machines.</h2>
+          <p class="sublead">Robichip is developing a patent-backed Power SoC and thermal-management platform for robotics, drones and high-density motion systems. Our roadmap connects RobiAgent design-entry, RobiSoC production modules, and validation platforms such as RobiDev, RobiLab, RobiThrust and RobiTorque.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="#contact">Discuss Strategic Investment</a>
+            <a class="btn" href="#contact">Explore Co-Development</a>
+          </div>
+        </div>
+        <div class="mini-list">
+          <div class="mini-item"><strong>Seed / Strategic Round</strong>｜DFM, reliability validation, pilot production and customer design-in readiness.</div>
+          <div class="mini-item"><strong>Target Partners</strong>｜materials, packaging, robotics, UAV, industrial automation and deep-tech investors.</div>
+          <div class="mini-item"><strong>12–18 Month Plan</strong>｜DFM review → reliability build → pilot production → design-in readiness.</div>
+          <div class="mini-item"><strong>Why Now</strong>｜Robotics and UAV performance increasingly depend on power density, thermal management and manufacturable module architecture.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="wrap">
+        <div class="card" style="padding: 38px; background: linear-gradient(135deg, rgba(68,167,255,0.18), rgba(101,241,255,0.08));">
+          <div class="section-head" style="margin-bottom: 0;">
+            <div class="eyebrow">Careers / Contact</div>
+            <h2>Talk to Robichip about design-in, co-development or strategic partnership.</h2>
+            <p>We welcome robotics, UAV, industrial motion, materials, packaging and investment partners who are building the next generation of intelligent machines.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="mailto:contact@robichip.com?subject=Robichip%20Strategic%20Partnership%20Inquiry">Contact Robichip</a>
+              <a class="btn" href="mailto:contact@robichip.com?subject=RobiDev%20Kit%20Request">Request RobiDev Kit</a>
+              <a class="btn" href="mailto:careers@robichip.com?subject=Robichip%20Career%20Inquiry">Careers</a>
+            </div>
+            <div class="notice">請將 contact@robichip.com 與 careers@robichip.com 替換為實際收件信箱；若使用 Google Forms，可把 CTA 連結改成表單網址。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© 2026 Robichip Technology Co., Ltd. All rights reserved.</div>
+      <div>Power + AI + Robotics｜RobiSoC / RobiDev / RobiLab / RobiThrust / RobiTorque / RobiAgent</div>
+    </div>
+  </footer>
+</body>
+</html>
+
