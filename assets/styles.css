@@ -122,6 +122,29 @@ body.google-reference .robithrust-native-architecture p { margin: 0 8px 14px; fo
 body.google-reference .robithrust-native-series { width: min(1154px, calc(100% - 48px)); margin: 0 auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; color: #202124; font-family: Roboto, Arial, sans-serif; }
 body.google-reference .robithrust-native-series img { display: block; width: 100%; height: auto; }
 body.google-reference .robithrust-native-series h2 { margin: 24px 8px 0; color: #202124; font-size: 25px; font-weight: 400; line-height: 1.35; }
+body.google-reference .event-source-row { width: min(1154px, calc(100% - 48px)); margin: 0 auto; color: #202124; font-family: Roboto, Arial, sans-serif; }
+body.google-reference .event-source-row figure { margin: 0; }
+body.google-reference .event-source-row img { display: block; max-width: 100%; height: auto; }
+body.google-reference .event-source-row h1 { margin: 0 0 26px; color: #95205c; font-size: 42px; font-weight: 300; line-height: 1.2; }
+body.google-reference .event-source-row h2 { margin: 0 0 18px; color: #202124; font-size: 24px; font-weight: 400; line-height: 1.45; }
+body.google-reference .event-source-row h3 { margin: 0 0 18px; color: #202124; font-size: 20px; font-weight: 400; line-height: 1.45; }
+body.google-reference .event-source-row p { margin: 0 0 14px; font-size: 16px; line-height: 1.7; }
+body.google-reference .event-source-row figcaption { margin-top: 13px; color: #202124; font-size: 16px; line-height: 1.45; text-align: center; }
+body.google-reference .tairos-booth { width: min(958px, calc(100% - 48px)); display: grid; grid-template-columns: 365px 562px; gap: 30px; }
+body.google-reference .tairos-booth .event-source-copy { grid-column: 1 / -1; padding-top: 4px; }
+body.google-reference .event-two, body.google-reference .event-grid-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; }
+body.google-reference .event-three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; }
+body.google-reference .event-single { width: min(562px, calc(100% - 48px)); }
+body.google-reference .event-single img { margin: 22px auto 0; }
+body.google-reference .event-deck { width: min(760px, calc(100% - 48px)); }
+body.google-reference .event-deck img { margin-top: 28px; }
+body.google-reference .event-evidence { width: min(760px, calc(100% - 48px)); }
+body.google-reference .event-evidence img { width: 100%; margin: 30px 0 46px; }
+body.google-reference .event-swancor { width: min(957px, calc(100% - 48px)); }
+body.google-reference .event-swancor > .event-hero-image { width: 100%; margin-bottom: 36px; }
+body.google-reference .event-swancor > h2 { margin-top: 28px; }
+body.google-reference .event-swancor .event-grid-two { margin-top: 28px; }
+body.google-reference .event-swancor .event-small-gallery { width: min(858px, 100%); margin-top: 38px; grid-template-columns: repeat(2, 266px); gap: 30px; }
 @media (max-width: 900px) {
   body.google-reference .nav-shell { width: min(100% - 32px, 1304px); min-height: 66px; }
   body.google-reference .brand img { width: 164px; height: 38px; }
@@ -149,6 +172,10 @@ body.google-reference .robithrust-native-series h2 { margin: 24px 8px 0; color: 
   body.google-reference .drive-reference iframe { height: min(var(--reference-height), 840px); }
   body.google-reference .robithrust-native-architecture { width: min(100% - 32px, 640px); grid-template-columns: 1fr; gap: 28px; }
   body.google-reference .robithrust-native-series { width: min(100% - 32px, 640px); grid-template-columns: 1fr; gap: 28px; }
+  body.google-reference .event-source-row, body.google-reference .tairos-booth { width: min(100% - 32px, 640px); }
+  body.google-reference .tairos-booth, body.google-reference .event-two, body.google-reference .event-three, body.google-reference .event-grid-two, body.google-reference .event-swancor .event-small-gallery { grid-template-columns: 1fr; }
+  body.google-reference .event-single, body.google-reference .event-deck, body.google-reference .event-evidence, body.google-reference .event-swancor { width: min(100% - 32px, 640px); }
+  body.google-reference .event-swancor .event-small-gallery { width: 100%; }
 }
 
 a { color: inherit; text-decoration: none; }
