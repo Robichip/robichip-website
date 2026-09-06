@@ -4,6 +4,8 @@
   const ORIGIN = 'https://www.robichip.com';
   const CONTACT = 'mailto:contact@robichip.com';
   const BD = 'mailto:bd@robichip.com';
+  const VIP = 'https://vip.robichip.com';
+  const DESIGN_IN = 'https://dev.robichip.com';
   const BASE_PATH = location.hostname.endsWith('.github.io') ? '/robichip-website' : '';
 
   const normalizePath = (value) => {
@@ -83,7 +85,7 @@
           <div class="visual-card" aria-label="Power SoC platform illustration">
             <div class="chip" aria-hidden="true"></div>
             <div class="metric-row">
-              ${(metrics.length ? metrics : [['250–1000 W', 'Product family'], ['18.5 × 22.5 mm', 'RobiSoC module'], ['Power + AI', 'Platform direction']]).map(([value, label]) => `<div class="metric"><strong>${value}</strong><span>${label}</span></div>`).join('')}
+              ${(metrics.length ? metrics : [['Up to 700 W', 'Engineering sample'], ['Target 1 kW', 'Platform direction'], ['Power + AI', 'Intelligent machines']]).map(([value, label]) => `<div class="metric"><strong>${value}</strong><span>${label}</span></div>`).join('')}
             </div>
           </div>`}
       </div>
@@ -92,10 +94,10 @@
   const utilityBar = () => `
     <aside class="utility-bar" aria-label="RobiChip event and contact links">
       <div class="wrap utility-links">
-        <a href="https://robichip-homepage.robichip-ai-8830.chatgpt.site/2026-TAIROS#schedule">TAIROS Virtual Booth · AUG 19 · 13:30 <span aria-hidden="true">↗</span></a>
-        <a href="https://robichip-homepage.robichip-ai-8830.chatgpt.site/semicon-taiwan-2026">SILICON STARTUPS PITCH</a>
-        <a href="https://VIP.robichip.com">VIP Room</a>
-        <a href="https://robichip-homepage.robichip-ai-8830.chatgpt.site/contact?intent=meeting">BOOK A MEETING</a>
+        <a href="https://vip.robichip.com/2026-TAIROS">TAIROS Virtual Booth <span aria-hidden="true">↗</span></a>
+        <a href="https://vip.robichip.com/semicon-taiwan-2026">SEMICON TAIWAN</a>
+        <a href="https://vip.robichip.com">VIP Room</a>
+        <a href="https://dev.robichip.com">START DESIGN-IN</a>
         <a href="https://www.linkedin.com/company/robichip/?viewAsMember=true">LINKEDIN</a>
         <a href="https://www.facebook.com/robichipTW">FACEBOOK</a>
         <a href="https://www.youtube.com/channel/UCqp-CDSVPCX8TfYT_aVScpg">YOUTUBE</a>
@@ -103,15 +105,15 @@
       </div>
     </aside>`;
 
-  const cta = (title = 'Build the Next Generation of Intelligent Machines with RobiChip', text = '與羅比芯共同打造次世代智慧機器動力平台。從技術對焦、驗證計畫到 design-in 與 pilot partnership。') => `
+  const cta = (title = 'Build the Next Generation of Intelligent Machines with RobiChip', text = '與羅比芯共同打造次世代智慧機器動力平台。從技術對焦、驗證計畫到受控的 design-in 與 pilot partnership。') => `
     <section class="section tight">
       <div class="wrap">
         <div class="cta-band">
           <h2>${title}</h2>
           <p>${text}</p>
           <div class="actions">
-            ${link(BD, 'Discuss a partnership', 'btn primary')}
-            ${link(CONTACT, 'Technical discussion', 'btn')}
+            ${link(DESIGN_IN, 'Start a Design-in Request', 'btn primary')}
+            ${link(BD, 'Book a Technical Meeting', 'btn')}
           </div>
         </div>
       </div>
@@ -123,17 +125,17 @@
       eyebrow: 'Power + AI + Robotics',
       title: 'Power SoC Platform for Intelligent Machines',
       zh: '為智慧機器打造高功率密度 Power SoC 平台',
-      lead: 'RobiChip builds high-power-density Power SoC, developer platforms, and AI-assisted engineering tools for robotics, UAVs, and intelligent motion systems.',
-      sublead: '羅比芯整合 Power SoC、先進封裝熱管理、RobiDev 驗證平台與 RobiAgent 設計代理人，協助客戶從 prototype validation 走向 design-in、DFM 與 pilot production。',
+      lead: 'RobiChip integrates high-power-density motor control, advanced packaging, thermal engineering, and system validation for robotics, UAVs, and intelligent machines.',
+      sublead: '羅比芯整合高功率密度馬達控制、先進封裝、熱工程與系統驗證，服務機器人、無人系統與智慧機器；再透過受控的 Design-in Workspace 推進可追溯的合作決策。',
       actions: [
-        {href: '/robisoc', label: '了解 RobiSoC'},
-        {href: '/technology-insights', label: '閱讀技術洞察'},
-        {href: '/partnership', label: '洽談策略合作'}
+        {href: '/robisoc', label: 'Explore RobiSoC'},
+        {href: DESIGN_IN, label: 'Start Design-in'},
+        {href: VIP, label: 'Visit RobiChip VIP'}
       ]
     })}
     ${section('2026 Technology Showcase Series', 'From Live Validation to Semiconductor-Defined Motion', '從實機驗證走向半導體定義的智慧動力。Aug. 19–22 展示技術如何運作；Sep. 2–4 說明如何透過半導體平台規模化。', cards([
       {tag: 'Aug 19–22 · Taipei', title: 'Automation Taipei / TAIROS 2026', text: 'Live demo at Swancor booth Q210, TaiNEX 2 and Maxon booth K012, TaiNEX 1.', href: '/news-events/2026-TAIROS', link: 'Event details'},
-      {tag: 'Sep 2–4 · Taipei', title: 'SEMICON Taiwan 2026', text: 'Accepted speaker and showcase at booth T9404, 7F TaiNEX 2. Presentation: Sep 4, 14:00.', href: '/news-events/semicon-taiwan-2026', link: 'Event details'}
+      {tag: 'Sep 2–4 · Taipei', title: 'SEMICON Taiwan 2026', text: 'Silicon Startups Stage: Sep 4, 11:20–11:30 at T9404 / 7F TaiNEX 2. Venture Day: 14:30–14:40 at Grand Hilai Taipei 6F (invitation-only).', href: '/news-events/semicon-taiwan-2026', link: 'Event details'}
     ]), 'tint')}
     ${section('RobiThrust Focus', 'From Power SoC to Propulsion Validation', '從 Power SoC 到無人機推進驗證平台：把電力轉換、馬達驅動、熱路徑與量測資料放進同一條工程流程。', `
       <div class="split">
@@ -153,8 +155,8 @@
       {tag:"2026.04.25 · Recognition", title:"2026 Best AI Awards", text:"Recognition for RobiChip Power SoC platform for intelligent motion systems.<br><br>羅比芯智慧動力 Power SoC 平台獲 IC 設計類別肯定。", href:"/news-events/news-events-best-AI-Awards", link:"Read Award Story"}
     ]), "tint")}
     ${section('Platform Overview', 'One Platform, Multiple Entry Points', '從 Power SoC、驗證平台到 AI-assisted design-in，依照客戶所處階段選擇最直接的合作入口。', cards([
-      {tag:'Power SoC', title:'RobiSoC', text:'Power SoC + hybrid-substrate product family from 250 W to 1000 W class.', href:'/robisoc'},
-      {tag:'Evaluation', title:'RobiDev', text:'Developer and evaluation platforms for electrical, firmware, and thermal validation.', href:'/robidev'},
+      {tag:'Power SoC', title:'RobiSoC', text:'Engineering samples up to 700 W, with a 1 kW platform target for compact intelligent-machine power control.', href:'/robisoc'},
+      {tag:'Evaluation', title:'RobiDev', text:'Developer and evaluation ecosystem for electrical, firmware, thermal validation, and governed Design-in preparation.', href:'/robidev'},
       {tag:'UAV', title:'RobiThrust', text:'UAV propulsion validation from compact motors to heavy-load test benches.', href:'/robithrust'},
       {tag:'Robotics', title:'RobiTorque', text:'Robotics actuator and joint-motor validation direction.', href:'/robitorque'},
       {tag:'AI Workflow', title:'RobiAgent', text:'AI-assisted technical query, pre-check, layout review, and design-in decisions.', href:'/robiagent'},
@@ -183,59 +185,56 @@
       eyebrow:'RobiSoC Product Family',
       title:'Scalable Power SoC Modules for Intelligent Machines',
       zh:'面向智慧機器的可擴展高功率密度 Power SoC 產品線',
-      lead:'RobiSoC is RobiChip’s scalable Power SoC product family for robotics, UAV propulsion, and high-power-density motion systems, offered as RC25 / RC50 / RC75 / RC100 modules from 250 W to 1000 W class.',
-      sublead:'RobiSoC 是羅比芯面向機器人、無人機推進與高功率密度動力系統的可擴展 Power SoC 產品線，提供 RC25 / RC50 / RC75 / RC100，涵蓋 250 W 到 1000 W class。',
-      actions:[{href:"/partnership",label:"Discuss Design-in"},{href:"/robidev",label:"Explore RobiDev"}],
-      metrics:[['250–1000 W','RC25–RC100'],['22 × 18 mm','Preliminary RC100 footprint'],['M1/M2 · G1/G2','Configuration logic']]
+      lead:'RobiSoC is RobiChip’s Power SoC platform for compact intelligent-machine power control across robotics, UAV propulsion, and high-power-density motion systems.',
+      sublead:'RobiSoC 是羅比芯面向機器人、無人機推進與高功率密度動力系統的 Power SoC 平台；目前工程樣品最高 700 W，並以 1 kW 為平台目標。',
+      actions:[{href:DESIGN_IN,label:'Start a Design-in Request'},{href:'/robidev',label:'Explore RobiDev'}],
+      metrics:[['Up to 700 W','Engineering sample'],['Target 1 kW','Platform direction'],['Power + AI','System integration']]
     })}
-    ${section('Product Line', 'RC25 / RC50 / RC75 / RC100', 'A scalable product family organized by power class and application direction.', cards([
-      {tag:'Market Baseline', title:'RC25', power:'250 W Class', text:'Lightweight motor control for compact actuators, education kits, mobility nodes, and edge-motion platforms.'},
-      {tag:'2× Direction', title:'RC50', power:'500 W Class', text:'Compact actuator and servo module for mid-power robotics, AMR/AGV, gimbals, and automation.'},
-      {tag:'3× Direction', title:'RC75', power:'750 W Class', text:'High-power compact actuation for robotics joints, industrial automation, and high-dynamic motion.'},
-      {tag:'Indicator Product', title:'RC100', power:'1000 W Class', text:'1000 W-class flagship for power-dense designs with clear thermal and validation boundaries.'}
-    ], 'four'), 'tint')}
-    ${section("Technical Documentation", "RC100 Detailed Datasheet", "RC100 三相 BLDC／PMSM 馬達驅動器詳細規格書<br>Download the detailed technical datasheet for the RC100 motor-drive Power SoC, including architecture, interfaces, operating conditions, protection functions, package information, ordering options, and RobiDev design-in support.<br><br>下載 RC100 馬達驅動 Power SoC 詳細規格書，查看功能架構、控制介面、操作條件、保護功能、封裝資訊、訂購組態與 RobiDev Design-in 支援。", `
+    ${section('Platform Status', 'From Engineering Sample to Design-in Platform', '從工程樣品走向客戶導入的平台路徑。', cards([
+      {tag:'Available now', title:'Engineering Sample', power:'Up to 700 W', text:'For compact intelligent-machine power-control evaluation and evidence-driven validation.'},
+      {tag:'Platform target', title:'Higher Power Density', power:'Target 1 kW', text:'A platform direction for future robotics, UAV propulsion, and intelligent-motion integration.'},
+      {tag:'Design-in', title:'Configured Engagement', text:'Controller, interface, thermal, package, and validation scope are reviewed per customer case.'}
+    ]), 'three')}
+    ${section("Technical Documentation", "RobiSoC Design-in Brief", "公開頁面說明目前工程樣品與平台方向；完整規格與設計資料將於正式技術討論及 NDA 管理的流程中提供。<br><br>The public site describes current engineering samples and platform direction; detailed specifications and design data are provided through official technical discussion and NDA-controlled access.", `
       <div class="datasheet-layout">
         <div>
           <div class="badge-row"><span class="tag">Version 0.9</span><span class="tag">Three-Phase BLDC / PMSM</span><span class="tag">Integrated GaN Power Stage</span><span class="tag">RobiSoC Platform</span></div>
-          <h3>RC100 Three-Phase BLDC/PMSM Motor Driver</h3><p class="secondary-heading">RobiSoC Motor-Drive Power SoC</p>
-          <p>RC100 combines an STM32G4-series motor-control MCU, a three-phase GaN power stage, current sensing, protection functions, and multiple control interfaces in a preliminary 22 mm × 18 mm footprint.</p>
-          <p>RC100 在初步 22 mm × 18 mm 的精巧尺寸中，整合 STM32G4 系列馬達控制 MCU、三相 GaN 功率級、電流感測、保護功能與多種控制介面。</p>
+          <h3>RobiSoC Power SoC Platform</h3><p class="secondary-heading">Engineering sample and Design-in platform</p>
+          <p>RobiSoC is evaluated through customer-specific motor-control, power-stage, thermal-path, protection, and interface requirements.</p>
+          <p>RobiSoC 依客戶的馬達控制、功率級、熱路徑、保護與介面需求進行工程評估與 Design-in 規劃。</p>
           <div class="spec-grid">
-            <div class="spec-item"><span>Main Supply</span><strong>12–60 V</strong><small>24–60 V robotic bus</small></div>
-            <div class="spec-item"><span>Output Current</span><strong>20 A continuous</strong><small>140 A peak @ 25°C / 300 µs</small></div>
-            <div class="spec-item"><span>Form Factor</span><strong>22 × 18 mm</strong><small>Preliminary RobiSoC footprint</small></div>
-            <div class="spec-item"><span>PWM Frequency</span><strong>10–100 kHz</strong><small>Recommended operating range</small></div>
-            <div class="spec-item"><span>Controller</span><strong>STM32G4 Series</strong><small>Motor-control MCU in package</small></div>
-            <div class="spec-item"><span>Power Stage</span><strong>Three-Phase GaN</strong><small>Configurable G1 / G2 options</small></div>
-            <div class="spec-item"><span>Interfaces</span><strong>PWM / SPI / UART</strong><small>Encoder and POT support</small></div>
+            <div class="spec-item"><span>Current sample</span><strong>Up to 700 W</strong><small>Engineering evaluation boundary</small></div>
+            <div class="spec-item"><span>Platform target</span><strong>1 kW</strong><small>Future integration direction</small></div>
+            <div class="spec-item"><span>Control</span><strong>Motor control</strong><small>Customer-specific interface review</small></div>
+            <div class="spec-item"><span>Power stage</span><strong>High density</strong><small>Protection and system integration</small></div>
+            <div class="spec-item"><span>Thermal path</span><strong>System reviewed</strong><small>Package to structure and airflow</small></div>
+            <div class="spec-item"><span>Validation</span><strong>Evidence-led</strong><small>RobiDev, RobiLab and application proof</small></div>
           </div>
         </div>
         <aside class="document-panel">
           <span class="document-icon">PDF</span><span class="document-pages">11 PAGES</span>
-          <h3>RC100 BLDC/PMSM Motor Driver Datasheet</h3>
-          <dl><div><dt>Document</dt><dd>RC100-DS-0717</dd></div><div><dt>Version</dt><dd>0.9 (draft)</dd></div><div><dt>Released</dt><dd>2026-07-29</dd></div><div><dt>Part No.</dt><dd>Robi-DRV-RC100B</dd></div><div><dt>Language</dt><dd>English</dd></div></dl>
-          <div class="actions"><a class="btn primary" href="https://drive.google.com/file/d/14MMWa4HdldpVRfPoB2D2_pjUSVBwh5M8/view?usp=sharing">Download RC100 Datasheet</a><a class="btn" href="https://drive.google.com/file/d/14MMWa4HdldpVRfPoB2D2_pjUSVBwh5M8/view?usp=sharing">View Datasheet Online</a></div>
+          <h3>RobiSoC Design-in Brief</h3>
+          <dl><div><dt>Sample status</dt><dd>Up to 700 W</dd></div><div><dt>Platform target</dt><dd>1 kW</dd></div><div><dt>Engagement</dt><dd>Reviewed per case</dd></div><div><dt>Disclosure</dt><dd>Official discussion / NDA</dd></div><div><dt>Language</dt><dd>English / 繁中</dd></div></dl>
+          <div class="actions">${link(DESIGN_IN,'Start a Design-in Request','btn primary')}${link(BD,'Book a Technical Meeting','btn')}</div>
         </aside>
       </div>
       <div class="detail-grid">
-        <div><span>Architecture</span><strong>Functional Block Diagram</strong><small>MCU、GaN 功率級、感測與控制架構</small></div><div><span>Electrical</span><strong>Ratings & Operating Conditions</strong><small>電壓、溫度與 PWM 操作範圍</small></div><div><span>Interfaces</span><strong>Control & Feedback</strong><small>PWM、SPI、UART、Encoder 與 POT</small></div><div><span>Protection</span><strong>OCP / OVP / UVLO / OTP</strong><small>過流、過壓、欠壓與過溫保護</small></div><div><span>Mechanical</span><strong>Package & Footprint</strong><small>封裝尺寸、焊墊與 IC footprint</small></div><div><span>Thermal</span><strong>Thermal & Reliability Data</strong><small>熱阻、接面溫度與 ESD 資訊</small></div><div><span>Configuration</span><strong>M1 / M2 · G1 / G2 Options</strong><small>控制器與 GaN 功率級組態</small></div><div><span>Design-in</span><strong>RobiDev Development Support</strong><small>High-Density 與 Discrete 評估平台</small></div>
+        <div><span>Architecture</span><strong>System Block Review</strong><small>控制、功率級、感測與介面</small></div><div><span>Electrical</span><strong>Operating-Point Review</strong><small>依應用與驗證目標確認</small></div><div><span>Interfaces</span><strong>Control & Feedback</strong><small>依系統介面進行規劃</small></div><div><span>Protection</span><strong>Protection Strategy</strong><small>依目標系統與使用情境審查</small></div><div><span>Mechanical</span><strong>Package & Footprint</strong><small>於正式資料與設計流程確認</small></div><div><span>Thermal</span><strong>System Heat-Flow Path</strong><small>封裝、載板、結構與氣流整合</small></div><div><span>Configuration</span><strong>Configured Platform Options</strong><small>依控制、功率與熱需求組態</small></div><div><span>Design-in</span><strong>RobiDev Development Support</strong><small>工程評估與驗證支援</small></div>
       </div>
-      <div class="notice"><strong>Preliminary document notice｜初步文件說明：</strong> Specifications, configuration options, package codes, electrical limits, availability, and production part numbers remain subject to validation, formal quotation, engineering review, and final product release.<br>規格、組態選項、封裝代碼、電氣限制、供貨狀態及正式量產料號，仍應以驗證、工程審查、正式報價及最終產品發布文件為準。</div>
+      <div class="notice"><strong>Public platform notice｜公開平台說明：</strong> The public site describes engineering direction, not final product specifications. Electrical, thermal, package, availability, and commercial terms remain subject to validation, formal quotation, engineering review, and final product release.<br>本頁說明工程方向，非最終產品規格；電氣、熱、封裝、供貨與商務條件仍以驗證、正式報價、工程審查及最終產品發布文件為準。</div>
     `, "tint")}
-    ${section('SKU Logic', 'RCxx + M / G Defines the RobiSoC Product Configuration', '以 RCxx + M / G 定義 RobiSoC 產品組態：RobiSoC-RCxx-MxGx。', `
+    ${section('Configuration Logic', 'Configure the Platform Around the Engineering Decision', '依照應用、控制、散熱與驗證需求定義平台組態，而非以固定公開 SKU 限制合作範圍。', `
       <div class="table-wrap"><table>
         <thead><tr><th>Code</th><th>Meaning</th><th>Public positioning</th></tr></thead>
         <tbody>
-          <tr><td>RC25 / 50 / 75 / 100</td><td>250 / 500 / 750 / 1000 W class</td><td>Scalable power-class family</td></tr>
-          <tr><td>M1</td><td>STM32G4x motor-control MCU baseline</td><td>170 MHz-class reference platform</td></tr>
-          <tr><td>M2</td><td>Custom controller / firmware integration</td><td>Partner-specific option</td></tr>
-          <tr><td>G1</td><td>Integrated 100 V GaN half-bridge</td><td>Integrated power-stage direction</td></tr>
-          <tr><td>G2</td><td>100 V enhancement-mode GaN reference</td><td>Discrete/reference transistor direction</td></tr>
-          <tr><td>T1 / T2</td><td>Compact RC thermal-model options</td><td>Thermal-path modeling options</td></tr>
+          <tr><td>Power class</td><td>Operating point and system objective</td><td>Engineering sample up to 700 W; 1 kW target direction</td></tr>
+          <tr><td>Control</td><td>Motor-control controller, firmware, sensing, and interface</td><td>Reviewed for application and partner requirements</td></tr>
+          <tr><td>Power stage</td><td>Power-device and protection architecture</td><td>Aligned with the target motion system</td></tr>
+          <tr><td>Thermal path</td><td>Package, substrate, board, structure, and airflow</td><td>Validated as a system heat-flow path</td></tr>
+          <tr><td>Validation</td><td>Evidence plan, measurement, and application proof</td><td>Scoped through the Design-in engagement</td></tr>
         </tbody>
       </table></div>
-      <div class="notice">Pin maps, package drawings, order codes, and final electrical/thermal ratings are subject to the official datasheet and partner discussion. M2 positioning is application- and partner-specific.</div>`)}
+      <div class="notice">Final electrical, thermal, package, availability, and commercial specifications are subject to the official datasheet, NDA, and partner discussion.</div>`)}
     ${section('Partner Configuration', 'From Reference Platform to Customer-Specific Power Silicon', '合作內容可依控制、介面、韌體、驗證與製造需求進行組態。', cards([
       {title:'Toolchain & Firmware Alignment', text:'Align the partner MCU, SDK, firmware structure, debug tools, production programming, and validation documentation.'},
       {title:'Application-specific I/O', text:'Define CAN bus, RS485, UART, SPI, PWM, encoder, sensor signals, cable direction, and control-interface logic.'},
@@ -258,7 +257,7 @@
       sublead:"Diameter 30 mm · up to 500 W",
       image:"/assets/images/robidev-platform.png",
       caption:"RobiDev High-Density evaluation and design-in platform",
-      actions:[{href:"/partnership",label:"Discuss Design-in"},{href:"/robisoc",label:"Explore RobiSoC"}]
+      actions:[{href:DESIGN_IN,label:'Start a Design-in Request'},{href:"/robisoc",label:"Explore RobiSoC"}]
     })}
     ${section("Platform Overview", "What is RobiDev?", "RobiDev 是什麼？<br>RobiDev is the board-level platform that bridges RobiSoC device technology with system-level validation, motor integration, thermal review, and customer design-in.<br><br>RobiDev 是承接 RobiSoC 與系統驗證之間的 board-level 平台，用來完成馬達整合、熱檢視、控制介面驗證與客戶導入前評估。", cards([
       {title:"Evaluation",text:"Supports early feasibility review, motor-control evaluation, electrical interface testing, and firmware bring-up."},
@@ -581,9 +580,9 @@
       title:'SEMICON Taiwan 2026', zh:'從功率半導體到智慧機器平台的技術發表',
       lead:'RobiChip is an accepted speaker and exhibitor at SEMICON Taiwan 2026.',
       sublead:'以 Power SoC、先進封裝熱管理與智慧運動驗證連結半導體與機器人應用。',
-      tag:'Accepted Speaker', metrics:[['Sep 2–4','2026'],['T9404','7F TaiNEX 2'],['Sep 4 · 14:00','Presentation']],
-      meta:['Sep 2–4, 2026','Booth T9404 · 7F TaiNEX 2','Presentation · Sep 4, 14:00'],
-      body:'<h2>Semiconductor-Defined Motion</h2><p>The presentation and showcase connect high-power-density Power SoC, packaging and thermal paths, evaluation platforms, and application-level validation.</p><h2>Meet the Team</h2><p>Discuss semiconductor, packaging, materials, thermal, robotics, UAV, manufacturing, and investment collaboration.</p>',
+      tag:'Accepted Speaker', metrics:[['Sep 2–4','2026'],['T9404','7F TaiNEX 2'],['Sep 4 · 11:20','Startups Stage']],
+      meta:['Sep 2–4, 2026','Silicon Startups Stage · Sep 4, 11:20–11:30 · T9404, 7F TaiNEX 2','SEMI Venture Day · Sep 4, 14:30–14:40 · Grand Hilai Taipei 6F · invitation-only'],
+      body:'<h2>Semiconductor-Defined Motion</h2><p>The Silicon Startups Stage presentation and showcase connect high-power-density Power SoC, packaging and thermal paths, evaluation platforms, and application-level validation.</p><h2>Meet for Design-in</h2><p>On Sep 2–3, arrange a partner-booth design-in meeting. On Sep 4, meet the team at the Silicon Startups Stage or the invitation-only Venture Day session.</p>',
       placeholder:'SEMICON Taiwan speaker / booth image placeholder'
     },
     '/news-events/news-events-best-AI-Awards': {
