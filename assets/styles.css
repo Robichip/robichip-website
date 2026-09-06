@@ -18,10 +18,12 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; color-scheme: dark; }
+html { overflow-x: hidden; overflow-y: auto; scroll-behavior: smooth; color-scheme: dark; }
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: hidden;
+  overflow-y: auto;
   font-family: var(--font);
   color: var(--ink);
   background:
@@ -298,7 +300,7 @@ button { font: inherit; }
   background: rgba(255,255,255,.06);
 }
 
-.page { overflow: hidden; }
+.page { overflow: visible; }
 .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
 .section { padding: 86px 0; }
 .section.tight { padding: 58px 0; }
