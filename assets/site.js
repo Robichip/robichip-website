@@ -835,6 +835,53 @@
     });
   }
 
+  // Google Sites exports embed a <style> tag in every content block. Several
+  // blocks reuse class names (for example .rs-title and .rs-card), and some
+  // export global html/body rules. Scope every stylesheet to its own wrapper
+  // before mounting it so a later dark block cannot overwrite a light block,
+  // and an imported overflow rule cannot lock the document scroll.
+  const scopeSourceCss = (css, scope) => {
+    const rootSelector = /^(?:html|body|:root)(?::[\w-]+)?$/i;
+    const nestedAtRule = /^@(?:container|media|supports|layer|document)\b/i;
+    const preservedAtRule = /^@(?:keyframes|font-face|property|counter-style)\b/i;
+
+    const transform = (input) => {
+      let output = '';
+      let cursor = 0;
+      while (cursor < input.length) {
+        const open = input.indexOf('{', cursor);
+        if (open === -1) return output + input.slice(cursor);
+        const prelude = input.slice(cursor, open);
+        let depth = 1;
+        let end = open + 1;
+        for (; end < input.length && depth; end += 1) {
+          if (input[end] === '{') depth += 1;
+          if (input[end] === '}') depth -= 1;
+        }
+        if (depth) return output + input.slice(cursor);
+
+        const declarations = input.slice(open + 1, end - 1);
+        const selectorText = prelude.trim();
+        if (nestedAtRule.test(selectorText)) {
+          output += `${prelude}{${transform(declarations)}}`;
+        } else if (preservedAtRule.test(selectorText) || selectorText.startsWith('@')) {
+          output += `${prelude}{${declarations}}`;
+        } else {
+          const selectors = selectorText.split(',').map((selector) => selector.trim()).filter(Boolean);
+          const rootOnly = selectors.length && selectors.every((selector) => rootSelector.test(selector));
+          const scopedSelectors = [...new Set(selectors.map((selector) => rootSelector.test(selector) ? scope : `${scope} ${selector}`))];
+          const safeDeclarations = rootOnly
+            ? declarations.replace(/\boverflow(?:-x|-y)?\s*:\s*hidden\s*;?/gi, '')
+            : declarations;
+          output += `${scopedSelectors.join(', ')}{${safeDeclarations}}`;
+        }
+        cursor = end;
+      }
+      return output;
+    };
+    return transform(css);
+  };
+
   const sourceMount = site.querySelector('[data-source-route]');
   if (sourceMount) {
     const source = sourceMount.getAttribute('data-source-route');
@@ -846,14 +893,16 @@
       })
       .then((html) => {
         sourceMount.innerHTML = html;
-        [...sourceMount.children].forEach((block) => {
+        [...sourceMount.children].forEach((block, index) => {
           const wrapper = document.createElement('div');
-          wrapper.className = 'google-source-block';
+          const scope = `google-source-scope-${index}`;
+          wrapper.className = `google-source-block ${scope}`;
           wrapper.style.containerType = 'inline-size';
           block.querySelectorAll('style').forEach((style) => {
             style.textContent = style.textContent
               .replace(/@media\s*\(\s*max-width\s*:\s*(\d+(?:\.\d+)?)px\s*\)/g, '@container (max-width: $1px)')
               .replace(/(\d+(?:\.\d+)?)vw\b/g, '$1cqw');
+            style.textContent = scopeSourceCss(style.textContent, `.${scope}`);
           });
           block.before(wrapper);
           wrapper.append(block);
