@@ -1,0 +1,11 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { DesignInCta, OfficialLayout, PageHero } from "../official-site";
+export const metadata: Metadata = { title: "Resources | RobiChip", description: "Technical context, platform guidance, evidence and event resources for RobiChip Design-in conversations." };
+export default function ResourcesPage(){ return <OfficialLayout><PageHero eyebrow="RESOURCES · 資源" title="Technical depth, organized around decisions." titleZh="技術深度，圍繞決策整理。" copy="Use engineering context to understand the application, compare platform layers and prepare a better Design-in question." copyZh="透過工程脈絡理解應用、比較平台層級，並準備更完整的 Design-in 問題。" aside={<>Resources support the public decision path. Controlled project data remains inside the Design-in process.<br /><br />公開資源支援前期決策；受控案件資料則留在 Design-in 流程內。</>} /><section className="os-content"><div className="os-shell"><p className="os-eyebrow">DECISION LIBRARY · 決策資源</p><h2>Start with the question you need to answer.<span>從您要回答的問題開始。</span></h2><div className="os-resource-list">
+  <article><p className="os-eyebrow">SYSTEM ARCHITECTS</p><h3>Why Power Density Matters</h3><p>Power density spans electronics, packaging, thermal paths and mechanics. Treating it as a component-only rating hides system constraints.</p><Link href="/robisoc">Related platform: RobiSoC ↗</Link></article>
+  <article><p className="os-eyebrow">MOTOR ENGINEERS</p><h3>From RobiDev to Design-in</h3><p>A disciplined evaluation path reduces uncertainty before semi-custom or custom design becomes expensive.</p><Link href="/robidev">Related platform: RobiDev ↗</Link></article>
+  <article><p className="os-eyebrow">UAV TEAMS</p><h3>Propulsion Validation as an Entry</h3><p>Start with measurable propulsion behavior, then trace evidence back to the controller and power platform.</p><Link href="/applications/uav-propulsion">Explore UAV application ↗</Link></article>
+  <article><p className="os-eyebrow">ROBOTICS TEAMS</p><h3>Inside-out Joint Co-design</h3><p>Align the driver, motor, encoder, reducer and upper-level control before freezing the joint architecture.</p><Link href="/applications/robotics-actuation">Explore robotics application ↗</Link></article>
+</div></div></section><DesignInCta /></OfficialLayout>; }
+

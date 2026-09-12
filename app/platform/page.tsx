@@ -1,0 +1,7 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { platforms } from "../official-data";
+import { DesignInCta, OfficialLayout, PageHero } from "../official-site";
+export const metadata: Metadata = { title: "Platform | RobiChip", description: "RobiChip platform layers from Power SoC and evaluation to system validation and engineering evidence." };
+export default function PlatformPage() { return <OfficialLayout><PageHero eyebrow="PLATFORM · 平台" title="One logic. Five platform layers." titleZh="一套邏輯，五個平台層級。" copy="Move from evaluation and evidence toward controlled product integration." copyZh="從評估與實證，逐步走向受控的產品整合。" aside={<>Select the layer that answers today’s engineering question—and keeps the next Design-in gate visible.<br /><br />選擇能回答當前工程問題的平台層，同時保留下一個 Design-in 關卡。</>} /><section className="os-content"><div className="os-shell"><p className="os-eyebrow">PLATFORM MAP · 平台地圖</p><h2>Evaluation to production intent.<span>從評估走向量產意圖。</span></h2><div className="os-overview-grid">{platforms.map((item) => <article className="os-overview-card" key={item.slug}><img src={item.image} alt={item.imageAlt} /><p className="os-eyebrow">{item.status}</p><h3>{item.title}<span>{item.titleZh}</span></h3><p>{item.role}<br /><br />{item.roleZh}</p><Link href={`/${item.slug}`}>Explore {item.title} ↗</Link></article>)}</div></div></section><DesignInCta /></OfficialLayout>; }
+
