@@ -24,7 +24,17 @@ import { readFile } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 
 const [workerPath, hostingPath] = process.argv.slice(2);
-JSON.parse(await readFile(hostingPath, "utf8"));
+const manifest = JSON.parse(await readFile(hostingPath, "utf8"));
+
+// D1 is a Cloudflare-native module. Node cannot load its `cloudflare:workers`
+// import during this artifact-only validation, although the deployed Worker can.
+if (manifest.d1) {
+  const workerSource = await readFile(workerPath, "utf8");
+  if (!/export\s*\{[^}]*\s+as\s+default\s*\}/.test(workerSource)) {
+    throw new Error("dist/server/index.js must export a default Worker fetch handler");
+  }
+  process.exit(0);
+}
 
 const workerUrl = pathToFileURL(workerPath);
 workerUrl.searchParams.set("sites-validation", `${process.pid}-${Date.now()}`);

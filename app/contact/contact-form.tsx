@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 
 type Intent = "evaluation" | "quotation" | "meeting" | "partnership";
 
@@ -13,14 +13,48 @@ const intents: Array<{ value: Intent; label: string; detail: string }> = [
 
 export default function ContactForm({ initialIntent }: { initialIntent: Intent }) {
   const [intent, setIntent] = useState<Intent>(initialIntent);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
+
+  async function submitInquiry(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (isSubmitting) return;
+
+    const form = event.currentTarget;
+    if (!form.reportValidity()) return;
+    setIsSubmitting(true);
+    setError("");
+
+    const values = Object.fromEntries(new FormData(form).entries());
+    try {
+      const response = await fetch("/api/inquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      const result = (await response.json()) as { error?: string };
+      if (!response.ok) throw new Error(result.error || "We could not save your request.");
+
+      // Keep the existing FormSubmit delivery so BD receives an immediate email alert.
+      formRef.current?.submit();
+    } catch (submissionError) {
+      setError(
+        submissionError instanceof Error
+          ? submissionError.message
+          : "We could not save your request. Please email bd@robichip.com.",
+      );
+      setIsSubmitting(false);
+    }
+  }
 
   return (
-    <form className="inquiry-form" action="https://formsubmit.co/bd@robichip.com" method="POST">
+    <form ref={formRef} className="inquiry-form" action="https://formsubmit.co/bd@robichip.com" method="POST" onSubmit={submitInquiry}>
       <input type="hidden" name="_subject" value={`[RobiChip Web] ${intent}`} />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_next" value="https://robichip-homepage.robichip-ai-8830.chatgpt.site/contact/thanks" />
-      <input type="hidden" name="_url" value="https://robichip-homepage.robichip-ai-8830.chatgpt.site/contact" />
+      <input type="hidden" name="_next" value="https://robichip-official-review.robichip-ai-8830.chatgpt.site/contact/thanks" />
+      <input type="hidden" name="_url" value="https://robichip-official-review.robichip-ai-8830.chatgpt.site/contact" />
       <fieldset className="intent-fieldset">
         <legend>How can we help? <b>*</b></legend>
         <div className="intent-grid">
@@ -96,12 +130,13 @@ export default function ContactForm({ initialIntent }: { initialIntent: Intent }
 
       <label className="consent-row">
         <input name="consent" type="checkbox" value="yes" required />
-        <span>I agree that RobiChip may use this information to respond to my inquiry and that FormSubmit will process the submission for email delivery. <b>*</b></span>
+        <span>I agree that RobiChip may store and use this information to respond to my inquiry. FormSubmit will also process the submission for email delivery. <b>*</b></span>
       </label>
       <label className="honeypot" aria-hidden="true">Website<input name="_honey" type="text" tabIndex={-1} autoComplete="off" /></label>
 
-      <button className="submit-button" type="submit">
-        Send to RobiChip BD<span aria-hidden="true">↗</span>
+      {error && <p className="form-alert error" role="alert">{error}</p>}
+      <button className="submit-button" type="submit" disabled={isSubmitting}>
+        {isSubmitting ? "Saving your request…" : "Send to RobiChip BD"}<span aria-hidden="true">↗</span>
       </button>
       <p className="form-note">Required fields are marked with *. Please do not include confidential design files or trade secrets in this form.</p>
     </form>

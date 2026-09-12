@@ -73,7 +73,7 @@ export default async function ContactPage({
             <div className="contact-direct">
               <span>Direct contact</span>
               <a href="mailto:bd@robichip.com">bd@robichip.com</a>
-              <a href="tel:+886277016728">+886 2 7701 6728</a>
+              <a href="tel:+886277015728">+886-2-7701-5728</a>
             </div>
           </aside>
           <ContactForm initialIntent={intent} />
