@@ -2,29 +2,41 @@ import { desc } from "drizzle-orm";
 import { getChatGPTUser } from "../../../chatgpt-auth";
 import { getDb } from "../../../../db";
 import { inquiries } from "../../../../db/schema";
+import { buildInquiryWorkbook } from "../../../../db/inquiry-workbook";
 
 const STAFF_EMAILS = new Set(["henrygong.tw@gmail.com", "robiagent@robichip.com"]);
 
 function csvCell(value: unknown) {
-  const text = value === null || value === undefined ? "" : String(value);
+  const raw = value === null || value === undefined ? "" : String(value);
+  const text = /^[\s]*[=+@-]/.test(raw) ? `'${raw}` : raw;
   return `"${text.replaceAll('"', '""')}"`;
 }
 
-export async function GET() {
+export async function GET(request: Request) {
   const user = await getChatGPTUser();
   if (!user || !STAFF_EMAILS.has(user.email.toLowerCase())) {
     return Response.json({ error: "Staff access is required." }, { status: 403 });
   }
 
   try {
+    const excel = new URL(request.url).searchParams.get("format") === "xlsx";
     const rows = await getDb()
       .select()
       .from(inquiries)
       .orderBy(desc(inquiries.createdAt), desc(inquiries.id))
-      .limit(5000);
+      .limit(excel ? 1001 : 5000);
+    const date = new Date().toISOString().slice(0, 10);
+    if (excel) {
+      if (rows.length > 1000) return Response.json({ error: "Excel contact cards support up to 1,000 records per export. Please use CSV for this larger data set." }, { status: 413 });
+      return new Response(buildInquiryWorkbook(rows), { headers: {
+        "Content-Type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "Content-Disposition": `attachment; filename=robichip-customer-contacts-${date}.xlsx`,
+        "Cache-Control": "no-store",
+      } });
+    }
     const columns = [
-      "id", "createdAt", "status", "owner", "intent", "fullName", "email",
-      "company", "jobTitle", "phone", "region", "application", "projectStage",
+      "id", "fullName", "company", "jobTitle", "email", "phone", "region",
+      "createdAt", "status", "owner", "intent", "application", "projectStage",
       "preferredWindow", "timeZone", "quantity", "targetTiming", "details",
       "consent", "consentAt", "followUpNote", "sourcePath",
     ] as const;
@@ -32,7 +44,6 @@ export async function GET() {
       columns.join(","),
       ...rows.map((row) => columns.map((column) => csvCell(row[column])).join(",")),
     ].join("\n");
-    const date = new Date().toISOString().slice(0, 10);
 
     return new Response(`\uFEFF${csv}`, {
       headers: {

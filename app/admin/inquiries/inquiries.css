@@ -1,0 +1,21 @@
+.inquiry-simulation-tools{margin-top:24px;padding:20px 24px;border:1px solid #cbd3cf;background:#fff;font-size:1rem;line-height:1.6}
+.inquiry-simulation-tools summary,.inquiry-project-details summary{cursor:pointer;font-size:1rem;font-weight:700;line-height:1.6}
+.inquiry-simulation-tools p{max-width:80ch}
+.inquiry-contact-list{display:grid;gap:24px}
+.inquiry-export-actions{display:flex;flex-direction:column;gap:12px;min-width:240px;font-size:1rem}.inquiry-export-actions small{font-size:.875rem;color:#526068}.inquiry-export-actions>a:not(.admin-export){text-decoration:underline}
+.inquiry-contact-card{padding:28px;background:#fff;border:1px solid #bdcac4;border-top:4px solid #10191e;overflow-wrap:anywhere}
+.inquiry-contact-card>header{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+.inquiry-contact-card h2{margin:8px 0;font-size:1.65rem;line-height:1.3;color:#10191e}
+.inquiry-record-id{margin:0;font-size:.875rem;line-height:1.5;color:#526068}
+.inquiry-company{margin:0;font-size:1.125rem;line-height:1.5;color:#26363d}
+.inquiry-contact-card .admin-status{font-size:.875rem!important;white-space:nowrap}
+.inquiry-contact-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:26px 0;padding:24px;background:#f3f7f4;border:1px solid #d9e2dd}
+.inquiry-contact-card dt{font-size:.875rem;font-weight:700;color:#46565e;line-height:1.5}
+.inquiry-contact-card dd{margin:6px 0 0;font-size:1rem;color:#111b20;line-height:1.6}
+.inquiry-contact-fields a{color:#064fb4;text-decoration:underline;text-underline-offset:4px}
+.inquiry-contact-fields a:focus-visible,.inquiry-contact-card summary:focus-visible{outline:3px solid #336dc4;outline-offset:4px}
+.inquiry-followup{font-size:1rem;line-height:1.6}.inquiry-followup p{margin:10px 0}
+.inquiry-project-details{margin-top:24px;padding-top:20px;border-top:1px solid #cbd3cf}
+.inquiry-project-details dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.inquiry-project-details>p{font-size:1rem;line-height:1.7;white-space:pre-wrap}
+.inquiry-test-note{color:#66481b;background:#fff4d9;padding:16px;font-size:1rem;line-height:1.6}
+@media(max-width:600px){.inquiry-contact-card{padding:20px 16px}.inquiry-contact-card>header{flex-direction:column;gap:12px}.inquiry-contact-fields,.inquiry-project-details dl{grid-template-columns:1fr}.inquiry-contact-fields{padding:18px;gap:20px}}

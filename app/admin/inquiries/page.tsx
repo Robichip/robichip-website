@@ -5,6 +5,7 @@ import { getDb } from "../../../db";
 import { inquiries } from "../../../db/schema";
 import { SIMULATION_SOURCE } from "../../../db/inquiry-simulations";
 import "../../contact/contact.css";
+import "./inquiries.css";
 
 const STAFF_EMAILS = new Set(["henrygong.tw@gmail.com", "robiagent@robichip.com"]);
 type Inquiry = InferSelectModel<typeof inquiries>;
@@ -55,13 +56,13 @@ export default async function InquiryAdminPage() {
         <div className="admin-head">
           <div>
             <p className="contact-eyebrow dark">RobiChip internal</p>
-            <h1>Design-in inquiries</h1>
-            <p>Recent submissions from the official website contact form. Export the full data set as a CSV file for Excel analysis.</p>
+            <h1>Customer contacts</h1>
+            <p>客戶聯絡與商機跟進 · 查看聯絡人、公司及聯繫方式，再檢視產品需求。Excel 包含聯絡清單、逐筆聯絡卡與技術需求三個工作表。</p>
           </div>
-          <a className="admin-export" href="/api/inquiries/export">Export CSV for Excel ↗</a>
+          <div className="inquiry-export-actions"><a className="admin-export" href="/api/inquiries/export?format=xlsx">Excel · 匯出客戶聯絡卡 ↗</a><a href="/api/inquiries/export">Download CSV · 下載清單</a><small>Excel：每次最多 1,000 筆；CSV：最多 5,000 筆。</small></div>
         </div>
-        <section style={{ padding: "24px", marginTop: "24px", background: "#fff", border: "1px solid #cbd3cf", fontSize: "16px", lineHeight: 1.6 }}>
-          <h2 style={{ marginTop: 0, fontSize: "22px" }}>Simulation workspace · 模擬資料</h2>
+        <details className="inquiry-simulation-tools">
+          <summary>Simulation workspace · 模擬資料（{simulationCount} 筆）</summary>
           <p>Six fictional cases cover evaluation, quotation, meetings and partnership. Each is marked TEST and uses example.com contact details. No emails or meeting invitations are sent.</p>
           <p>六筆虛構案例，涵蓋評估、詢價、會議與合作。僅供後台與匯出測試，勿列入正式商機統計。重複點擊不會重複建立。</p>
           <form action="/api/inquiries/simulations" method="POST">
@@ -70,31 +71,40 @@ export default async function InquiryAdminPage() {
             </button>
           </form>
           <p>{simulationCount} simulation cases in the recent list · 近期清單中的模擬資料：{simulationCount} 筆。下方統計包含模擬資料。</p>
-        </section>
+        </details>
         {unavailable ? (
           <div className="form-alert error">The database is still being prepared. Refresh this page shortly.</div>
         ) : (
           <>
             <div className="admin-stats">
-              <article><strong>{rows.length}</strong><span>Recent requests shown</span></article>
-              <article><strong>{newCount}</strong><span>New / unassigned</span></article>
-              <article><strong>{meetingCount}</strong><span>Meeting requests</span></article>
+              <article><strong>{rows.length}</strong><span>Recent contacts · 近期聯絡紀錄</span></article>
+              <article><strong>{newCount}</strong><span>New requests · 新詢問</span></article>
+              <article><strong>{meetingCount}</strong><span>Meeting requests · 會議需求</span></article>
             </div>
-            <div className="admin-table-wrap">
-              <table className="admin-table">
-                <thead><tr><th>Received</th><th>Contact</th><th>Request</th><th>Application</th><th>Status</th></tr></thead>
-                <tbody>
-                  {rows.map((row) => (
-                    <tr key={row.id}>
-                      <td>{formatDate(row.createdAt)}</td>
-                      <td><strong>{row.fullName}</strong><span>{row.company}<br />{row.email}</span></td>
-                      <td><strong>{row.intent}</strong><span>{row.projectStage || "Project stage not specified"}</span></td>
-                      <td>{row.application}<details style={{ marginTop: "12px" }}><summary>View details · 查看內容</summary><p style={{ whiteSpace: "pre-wrap", overflowWrap: "anywhere" }}>{row.details}</p><p>{row.quantity} {row.targetTiming}</p><p>{row.preferredWindow} {row.timeZone}</p><p>{row.followUpNote}</p></details></td>
-                      <td><span className="admin-status">{row.status}</span></td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            {simulationCount > 0 && <p className="inquiry-test-note">清單與統計包含 {simulationCount} 筆 TEST／模擬案例。模擬聯絡資訊不可用於實際聯繫；未填欄位會標示「未提供」。</p>}
+            <div className="inquiry-contact-list">
+              {rows.length === 0 && <p>No customer contacts yet · 尚無客戶聯絡紀錄。</p>}
+              {rows.map((row) => {
+                const isTest = row.sourcePath.startsWith("/simulation/");
+                const emailHref = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(row.email) ? `mailto:${encodeURIComponent(row.email)}` : null;
+                const phoneNumber = row.phone.replace(/[^\d+]/g, "");
+                return (
+                  <article className="inquiry-contact-card" key={row.id}>
+                    <header>
+                      <div><p className="inquiry-record-id">Contact #{row.id} · {formatDate(row.createdAt)} UTC{isTest && " · TEST／模擬"}</p><h2>{row.fullName || "Name not provided · 姓名未提供"}</h2><p className="inquiry-company">{row.company || "Company not provided · 公司未提供"}</p></div>
+                      <span className="admin-status">{row.status}</span>
+                    </header>
+                    <dl className="inquiry-contact-fields">
+                      <div><dt>Email · 電子郵件</dt><dd>{!isTest && emailHref ? <a href={emailHref}>{row.email}</a> : row.email || "Not provided · 未提供"}</dd></div>
+                      <div><dt>Phone · 聯絡電話</dt><dd>{!isTest && phoneNumber ? <a href={`tel:${phoneNumber}`}>{row.phone}</a> : row.phone || "Not provided · 未提供"}</dd></div>
+                      <div><dt>Job title · 職稱</dt><dd>{row.jobTitle || "Not provided · 未提供"}</dd></div>
+                      <div><dt>Country / region · 國家／地區</dt><dd>{row.region || "Not provided · 未提供"}</dd></div>
+                    </dl>
+                    <div className="inquiry-followup"><p><strong>BD owner · 跟進窗口：</strong>{row.owner || "Unassigned · 待指派"}</p><p><strong>Meeting window · 聯繫／會議時段：</strong>{row.preferredWindow || "Not specified · 未指定"}{row.timeZone && ` (${row.timeZone})`}</p>{row.followUpNote && <p><strong>Follow-up · 跟進紀錄：</strong>{row.followUpNote}</p>}</div>
+                    <details className="inquiry-project-details"><summary>Project request · 產品／技術需求 — {row.intent}</summary><dl><div><dt>Application · 應用</dt><dd>{row.application}</dd></div><div><dt>Project stage · 階段</dt><dd>{row.projectStage || "未提供"}</dd></div><div><dt>Quantity · 數量</dt><dd>{row.quantity || "未提供"}</dd></div><div><dt>Target timing · 時程</dt><dd>{row.targetTiming || "未提供"}</dd></div></dl><p>{row.details}</p></details>
+                  </article>
+                );
+              })}
             </div>
           </>
         )}
