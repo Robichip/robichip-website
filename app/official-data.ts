@@ -157,7 +157,7 @@ export const platforms: PlatformRecord[] = [
     role: "Turn an engineering question into evidence.", roleZh: "將工程問題轉化為證據。",
     summary: "RobiLab scopes propulsion, motion, electrical and thermal questions into a measured review package for the next decision gate.",
     summaryZh: "RobiLab 將推進、運動、電性與熱問題整理為可量測、可審查的決策資料。",
-    image: "/virtual-booth/robithrust-validation-rigs.png", imageAlt: "RobiChip engineering validation rigs",
+    image: "/robilab-measurement-bench.png", imageAlt: "RobiLab motor-drive measurement and thermal validation bench",
     capabilities: [
       { title: "Test definition", titleZh: "測試定義", copy: "Define the operating conditions, instrumentation and comparison baseline.", copyZh: "定義操作條件、量測工具與比較基準。" },
       { title: "Measured dataset", titleZh: "量測資料", copy: "Capture the data needed for the specific architecture decision.", copyZh: "取得特定架構決策所需的資料。" },
