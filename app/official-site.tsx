@@ -47,7 +47,7 @@ export function OfficialFooter() {
           <p>Power SoC Platform for Intelligent Machines<br />智慧機器的 Power SoC 平台</p>
           <a className="os-incubated" href="https://www.lighthouse-lmc.com" target="_blank" rel="noreferrer"><strong>Incubated by LMC ↗</strong><span>由 Lighthouse Management Co., Ltd. 孵化支持</span></a>
         </div>
-        <div><h3>Explore · 探索</h3><Link href="/applications">Applications</Link><Link href="/platform">Platform</Link><Link href="/evidence">Evidence</Link><Link href="/resources">Resources</Link></div>
+        <div><h3>Explore · 探索</h3><Link href="/applications">Applications</Link><Link href="/platform">Platform</Link><Link href="/robidev">RobiDev Ecosystem</Link><Link href="/#robiagent">RobiAgent</Link><Link href="/evidence">Evidence</Link><Link href="/resources">Resources</Link></div>
         <div><h3>Company · 公司</h3><Link href="/company">About RobiChip</Link><Link href="/partnership">Partnership</Link><Link href="/news-events">News &amp; Events</Link><a href="https://profile.104.com.tw/company/1a2x6bnk3q">Careers ↗</a></div>
         <div><h3>Connect · 聯絡</h3><a href="https://dev.robichip.com">Start Design-in ↗</a><Link href="/contact?intent=meeting">Book a Meeting</Link><a href="https://www.linkedin.com/company/robichip/?viewAsMember=true" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://www.youtube.com/channel/UCqp-CDSVPCX8TfYT_aVScpg" target="_blank" rel="noreferrer">YouTube ↗</a></div>
       </div>
@@ -78,4 +78,3 @@ export function DesignInCta({ title = "Bring the application. Define the next ga
     </section>
   );
 }
-

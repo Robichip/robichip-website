@@ -111,14 +111,14 @@ export const platforms: PlatformRecord[] = [
     noteZh: "架構目標、原型結果與最終認證限制分別陳述。",
   },
   {
-    slug: "robidev", title: "RobiDev", titleZh: "評估與開發平台", status: "AVAILABLE NOW",
+    slug: "robidev", title: "RobiDev", titleZh: "評估、教育與開發生態", status: "AVAILABLE NOW",
     role: "Evaluate before custom design becomes expensive.", roleZh: "在客製成本放大前完成評估。",
-    summary: "RobiDev provides a practical motor-drive evaluation layer for architecture, firmware, interface and Design-in decisions.",
-    summaryZh: "RobiDev 提供馬達驅動評估層，支援架構、韌體、介面與 Design-in 決策。",
+    summary: "RobiDev connects developers, education and research teams, and enablement partners through motor-drive evaluation, shared validation methods and Design-in collaboration.",
+    summaryZh: "RobiDev 以馬達驅動評估、共通驗證方法與 Design-in 協作，串接開發者、教育研究團隊與合作夥伴。",
     image: "/semicon-2026/robisoc-board.png", imageAlt: "RobiDev evaluation board",
     capabilities: [
       { title: "Developer Evaluation", titleZh: "開發者評估", copy: "Bring the motor, load and operating requirement into a controlled test path.", copyZh: "將馬達、負載與操作需求帶入受控測試路徑。" },
-      { title: "Architecture Decisions", titleZh: "架構決策", copy: "Compare interfaces and power classes before freezing the customer design.", copyZh: "在客戶設計定版前比較介面與功率級。" },
+      { title: "Education / Research Program", titleZh: "教育／研究計畫", copy: "Define a learning or research objective, evaluation scope and validation evidence with your laboratory or academic team.", copyZh: "與實驗室或學研團隊界定學習與研究目標、評估範圍及驗證證據。" },
       { title: "Partner Enablement", titleZh: "夥伴賦能", copy: "Create a shared evidence base across system, motor and semiconductor teams.", copyZh: "在系統、馬達與半導體團隊間建立共通證據。" },
     ],
     note: "Evaluation availability does not imply that every custom configuration is production-qualified.",
@@ -170,4 +170,3 @@ export const platforms: PlatformRecord[] = [
 
 export const platformBySlug = Object.fromEntries(platforms.map((item) => [item.slug, item]));
 export const applicationBySlug = Object.fromEntries(applications.map((item) => [item.slug, item]));
-

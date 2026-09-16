@@ -11,6 +11,7 @@ export default function PlatformDetail({ platform }: { platform: PlatformRecord 
           <div><span className="os-status-pill">{platform.status}</span><h2>A platform layer with a clear job.<span>每一層平台，都有明確任務。</span></h2><p className="os-content-lead">{platform.summary}<span>{platform.summaryZh}</span></p>
             <div className="os-step-list">{platform.capabilities.map((capability, index) => <article key={capability.title}><span>0{index + 1}</span><div><h3>{capability.title}<span>{capability.titleZh}</span></h3><p>{capability.copy}<span>{capability.copyZh}</span></p></div></article>)}</div>
             <p className="os-note">{platform.note}<span>{platform.noteZh}</span></p>
+            {platform.slug === "robidev" && <a className="os-button os-button-dark" href="https://dev.robichip.com/signin-with-chatgpt?return_to=%2Fapply%3Fsubject%3DRobiDev%2520Ecosystem">Join the RobiDev Ecosystem · 啟動生態合作 <span>↗</span></a>}
           </div>
         </div>
       </section>
@@ -18,4 +19,3 @@ export default function PlatformDetail({ platform }: { platform: PlatformRecord 
     </OfficialLayout>
   );
 }
-
